@@ -500,6 +500,11 @@ html, body {
 // Template Buttons
 //-----------------------------------------------------------------
 
+.search-button i {
+	font-size: rem-calc(20);
+	line-height: 36px;
+}
+
 input[type="button"],
 input[type="submit"] {
 	@include button;
@@ -541,6 +546,23 @@ input[type="submit"] {
 	    max-height: none;
 	    margin: 0;
 	}
+}
+
+//-----------------------------------------------------------------
+
+// Center all input placeholder text - looks better
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  text-align: center;
+}
+:-ms-input-placeholder {
+  text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;
 }
 
 //-----------------------------------------------------------------

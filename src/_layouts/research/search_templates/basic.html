@@ -15,12 +15,13 @@ context_menu: "context_menu_output/search_templates.html"
     <div class="medium-10 medium-centered columns">
         <form data-abide novalidate action="/research/search-results/" method="post">
             <div class="row collapse postfix-radius">
-                <div class="small-12 medium-9 columns">
-                    <input name="q" class="text-center" type="text" placeholder="Type keywords to begin your search">
+                <div class="small-10 medium-9 columns">
+                    <input name="q" type="text" placeholder="Type keywords to search">
                 </div>
-                <div class="hide-for-small medium-3 columns">
-                    <!-- <button type="submit" class="button flat radius postfix">Search</button> -->
-                    <a href="/research/search-results/" class="button flat radius postfix">Search</a>
+                <div class="small-2 medium-3 columns">
+                    <!-- Switch anchor for button on production -->
+                    <!-- <button type="submit" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> Search</button> -->
+                    <a href="/research/search-results/" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Search</span></a>
                 </div>
             </div>
             <!-- Radio -->

@@ -538,9 +538,9 @@ $button-bg: $primary-color;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
 $input-bg-color: #fff; //#E3E3E3;
-$input-focus-bg-color: scale-color(#fff, $lightness: -10%);//#B5B5B5; //
+$input-focus-bg-color: white; //scale-color(#fff, $lightness: -10%);//#B5B5B5; //
 $input-border-color: scale-color(#fff, $lightness: -20%);
-// $input-focus-border-color: transparent; //$primary-color; //scale-color(#fff, $lightness: -40%);
+$input-focus-border-color: scale-color(#fff, $lightness: -40%); //scale-color(#fff, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
 // $input-border-radius: $global-radius;

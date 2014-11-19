@@ -225,19 +225,19 @@ $(".lv-hamburger").bind(touchEvent, function(e) {
     }
 });
 
-$(function() {
-    $("#off-canvas-menu-left").mmenu({
-       "offCanvas": {
-          "position": "left"
-       }
-    });
+// $(function() {
+//     $("#off-canvas-menu-left").mmenu({
+//        "offCanvas": {
+//           "position": "left"
+//        }
+//     });
 
-    $("#off-canvas-menu-right").mmenu({
-       "offCanvas": {
-          "position": "right"
-       }
-    });
- });
+//     $("#off-canvas-menu-right").mmenu({
+//        "offCanvas": {
+//           "position": "right"
+//        }
+//     });
+//  });
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

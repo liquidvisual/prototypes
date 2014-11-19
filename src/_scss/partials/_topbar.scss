@@ -37,7 +37,8 @@
 		float: left; // flush
 
 		&.active a {
-			color: $primary-color; // Decision to leave out BG color change from active
+			//color: $primary-color; // Decision to leave out BG color change from active
+			background: darken($dark-grey, 30%);
 		}
 
 		.home-text {
@@ -56,7 +57,7 @@
 		line-height: $primary-nav-height;
 
 		&:hover {
-			background: darken($dark-grey, 30%);
+			background: darken($dark-grey, 5%);
 		}
 	}
 

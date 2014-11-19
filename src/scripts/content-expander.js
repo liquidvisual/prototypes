@@ -29,12 +29,43 @@ $('.lv-advanced-options-btn').click(function(e){
 
 //-----------------------------------------------------------------
 // Partial View
+//
+// For all partial views, append a button to trigger expanding / collapsing
+// in order to work, it has to add a class of 'collapsed' which really
+// needs to be in the markup to prevent FLAUC
 //-----------------------------------------------------------------
 
-// Toggle form HEIGHT (mobile only - shows first 3 fields approx)
-$('.lv-partial-view-btn').click(function(e){
-    // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
-    e.preventDefault();
-    $(this).hide();
-    searchForm.toggleClass('lv-partial-view');
+$('.lv-partial-view, #resultsContainerForm .result, #documentDisplay').each(function(){
+    var $this = $(this);
+    var expander = $('.lv-partial-view-btn');
+    var expanderOnPage = expander.length;
+
+    // Test for expander btn on page, if legacy - append to markup (ew)
+    if (!expanderOnPage) {
+        expander = $('<a class="lv-partial-view-btn button pill tiny" href="#">Expand</a>');
+        $this.append(expander);
+    }
+
+    $this.addClass('collapsed');
+
+    expander.click(function(e){
+        e.preventDefault();
+        $this.toggleClass('collapsed');
+
+        $this.hasClass('collapsed') ? $(this).text('Expand') : $(this).text('Minimize');
+    });
 });
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+// // Toggle form HEIGHT (mobile only - shows first 3 fields approx)
+// $('.lv-partial-view-btn, #documentDisplay').click(function(e){
+//     // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+//     // e.preventDefault();
+
+//     // $(this).hide();
+
+//     // searchForm.toggleClass('lv-partial-view');
+// });

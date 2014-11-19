@@ -166,6 +166,8 @@ $('.lv-sidebar .tabs a').click(function(e){
         if (sidebarCollapsed || (!sidebarCollapsed && !sidebarUncollapsed)) {
             sidebar.removeClass('is-collapsed').addClass('is-uncollapsed');
 
+            // sidebar.css({ x: sidebar.width() }).transition({ x: 0 }); can't make this work
+
             // USER STORAGE - Remember user input
             if (typeof(Storage) !== "undefined") {
                 localStorage.setItem("sidebarState", "uncollapsed");
@@ -210,33 +212,33 @@ var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
 
-// $(".lv-hamburger").bind(touchEvent, function(e) {
+$(".lv-hamburger").bind(touchEvent, function(e) {
 
-//     $this = $(this);
-//     //e.preventDefault();
+    $this = $(this);
+    e.preventDefault();
 
-//     if ($this.attr('href', '#off-canvas-menu-left')) {
-//         $("#off-canvas-menu-left").trigger("open.mm");
-//     }
+    if ($this.attr('href') == '#off-canvas-menu-left') {
+        $("#off-canvas-menu-left").trigger("open.mm");
+    }
 
-//     if ($this.attr('href', '#off-canvas-menu-right')) {
-//         $("#off-canvas-menu-right").trigger("open.mm");
-//     }
-// });
+    if ($this.attr('href') == '#off-canvas-menu-right') {
+        $("#off-canvas-menu-right").trigger("open.mm");
+    }
+});
 
-// $(function() {
-//     $("#off-canvas-menu-left").mmenu({
-//        "offCanvas": {
-//           "position": "left"
-//        }
-//     });
+$(function() {
+    $("#off-canvas-menu-left").mmenu({
+       "offCanvas": {
+          "position": "left"
+       }
+    });
 
-//     $("#off-canvas-menu-right").mmenu({
-//        "offCanvas": {
-//           "position": "right"
-//        }
-//     });
-//  });
+    $("#off-canvas-menu-right").mmenu({
+       "offCanvas": {
+          "position": "right"
+       }
+    });
+ });
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

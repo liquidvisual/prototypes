@@ -12,21 +12,24 @@ context_menu: "context_menu_output/search_templates.html"
 <script>
     $(document).ready(function(){
 
-        var moreOptions = $('.lv-more-options');
+        var searchForm = $('.lv-partial-view');
+        var advancedOptions = $('.lv-advanced-options');
 
         // Toggle fields INSIDE of form
-        $('.lv-more-options-btn').click(function(){
+        $('.lv-advanced-options-btn').click(function(e){
             var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+
+            e.preventDefault();
             $(this).text(text);
-            moreOptions.toggle();
+            advancedOptions.toggle();
         });
 
-        // Toggle form HEIGHT (mobile only - shows first 3 fields)
-        var searchForm = $('.lv-form-restrictor');
-        $('.lv-form-restrictor-btn').click(function(){
+        // Toggle form HEIGHT (mobile only - shows first 3 fields approx)
+        $('.lv-partial-view-btn').click(function(e){
             // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+            e.preventDefault();
             $(this).hide();
-            searchForm.toggleClass('lv-form-restrictor');
+            searchForm.toggleClass('lv-partial-view');
         });
     });
 </script>
@@ -165,7 +168,7 @@ context_menu: "context_menu_output/search_templates.html"
 
             <!-- ************************ MORE OPTIONS ************************ -->
 
-            <div class="lv-more-options hide">
+            <div class="lv-advanced-options hide">
 
                 <!-- Cases Cited (title) -->
                 <div class="row">
@@ -269,7 +272,7 @@ context_menu: "context_menu_output/search_templates.html"
             <!-- Toggle More Option Button -->
             <div class="row">
                 <div class="medium-offset-3 medium-9 columns">
-                    <a class="lv-more-options-btn button tiny knockout radius" href="#">Show More</a>
+                    <a class="lv-advanced-options-btn button tiny knockout radius" href="#">Show More</a>
                 </div>
             </div>
 
@@ -305,13 +308,13 @@ context_menu: "context_menu_output/search_templates.html"
 
 <!-- Form restricted on mobile (small height) - button to show more -->
 
-<!-- <div class="show-for-small-only">
+<div class="show-for-small-only">
     <div class="row">
         <div class="medium-offset-3 medium-9 columns">
-            <a class="lv-form-restrictor-btn button tiny knockout radius" href="#">Show More</a>
+            <a class="lv-partial-view-btn button tiny knockout radius" href="#">Show More</a>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- DOCUMENT OPTIONS -->
 <div class="row">

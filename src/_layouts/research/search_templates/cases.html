@@ -274,7 +274,6 @@ context_menu: "context_menu_output/search_templates.html"
 <!-- ************************ END FORM ************************ -->
 
 <!-- Form restricted on mobile (small height) - button to show more -->
-
 <div class="show-for-small-only">
     <div class="row">
         <div class="columns text-right">
@@ -287,7 +286,16 @@ context_menu: "context_menu_output/search_templates.html"
 <div class="row">
     <div class="columns">
         <hr>
-        {% include document_options/search.html %}
+        <h4>You are in:</h4>
+        {% include snippets/breadcrumbs.html %}
+        {% include document_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- EXPAND LEVEL -->
+<div class="row">
+    <div class="columns text-right">
+        <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
     </div>
 </div>
 

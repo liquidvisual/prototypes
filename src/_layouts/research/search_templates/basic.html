@@ -11,9 +11,12 @@ context_menu: "context_menu_output/search_templates.html"
     </div>
 </div>
 
-<div class="row">
-    <div class="medium-10 medium-centered columns">
-        <form data-abide novalidate action="/research/search-results/" method="post">
+<!-- SEARCH FORM -->
+<form class="lv-search-form" action="/research/search-results/" method="post" novalidate>
+    <div class="row">
+        <div class="medium-10 medium-centered columns">
+
+            <!-- Keyword Search -->
             <div class="row collapse postfix-radius">
                 <div class="small-10 medium-9 columns">
                     <input name="q" type="text" placeholder="Type keywords to search">
@@ -24,52 +27,48 @@ context_menu: "context_menu_output/search_templates.html"
                     <a href="/research/search-results/" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Search</span></a>
                 </div>
             </div>
-            <!-- Radio -->
-            <div class="row">
-                <div class="medium-4 columns">
-                    <label for="" class="text-left medium-text-right">Preferred results format:</label>
-                </div>
-                <div class="medium-8 columns">
-                    <input type="radio" id="resultTocRadio" name="resultType" value="toc"><label for="resultTocRadio">Tree of Contents</label>
-                    <input type="radio" id="resultListRadio" name="resultType" value="list"><label for="resultListRadio">Document List</label>
-                </div>
-            </div> <!-- .row -->
-        </form>
-    </div>
-</div> <!-- .row -->
 
+            <!-- Preferred Results Format -->
+            <div class="row show-for-medium-up">
+                <div class="medium-3 columns">
+                    <label class="text-left medium-text-right">
+                        <span class="text">Preferred results format:</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="radio" name="sf-result-type" value="toc" id="sf-tree-of-contents">
+                    <label for="tree-of-contents" id="sf-tree-of-contents">Tree of Contents</label>
+                    <input type="radio" name="sf-result-type" value="list" id="sf-document-list" checked>
+                    <label for="document-list" id="sf-document-list">Document List</label>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- .row -->
+</form>
+
+<!-- ************************ END FORM ************************ -->
+
+<!-- DOCUMENT OPTIONS -->
 <div class="row">
     <div class="columns">
         <hr>
         <h4>You are in:</h4>
         {% include snippets/breadcrumbs.html %}
-
-        {% include document_options/search.html %}
+        {% include document_options/search_basic.html %}
     </div>
 </div>
 
-<!-- Expand Level -->
+<!-- EXPAND LEVEL -->
 <div class="row">
-    <div class="medium-6 large-7 columns">
+    <div class="columns text-right">
         <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
     </div>
-    <div class="medium-6 large-5 columns">
-        <div class="large-5 columns text-center large-text-rightX">
-            <label class="inline">Browse By:</label>
-        </div>
-        <div class="large-7 columns">
-            <select id="selBrowseBy" name="selBrowseBy">
-               <option value="contentType" selected="selected">Content Type</option>
-               <option value="product">Product</option>
-               <option value="subjectArea">Subject Area</option>
-            </select>
-        </div>
-    </div>
 </div>
 
+<!-- TOC -->
 <div class="row">
     <div class="columns">
-    <hr>
         {% include toc_output/toc_01.html %}
     </div>
 </div>

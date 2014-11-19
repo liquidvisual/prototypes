@@ -1,0 +1,30 @@
+<div class="lv-doc-options disabled">
+    <div class="row">
+        <div class="medium-6 columns">
+            <ul class="lv-inline-list small-gaps text-center medium-text-left">
+                <li><a title="Print Documents" class="ajax-modal" href="/modal_output/print-search.html"><i class="fi-print"></i></a></li>
+                <li><a title="Download Documents" class="ajax-modal" href="/modal_output/export-document.html"><i class="fi-page-export-doc"></i></a></li>
+                <li><a title="Email Documents" class="ajax-modal" href="/modal_output/email-search.html"><i class="fi-mail"></i></a></li>
+                <li><a title="Create Email Alert" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-alert"></i></a></li>
+                <li><a title="Create Organisational Alert" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-calendar"></i></a></li>
+                <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-rss"></i></a></li>
+            </ul>
+        </div>
+        <div class="medium-6 columns">
+            <form novalidate action="/research/search-results/" method="post">
+                <div class="row">
+                    <div class="medium-5 columns text-center medium-text-right">
+                        <label class="inline">Browse By:</label>
+                    </div>
+                    <div class="medium-7 columns">
+                        <select id="selBrowseBy" name="selBrowseBy">
+                        <option value="contentType" selected="selected">Content Type</option>
+                        <option value="product">Product</option>
+                        <option value="subjectArea">Subject Area</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> <!-- .row -->
+</div> <!-- .lv-doc-options -->

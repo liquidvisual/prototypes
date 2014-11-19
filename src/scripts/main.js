@@ -184,7 +184,6 @@ $('.lv-sidebar .tabs a').click(function(e){
 //-----------------------------------------------------------------
 
 $('#context-menu-btn').click(function(e){
-
     var contextMenu = $('.lv-context-menu');
     var contextMenuVisible = contextMenu.is(':visible');
     var contextMenuWidth = contextMenu.width();
@@ -211,19 +210,19 @@ var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
 
-$(".lv-hamburger").bind(touchEvent, function(e) {
+// $(".lv-hamburger").bind(touchEvent, function(e) {
 
-    $this = $(this);
-    //e.preventDefault();
+//     $this = $(this);
+//     //e.preventDefault();
 
-    if ($this.attr('href', '#off-canvas-menu-left')) {
-        $("#off-canvas-menu-left").trigger("open.mm");
-    }
+//     if ($this.attr('href', '#off-canvas-menu-left')) {
+//         $("#off-canvas-menu-left").trigger("open.mm");
+//     }
 
-    if ($this.attr('href', '#off-canvas-menu-right')) {
-        $("#off-canvas-menu-right").trigger("open.mm");
-    }
-});
+//     if ($this.attr('href', '#off-canvas-menu-right')) {
+//         $("#off-canvas-menu-right").trigger("open.mm");
+//     }
+// });
 
 // $(function() {
 //     $("#off-canvas-menu-left").mmenu({

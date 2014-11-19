@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
-        {% comment %} SEO IMPLEMENTATION {% endcomment %}
+        <!-- SEO IMPLEMENTATION -->
         {% if page.url == '/' %}
             {{ site.data.settings.seo_title }}
         {% else %}
@@ -49,7 +49,7 @@
     <![endif]-->
 </head>
 <body>
-    <div class="lv-super developerX">
+    <div class="lv-super">
         <div class="lv-page">
 
             {{ content }}
@@ -69,7 +69,7 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <!-- CDN -->
+    <!-- CDN SCRIPTS -->
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
     <!-- build:js(src) /assets/scripts/optimized.js -->
@@ -82,31 +82,26 @@
     <script src="/_bower_components/nprogress/nprogress.js"></script>
     <script src="/_bower_components/WOW/dist/wow.min.js"></script>
     <script src="/scripts/legacy/foundation.js"></script>
+
+    <script src="/scripts/adhoc-export-options.js"></script>
+    <script src="/scripts/adhoc-filter-toc.js"></script>
+    <script src="/scripts/adhoc-toc.js"></script>
+    <script src="/scripts/content-expander.js"></script>
+    <script src="/scripts/context-menu.js"></script>
+    <script src="/scripts/modal.js"></script>
+    <script src="/scripts/off-canvas.js"></script>
+    <script src="/scripts/sidebar.js"></script>
+    <script src="/scripts/tooltips.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 
+    <!-- PLACE ALL OTHER SCRIPT REFS BELOW HERE -->
+
     <script>
         $(document).foundation();
-
-
-
-        $(function() {
-            FastClick.attach(document.body);
-        });
-
-        $(function() {
-            $(".ui-datepicker").datepicker();
-            $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
-        });
-
-        // jQuery UI
-        $(function() {
-            $("#docoptionstabs").tabs();
-          });
-
     </script>
 
-    <!-- Analytics Scripts Here -->
+    <!-- Analytics Scripts Go Here -->
 
     <!-- No Javascript Warning -->
     <noscript>

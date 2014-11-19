@@ -5,39 +5,6 @@ context_menu: "context_menu_output/search_templates.html"
 
 {% assign jurisdictions = site.data.jurisdictions %}
 
-<!-- **********************************************************************
-    AD HOC JAVASCRIPT (Simulation Purposes Only)
-*********************************************************************** -->
-
-<script>
-    $(document).ready(function(){
-
-        var searchForm = $('.lv-partial-view');
-        var advancedOptions = $('.lv-advanced-options');
-
-        // Toggle fields INSIDE of form
-        $('.lv-advanced-options-btn').click(function(e){
-            var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
-
-            e.preventDefault();
-            $(this).text(text);
-            advancedOptions.toggle();
-        });
-
-        // Toggle form HEIGHT (mobile only - shows first 3 fields approx)
-        $('.lv-partial-view-btn').click(function(e){
-            // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
-            e.preventDefault();
-            $(this).hide();
-            searchForm.toggleClass('lv-partial-view');
-        });
-    });
-</script>
-
-<!-- **********************************************************************
-    END AD HOC JAVASCRIPT (Simulation Purposes Only)
-*********************************************************************** -->
-
 <div class="row">
     <div class="columns">
         <h3 class="left">Cases</h3>

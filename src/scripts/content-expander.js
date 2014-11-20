@@ -37,7 +37,7 @@ $('.lv-advanced-options-btn').click(function(e){
 
 $('.lv-partial-view, #resultsContainerForm .result, #documentDisplay').each(function(){
     var $this = $(this);
-    var expander = $('.lv-partial-view-btn');
+    var expander = $('.lv-partial-view-btn.lv-non-legacy');
     var expanderOnPage = expander.length;
 
     // Test for expander btn on page, if legacy - append to markup (ew)

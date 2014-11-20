@@ -1,0 +1,67 @@
+/*
+    LEGACY DOC CONTEXT.CSS
+
+    - Last updated: 20.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Document Styling Taken from Checkpoint
+//-----------------------------------------------------------------
+
+.lv-context-menu #dochierarchy {
+    // overflow-x: scroll;
+    margin: 10px;
+    padding: 10px;
+    background: #F5F6F6;
+    border: 1px solid #D4DCE3;
+    border-radius: $global-radius;
+}
+
+.lv-context-menu #dochierarchy ul {
+    // padding-left: 5px;
+
+    .active a {
+        background: none;
+        font-weight: bold;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        color: $blue-color;
+        border-bottom: 0;
+        font-size: 13px;
+        padding: 5px 0;
+
+        &:before {
+            @extend .foundation-icons;
+            content: "\f198";
+            // content: "↳";
+            color: $primary-color;
+            font-size: 10px;
+            margin-right: 5px;
+
+            // background: white;
+            width: 15px;
+            text-align: center;
+            height: 15px;
+            line-height: 13px;
+
+            border-radius: 2px;
+        }
+    }
+}
+
+.lv-super .lv-context-menu #dochierarchy > .tree > li > a {
+
+
+    &:before {
+        background: none;
+        // border: 1px solid #B3B3B3;
+        color: grey;
+    }
+}

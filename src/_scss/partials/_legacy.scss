@@ -147,9 +147,10 @@
 //=========================================
 
 .lv-context-menu #recentDocumentsList li a:before,
-.lv-context-menu #searchResultPanel a:before {
+.lv-context-menu #searchResultPanel a:before,
+.lv-context-menu #docoptionscontent .doclist.toplevel a:before {
 	@extend .foundation-icons;
-	content: "\f18e";
+	content: "\f18e"; // document icon
 	display: inline-block;
 	margin-right: 10px;
 	color: $primary-color;

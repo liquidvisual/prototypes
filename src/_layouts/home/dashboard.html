@@ -4,10 +4,9 @@ layout: homepage
 
 <div class="row">
     <div class="columns">
-        <ul class="dashboard-grid medium-block-grid-1 large-block-grid-3">
+        <ul class="lv-dashboard-grid medium-block-grid-1 large-block-grid-3">
             <li>
                 <!-- CALENDAR -->
-
                 {% capture body_text %}
                     <p><a href="#"></a></p>
                     <form data-abide novalidate id="contact" action="/" method="post">
@@ -24,13 +23,11 @@ layout: homepage
                             <option value="FBT">FBT</option>
                         </select>
                     </form>
-                    <div id="datepicker"></div>
-
+                    <div id="datepicker"></div> <!-- JQuery UI Calendar -->
                 {% endcapture %}
                 {% include components/dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
 
                 <!-- BASIC SEARCH -->
-
                 {% capture body_text %}
                     <p><a class="ajax-modal" href="/modal_output/terms-and-connectors.html"><i class="fi-lightbulb"></i> Advanced searching hints and tips</a></p>
                     <form data-abide novalidate id="contact" action="/" method="post">
@@ -39,7 +36,9 @@ layout: homepage
                                 <input name="q" type="text" placeholder="Type Keywords">
                             </div>
                             <div class="hide-for-small medium-4 columns">
-                                <button type="submit" class="button flat radius postfix">Search</button>
+                                <!-- Switch anchor for button on production -->
+                                <!-- <button type="submit" class="button flat radius postfix">Search</button> -->
+                                <a href="/research/tax-exempt-10-deduct/" class="button flat radius postfix">Search</a>
                             </div>
                         </div>
                     </form>
@@ -47,7 +46,6 @@ layout: homepage
                 {% include components/dash_block.html header="Basic Search" body=body_text %}
 
                 <!-- ADVANCED SEARCH -->
-
                 {% capture body_text %}
                     <ul>
                         <li><a href="#">Cases</a></li>
@@ -61,8 +59,7 @@ layout: homepage
 
             </li>
             <li>
-                <!-- MY PINS (Quicklinks) -->
-
+                <!-- MY QUICKLINKS -->
                 {% capture body_text %}
                     <ul>
                         <li><a href="#">abc</a></li>
@@ -72,14 +69,12 @@ layout: homepage
                 {% include components/dash_block.html header="My Quicklinks" body=body_text %}
 
                 <!-- MY CLEARDOCS -->
-
                 {% capture body_text %}
                     <h5 class="subheader"><i>There have been no assembled documents saved.</i></h5>
                 {% endcapture %}
                 {% include components/dash_block.html header="My Cleardocs" body=body_text %}
 
                 <!-- MY PRODUCTS -->
-
                 {% capture body_text %}
                     <ul>
                         <li><a href="/research/">Tax Q and A - Submit a question</a></li>
@@ -112,7 +107,6 @@ layout: homepage
             </li>
             <li>
                 <!-- CUSTOMER SERVICES -->
-
                 {% capture body_text %}
                     <ul>
                         <li><a href="#">Contact Details</a></li>
@@ -124,7 +118,6 @@ layout: homepage
                 {% include components/dash_block.html header="Customer Service" body=body_text %}
 
                 <!-- NEWS HEADLINES -->
-
                 {% capture body_text %}
                     <ul>
                         <li><a href="">Dependant spouse tax rebate denied</a></li>
@@ -138,12 +131,10 @@ layout: homepage
                         <li><a href="">Transfer pricing: relevance of actual commercial or financial relations</a></li>
                         <li><a href="">ASIC seeks court order to stop property promoter from providing unlicensed financial product advice on SMSFs</a></li>
                     </ul>
-
                 {% endcapture %}
                 {% include components/dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
 
                 <!-- MY TOOLS -->
-
                 {% capture body_text %}
                     <ul>
                         <li><a href="/tools/">Accountant's Manual</a></li>
@@ -158,14 +149,14 @@ layout: homepage
                         <li><a href="/tools/">Company Tax Return Preparation Checklist</a></li>
                     </ul>
                     <br>
-                    <a href="/tools/">More Tools</a>
+                    <a class="button radius knockout tiny" href="/tools/">More Tools</a>
                 {% endcapture %}
                 {% include components/dash_block.html header="My Tools" body=body_text %}
 
             </li>
         </ul>
 
-    </div>
-</div>
+    </div> <!-- .columns -->
+</div> <!-- .row -->
 
 {{ content }}

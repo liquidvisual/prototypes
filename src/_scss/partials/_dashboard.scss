@@ -1,7 +1,7 @@
 /*
     DASHBOARD.CSS
 
-    - Last updated: 18.09.14
+    - Last updated: 20.09.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,85 +11,134 @@
 // Dasboard
 //-----------------------------------------------------------------
 
-.dashboard-grid ul {
-    list-style: none;
-    margin-left: 0;
-}
+.lv-dashboard-grid {
+    ul, p {
+      font-size: rem-calc(14);
+    }
 
-.dashboard-grid li {
-    /* Only way I could think to solve block grid issue */
-    @media (max-width: 47.938em){
-        width: 100%;
-        overflow: hidden;
+    ul {
+        list-style: none;
+        margin: 0;
     }
 }
 
 //=========================================
-// Dash Content
+// Patch Foundation's grid issue
+// Apply below the landscape breakpoint (1024)
 //=========================================
 
-.dashboard-grid p,
-.dashboard-grid ul {
-    font-size: 14px;
+.lv-super .lv-dashboard-grid li {
+    @media (max-width: 63.938em){ // 1023
+        float: none;
+        padding-bottom: 0;
+    }
 }
 
+//=========================================
+// Content Block
+//=========================================
 
-
-.content-block {
-    background: #DBDFDF;
+.lv-content-block {
     background: white;
-    // background: #FBFAF8;
     width: 100%;
-    // padding: rem-calc(10 20);
+    padding: rem-calc(15 5);
     margin-bottom: rem-calc(20);
-    // border: 1px solid #D4DCE3;
     box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
-    // border: 1px solid #C7C0B8;
+
+    .lv-content-block-inner {
+        padding: rem-calc(20);
+    }
+
+    &.is-collapsed {
+        .lv-content-block-inner {
+            display: none;
+        }
+        h3 {
+            color: #777;
+        }
+    }
+
+    // h2 {
+    //     font-size: rem-calc(24);
+    // }
+
+    li {
+        margin-bottom: rem-calc(15);
+
+        &:before {
+            @extend .foundation-icons;
+            content: "\f198";
+            color: $primary-color;
+            margin-right: 6px;
+        }
+    }
 }
 
-.sidebar .content-block ul {
-    font-size: rem-calc(14);
-}
+//=========================================
+// Content Block Header
+//=========================================
 
-.content-block-header {
+.lv-content-block-header {
     position: relative;
-    background: white;
     padding: rem-calc(5 60 5 20);
-    // border-bottom: 1px solid #D3D3D3;
+    // border-bottom: 1px solid #DEDEDE; // keep it minimal
+
+    .minimize-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: rem-calc(44);
+        display: block;
+
+        span {
+            // @extend .transition;
+            position: absolute;
+            // top: 50%;
+            top: rem-calc(15);
+            // margin-top: rem-calc(-2);
+            width: 24px;
+            height: 4px;
+            background: #6A6A6A;
+
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     left: 10px;
+            //     top: -10px;
+            //     width: 4px;
+            //     height: 24px;
+            //     background: #6A6A6A;
+            // }
+        }
+
+        &:hover span {
+            background: $primary-color;
+            border-color: $primary-color !important;
+        }
+    }
 }
 
-.content-block-header .minimize-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: rem-calc(44);
-    display: block;
+.is-collapsed .lv-content-block-header .minimize-btn span {
+    top: rem-calc(10);
+    height: 15px;
+    border: 2px solid #CFCFCF;
+    background: none;
 }
 
-.content-block-header .minimize-btn span {
+.lv-content-block a:not(.button) {
     @extend .transition;
-    position: absolute;
-    top: 50%;
-    margin-top: rem-calc(-2);
-    width: rem-calc(25);
-    height: rem-calc(4);
-    background: #6A6A6A;
+    color: $blue-color;
+
+    &:hover {
+        color: $primary-color;
+    }
 }
 
-.content-block-header .minimize-btn:hover span {
-    background: #62CE9A;
-}
+//=========================================
+// Sidebar Context
+//=========================================
 
-.content-block-inner {
-    padding: rem-calc(20);
-}
-
-.content-block h2 {
-    font-size: rem-calc(24);
-}
-
-.content-block a {
-    color: #125BA2;
-    // color: white;
+.lv-sidebar .lv-content-block ul {
+    font-size: rem-calc(14);
 }

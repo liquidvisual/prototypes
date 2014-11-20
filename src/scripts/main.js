@@ -14,9 +14,7 @@ $(document).ready(function() {
     // Fastclick on touch
     FastClick.attach(document.body);
 
-    // jQuery UI
-    $(".ui-datepicker").datepicker();
-    $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
+    // Init Tabs
     $("#docoptionstabs").tabs();
 });
 
@@ -27,6 +25,22 @@ $(document).ready(function() {
 $(window).load(function() {
     NProgress.done(); // Complete preload once page loaded
 });
+
+//-----------------------------------------------------------------
+// Dashboard (Move into its own file)
+//-----------------------------------------------------------------
+
+$('.lv-dashboard-grid .lv-content-block').each(function(){
+
+    var $this = $(this);
+    var minimizer = $('.minimize-btn', $this);
+    var content = $('.lv-content-block-inner', $this);
+
+    minimizer.click(function(e){
+        e.preventDefault();
+        $this.toggleClass('is-collapsed');
+    });
+})
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

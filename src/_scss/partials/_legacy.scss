@@ -5,7 +5,7 @@
 /*
     LEGACY.CSS
 
-    - Last updated: 11.11.14
+    - Last updated: 20.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -139,8 +139,6 @@
 	margin-bottom: 30px;
 	border-bottom: 2px solid #D4DCE3;
 }
-
-
 
 //=========================================
 // search results and recently accessed docs are similiar - same icons
@@ -320,20 +318,25 @@
 }
 
 #prefForm,
-#documentDisplay,
 #resultsContainerForm .result {
 	background: white;
-	padding: 20px;
-	border: 1px solid #DDDDDD;
-	// border-radius: 5px;
+	padding: 20px; // THIS IS A PROBLEM
+	border: 1px solid #DDDDDD; // THIS IS A PROBLEM
 	margin-bottom: 20px;
 	box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.05);
+}
 
-	// height: 340px;
-	// overflow: hidden;
+#documentDisplay {
+	background: white;
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding: 20px; // THIS IS A PROBLEM
+	border: 1px solid #DDDDDD; // THIS IS A PROBLEM
+	box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.05);
 
-	@media #{$medium-up} {
-	    // height: auto;
+	@media #{$small-only} {
+	    padding: 0; // THIS IS A PROBLEM
+	    border: 0;
 	}
 }
 

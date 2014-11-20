@@ -141,4 +141,8 @@
 
 .lv-sidebar .lv-content-block ul {
     font-size: rem-calc(14);
+
+    a {
+        color: $blue-color;
+    }
 }

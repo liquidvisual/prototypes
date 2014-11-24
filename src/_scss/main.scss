@@ -3,7 +3,7 @@
 /*
     MAIN.CSS
 
-    - Last updated: 13.11.14
+    - Last updated: 24.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -13,7 +13,7 @@
 $primary-color: #FC8946;
 $secondary-color: #FEA66C; //#2C2C2C;
 $tertiary-color: #5E6E7E; //#125BA2;
-$dark-grey: #2C2C2C;
+$dark-grey: #2C2C2C; //rgba(44,44,44,0.85);//#2C2C2C;
 $border-color-light: #D4DCE3;
 $blue-color: #125BA2;
 
@@ -70,13 +70,17 @@ html, body {
 	top: 0;
 	width: 100%;
 	background: #FE9241;
-	background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
+	// background: #FE9241 url(../img/template/nav-gradient.png) repeat-x; /* fallback */
 	height: $header-height;
 	z-index: 110; // bring above nav
 
 	.logo {
 		padding: rem-calc(0 30);
 	}
+}
+
+.lv-footer {
+	background: black;
 }
 
 //=========================================
@@ -236,22 +240,21 @@ html, body {
 	display: table;
 	width: 100%; /* added 3.11.14 for toolbar at weird small breakpoint */
 	overflow-x: hidden; /* stops sidebar breaking out with the -1px x value */
-	// top: $header-height;
+	// overflow-y: scroll;
 	top: $header-height;
-	overflow-y: scroll;
+
+	@media #{$medium-up} {
+		// position: absolute;
+		// left: 0;
+		// right: 0;
+		// bottom: 0;
+		// width: 100%;
+		// height: 100%;
+		// padding: 0;
+	}
 
 	@media #{$large-up} {
 		top: $header-height + $primary-nav-height;
-	}
-
-	@media #{$medium-up} {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		padding: 0;
 	}
 }
 
@@ -373,23 +376,29 @@ html, body {
 .lv-footer {
 	position: relative;
 	padding: rem-calc(5 15 10 15);
-	// border-top: 1px solid $border-color-light;
 	background: $footer-background;
-	// overflow: hidden;
-	z-index: 10;
-
-	a {
-		color: white;
-	}
+	width: 100%;
+	z-index: 20;
 
 	@media #{$medium-up} {
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    height: $footer-height;
+	    line-height: $footer-height;
+	    padding: rem-calc(0 15);
+	}
+
+	@media #{$xxlarge-up} {
 		position: fixed;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		height: $footer-height;
-		line-height: $footer-height;
-		padding: rem-calc(0 15);
+
+	}
+
+	a {
+		color: white;
 	}
 }
 

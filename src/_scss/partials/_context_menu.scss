@@ -1,7 +1,7 @@
 /*
-    CONTEXT_MENU.CSS
+    CONTEXT MENU.CSS
 
-    - Last updated: 03.11.14
+    - Last updated: 24.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -13,8 +13,6 @@
 
 .lv-context-menu {
     @extend .table-cell;
-
-    // width: $primary-nav-width + $secondary-nav-width;
     width: $secondary-nav-width;
 
     // Context menu is overlaid on mobile (when cog appeara)
@@ -27,7 +25,6 @@
         display: none; // hides by default
 
         /* Rectangle 35: */
-        // -moz-box-shadow: 8px 2px 8px 2px rgba(0,0,0,0.50);
         box-shadow: 4px 2px 8px 0px rgba(0,0,0,0.10);
 
         &.lv-show {
@@ -52,46 +49,12 @@
     }
 
     @media (min-width: 56.250em) {
-        bottom: $footer-height;
+        // bottom: $footer-height;
+        bottom: 0;
     }
 
     @media #{$large-up} {
         top: $header-height + $primary-nav-height;
-    }
-}
-
-//=========================================
-// Primary Nav (Tools Nav IF INCLUDED)
-//=========================================
-
-.lv-context-menu .primary-nav {
-    @extend .table-cell;
-
-    width: $primary-nav-width;
-    background: $dark-grey;
-    height: 100%;
-
-    a {
-        color: lighten($dark-grey, 60%);
-        display: block;
-        padding: 10px 0;
-        font-size: 11px;
-
-        &.active {
-            // background: darken($dark-grey, 30%);
-            color: $primary-color;
-        }
-
-        &:hover {
-            @extend .transition;
-            color: $secondary-color;
-        }
-    }
-
-    i {
-        font-size: 28px;
-        display: block;
-        line-height: 1;
     }
 }
 

@@ -9,10 +9,14 @@
 //-----------------------------------------------------------------
 
 // jQuery UI on SELECT elements
-$(".ui-datepicker").datepicker();
+$(".ui-datepicker").datepicker({ dateFormat: "dd-mm-yy" });
+
+//-----------------------------------------------------------------
+// Adhoc Datepicker for Dashboard Below
+//-----------------------------------------------------------------
 
 // homepage datepicker - select to launch modal (faked)
-$("#datepicker").datepicker({ changeMonth: true, changeYear: true,
+$("#datepicker").datepicker({ changeMonth: true, changeYear: true, dateFormat: "dd-mm-yy",
 
     // SIMULATED FUNCTIONALITY ONLY
     onSelect: function(dateText, inst) {

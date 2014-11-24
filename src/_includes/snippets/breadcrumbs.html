@@ -6,7 +6,6 @@
 {% assign crumbs = page.url | split: '/' %}
 
 <ul class="lv-breadcrumbs">
-    <li><a href="/">Home</a></li>
     {% for crumb in crumbs offset: 1 %}
         {% if forloop.last %}
             <li class="active">{{ crumb | replace:'-',' ' }}</li>

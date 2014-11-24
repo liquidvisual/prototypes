@@ -24,7 +24,7 @@ $('.lv-advanced-options-btn').click(function(e){
 
     e.preventDefault();
     $(this).text(text);
-    advancedOptions.toggle();
+    advancedOptions.toggleClass('hide');
 });
 
 //-----------------------------------------------------------------

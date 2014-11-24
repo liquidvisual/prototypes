@@ -381,20 +381,13 @@ html, body {
 	z-index: 20;
 
 	@media #{$medium-up} {
-	    position: absolute;
-	    left: 0;
-	    bottom: 0;
-	    height: $footer-height;
-	    line-height: $footer-height;
-	    padding: rem-calc(0 15);
-	}
-
-	@media #{$xxlarge-up} {
 		position: fixed;
 		left: 0;
 		right: 0;
 		bottom: 0;
-
+		height: $footer-height;
+		line-height: $footer-height;
+		padding: rem-calc(0 15);
 	}
 
 	a {

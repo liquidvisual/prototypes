@@ -407,5 +407,11 @@
 
 #prefForm {
 	background: white;
+}
 
+// Allow gap for footer in content scroll
+
+#sidebar {
+	height: auto !important;
+	// overflow: hidden;
 }

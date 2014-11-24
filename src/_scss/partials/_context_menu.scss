@@ -49,8 +49,8 @@
     }
 
     @media (min-width: 56.250em) {
-        // bottom: $footer-height;
-        bottom: 0;
+        bottom: $footer-height;
+        // bottom: 0;
     }
 
     @media #{$large-up} {
@@ -86,6 +86,11 @@
         background: #5E6E7F;
         color: white;
     }
+
+    // .lv-spacer {
+    //     height: $footer-height + 500;
+    //     background: red;
+    // }
 
     a {
         display: block;

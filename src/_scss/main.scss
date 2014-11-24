@@ -520,84 +520,6 @@ input[type="submit"] {
 // FORMS
 //-----------------------------------------------------------------
 
-@mixin lv-partial-view-result() {
-	position: relative;
-
-	&.collapsed {
-		.resultMetadata {
-			margin-bottom: 0;
-			overflow: hidden;
-		}
-
-		.resultMetadata * {
-			display: none;
-		}
-
-		.resultMetadata .titleBody,
-		.resultMetadata .titleBody * {
-			display: inline;
-			padding: 0;
-			margin: 0;
-		}
-	}
-
-	// Button
-	.lv-partial-view-btn {
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		margin: 0;
-	}
-}
-
-//=========================================
-
-@mixin lv-partial-view-document() {
-	position: relative;
-
-	&.collapsed {
-		height: rem-calc(500);
-		overflow: hidden;
-	}
-
-	// Button
-	.lv-partial-view-btn {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		margin: 0;
-	}
-}
-
-//=========================================
-
-@mixin lv-partial-view() {
-	position: relative;
-
-	&.collapsed {
-		@media #{$small-only} {
-		   height: rem-calc(220);
-		   overflow: hidden;
-		}
-	}
-}
-
-//=========================================
-
-.lv-partial-view {
-	@include lv-partial-view();
-}
-
-#resultsContainerForm .result {
-	@include lv-partial-view-result();
-}
-
-#documentDisplay {
-	@include lv-partial-view-document();
-}
-
-//-----------------------------------------------------------------
-
 // Center all input placeholder text - looks better
 
 ::-webkit-input-placeholder {
@@ -777,6 +699,7 @@ input[type="submit"] {
 @import "partials/legacy_document";
 @import "partials/legacy_search_templates";
 @import "partials/modal";
+@import "partials/partial_view";
 @import "partials/fonts";
 @import "partials/foundation-icons";
 

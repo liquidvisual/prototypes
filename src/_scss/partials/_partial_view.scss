@@ -1,0 +1,73 @@
+/*
+    PARTIAL VIEW.CSS
+
+    - Last updated: 24.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Partial View
+//-----------------------------------------------------------------
+
+// Button
+.lv-partial-view-btn {
+	display: none;
+}
+
+@mixin lv-partial-view-result() {
+	position: relative;
+
+	&.collapsed {
+		.resultMetadata {
+			margin-bottom: 0;
+			overflow: hidden;
+		}
+
+		.resultMetadata * {
+			display: none;
+		}
+
+		.resultMetadata .titleBody,
+		.resultMetadata .titleBody * {
+			display: inline;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	// Button
+	.button.lv-partial-view-btn {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		margin: 0;
+		display: inline-block;
+	}
+}
+
+//=========================================
+
+@mixin lv-partial-view() {
+	position: relative;
+
+	&.collapsed {
+		@media #{$small-only} {
+		   height: rem-calc(220);
+		   overflow: hidden;
+		}
+	}
+}
+
+//=========================================
+
+.lv-partial-view {
+	@include lv-partial-view();
+}
+
+#resultsContainerForm .result {
+	@media #{$small-only} {
+	   @include lv-partial-view-result();
+	}
+}

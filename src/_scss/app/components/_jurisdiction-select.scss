@@ -1,12 +1,14 @@
 /*
     JURISDICTION SELECT.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 26.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+
+$jurisdiction-select-bg: #FE9E4F !default;
 
 //-----------------------------------------------------------------
 // Jurisdiction Select
@@ -17,9 +19,9 @@
     top: rem-calc(13);
     display: inline-block;
     border: 1px solid white;
-    overflow: hidden;
     border-radius: $global-radius;
     background: #FE9E4F;
+    overflow: hidden;
 
     @media #{$medium-up} {
         position: absolute;
@@ -28,9 +30,9 @@
     i.fa-caret-down {
         position: absolute;
         top: 0;
-        right: 10px;
+        right: rem-calc(10);
         color: white;
-        line-height: 32px;
+        line-height: rem-calc(32);
     }
 
     ul {
@@ -39,7 +41,8 @@
         margin: 0;
         text-align: left;
 
-        li:last-child a {
+        li:last-child a,
+        li.last a, {
             display: none;
         }
     }
@@ -50,7 +53,7 @@
         padding: rem-calc(4 30 4 10);
 
         &:hover {
-            background: lighten(#FE9E4F, 10%);
+            background: lighten($jurisdiction-select-bg, 10%);
             color: #222;
         }
     }
@@ -58,4 +61,9 @@
 
 .jurisdiction-select:hover ul li a {
     display: block;
+}
+
+// IE8 doesn't render SVG
+.lt-ie9 .flag-icon {
+    display: none;
 }

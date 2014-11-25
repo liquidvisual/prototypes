@@ -1,7 +1,7 @@
 /*
     HEADER.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 26.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,9 +12,9 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: $header-height;
     // background: #FE9241;
     background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
-    height: $header-height;
     z-index: 110; // bring above nav
 
     .logo {
@@ -26,7 +26,7 @@
 // Mobile Nav
 //=========================================
 
-.user-profile {
+.lv-user-profile {
     position: absolute;
     top: 0;
     right: 20px;
@@ -34,20 +34,24 @@
     padding: 9px;
 }
 
-.user-profile-title {
+.lv-user-profile-title {
     display: block;
     color: white;
     line-height: 1;
     font-size: 18px;
 }
 
-.user-profile-pic {
-    position: relative;
-    margin-left: 10px;
+.lv-user-profile-pic {
+    // position: relative;
+    margin-left: rem-calc(10);
     box-shadow: 0 3px 5px -6px rgba(0, 0, 0, 0.26);
     cursor: pointer;
+    padding-bottom: rem-calc(9); // allow hit area to extend to dropdown
 
-    padding-bottom: 9px; // allow hit area to extend to dropdown
+    img {
+        max-width: none;
+        // width: rem-calc(40);
+    }
 
     i {
         @extend .transition;
@@ -55,7 +59,7 @@
     }
 }
 
-.user-profile .logout-btn {
+.lv-user-profile .logout-btn {
     @extend .transition;
     color: #222;
     font-size: 11px;
@@ -74,39 +78,39 @@
 // User Menu Dropdown
 //=========================================
 
-.user-profile-pic:hover .user-profile-dropdown {
+.lv-user-profile-pic:hover .lv-user-profile-dropdown {
     height: auto;
     opacity: 1;
 }
 
-.user-profile-pic:hover i.fa-caret-down {
+.lv-user-profile-pic:hover i.fa-caret-down {
     color: #222;
 }
 
-.user-profile-pic a:hover i {
+.lv-user-profile-pic a:hover i {
     color: $primary-color;
 }
 
-.user-profile-dropdown {
+.lv-user-profile-dropdown {
     @extend .transition;
-    opacity: 0;
-    height: 0;
-    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
-    overflow: hidden;
     position: absolute;
-    top: 100%;
+    top: $header-height;
     right: 0;
+    width: rem-calc(180);
+    height: 0;
     background: white;
     border-left: 1px solid #D4DCE3;
     border-right: 1px solid #D4DCE3;
-    width: rem-calc(180);
     border-radius: 0 0 $global-radius $global-radius;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+    opacity: 0;
+    overflow: hidden;
 
     ul {
+        margin: 0;
         font-size: rem-calc(12);
         font-weight: 600;
         list-style: none;
-        margin: 0;
         text-align: left;
     }
 

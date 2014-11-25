@@ -22,8 +22,8 @@
 		<div class="jurisdiction-select">
 			<i class="fa fa-caret-down"></i>
 			<ul>
-				<li><a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a></li>
-				<li><a href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a></li>
+				<li class="first"><a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a></li>
+				<li class="last"><a href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a></li>
 			</ul>
 		</div>
 
@@ -32,15 +32,15 @@
 </section>
 
 <!-- User Profile -->
-<section class="user-profile text-right show-for-large-up">
+<section class="lv-user-profile text-right show-for-large-up">
 	<div class="left">
-		<strong class="user-profile-title">{{ username }}</strong>
+		<strong class="lv-user-profile-title">{{ username }}</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
-	<div class="right user-profile-pic" href="#">
+	<div class="right lv-user-profile-pic" href="#">
 		<img width="40" src="/img/ui/no-face.png" alt="Profile Pic">
 		<i class="fa fa-caret-down"></i>
-		<div class="user-profile-dropdown">
+		<div class="lv-user-profile-dropdown">
 			{% include menus/user_menu.html %}
 		</div>
 	</div>

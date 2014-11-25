@@ -1,25 +1,11 @@
 /*
-    MAIN SCRIPTS - Last updated: 19-11-14
+    SIDEBAR.JS - Last updated: 26-11-14
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
 var TOUCH_ENABLED = $(".touch").length;
-var sidebarStateStorage = localStorage.getItem("sidebarState");
-
-//-----------------------------------------------------------------
-// HTML Local Storage - Save state of sidebar
-//
-// Sidebar defaults to the 'is-collapsed' state (class on Master).
-// Local storage will remember if user left it open or hasn't touched it.
-// In either case, media queries will handle the state naturally, or the sidebar
-// will initalize open.
-//-----------------------------------------------------------------
-
-if (sidebarStateStorage == "uncollapsed" || sidebarStateStorage == null) {
-    $('.lv-sidebar').removeClass('is-collapsed');
-}
 
 //-----------------------------------------------------------------
 // Sidebar Tabs
@@ -46,11 +32,6 @@ $('.lv-sidebar .tabs a').click(function(e){
         // user has engaged the sidebar. Remember preferences and override media queries
         sidebar.removeClass('is-uncollapsed').addClass('is-collapsed');
 
-        // USER STORAGE - Remember user input
-        if (typeof(Storage) !== "undefined") {
-            localStorage.setItem("sidebarState", "collapsed");
-        }
-
     // Clicking all other tabs - will ** UNCOLLAPSE ** sidebar
     } else {
         // Strip all content sections, apply 'active' to ID that matches tabHash
@@ -67,11 +48,6 @@ $('.lv-sidebar .tabs a').click(function(e){
             sidebar.removeClass('is-collapsed').addClass('is-uncollapsed');
 
             // sidebar.css({ x: sidebar.width() }).transition({ x: 0 }); can't make this work
-
-            // USER STORAGE - Remember user input
-            if (typeof(Storage) !== "undefined") {
-                localStorage.setItem("sidebarState", "uncollapsed");
-            }
         }
 
         // scroll to top on desktop, sidebar scrolls WITH page on medium-up

@@ -14,7 +14,7 @@
     width: 100%;
     height: $header-height;
     // background: #FE9241;
-    background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
+    background: #F5F6F6 url(../img/template/nav-gradient.png) repeat-x; /* fallback */
     z-index: 110; // bring above nav
 
     .logo {
@@ -29,28 +29,27 @@
 .lv-user-profile {
     position: absolute;
     top: 0;
-    right: 20px;
+    right: rem-calc(20);
     height: $header-height;
-    padding: 9px;
+    padding: rem-calc(9); // magic, but lines up best
 }
 
 .lv-user-profile-title {
     display: block;
     color: white;
     line-height: 1;
-    font-size: 18px;
+    font-size: rem-calc(18);
 }
 
 .lv-user-profile-pic {
-    // position: relative;
     margin-left: rem-calc(10);
     box-shadow: 0 3px 5px -6px rgba(0, 0, 0, 0.26);
     cursor: pointer;
-    padding-bottom: rem-calc(9); // allow hit area to extend to dropdown
+    padding-bottom: rem-calc(10); // allow hit area to extend to dropdown
 
     img {
         max-width: none;
-        // width: rem-calc(40);
+        width: 39px;
     }
 
     i {
@@ -62,7 +61,7 @@
 .lv-user-profile .logout-btn {
     @extend .transition;
     color: #222;
-    font-size: 11px;
+    font-size: rem-calc(11);
     font-weight: 600;
 
     &:hover {
@@ -71,7 +70,7 @@
 }
 
 .logo-switcher-wrapper {
-    display: inline;
+    display: inline; // best for cross compatibility
 }
 
 //=========================================

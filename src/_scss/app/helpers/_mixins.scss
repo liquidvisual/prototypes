@@ -1,0 +1,65 @@
+/*
+    MIXINS.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Mixins
+//-----------------------------------------------------------------
+
+@mixin transition() {
+    -webkit-transition: all .16s linear;
+       -moz-transition: all .16s linear;
+         -o-transition: all .16s linear;
+        -ms-transition: all .16s linear;
+            transition: all .16s linear;
+
+    -webkit-transition-property: opacity, color, width, background, transform;
+       -moz-transition-property: opacity, color, width, background, transform;
+         -o-transition-property: opacity, color, width, background, transform;
+        -ms-transition-property: opacity, color, width, background, transform;
+            transition-property: opacity, color, width, background, transform;
+}
+
+.transition {
+    @include transition();
+}
+
+//-----------------------------------------------------------------
+// Mixins
+//-----------------------------------------------------------------
+
+@mixin foundation-icons() {
+    font-family: "foundation-icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+.foundation-icons {
+    @include foundation-icons();
+}
+
+//-----------------------------------------------------------------
+// Table Cell
+//-----------------------------------------------------------------
+
+@mixin table-cell() {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+}
+
+.table-cell {
+    @include table-cell();
+}

@@ -1,0 +1,25 @@
+/*
+    SPECIAL.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.lv-super .pagination {
+    display: inline-block; // so we can text-align it
+}
+
+.postfix {
+    position: relative;
+    left: -2px;
+}
+
+.row.is-full-width {
+    max-width: none;
+}

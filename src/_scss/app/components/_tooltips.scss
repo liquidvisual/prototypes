@@ -1,0 +1,38 @@
+/*
+    TOOLTIPS.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Tooltips
+//-----------------------------------------------------------------
+
+.lv-tooltip {
+    position: relative;
+    @media #{$medium-up} {
+        background: url(../img/ui/dots-black.png) repeat-x bottom;
+    }
+}
+
+.lv-tooltip .title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    text-align: left;
+    font-size: rem-calc(13);
+    width: rem-calc(300);
+    background: white;
+    border: 2px solid $primary-color;
+    padding: rem-calc(15);
+    left: 0;
+    z-index: 1000;
+}
+
+.tooltip-icon {
+    padding-left: 10px;
+    font-size: 20px;
+}

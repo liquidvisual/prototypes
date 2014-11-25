@@ -1,0 +1,86 @@
+/*
+    EXPORT OPTIONS.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Export Options
+//-----------------------------------------------------------------
+
+.lv-doc-options {
+    position: relative;
+    background: white;
+    overflow: hidden;
+    border: 1px solid #DDDDDD;
+    border-radius: $global-radius;
+    padding: rem-calc(10 15);
+    margin-bottom: rem-calc(20);
+
+    ul {
+        position: relative;
+        font-size: rem-calc(25);
+        margin-bottom: rem-calc(20);
+
+        @media #{$large-up} {
+            margin-bottom: 0;
+        }
+    }
+
+    select {
+        @media #{$medium-up} {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Buttons are unclickable when disabled
+
+.lv-doc-options.disabled ul {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        color: #DDDDDD;
+        cursor: default;
+    }
+}
+
+.lv-doc-navigation {
+    list-style: none;
+    margin-left: 0;
+    line-height: 1.2;
+
+    .lv-doc-navigation-item {
+        display: inline-block;
+        padding: rem-calc(0 15);
+        margin-bottom: rem-calc(10);
+    }
+
+    .text {
+        font-size: rem-calc(14);
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+
+    .button {
+        margin-bottom: 0;
+        padding: rem-calc(2 10);
+
+        &.disabled {
+            border-color: #ddd;
+            background: none;
+            color: #ddd;
+        }
+    }
+}

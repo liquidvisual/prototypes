@@ -1,0 +1,61 @@
+/*
+    JURISDICTION SELECT.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Jurisdiction Select
+//-----------------------------------------------------------------
+
+.jurisdiction-select {
+    position: relative;
+    top: rem-calc(13);
+    display: inline-block;
+    border: 1px solid white;
+    overflow: hidden;
+    border-radius: $global-radius;
+    background: #FE9E4F;
+
+    @media #{$medium-up} {
+        position: absolute;
+    }
+
+    i.fa-caret-down {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: white;
+        line-height: 32px;
+    }
+
+    ul {
+        list-style: none;
+        font-size: rem-calc(14);
+        margin: 0;
+        text-align: left;
+
+        li:last-child a {
+            display: none;
+        }
+    }
+
+    a {
+        display: block;
+        color: white;
+        padding: rem-calc(4 30 4 10);
+
+        &:hover {
+            background: lighten(#FE9E4F, 10%);
+            color: #222;
+        }
+    }
+}
+
+.jurisdiction-select:hover ul li a {
+    display: block;
+}

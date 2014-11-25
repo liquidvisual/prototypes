@@ -1,0 +1,36 @@
+@import "foundation/components/buttons";
+/*
+    BUTTONS.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Buttons
+//-----------------------------------------------------------------
+
+.search-button i {
+    font-size: rem-calc(20);
+    line-height: 36px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    @include button;
+    border-radius: $global-radius;
+    cursor: pointer;
+}
+
+.lv-super .pill {
+    padding: rem-calc(2 8);
+    background: grey;
+    border-radius: 30px;
+}
+
+.lv-sidebar .pill {
+    float: right;
+    margin-top: rem-calc(6);
+}

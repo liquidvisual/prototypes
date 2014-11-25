@@ -121,6 +121,7 @@ module.exports = function (grunt) {
     //-----------------------------------------------------
     sass: {
       options: {
+        //sourceMap: true,
         //imagePath: '',
         includePaths: ['<%= yeoman.app %>/_bower_components/foundation/scss',
                        '<%= yeoman.app %>/_bower_components/jQuery.mmenu/src/scss']
@@ -137,7 +138,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          //sourceMap: false,
+          // sourceMap: true,
           outputStyle: 'expanded'
         },
         files: [{

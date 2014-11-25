@@ -12,8 +12,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: #FE9241;
-    // background: #FE9241 url(../img/template/nav-gradient.png) repeat-x; /* fallback */
+    // background: #FE9241;
+    background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
     height: $header-height;
     z-index: 110; // bring above nav
 

@@ -3,8 +3,6 @@ layout: internal
 context_menu: "context_menu_output/search_templates.html"
 ---
 
-{% assign jurisdictions = site.data.jurisdictions %}
-
 <div class="row">
     <div class="columns">
         <h3 class="left">Cases</h3>
@@ -100,10 +98,20 @@ context_menu: "context_menu_output/search_templates.html"
                 </div>
                 <div class="medium-9 columns">
                     <select name="Jurisdiction" id="jurisdiction">
-                        <option selected disabled>All Jurisdictions</option>
-                        {% for item in jurisdictions %}
-                        <option value="{{ item.title }}">{{ item.title }}</option>
-                        {% endfor %}
+                        <option value="All" selected>All Jurisdictions</option>
+                        <option value="Australian Captial Territory">Australian Captial Territory</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        <option value="Commonwealth of Australia">Commonwealth of Australia</option>
+                        <option value="New South Wales">New South Wales</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Territory">Northern Territory</option>
+                        <option value="Queensland">Queensland</option>
+                        <option value="South Australia">South Australia</option>
+                        <option value="Tasmania">Tasmania</option>
+                        <option value="Victoria">Victoria</option>
+                        <option value="Western Australia">Western Australia</option>
                     </select>
                 </div>
             </div>

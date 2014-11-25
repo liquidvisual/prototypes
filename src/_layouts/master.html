@@ -26,7 +26,6 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
 
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
@@ -35,7 +34,8 @@
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
-    <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
+    <!-- IE8 Override -->
+
 
     <!-- build:js(src) /assets/scripts/priority-optimized.js -->
     <script src="/scripts/legacy/jquery-1.11.1.min.js"></script>
@@ -69,9 +69,6 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <!-- CDN SCRIPTS -->
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-
     <!-- build:js(src) /assets/scripts/optimized.js -->
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
@@ -80,15 +77,15 @@
     <script src="/_bower_components/jquery.transit/jquery.transit.js"></script>
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
-    <script src="/_bower_components/WOW/dist/wow.min.js"></script>
-    <script src="/scripts/legacy/foundation.js"></script>
 
+    <script src="/scripts/legacy/jquery-ui.js"></script>
     <script src="/scripts/adhoc-datepicker.js"></script>
     <script src="/scripts/adhoc-export-options.js"></script>
     <script src="/scripts/adhoc-filter-toc.js"></script>
     <script src="/scripts/adhoc-toc.js"></script>
     <script src="/scripts/content-expander.js"></script>
     <script src="/scripts/context-menu.js"></script>
+    <script src="/scripts/dashboard.js"></script>
     <script src="/scripts/modal.js"></script>
     <script src="/scripts/off-canvas.js"></script>
     <script src="/scripts/sidebar.js"></script>
@@ -96,13 +93,9 @@
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 
-    <!-- PLACE ALL OTHER SCRIPT REFS BELOW HERE -->
+    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 
-    <script>
-        $(document).foundation();
-    </script>
-
-    <!-- Analytics Scripts Go Here -->
+    <!-- Analytics Scripts Go Below Here -->
 
     <!-- No Javascript Warning -->
     <noscript>

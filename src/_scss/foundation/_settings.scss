@@ -56,8 +56,7 @@ $font-smoothing: antialiased;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #FF8000;
-$tertiary-color: pink;
+$primary-color: #FC8946; //#FF8000;
 $secondary-color: #666666; //#e7e7e7;
 $alert-color: #DB3A48; //#f04124;
 $success-color: #43AC6A;
@@ -377,7 +376,7 @@ $button-font-weight: 600; //$font-weight-normal;
 // We use these to control button border styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-$button-bg: $primary-color;
+// $button-bg: $primary-color;
 // $button-border-color: scale-color($bg, $lightness: $button-function-factor);
 
 // We use this to set the default radius used throughout the core.

@@ -1,95 +1,87 @@
 /*
     PARTIAL VIEW.CSS
 
-    - Last updated: 24.11.14
+    - Last updated: 25.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Partial View on Search Templates
+//-----------------------------------------------------------------
+
+.lv-partial-view {
+	position: relative;
+
+	&.collapsed {
+		@media #{$small-only} {
+		  height: rem-calc(220);
+		  overflow: hidden;
+		}
+	}
+}
+
+//=========================================
+// Partial View Btn
+//=========================================
+
+.lv-super .lv-partial-view-btn {
+	display: none;
+
+	@media #{$small-only} {
+	    display: inline-block;
+	}
+}
 
 //-----------------------------------------------------------------
-// Advanced Options
+// Advanced Options - extends to Search Templates
 //-----------------------------------------------------------------
 
-.lv-advanced-options {
+.lv-super .lv-advanced-options {
 	@media #{$small-only} {
 	   display: inherit;
 	}
 }
 
-.lv-advanced-options-btn {
+.lv-super .lv-advanced-options-btn {
 	@media #{$small-only} {
 	   display: none;
 	}
 }
 
 //-----------------------------------------------------------------
-// Partial View Btn
+// Partial View on Results Screen (Targets Legacy)
 //-----------------------------------------------------------------
-
-// Button
-.lv-partial-view-btn {
-	@media #{$medium-up} {
-	   display: none;
-	}
-}
-
-//-----------------------------------------------------------------
-// Partial View
-//-----------------------------------------------------------------
-
-@mixin lv-partial-view-result() {
-	position: relative;
-
-	&.collapsed {
-		.resultMetadata {
-			margin-bottom: 0;
-			overflow: hidden;
-		}
-
-		.resultMetadata * {
-			display: none;
-		}
-
-		.resultMetadata .titleBody,
-		.resultMetadata .titleBody * {
-			display: inline;
-			padding: 0;
-			margin: 0;
-		}
-	}
-
-	// Button
-	.button.lv-partial-view-btn {
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		margin: 0;
-	}
-}
-
-//=========================================
-
-@mixin lv-partial-view() {
-	position: relative;
-
-	&.collapsed {
-		@media #{$small-only} {
-		   height: rem-calc(220);
-		   overflow: hidden;
-		}
-	}
-}
-
-//=========================================
-
-.lv-partial-view {
-	@include lv-partial-view();
-}
 
 #resultsContainerForm .result {
+	position: relative;
+
 	@media #{$small-only} {
-	   @include lv-partial-view-result();
+		&.collapsed {
+			.resultMetadata {
+				margin-bottom: 0;
+				overflow: hidden;
+			}
+
+			.resultMetadata * {
+				display: none;
+			}
+
+			.resultMetadata .titleBody,
+			.resultMetadata .titleBody * {
+				display: inline;
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		// Button
+		.lv-partial-view-btn {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			margin: 0;
+		}
 	}
 }

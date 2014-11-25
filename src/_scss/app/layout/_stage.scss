@@ -12,18 +12,18 @@
     position: relative;
     display: table;
     width: 100%; /* added 3.11.14 for toolbar at weird small breakpoint */
+    height: 100%;
     overflow-x: hidden; /* stops sidebar breaking out with the -1px x value */
-    // overflow-y: scroll;
+    overflow-y: scroll; // need this?
     top: $header-height;
 
     @media #{$medium-up} {
-        // position: absolute;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
-        // width: 100%;
-        // height: 100%;
-        // padding: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        padding: 0;
     }
 
     @media #{$large-up} {
@@ -51,26 +51,30 @@
     }
 }
 
+//=========================================
 // Ignore gaps left for sidebar on internal pages
-.homepage .lv-main {
+//=========================================
 
-    .row {
-        max-width: 1200px;
-    }
-
+.homepage .lv-main,
+.internal-minimal .lv-main {
     @media #{$medium-up} {
         padding: rem-calc(20 20 50 20);
     }
 }
 
-// No context menus or sidebar - Preferences uses it
-.internal-minimal .lv-main {
-
+.homepage .lv-main {
     .row {
-        max-width: 900px;
+        max-width: rem-calc(1200);
     }
+}
 
-    @media #{$medium-up} {
-        padding: rem-calc(20 20 50 20);
+//=========================================
+// Preferences uses 'internal-minimal' template.
+// Doesn't use context menus or sidebar.
+//=========================================
+
+.internal-minimal .lv-main {
+    .row {
+        max-width: rem-calc(900);
     }
 }

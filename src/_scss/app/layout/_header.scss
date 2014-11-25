@@ -1,0 +1,155 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+.lv-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FE9241;
+    // background: #FE9241 url(../img/template/nav-gradient.png) repeat-x; /* fallback */
+    height: $header-height;
+    z-index: 110; // bring above nav
+
+    .logo {
+        padding: rem-calc(0 30);
+    }
+}
+
+//=========================================
+// Mobile Nav
+//=========================================
+
+.user-profile {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: $header-height;
+    padding: 9px;
+}
+
+.user-profile-title {
+    display: block;
+    color: white;
+    line-height: 1;
+    font-size: 18px;
+}
+
+.user-profile-pic {
+    position: relative;
+    margin-left: 10px;
+    box-shadow: 0 3px 5px -6px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+
+    padding-bottom: 9px; // allow hit area to extend to dropdown
+
+    i {
+        @extend .transition;
+        color: white;
+    }
+}
+
+.user-profile .logout-btn {
+    @extend .transition;
+    color: #222;
+    font-size: 11px;
+    font-weight: 600;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.logo-switcher-wrapper {
+    display: inline;
+}
+
+//=========================================
+// User Menu Dropdown
+//=========================================
+
+.user-profile-pic:hover .user-profile-dropdown {
+    height: auto;
+    opacity: 1;
+}
+
+.user-profile-pic:hover i.fa-caret-down {
+    color: #222;
+}
+
+.user-profile-pic a:hover i {
+    color: $primary-color;
+}
+
+.user-profile-dropdown {
+    @extend .transition;
+    opacity: 0;
+    height: 0;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-left: 1px solid #D4DCE3;
+    border-right: 1px solid #D4DCE3;
+    width: rem-calc(180);
+    border-radius: 0 0 $global-radius $global-radius;
+
+    ul {
+        font-size: rem-calc(12);
+        font-weight: 600;
+        list-style: none;
+        margin: 0;
+        text-align: left;
+    }
+
+    i {
+        // color: #666;
+        color: #94999C;
+    }
+
+    a {
+        // @extend .transition;
+        display: block;
+        padding: rem-calc(10 15);
+        border-bottom: 1px solid #D4DCE3; // better blue? #E1E4E6
+        color: #505659;//#676767;
+
+        &:hover {
+            // color: $primary-color;
+            background: #F2F4F5;
+        }
+    }
+}
+
+//=========================================
+// Mobile Nav Btn (user menu)
+//=========================================
+
+.lv-hamburger {
+    width: 50px;
+    height: $header-height;
+    line-height: $header-height;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    /* refactor */
+    display: none;
+
+    // Removed on dashboard
+    &.remove {
+        display: none !important;
+    }
+
+    @media (max-width: 900px) {
+        // display: block !important;
+        display: block;
+    }
+}

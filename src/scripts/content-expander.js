@@ -45,7 +45,6 @@ $('.lv-partial-view, #resultsContainerForm .result').each(function(){
         expander = $('<a class="lv-partial-view-btn button pill tiny" href="#">Expand</a>');
         $this.append(expander);
     }
-
     $this.addClass('collapsed');
 
     expander.click(function(e){
@@ -55,17 +54,3 @@ $('.lv-partial-view, #resultsContainerForm .result').each(function(){
         $this.hasClass('collapsed') ? $(this).text('Expand') : $(this).text('Minimize');
     });
 });
-
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
-
-// // Toggle form HEIGHT (mobile only - shows first 3 fields approx)
-// $('.lv-partial-view-btn, #documentDisplay').click(function(e){
-//     // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
-//     // e.preventDefault();
-
-//     // $(this).hide();
-
-//     // searchForm.toggleClass('lv-partial-view');
-// });

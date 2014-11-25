@@ -58,10 +58,6 @@
         }
     }
 
-    // h2 {
-    //     font-size: rem-calc(24);
-    // }
-
     li {
         margin-bottom: rem-calc(15);
 
@@ -100,16 +96,6 @@
             width: 24px;
             height: 4px;
             background: #6A6A6A;
-
-            // &:after {
-            //     content: "";
-            //     position: absolute;
-            //     left: 10px;
-            //     top: -10px;
-            //     width: 4px;
-            //     height: 24px;
-            //     background: #6A6A6A;
-            // }
         }
 
         &:hover span {
@@ -132,17 +118,5 @@
 
     &:hover {
         color: $primary-color;
-    }
-}
-
-//=========================================
-// Sidebar Context
-//=========================================
-
-.lv-sidebar .lv-content-block ul {
-    font-size: rem-calc(14);
-
-    a {
-        color: $blue-color;
     }
 }

@@ -39,6 +39,10 @@
 
 // Buttons are unclickable when disabled
 
+.lv-doc-options.disabled {
+    cursor: not-allowed;
+}
+
 .lv-doc-options.disabled ul {
     &:after {
         content: "";

@@ -5,18 +5,18 @@
 	<!-- Mobile Hamburgers -->
 	<div class="left">
 		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
-		<a id="context-menu-btn" class="lv-hamburger left {% if page.url == "/" %} remove {% endif %}" href="#"><i class="fi-results"></i></a>
+		<a id="context-menu-btn" class="lv-hamburger left {% if page.url == "/" %} removeX {% endif %}" href="#"><i class="fi-results"></i></a>
 	</div>
 
 	<!-- User Menu Hamburger -->
 	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
 
-	<div class="logo-switcher-wrapper">
+	<div class="lv-logo-wrapper">
 
 		<!-- Logo -->
-		<a title="Checkpoint®" class="logo show-for-medium-upX" href="/">
-			<!-- <img width="152" src="/img/template/logo.png" alt="Thomson Reuters Checkpoint"> -->
-			<img width="40" src="/img/template/logo-mobile-black@2x.png" alt="Thomson Reuters Checkpoint">
+		<a title="Checkpoint®" class="lv-logo" href="/">
+			<img class="show-for-medium-up" width="152" src="/img/template/logo.png" alt="Thomson Reuters Checkpoint">
+			<img class="hide-for-medium-up" width="40" src="/img/template/logo-mobile-black@2x.png" alt="Thomson Reuters Checkpoint">
 		</a>
 
 		<!-- Jurisdiction Select -->
@@ -25,11 +25,11 @@
 			<ul>
 				<li class="first">
 					<a class="show-for-medium-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a>
-					<a class="hide-for-medium-up" href="#"><i class="flag-icon flag-icon-au"></i></a>
+					<a class="hide-for-medium-up" href="#">AU</a>
 				</li>
 				<li class="last">
 					<a class="show-for-medium-up" href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
-					<a class="hide-for-medium-up" href="#"><i class="flag-icon flag-icon-nz"></i></a>
+					<a class="hide-for-medium-up" href="#">NZ</a>
 				</li>
 			</ul>
 		</div> <!-- .jurisdiction-select -->

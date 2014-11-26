@@ -9,22 +9,24 @@
 //-----------------------------------------------------------------
 
 $jurisdiction-select-bg: #FE9E4F !default;
+$jurisdiction-select-bg-hover: #FE9E4F !default;
 
 //-----------------------------------------------------------------
 // Jurisdiction Select
 //-----------------------------------------------------------------
 
 .jurisdiction-select {
-    position: relative;
+    position: absolute;
+    // position: relative;
     top: rem-calc(14); // perfect vertical center
     display: inline-block;
     border: 1px solid white;
     border-radius: $global-radius;
-    background: #FE9E4F;
+    background: $jurisdiction-select-bg;
     overflow: hidden;
 
     @media #{$medium-up} {
-        position: absolute;
+        // position: absolute;
     }
 
     i.fa-caret-down {
@@ -53,7 +55,7 @@ $jurisdiction-select-bg: #FE9E4F !default;
         padding: rem-calc(4 30 4 10);
 
         &:hover {
-            background: lighten($jurisdiction-select-bg, 10%);
+            background: lighten($jurisdiction-select-bg-hover, 10%);
             color: #222;
         }
     }

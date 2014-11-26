@@ -7,6 +7,9 @@
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
 
 .lv-header {
     position: fixed;
@@ -17,24 +20,55 @@
     background: $body-bg url(../img/template/nav-gradient.png) repeat-x; /* fallback */
     z-index: 110; // bring above nav
 
-    .logo {
-        padding: rem-calc(0 30); // Lines up with grid
+    .lv-logo {
+        padding: rem-calc(0 5);
+        display: inline-block;
+
+        @media #{$medium-up} {
+            padding: rem-calc(0 10);
+        }
+
+        @media #{$large-up} {
+            padding: rem-calc(0 20);
+        }
     }
 }
 
 //=========================================
-// Mobile Nav Btn (user menu)
+// Logo Wrapper
 //=========================================
 
+.lv-logo-wrapper {
+    line-height: $header-height;
+    width: rem-calc(116);
+    text-align: left;
+    display: inline-block;
+
+    // Centering bigger logo
+    @media #{$medium-up} {
+        width: rem-calc(306);
+    }
+
+    // Revert to bigger logo on medium up
+    @media #{$large-up} {
+        display: inline;
+        line-height: 0;
+    }
+}
+
+//-----------------------------------------------------------------
+// Mobile Nav Btn (user menu)
+//-----------------------------------------------------------------
+
 .lv-hamburger {
+    display: none;
     width: 50px;
     height: $header-height;
     line-height: $header-height;
     color: white;
     text-align: center;
-    font-size: 26px;
+    font-size: rem-calc(26);
     /* refactor */
-    display: none;
 
     // Removed on dashboard
     &.remove {
@@ -42,7 +76,6 @@
     }
 
     @media (max-width: 900px) {
-        // display: block !important;
         display: block;
     }
 }

@@ -1,0 +1,56 @@
+@import "foundation/components/grid";
+/*
+    LEGACY PREFERENCES.CSS
+
+    - Last updated: 26.11.14
+    - hello@liquidvisual.com
+
+    - Notes -
+
+    This template output had a lot of <br> elements. To remove excessive
+    spacing - remove them from their template manually.
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Legacy Preferences
+//-----------------------------------------------------------------
+
+#prefForm {
+    padding: rem-calc(30);
+
+    h2 {
+        margin-bottom: rem-calc(30);
+        padding-bottom: rem-calc(5);
+        border-bottom: 1px solid #ddd;
+    }
+
+    // Submit Button
+    #submitDiv {
+        margin-top: rem-calc(30);
+        text-align: center;
+    }
+}
+
+//=========================================
+// Insert Foundation Grid
+//=========================================
+
+.preferenceRow {
+    @include grid-row();
+    margin-bottom: rem-calc(30);
+}
+
+.preferenceTitle {
+    @media #{$medium-up} {
+        @include grid-column($columns:4, $offset:1);
+        text-align: right;
+    }
+}
+
+.preferenceContent {
+    @media #{$medium-up} {
+        @include grid-column(5);
+    }
+}

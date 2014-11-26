@@ -2,7 +2,7 @@
 /*
     BUTTONS.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 26.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -17,8 +17,11 @@
     line-height: 36px;
 }
 
+.lv-super input[type="button"],
+.lv-super input[type="submit"],
 input[type="button"],
-input[type="submit"] {
+input[type="submit"]
+ {
     @include button;
     border-radius: $global-radius;
     cursor: pointer;

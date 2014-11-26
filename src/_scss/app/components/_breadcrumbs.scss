@@ -1,7 +1,7 @@
 /*
     BREADCRUMBS.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 26.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -17,5 +17,6 @@
     a,
     li {
         text-transform: capitalize;
+        font-size: rem-calc(14);
     }
 }

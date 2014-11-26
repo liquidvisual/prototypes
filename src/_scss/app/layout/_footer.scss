@@ -28,7 +28,8 @@
         padding: rem-calc(0 15);
     }
 
-    a {
+    a,
+    .anchor {
         color: white;
     }
 }
@@ -37,10 +38,12 @@
 // Footer Links
 //=========================================
 
-.lv-footer-links a {
+.lv-footer-links a,
+.lv-footer-links .anchor {
     @extend .transition;
     font-size: rem-calc(12);
     line-height: $footer-height;
+    cursor: pointer;
 
     &:hover {
         color: grey;

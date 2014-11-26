@@ -1,0 +1,45 @@
+---
+layout: internal
+sidebar_details: "sidebar_content/workflow.html"
+---
+
+<!-- ADHOC JS FOR SIMULATION ONLY -->
+<script>
+    $(document).ready(function(){
+        // Point all links to the same template (demo purposes only)
+        var newLink = "/workflow/annual-trust-distributions-workflow/";
+        $(".toc-root a").attr("href", newLink);
+    });
+</script>
+<!-- END ADHOC JS FOR SIMULATION ONLY -->
+
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Workflow</h3>
+        <p class="right"><a href="/modal_output/understanding-workflow.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
+        <hr>
+    </div>
+</div>
+
+<!-- EXPORT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        <h5>You are in:</h5>
+        {% include snippets/breadcrumbs.html %}
+        {% include export_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- EXPAND LEVEL -->
+<div class="row">
+    <div class="columns text-right">
+        <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include toc_output/toc_workflow.html %}
+    </div>
+</div>

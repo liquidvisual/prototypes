@@ -15,7 +15,7 @@ $jurisdiction-select-bg-hover: #FE9E4F !default;
 // Jurisdiction Select
 //-----------------------------------------------------------------
 
-.jurisdiction-select {
+.lv-jurisdiction-select {
     position: absolute;
     // position: relative;
     top: rem-calc(14); // perfect vertical center
@@ -61,7 +61,7 @@ $jurisdiction-select-bg-hover: #FE9E4F !default;
     }
 }
 
-.jurisdiction-select:hover ul li {
+.lv-jurisdiction-select:hover ul li {
     display: block;
 }
 

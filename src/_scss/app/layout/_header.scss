@@ -34,6 +34,11 @@
     }
 }
 
+// IE8 image scaling issue
+.lt-ie9 .lv-header img {
+    max-width: none;
+}
+
 //=========================================
 // Logo Wrapper
 //=========================================

@@ -11,10 +11,11 @@
 // Export Options
 //-----------------------------------------------------------------
 
-.lv-doc-options {
+.lv-export-options {
     position: relative;
-    background: white;
-    overflow: hidden;
+    // background: white;
+    background: #EDEFEF;
+    // overflow: hidden;
     border: 1px solid #DDDDDD;
     border-radius: $global-radius;
     padding: rem-calc(10 15);
@@ -22,11 +23,11 @@
 
     ul {
         position: relative;
-        font-size: rem-calc(25);
-        margin-bottom: rem-calc(20);
+        // font-size: rem-calc(25);
+        // margin-bottom: rem-calc(20);
 
         @media #{$large-up} {
-            margin-bottom: 0;
+            // margin-bottom: 0;
         }
     }
 
@@ -39,11 +40,11 @@
 
 // Buttons are unclickable when disabled
 
-.lv-doc-options.disabled {
+.lv-export-options.disabled {
     cursor: not-allowed;
 }
 
-.lv-doc-options.disabled ul {
+.lv-export-options.disabled ul {
     &:after {
         content: "";
         position: absolute;
@@ -58,6 +59,38 @@
         cursor: default;
     }
 }
+
+//-----------------------------------------------------------------
+// Export Options Dropdown (refactor)
+//-----------------------------------------------------------------
+
+.lv-export-options-dropdown {
+    position: absolute !important;
+    top: 50px;
+    left: 0;
+    width: 240px;
+    list-style: none;
+    font-size: 1rem !important; // refactor
+    background: white;
+    border: 1px solid #DDDDDD;
+    z-index: 1;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+
+    a {
+        display: block;
+        padding: rem-calc(10 15);
+        color: #555 !important;
+        border-bottom: 1px solid #D4DCE3;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+//-----------------------------------------------------------------
+// Document Navigation (sort by etc)
+//-----------------------------------------------------------------
 
 .lv-doc-navigation {
     list-style: none;

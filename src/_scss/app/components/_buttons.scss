@@ -25,9 +25,9 @@ input[type="submit"] {
 }
 
 .lv-super .pill {
-    padding: rem-calc(2 8);
+    padding: rem-calc(5 10);
     background: grey;
-    border-radius: 30px;
+    border-radius: rem-calc(30);
 }
 
 .lv-sidebar .pill {

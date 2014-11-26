@@ -1,7 +1,7 @@
 /*
     SIDEBAR.CSS
 
-    - Last updated: 19.11.14
+    - Last updated: 26.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -246,6 +246,10 @@ ul.lv-quicklinks {
 }
 
 //=========================================
-//
+// IE8 has issues with opening with media
+// queries alone. Needs explicit setting.
 //=========================================
 
+.lt-ie9 .lv-sidebar {
+	@include collapsed();
+}

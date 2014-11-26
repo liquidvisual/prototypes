@@ -16,7 +16,7 @@ $jurisdiction-select-bg: #FE9E4F !default;
 
 .jurisdiction-select {
     position: relative;
-    top: rem-calc(13);
+    top: rem-calc(14); // perfect vertical center
     display: inline-block;
     border: 1px solid white;
     border-radius: $global-radius;
@@ -41,8 +41,8 @@ $jurisdiction-select-bg: #FE9E4F !default;
         margin: 0;
         text-align: left;
 
-        li:last-child a,
-        li.last a, {
+        li:last-child,
+        li.last, {
             display: none;
         }
     }
@@ -59,7 +59,7 @@ $jurisdiction-select-bg: #FE9E4F !default;
     }
 }
 
-.jurisdiction-select:hover ul li a {
+.jurisdiction-select:hover ul li {
     display: block;
 }
 

@@ -13,8 +13,8 @@
 
 .lv-export-options {
     position: relative;
-    // background: white;
-    background: #EDEFEF;
+    background: white;
+    // background: #EDEFEF;
     // overflow: hidden;
     border: 1px solid #DDDDDD;
     border-radius: $global-radius;
@@ -23,11 +23,11 @@
 
     ul {
         position: relative;
-        // font-size: rem-calc(25);
+        font-size: rem-calc(25);
         // margin-bottom: rem-calc(20);
 
         @media #{$large-up} {
-            // margin-bottom: 0;
+            margin-bottom: 0;
         }
     }
 

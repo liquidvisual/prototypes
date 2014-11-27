@@ -17,8 +17,8 @@
 
 $("#tocNodes input[type='checkbox'], #resultsContainerForm input[type='checkbox']").on("click", function() {
     if ($("#tocNodes input:checked").length || $("#resultsContainerForm input:checked").length) {
-        $('.lv-doc-options').removeClass('disabled');
+        $('.lv-export-options').removeClass('disabled');
     } else {
-        $('.lv-doc-options').addClass('disabled');
+        $('.lv-export-options').addClass('disabled');
     }
 });

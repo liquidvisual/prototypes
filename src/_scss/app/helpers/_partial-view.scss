@@ -15,7 +15,7 @@
 	position: relative;
 
 	&.collapsed {
-		@media #{$small-only} {
+		@media (max-width: 48.000em) { // 1024 MAX
 		  height: rem-calc(220);
 		  overflow: hidden;
 		}
@@ -29,7 +29,7 @@
 .lv-super .lv-partial-view-btn {
 	display: none;
 
-	@media #{$small-only} {
+	@media (max-width: 48.000em) {
 	    display: inline-block;
 	}
 }
@@ -39,25 +39,32 @@
 //-----------------------------------------------------------------
 
 .lv-super .lv-advanced-options {
-	@media #{$small-only} {
+	@media (max-width: 48.000em) {
 	   display: inherit;
 	}
 }
 
 .lv-super .lv-advanced-options-btn {
-	@media #{$small-only} {
+	@media (max-width: 48.000em) {
 	   display: none;
 	}
 }
 
 //-----------------------------------------------------------------
-// Partial View on Results Screen (Targets Legacy)
+// Partial View on RESULTS SCREEN ONLY (Targets Legacy)
 //-----------------------------------------------------------------
 
 #resultsContainerForm .result {
 	position: relative;
 
-	@media #{$small-only} {
+	@media (max-width: 48.000em) { // 768 MAX
+
+		.documentLink,
+		.resultMetadata .titleBody {
+			font-size: rem-calc(16);
+			line-height: 1.4;
+		}
+
 		&.collapsed {
 			.resultMetadata {
 				margin-bottom: 0;

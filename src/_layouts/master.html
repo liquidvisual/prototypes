@@ -9,6 +9,8 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Checkpoint">
     <title>
         {% comment %} SEO IMPLEMENTATION {% endcomment %}
         {% if page.url == '/' %}
@@ -23,6 +25,7 @@
     </title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">

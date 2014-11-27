@@ -54,9 +54,48 @@
     }
 }
 
-//=========================================
+//-----------------------------------------------------------------
+// User Profile icons
+//-----------------------------------------------------------------
+
+.lv-user-profile-icons {
+    a {
+        @extend .transition;
+        color: white;
+        font-size: rem-calc(13);
+        font-weight: bold;
+
+        border-radius: $global-radius;
+        padding: rem-calc(2 10);
+
+        &:hover {
+            // color: rgba(0,0,0,.5);
+            // background: rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.1);
+        }
+    }
+
+    i {
+        color: rgba(0,0,0,.5);
+    }
+}
+
+.lv-user-text {
+    position: absolute;
+    bottom: rem-calc(-30);
+    right: rem-calc(20);
+    color: lighten($dark-grey, 70%);
+    font-size: rem-calc(15);
+}
+
+// Remove if going with initial design
+.lv-user-profile {
+    right: rem-calc(0);
+}
+
+//-----------------------------------------------------------------
 // User Menu Dropdown
-//=========================================
+//-----------------------------------------------------------------
 
 .lv-user-profile-pic:hover .lv-user-profile-dropdown {
     height: auto;
@@ -112,3 +151,5 @@
         }
     }
 }
+
+//=========================================

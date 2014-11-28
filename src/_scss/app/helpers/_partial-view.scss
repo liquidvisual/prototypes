@@ -1,7 +1,7 @@
 /*
     PARTIAL VIEW.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 28.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -15,10 +15,16 @@
 	position: relative;
 
 	&.collapsed {
-		@media (max-width: 48.000em) { // 1024 MAX
-		  height: rem-calc(220);
-		  overflow: hidden;
+		overflow: hidden;
+
+		@media (max-width: 768px) {
+			height: rem-calc(150);
 		}
+
+		@media #{$small-only} {
+            margin-bottom: 0;
+            height: rem-calc(220);
+        }
 	}
 }
 
@@ -29,7 +35,7 @@
 .lv-super .lv-partial-view-btn {
 	display: none;
 
-	@media (max-width: 48.000em) {
+	@media (max-width: 768px) {
 	    display: inline-block;
 	}
 }
@@ -57,7 +63,7 @@
 #resultsContainerForm .result {
 	position: relative;
 
-	@media (max-width: 48.000em) { // 768 MAX
+	@media (max-width: 768px) { // 768 MAX
 
 		.documentLink,
 		.resultMetadata .titleBody {

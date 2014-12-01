@@ -5,6 +5,8 @@
 
 {% assign crumbs = page.url | split: '/' %}
 
+<h5><i class="fi-marker"></i>&nbsp; You are in:</h5>
+
 <ul class="lv-breadcrumbs">
     {% for crumb in crumbs offset: 1 %}
         {% if forloop.last %}

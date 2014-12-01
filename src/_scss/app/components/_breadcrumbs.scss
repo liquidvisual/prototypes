@@ -12,11 +12,22 @@
 //-----------------------------------------------------------------
 
 .lv-breadcrumbs {
-    border-bottom: 0;
+    // border-bottom: 0;
+    background: #FAFAFA;
+    // background: #EDEFEF;
+    // overflow: hidden;
+    border: 1px solid #DDDDDD;
+    border-radius: $global-radius;
+    padding: rem-calc(10 15);
+    margin-bottom: rem-calc(20);
 
     a,
     li {
         text-transform: capitalize;
         font-size: rem-calc(14);
     }
+}
+
+.fi-marker {
+    color: #FF405C;
 }

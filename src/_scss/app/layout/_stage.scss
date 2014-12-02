@@ -8,31 +8,34 @@
 // Variables
 //-----------------------------------------------------------------
 
+$stage-bg-background: #DEDEDE;
+
+//-----------------------------------------------------------------
+// Stage
+//-----------------------------------------------------------------
+
 .lv-stage {
-    position: relative;
     display: table;
+    position: relative;
+    top: $header-height;
     width: 100%; /* added 3.11.14 for toolbar at weird small breakpoint */
     height: 100%;
     overflow-x: hidden; /* stops sidebar breaking out with the -1px x value */
     overflow-y: scroll; // need this?
-    top: $header-height;
 
-    @media #{$medium-up} {
+    @media #{$large-up} {
         position: absolute;
+        top: $header-height + $primary-nav-height;
         left: 0;
         right: 0;
         bottom: 0;
         height: 100%;
         padding: 0;
     }
-
-    @media #{$large-up} {
-        top: $header-height + $primary-nav-height;
-    }
 }
 
 .homepage .lv-stage {
-    background: #DEDEDE;
+    background: $stage-bg-background;;
 }
 
 //-----------------------------------------------------------------

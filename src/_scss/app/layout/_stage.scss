@@ -1,14 +1,31 @@
 /*
     STAGE.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 02.12.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
-$stage-bg-background: #DEDEDE;
+$stage-bg-background: #F5F6F6;
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+// There is a conflict with F5 and MMenu off-canvas
+// This prevents the page jumping to the top
+// https://github.com/BeSite/jQuery.mmenu/issues/142
+
+html, body {
+    // height: 100% !important;
+    // height: auto !important; // this will fix Mmenu but break lv-stage
+}
+
+.lv-super {
+    height: 100%;
+}
 
 //-----------------------------------------------------------------
 // Stage
@@ -22,20 +39,24 @@ $stage-bg-background: #DEDEDE;
     height: 100%;
     overflow-x: hidden; /* stops sidebar breaking out with the -1px x value */
     overflow-y: scroll; // need this?
+    background: $stage-bg-background;
 
-    @media #{$large-up} {
+    @media #{$medium-up} {
         position: absolute;
-        top: $header-height + $primary-nav-height;
         left: 0;
         right: 0;
         bottom: 0;
-        height: 100%;
         padding: 0;
+    }
+
+    @media #{$large-up} {
+        top: $header-height + $primary-nav-height;
     }
 }
 
 .homepage .lv-stage {
-    background: $stage-bg-background;;
+    // background: $stage-bg-background;
+    background: none;
 }
 
 //-----------------------------------------------------------------

@@ -193,7 +193,7 @@ ul.lv-quicklinks {
 .lv-sidebar {
 
 	// Hide on mobile (below portrait)
-	@media (max-width: 767px) {
+	@media #{$small-only} {
 	    display: none;
 	}
 

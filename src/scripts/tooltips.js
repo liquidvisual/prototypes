@@ -12,8 +12,11 @@ var TOUCH_ENABLED = $(".touch").length;
 //-----------------------------------------------------------------
 
 $(function() {
-    $(".lv-tooltip").click(function () {
+    $(".lv-tooltip").click(function (e) {
         var $title = $(this).find(".title");
+
+        e.preventDefault();
+
         if (!$title.length) {
             $(".title").remove();
             $(this).append('<span class="title">' + $(this).attr("title") + '</span>');

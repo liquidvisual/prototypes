@@ -7,6 +7,9 @@
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+
+$fixed-breakpoint: 56.250em; //56.250em; 1024 prev 900
+
 //-----------------------------------------------------------------
 // Context Menu
 //-----------------------------------------------------------------
@@ -16,7 +19,7 @@
     width: $secondary-nav-width;
 
     // Context menu is overlaid on mobile (when cog appeara)
-    @media (max-width: 56.250em) {
+    @media (max-width: $fixed-breakpoint) {
         position: fixed;
         top: 0;
         left: 0;
@@ -43,12 +46,12 @@
 	// display: table; // old code with vert nav
 
 	// remember it's MAX WIDTH, large doesn't inherit
-    @media (max-width: 56.250em) {
+    @media (max-width: $fixed-breakpoint) {
 		bottom: 0; // needs this for mobile
 		width: 100%; // for mobile only?
     }
 
-    @media (min-width: 56.250em) {
+    @media (min-width: $fixed-breakpoint) {
         bottom: $footer-height;
         // bottom: 0;
     }
@@ -87,17 +90,13 @@
         color: white;
     }
 
-    // .lv-spacer {
-    //     height: $footer-height + 500;
-    //     background: red;
-    // }
-
     a {
         display: block;
         border-bottom: 1px solid #D4DCE3;
         color: #676767;
         padding: 10px 15px;
         font-size: 0.9rem;
+
         &.active {
             background: #5E6E7F;
             color: white;

@@ -24,6 +24,10 @@
     max-width: none;
 }
 
-html {
-    height: 100% !important;
+// There is a conflict with F5 and MMenu off-canvas
+// This prevents the page jumping to the top
+// https://github.com/BeSite/jQuery.mmenu/issues/142
+
+html, body {
+    height: auto !important;
 }

@@ -17,7 +17,7 @@
 	&.collapsed {
 		overflow: hidden;
 
-		@media (max-width: 768px) {
+		@media (max-width: 1024px) {
 			height: rem-calc(150);
 		}
 
@@ -35,7 +35,7 @@
 .lv-super .lv-partial-view-btn {
 	display: none;
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 	    display: inline-block;
 	}
 }
@@ -54,6 +54,18 @@
 	@media (max-width: 48.000em) {
 	   display: none;
 	}
+}
+
+//-----------------------------------------------------------------
+// Partial View on Breadcrumbs
+//-----------------------------------------------------------------
+
+.lv-breadcrumbs-expander {
+	position: relative;
+	top: 5px;
+	right: 5px;
+	display: inline-block;
+
 }
 
 //-----------------------------------------------------------------

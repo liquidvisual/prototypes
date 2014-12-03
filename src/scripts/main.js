@@ -16,6 +16,14 @@ $(document).ready(function() {
 
     // Init Tabs
     $("#docoptionstabs").tabs();
+
+    $(window).scroll(function (event) {
+        var y = $(this).scrollTop();
+        if (y >= 240)
+            $('.sticky-scroll').addClass('fixed');
+        else
+            $('.sticky-scroll').removeClass('fixed');
+    });
 });
 
 //==================================================
@@ -25,6 +33,11 @@ $(document).ready(function() {
 $(window).load(function() {
     NProgress.done(); // Complete preload once page loaded
 });
+
+var top = $('.sticky-scroll-box').offset().top;
+
+
+
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

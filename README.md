@@ -3,7 +3,7 @@
 Last updated: **03.12.14**
 
 The public facing site is currently located at:
-[http://cpbeta.uat.liquidvisual.net](Live Site Here)
+[http://cpbeta.uat.liquidvisual.net](http://cpbeta.uat.liquidvisual.net)
 
 ---
 
@@ -116,8 +116,8 @@ Some templates and includes will draw data (such as the navigation and locations
 Each Jekyll page is initiated with a single MARKDOWN file acting as the point of entry. These files contain meta data, permalinks and page specific variables which get passed into the layouts. They also contain body text which is stored as:
 
     {{ content }}
-    
-In the YAML front matter - these leaf pages will specify a template to use, eg. /user/preferences.html which will start at the leaf template and inherit up the chain.    
+
+In the YAML front matter - these leaf pages will specify a template to use, eg. /user/preferences.html which will start at the leaf template and inherit up the chain.
 
 ### Front Matter
 

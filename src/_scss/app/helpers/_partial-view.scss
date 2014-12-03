@@ -45,13 +45,13 @@
 //-----------------------------------------------------------------
 
 .lv-super .lv-advanced-options {
-	@media (max-width: 48.000em) {
+	@media (max-width: 1024px) {
 	   display: inherit;
 	}
 }
 
 .lv-super .lv-advanced-options-btn {
-	@media (max-width: 48.000em) {
+	@media (max-width: 1024px) {
 	   display: none;
 	}
 }
@@ -65,7 +65,6 @@
 	top: 5px;
 	right: 5px;
 	display: inline-block;
-
 }
 
 //-----------------------------------------------------------------
@@ -75,7 +74,7 @@
 #resultsContainerForm .result {
 	position: relative;
 
-	@media (max-width: 768px) { // 768 MAX
+	@media (max-width: 1024px) { // 768 MAX
 
 		.documentLink,
 		.resultMetadata .titleBody {

@@ -1,6 +1,6 @@
 # DOCUMENTATION
 
-Last updated: **03.12.14**
+Last updated: **12.01.15**
 
 The public facing site is currently located at:
 [http://cpbeta.uat.liquidvisual.net](http://cpbeta.uat.liquidvisual.net)
@@ -9,7 +9,7 @@ The public facing site is currently located at:
 
 ## Installation &  Setup
 
-This project is built with [Jekyll 2.4.0](http://jekyllrb.com) - a static site generator. It also uses [Grunt.js](http://gruntjs.com) - a JavaScript task runner and [Bower](http://bower.io) for package management. This workflow was scaffolded with a [Yeoman](http://yeoman.io) generator called [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb) which simply automates the process of setting it all up.
+This project is built with [Jekyll 2.5.3](http://jekyllrb.com) - a static site generator. It also uses [Grunt.js](http://gruntjs.com) - a JavaScript task runner and [Bower](http://bower.io) for package management. This workflow was scaffolded with a [Yeoman](http://yeoman.io) generator called [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb) which simply automates the process of setting it all up.
 
 The repo for all the source files are found here:
 

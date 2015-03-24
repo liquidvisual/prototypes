@@ -8,17 +8,17 @@
 //
 //-----------------------------------------------------------------
 
-$("#off-canvas-menu-left").mmenu({
-   "offCanvas": {
-      "position": "left"
-   }
-});
+// $("#off-canvas-menu-left").mmenu({
+//    "offCanvas": {
+//       "position": "left"
+//    }
+// });
 
-$("#off-canvas-menu-right").mmenu({
-   "offCanvas": {
-      "position": "right"
-   }
-});
+// $("#off-canvas-menu-right").mmenu({
+//    "offCanvas": {
+//       "position": "right"
+//    }
+// });
 
 //-----------------------------------------------------------------
 // Off Canvas Menus - Uses MMenu library
@@ -30,15 +30,15 @@ $("#off-canvas-menu-right").mmenu({
 // Hamburger trigger buttons live inside the header
 //-----------------------------------------------------------------
 
-$(".lv-hamburger").bind('click', function(event) {
-    event.preventDefault();
-    $this = $(this);
+// $(".lv-hamburger").bind('click', function(event) {
+//     event.preventDefault();
+//     $this = $(this);
 
-    if ($this.attr('href') == '#off-canvas-menu-left') {
-        $("#off-canvas-menu-left").trigger("open.mm");
-    }
+//     if ($this.attr('href') == '#off-canvas-menu-left') {
+//         $("#off-canvas-menu-left").trigger("open.mm");
+//     }
 
-    if ($this.attr('href') == '#off-canvas-menu-right') {
-        $("#off-canvas-menu-right").trigger("open.mm");
-    }
-});
+//     if ($this.attr('href') == '#off-canvas-menu-right') {
+//         $("#off-canvas-menu-right").trigger("open.mm");
+//     }
+// });

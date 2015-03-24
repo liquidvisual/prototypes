@@ -1,0 +1,77 @@
+---
+layout: checkpoint/app/internal
+sidebar_details: "checkpoint/app/sidebar_content/sort_ordering.html"
+---
+
+<!-- ADHOC JS FOR SIMULATION ONLY -->
+<script>
+    $(document).ready(function(){
+        // Point all links to the same template (demo purposes only)
+        var newLink = "/research/blank-v-federal/";
+        $("#resultsContainerForm a").attr("href", newLink);
+    });
+</script>
+<!-- END ADHOC JS FOR SIMULATION ONLY -->
+
+<div class="row">
+    <div class="columns">
+        <h3>Refine your Search</h3>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="medium-10 medium-centered columns">
+        <form data-abide novalidate id="contact" action="/" method="post">
+            <div class="row collapse postfix-radius">
+                <div class="small-10 medium-9 columns">
+                    <input name="q" type="text" placeholder="Type Keywords to Refine Search">
+                </div>
+                <div class="small-2 medium-3 columns">
+                    <!-- Switch anchor for button on production -->
+                    <!-- <button type="submit" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> Search</button> -->
+                    <a href="/research/2007-fca-1526/" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Refine Search</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Hint - mobile only -->
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Search Results</h3>
+        <p class="right"><a href="/modal_output/checkpoint/terms-and-connectors.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
+        <hr>
+    </div>
+</div>
+
+<!-- Pagination and tree views -->
+<div class="row">
+    <div class="medium-6 columns show-for-large-up">
+        <p><a href="/research/2007-fca-1526/2007-fca-1526-toc-view/">Tree of Contents</a> | <span>Document List</span></p>
+    </div>
+    <div class="medium-6 columns text-right">
+        {% include common/snippets/pagination.html %}
+    </div>
+</div>
+
+{% include checkpoint/app/export_options/results.html %}
+
+<!-- Select All -->
+<input type="checkbox" id="select-all" name="selectAll"><label for="select-all">Select All</label>
+
+{{ content }}
+
+<!-- Pagination -->
+<div class="text-center medium-text-right">
+    {% include common/snippets/pagination.html %}
+</div>
+
+<!-- Code Output from Checkpoint -->
+<!-- <div class="navigationLinks text-right">
+    <span class="currentPage">1</span>
+    <a href="/maf/app/search/navigate?snippets=true&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;savedSearch=false&amp;originates-from-link=false&amp;searchFrom=&amp;sttype=&amp;frt=&amp;page=1" id="lnkNavPages2" class="navPages">2</a>
+    <a href="/maf/app/search/navigate?snippets=true&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;savedSearch=false&amp;originates-from-link=false&amp;searchFrom=&amp;sttype=&amp;frt=&amp;page=1" id="lnkNavNext" class="navNext">Next&nbsp;&gt;</a>
+    <a href="/maf/app/search/navigate?snippets=true&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;savedSearch=false&amp;originates-from-link=false&amp;searchFrom=&amp;sttype=&amp;frt=&amp;page=1" id="lnkNavLast" class="navLast">Last&nbsp;&gt;&gt;</a>
+</div> -->

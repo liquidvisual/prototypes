@@ -1,0 +1,59 @@
+/*
+    Checkpoint SCSS
+
+    - Last updated: 20.03.15
+    - hello@liquidvisual.com
+*/
+
+// Foundation
+@import "foundation/settings";
+
+// Variables
+@import "app/base/variables";
+
+// Common
+@import "../common/mixins";
+@import "../common/tabs";
+
+// Helpers
+@import "app/helpers/partial-view";
+@import "app/helpers/special";
+
+// Base
+@import "app/base/fonts";
+@import "app/base/foundation-icons";
+
+// Layout
+@import "app/layout/context-menu";
+@import "app/layout/footer";
+@import "app/layout/header";
+@import "app/layout/global-header";
+@import "app/layout/page";
+@import "app/layout/sidebar";
+@import "app/layout/stage";
+@import "app/layout/touch-menu";
+
+// Components
+@import "app/components/breadcrumbs";
+@import "app/components/buttons";
+@import "app/components/datepicker";
+@import "app/components/dropdowns";
+@import "app/components/export-options";
+@import "app/components/forms";
+@import "app/components/jurisdiction-select";
+@import "app/components/lists";
+@import "app/components/modal";
+@import "app/components/tooltips";
+@import "app/components/topbar";
+@import "app/components/user-profile";
+
+// Pages
+// @import "app/pages/dashboard";
+
+// Legacy
+@import "app/legacy/legacy";
+@import "app/legacy/legacy-document";
+@import "app/legacy/legacy-preferences";
+@import "app/legacy/legacy-search-templates";
+@import "app/legacy/legacy-toc";
+@import "app/legacy/legacy-doc-context";

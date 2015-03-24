@@ -1,0 +1,114 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 26.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.lv-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $mobile-header-height;
+    // background: #FE9241;
+    // background: $body-bg url(../../img/checkpoint/template/nav-gradient.png) repeat-x; /* fallback */
+    background: #0B5E88;
+    z-index: 110; // bring above nav
+
+    @media #{$large-up} {
+        height: $header-height;
+    }
+
+    .lv-logo {
+        position: relative;
+        top: -5px; // refactor
+        padding: rem-calc(0 5);
+        display: inline-block;
+
+        @media #{$medium-up} {
+            padding: rem-calc(0 10);
+        }
+
+        @media #{$large-up} {
+            padding: rem-calc(0 20);
+            top: 0; // refactor
+        }
+
+        img {
+
+        }
+    }
+}
+
+// IE8 image scaling issue
+.lt-ie9 .lv-header img {
+    max-width: none;
+}
+
+//=========================================
+// Logo Wrapper
+//=========================================
+
+.lv-logo-wrapper {
+    line-height: $mobile-header-height;
+    width: rem-calc(116);
+    text-align: left;
+    display: inline-block;
+
+    // Centering bigger logo
+    @media #{$medium-up} {
+        width: rem-calc(306);
+    }
+
+    // Revert to bigger logo on medium up
+    @media #{$large-up} {
+        line-height: $header-height;
+        display: inline;
+        line-height: 0;
+    }
+}
+
+//-----------------------------------------------------------------
+// Mobile Nav Btn (user menu)
+//-----------------------------------------------------------------
+
+.lv-hamburger {
+    display: none;
+    width: 50px;
+    height: $mobile-header-height;
+    line-height: $mobile-header-height;
+    color: white;
+    text-align: center;
+    // font-size: rem-calc(26);
+    font-size: rem-calc(24);
+
+    @media #{$large-up} {
+        height: $header-height;
+        line-height: $header-height;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+    &:active {
+        color: #28A4E3;
+    }
+
+    /* refactor */
+
+    // Removed on dashboard
+    &.remove {
+        display: none !important;
+    }
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
+}

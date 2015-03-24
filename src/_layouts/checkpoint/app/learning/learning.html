@@ -1,0 +1,37 @@
+---
+layout: checkpoint/app/internal
+sidebar_details: "checkpoint/app/sidebar_content/learning.html"
+---
+
+<!-- ADHOC JS FOR SIMULATION ONLY -->
+<script>
+    $(document).ready(function(){
+        // Point all links to the same template (demo purposes only)
+        var newLink = "/learning/test-capital-gains-tax/";
+        $(".toc-root a").attr("href", newLink);
+    });
+</script>
+<!-- END ADHOC JS FOR SIMULATION ONLY -->
+
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Learning</h3>
+        <p class="right"><a href="/modal_output/checkpoint/understanding-workflow.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
+        <hr>
+    </div>
+</div>
+
+<!-- EXPORT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        {% include common/snippets/breadcrumbs.html %}
+        {% include checkpoint/app/export_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include checkpoint/app/toc_output/toc_learning.html %}
+    </div>
+</div>

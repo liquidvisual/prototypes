@@ -1,0 +1,52 @@
+/*
+    TABS.CSS
+
+    - Last updated: 17.03.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Tabs - used for content
+//-----------------------------------------------------------------
+
+.lv-tabs {
+    display: table;
+
+    border: 1px solid $primary-color;
+    margin: rem-calc(0 0 20 0);
+    border-radius: $global-radius;
+
+    @media #{$devices-only} {
+        width: 100%;
+    }
+
+    li {
+        display: table-cell;
+        text-align: center;
+    }
+
+    a {
+        // @include transition('background color'); feels slow
+        display: inline-block;
+        width: 100%;
+        padding: rem-calc(5 0);
+        color: $primary-color;
+        outline: none;
+        // border-radius: $global-radius;
+
+        @media #{$medium-up} {
+            padding: rem-calc(5 30);
+        }
+    }
+
+    li a:hover {
+        background: #DDDFE7;
+    }
+
+    li.active a {
+        background: $primary-color;
+        color: white;
+    }
+}

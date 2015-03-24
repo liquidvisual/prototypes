@@ -1,0 +1,86 @@
+/*
+    MIXINS.CSS
+
+    - Last updated: 23.02.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Mixins
+//-----------------------------------------------------------------
+
+@mixin transition($property: false) {
+
+    -webkit-transition: all .15s linear;
+       -moz-transition: all .15s linear;
+         -o-transition: all .15s linear;
+        -ms-transition: all .15s linear;
+            transition: all .15s linear;
+
+    // OPT IN - by passing a specific transition
+    @if $property {
+        -webkit-transition-property: #{$property};
+           -moz-transition-property: #{$property};
+             -o-transition-property: #{$property};
+            -ms-transition-property: #{$property};
+                transition-property: #{$property};
+    }
+
+    // -webkit-transition-property: opacity, color, width, background, transform;
+    //    -moz-transition-property: opacity, color, width, background, transform;
+    //      -o-transition-property: opacity, color, width, background, transform;
+    //     -ms-transition-property: opacity, color, width, background, transform;
+    //         transition-property: opacity, color, width, background, transform;
+}
+
+.transition {
+    @include transition();
+}
+
+//-----------------------------------------------------------------
+// Ellipsis
+//-----------------------------------------------------------------
+
+@mixin truncate($width: 220px) {
+    width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//-----------------------------------------------------------------
+// Mixins
+//-----------------------------------------------------------------
+
+@mixin foundation-icons() {
+    font-family: "foundation-icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+.foundation-icons {
+    @include foundation-icons();
+}
+
+//-----------------------------------------------------------------
+// Table Cell
+//-----------------------------------------------------------------
+
+@mixin table-cell() {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+}
+
+.table-cell {
+    @include table-cell();
+}

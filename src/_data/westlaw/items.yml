@@ -1,0 +1,9 @@
+# Generic template for data
+
+- title: Item Group Name
+  url: /item-url-here/
+  children:
+    - title: Child Item Name
+      url: /child-url-here/
+    - title: Child Item Name
+      url: /child-url-here/

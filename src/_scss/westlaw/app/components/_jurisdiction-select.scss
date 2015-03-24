@@ -1,0 +1,71 @@
+/*
+    JURISDICTION SELECT.CSS
+
+    - Last updated: 26.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$jurisdiction-select-bg: $primary-color;
+$jurisdiction-select-bg-hover: lighten($primary-color, 3%);
+
+//-----------------------------------------------------------------
+// Jurisdiction Select
+//-----------------------------------------------------------------
+
+.lv-jurisdiction-select {
+    position: absolute;
+    // position: relative;
+    top: rem-calc(9); // perfect vertical center
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: $global-radius;
+    background: $jurisdiction-select-bg;
+    overflow: hidden;
+
+    @media #{$large-up} {
+        top: rem-calc(14); // perfect vertical center
+    }
+
+    i.fa-caret-down {
+        position: absolute;
+        top: 0;
+        right: rem-calc(10);
+        color: white;
+        line-height: rem-calc(32);
+    }
+
+    ul {
+        list-style: none;
+        font-size: rem-calc(14);
+        margin: 0;
+        text-align: left;
+
+        li:last-child,
+        li.last, {
+            display: none;
+        }
+    }
+
+    a {
+        display: block;
+        color: white;
+        padding: rem-calc(4 30 4 10);
+
+        &:hover {
+            background: lighten($jurisdiction-select-bg-hover, 10%);
+            color: #222;
+        }
+    }
+}
+
+.lv-jurisdiction-select:hover ul li {
+    display: block;
+}
+
+// IE8 doesn't render SVG
+.lt-ie9 .flag-icon {
+    display: none;
+}

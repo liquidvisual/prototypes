@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       dist: 'dist',
       assets: 'dist/assets',
       port: '9292',
-      git: 'git@github.com:liquidvisual/cp-beta.git',
+      git: 'git@github.com:liquidvisual/prototypes.git',
       // IMPORTANT: Set a baseurl on line 364
     },
     //-----------------------------------------------------
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
           notify: false,
           // Here you can disable/enable each feature individually
           ghostMode: {
-              clicks: true,
+              clicks: false,
               forms: true,
               scroll: true
           },
@@ -202,7 +202,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= yeoman.dist %>'
       },
-      html: '<%= yeoman.dist %>/index.html'
+      html: ['<%= yeoman.dist %>/index.html', '<%= yeoman.dist %>/westlaw/index.html']
     },
     usemin: {
       options: {
@@ -398,7 +398,7 @@ module.exports = function (grunt) {
       }
     },
     //-----------------------------------------------------
-    // IE8 REM Fallback
+    // IE8 REM Fallback - for westlaw only right now
     // This will create a NEW stylesheet. Won't work with
     // file revving.
     //-----------------------------------------------------
@@ -407,8 +407,8 @@ module.exports = function (grunt) {
         rootvalue: '16px'
       },
       dist: {
-        src: '<%= yeoman.assets %>/css/*.css',
-        dest: '<%= yeoman.assets %>/css/optimized-ie8.css'
+        src: '<%= yeoman.assets %>/css/westlaw/*.css',
+        dest: '<%= yeoman.assets %>/css/westlaw/minified-ie8.css'
       }
     },
     //-----------------------------------------------------
@@ -481,7 +481,7 @@ module.exports = function (grunt) {
     'uglify',
     //'imagemin',
     //'svgmin',
-    'filerev',
+    //'filerev',
     'usemin',
     'pixrem',
     'cdnify'

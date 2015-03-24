@@ -1,0 +1,137 @@
+/*
+    EXPORT OPTIONS.CSS
+
+    - Last updated: 03.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Stick Scroll
+//-----------------------------------------------------------------
+
+.sticky-scroll.fixed {
+    @media #{$large-up} {
+        position: fixed;
+        top: 120px;
+        width: 800px;
+        box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+    }
+}
+
+//-----------------------------------------------------------------
+// Export Options
+//-----------------------------------------------------------------
+
+.lv-export-options {
+    position: relative;
+    background: white;
+    // background: #EDEFEF;
+    // overflow: hidden;
+    border: 1px solid #DDDDDD;
+    border-radius: $global-radius;
+    padding: rem-calc(10 15);
+    margin-bottom: rem-calc(20);
+
+    ul {
+        position: relative;
+        font-size: rem-calc(25);
+        // margin-bottom: rem-calc(20);
+
+        @media #{$large-up} {
+            margin-bottom: 0;
+        }
+    }
+
+    select {
+        @media #{$medium-up} {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Buttons are unclickable when disabled
+
+.lv-export-options.disabled {
+    cursor: not-allowed;
+}
+
+.lv-export-options.disabled ul {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        color: #DDDDDD;
+        cursor: default;
+    }
+}
+
+//-----------------------------------------------------------------
+// Export Options Dropdown (refactor)
+//-----------------------------------------------------------------
+
+.lv-export-options-dropdown {
+    position: absolute !important;
+    top: 50px;
+    left: 0;
+    width: 240px;
+    list-style: none;
+    font-size: 1rem !important; // refactor
+    background: white;
+    border: 1px solid #DDDDDD;
+    z-index: 1;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+
+    a {
+        display: block;
+        padding: rem-calc(10 15);
+        color: #555 !important;
+        border-bottom: 1px solid #D4DCE3;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+//-----------------------------------------------------------------
+// Document Navigation (sort by etc)
+//-----------------------------------------------------------------
+
+.lv-doc-navigation {
+    list-style: none;
+    margin-left: 0;
+    line-height: 1.2;
+
+    .lv-doc-navigation-item {
+        display: inline-block;
+        padding: rem-calc(0 15);
+        margin-bottom: rem-calc(10);
+    }
+
+    .text {
+        font-size: rem-calc(14);
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+
+    .button {
+        margin-bottom: 0;
+        padding: rem-calc(2 10);
+
+        &.disabled {
+            border-color: #ddd;
+            background: none;
+            color: #ddd;
+        }
+    }
+}

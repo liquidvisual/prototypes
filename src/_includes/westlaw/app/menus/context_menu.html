@@ -1,0 +1,21 @@
+<div class="lv-context-menu-fixed">
+
+	<!-- Dynamic Content - each page will point to a partial to pass through -->
+	<nav class="lv-context-menu-panel" aria-hidden="true">
+		{% if page.context_menu %}
+		    {% include {{ page.context_menu }} %}
+		{% endif %}
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- Top Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
+		{% include westlaw/app/menus/top_menu.html %}
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- User Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-user-menu js-user-menu" aria-hidden="true">
+		{% include westlaw/app/menus/user_menu.html %}
+	</nav> <!-- .lv-context-menu-panel -->
+
+</div> <!-- .lv-context-menu-fixed -->
+

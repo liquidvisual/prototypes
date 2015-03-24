@@ -1,8 +1,8 @@
 ---
-layout: folders/folders
+layout: checkpoint/app/folders/folders
 title: My Folders
 permalink: /folders/
-context_menu: "context_menu_output/folders.html"
+context_menu: "checkpoint/app/context_menu_output/folders.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

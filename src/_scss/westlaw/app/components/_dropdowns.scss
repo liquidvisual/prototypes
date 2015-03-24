@@ -1,0 +1,68 @@
+/*
+    DROPDOWNS.CSS
+
+    - Last updated: 26.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Dropdowns
+//-----------------------------------------------------------------
+/*
+.lv-has-dropdown:hover .lv-dropdown {
+    height: auto;
+    opacity: 1;
+}
+
+.lv-has-dropdown:hover i.fa-caret-down {
+    color: #222;
+}
+
+.lv-has-dropdown a:hover i {
+    color: $primary-color;
+}
+
+.lv-dropdown {
+    @extend .transition;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem-calc(250);
+    // height: 0;
+    background: white;
+    border-left: 1px solid #D4DCE3;
+    border-right: 1px solid #D4DCE3;
+    border-radius: 0 0 $global-radius $global-radius;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+    // opacity: 0;
+    overflow: hidden;
+
+    ul {
+        margin: 0;
+        font-size: rem-calc(12);
+        font-weight: 600;
+        list-style: none;
+        text-align: left;
+    }
+
+    i {
+        // color: #666;
+        color: #94999C;
+    }
+
+    a {
+        // @extend .transition;
+        display: block;
+        padding: rem-calc(10 15);
+        border-bottom: 1px solid #D4DCE3; // better blue? #E1E4E6
+        color: #505659;//#676767;
+        font-size: rem-calc(14) !important;
+
+        &:hover {
+            // color: $primary-color;
+            background: #F2F4F5;
+        }
+    }
+}*/

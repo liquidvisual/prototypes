@@ -1,0 +1,71 @@
+---
+layout: westlaw/app/internal
+context_menu: "westlaw/app/context_menu_output/search_templates.html"
+---
+
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Basic</h3>
+        <hr>
+    </div>
+</div>
+
+<!-- SEARCH FORM -->
+<form class="lv-search-form" action="/research/search-results/" method="post" novalidate>
+    <div class="row">
+        <div class="medium-10 medium-centered columns">
+
+            <!-- Keyword Search -->
+            <div class="row collapse">
+                <div class="small-10 medium-9 columns">
+                    <input name="q" type="text" placeholder="Type keywords to search">
+                </div>
+                <div class="small-2 medium-3 columns">
+                    <!-- Switch anchor for button on production -->
+                    <!-- <button type="submit" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> Search</button> -->
+                    <a href="/research/tax-exempt-10-deduct/" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Search</span></a>
+                </div>
+            </div>
+
+            <!-- Preferred Results Format -->
+            <div class="row show-for-large-up">
+                <div class="medium-3 columns">
+                    <label class="text-left medium-text-right">
+                        <span class="text">Preferred results format:</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="radio" name="sf-result-type" value="toc" id="sf-tree-of-contents">
+                    <label for="sf-tree-of-contents" id="sf-tree-of-contents">Tree of Contents</label>
+                    <input type="radio" name="sf-result-type" value="list" id="sf-document-list" checked>
+                    <label for="sf-document-list" id="sf-document-list">Document List</label>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- .row -->
+</form>
+
+<!-- ************************ END FORM ************************ -->
+
+<!-- DOCUMENT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        {% include common/snippets/breadcrumbs.html %}
+        {% include checkpoint/app/export_options/search_basic.html %}
+    </div>
+</div>
+
+<!-- EXPAND LEVEL -->
+<div class="row">
+    <div class="columns text-right">
+        <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include checkpoint/app/toc_output/toc_basic.html %}
+    </div>
+</div>

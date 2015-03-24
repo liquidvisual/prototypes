@@ -1,0 +1,172 @@
+/*
+    LEGACY TOC.CSS
+
+    - Last updated: 20.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// TOC
+//-----------------------------------------------------------------
+
+.toc-root ul {
+    list-style: none;
+
+    // Drop indentation and make flat listed on mobile
+    @media #{$small-only} {
+        margin-left: 0;
+    }
+}
+
+.toc-root ul ul li.plus input {
+    margin-bottom: 0;
+}
+
+//=========================================
+// Hit Targets
+//=========================================
+
+// Images have no hit areas, not wrapped in anchors
+.toc-root .plus .expanded,
+.toc-root .plus .collapsed {
+    cursor: pointer;
+}
+
+.toc-root a {
+    color: $blue-color;
+    font-size: rem-calc(14);
+
+    @media #{$medium-up} {
+        font-size: rem-calc(15);
+    }
+}
+
+.toc-root input[type="checkbox"] {
+    margin-right: rem-calc(10);
+}
+
+//=========================================
+// Stars & Icons - saved / not saved
+//=========================================
+
+.toc-root .qlimg {
+    @media #{$small-only} {
+        display: none;
+    }
+}
+
+.toc-root .qlimg:before {
+    @extend .foundation-icons;
+    content: "\f1ee";
+    padding: rem-calc(0 5 0 0);
+}
+
+.toc-root .qlimg.noSaved:before {
+    color: lighten($tertiary-color, 40%);
+}
+
+.toc-root .lnkProductInfo:before {
+    @media #{$medium-up} {
+        @extend .foundation-icons;
+        content: "\f15e"; // info
+    }
+}
+
+//=========================================
+// PLUS + MINUS - BUTTONS
+//=========================================
+
+.resultMetadocLink:before,
+.toc-root .plus .expanded:before,
+.toc-root .plus .collapsed:before,
+.toc-root .plus .docLeaf:before
+{
+    @extend .foundation-icons;
+    content: "\f176"; // minus
+    color: $primary-color;
+    padding: rem-calc(0 5);
+
+    @media #{$small-only} {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin: 2px;
+        border-radius: 3px;
+        border: 1px solid #B3B3B3;
+    }
+}
+
+/* lead node is invisible - so all lines up */
+.toc-root .plus .docLeaf:before {
+    color: $body-bg;
+}
+
+/* prevent divs causing line breaks */
+.inline,
+.inline div {
+    display: inline;
+}
+
+// the minus shows where new nodes OPEN UP
+.toc-root .plus .expanded:before {
+    @media #{$small-only} {
+        background: $primary-color;
+        color: white;
+        border-color: $primary-color;
+    }
+}
+
+//=========================================
+// Gradient Shifter
+//=========================================
+
+.toc-root .plus .plus .plus {
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            .collapsed:before {
+                @media #{$small-only} {
+                    background: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+                    border-color: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+                    color: white;
+                }
+            }
+        }
+    }
+    // all the rest are just solid colors
+    &:nth-child(n+20) .collapsed:before {
+        @media #{$small-only} {
+            background: lighten(lighten(desaturate($primary-color, 10%), 15%), 20 * 0.5%);
+            border-color: lighten(lighten(desaturate($primary-color, 10%), 15%), 20 * 0.5%);
+            color: white;
+        }
+    }
+}
+
+.toc-root ul li.docLeaf {
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}):before {
+            @media #{$small-only} {
+                background: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+                border-color: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+                color: transparent;
+            }
+        }
+    }
+}
+
+.collapsed .resultMetadocLink:before,
+.toc-root .plus .collapsed:before {
+    content: "\f199";
+    color: lighten(#808080, 20%);
+}
+
+#tree li:first-child .expanded {
+    // display: none;
+}
+
+.toc-root .plus img {
+    display: none;
+}

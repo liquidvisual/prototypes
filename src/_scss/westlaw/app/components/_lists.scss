@@ -1,0 +1,73 @@
+/*
+    LISTS.CSS
+
+    - Last updated: 11.03.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$tabs-navigation-hover-bg-color: #DDDFE7;
+
+//-----------------------------------------------------------------
+// Lists
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// lv ui list
+//-----------------------------------------------------------------
+
+.lv-ui-list {
+    list-style: none;
+    margin: 0;
+
+    a {
+        position: relative;
+        padding: rem-calc(6 0 6 10);
+        display: block;
+        color: $body-font-color;
+        font-size: rem-calc(13);
+
+        @media #{$large-up} {
+            &:hover:before {
+                color: darken($tabs-navigation-hover-bg-color, 30%);
+            }
+            &:hover:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: rem-calc(-30);
+                width: 200%;
+                height: 100%;
+                background: lighten($tabs-navigation-hover-bg-color, 2%); //darken(#EEEFF3, 4%);
+                z-index: -1;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            left: rem-calc(-5);
+            // content: "\f1ee";
+            content: "\f198";
+            font-family: "foundation-icons";
+            color: $tertiary-color;
+            // color: #E6E6E6;
+        }
+
+        // Close button
+        .fi-pencil,
+        .fi-x {
+            float: left;
+            padding: rem-calc(0 5 0 2);
+            margin-right: 5px; // magic
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================

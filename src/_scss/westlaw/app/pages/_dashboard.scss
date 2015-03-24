@@ -1,0 +1,138 @@
+@import "foundation/components/block-grid";
+/*
+    DASHBOARD.CSS
+
+    - Last updated: 20.09.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Dasboard
+//-----------------------------------------------------------------
+
+.lv-dashboard-grid {
+
+    @include block-grid(
+        $per-row: false,
+        $spacing: $block-grid-default-spacing,
+        $base-style: true
+    );
+
+    @media (min-width: 1024px) {
+        @include block-grid(
+            $per-row: 3,
+            $spacing: $block-grid-default-spacing,
+            $base-style: true
+        );
+    }
+
+    ul, p {
+      font-size: rem-calc(14);
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+}
+
+//=========================================
+// Patch Foundation's grid issue
+// Apply below the landscape breakpoint (1024)
+//=========================================
+
+.lv-super .lv-dashboard-grid li {
+    @media (max-width: 1023px){ // 1023
+        float: none;
+        padding-bottom: 0;
+    }
+}
+
+//=========================================
+// Content Block
+//=========================================
+
+.lv-content-block {
+    background: white;
+    width: 100%;
+    padding: rem-calc(15 5);
+    margin-bottom: rem-calc(20);
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+
+    .lv-content-block-inner {
+        padding: rem-calc(20);
+    }
+
+    &.is-collapsed {
+        .lv-content-block-inner {
+            display: none;
+        }
+        h3 {
+            color: #777;
+        }
+    }
+
+    li {
+        margin-bottom: rem-calc(15);
+
+        &:before {
+            @extend .foundation-icons;
+            content: "\f198";
+            color: $primary-color;
+            margin-right: 6px;
+        }
+    }
+}
+
+//=========================================
+// Content Block Header
+//=========================================
+
+.lv-content-block-header {
+    position: relative;
+    padding: rem-calc(5 60 5 20);
+    // border-bottom: 1px solid #DEDEDE; // keep it minimal
+
+    .minimize-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: rem-calc(44);
+        display: block;
+
+        span {
+            // @extend .transition;
+            position: absolute;
+            // top: 50%;
+            top: rem-calc(15);
+            // margin-top: rem-calc(-2);
+            width: 24px;
+            height: 4px;
+            background: #6A6A6A;
+        }
+
+        &:hover span {
+            background: $primary-color;
+            border-color: $primary-color !important;
+        }
+    }
+}
+
+.is-collapsed .lv-content-block-header .minimize-btn span {
+    top: rem-calc(10);
+    height: 15px;
+    border: 2px solid #CFCFCF;
+    background: none;
+}
+
+.lv-content-block a:not(.button) {
+    @extend .transition;
+    color: $blue-color;
+
+    &:hover {
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,47 @@
+<div class="lv-sidebar-inner">
+
+	<!-- SPECIAL TABS -->
+	<ul class="lv-tabs">
+		<li class="active"><a title="Hints" href="#"><i class="fi-lightbulb"></i><span class="text">Hints</span></a></li>
+		<li><a title="Links" href="#"><i class="fi-star"></i><span class="text">Links</span></a></li>
+		<li><a title="History" href="#"><i class="fi-clock"></i><span class="text">History</span></a></li>
+		<li class="collapse-btn"><a title="Hide" href="#"><i class="fi-arrow-right"></i><span class="text">Hide</span></a></li>
+	</ul> <!-- .lv-tabs -->
+
+	<!-- TABS CONTENT -->
+	<div class="tabs-content">
+
+		<!-- HINTS -->
+		<section class="content active">
+			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
+				<h1>Hints</h1>
+				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+			</header>
+
+			{% if page.sidebar_details %}
+				{% include {{ page.sidebar_details }} %}
+			{% else %}
+				{% include westlaw/app/sidebar_content/hints/default.html %}
+			{% endif %}
+		</section>
+
+		<!-- LINKS -->
+		<section class="content">
+			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
+				<h1>Links</h1>
+				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+			</header>
+			{% include westlaw/app/sidebar_content/links/default.html %}
+		</section>
+
+		<!-- HISTORY -->
+		<section class="content">
+			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
+				<h1>History</h1>
+				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+			</header>
+			{% include westlaw/app/sidebar_content/history/default.html %}
+		</section>
+
+	</div> <!-- .tabs-content -->
+</div> <!-- .lv-siderbar-inner -->

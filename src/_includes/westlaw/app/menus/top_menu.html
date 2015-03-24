@@ -1,0 +1,14 @@
+<ul>
+    <li class="{% if page.url == "/" %} active {% endif %}">
+        <a href="/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+    </li>
+    <li class="{% include common/snippets/is_active.html current_path="workflow" %}">
+        <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+    </li>
+    <li class="{% include common/snippets/is_active.html current_path="tools" %}">
+        <a href="#"><i class="fi-wrench"></i> Tools</a>
+    </li>
+    <li class="{% include common/snippets/is_active.html current_path="newsroom" %}">
+        <a href="#"><i class="fi-info"></i> Newsroom</a>
+    </li>
+</ul>

@@ -5,7 +5,7 @@
 	<!-- Mobile Hamburgers -->
 	<div class="left">
 		<a id="top-menu-btn" class="lv-hamburger left hide-for-large-up" href="#"><i class="fi-list"></i></a>
-		<a id="dynamic-menu-btn" class="lv-hamburger left {% if page.context_menu == nil %} remove {% endif %}" href="#"><i class="fi-magnifying-glass"></i></a>
+		<a id="dynamic-menu-btn" class="lv-hamburger left {% if page.context_menu == nil %} remove {% endif %}" href="#"><i class="fi-results"></i></a>
 	</div>
 
 	<!-- User Menu Hamburger -->
@@ -16,25 +16,21 @@
 		<!-- Logo -->
 		<a title="westlaw®" class="lv-logo" href="/">
 			<img class="show-for-medium-up" width="120" src="/img/westlaw/template/logo.png" alt="Thomson Reuters Westlaw">
-			<!-- <img class="hide-for-medium-up" width="40" src="/img/westlaw/template/logo-mobile-black@2x.png" alt="Thomson Reuters Westlaw"> -->
+			<img class="hide-for-medium-up" width="40" src="/img/westlaw/template/logo-mobile-black@2x.png" alt="Thomson Reuters Westlaw">
 		</a>
 
 		<!-- Jurisdiction Select -->
-		<div class="lv-jurisdiction-select">
+		<!-- <div class="lv-jurisdiction-select">
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first">
-					<a class="hide-for-medium-up" href="#">AU</a>
-					<a class="show-for-medium-up hide-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; AU</a>
-					<a class="show-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a>
+					<a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; International Sites</a>
 				</li>
 				<li class="last">
-					<a class="hide-for-medium-up" href="#">NZ</a>
-					<a class="show-for-medium-up hide-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; NZ</a>
-					<a class="show-for-large-up" href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
+					<a href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
 				</li>
 			</ul>
-		</div> <!-- .jurisdiction-select -->
+		</div> --> <!-- .jurisdiction-select -->
 
 	</div> <!-- .logo-switcher-wrapper -->
 
@@ -44,8 +40,9 @@
 <section class="lv-user-profile text-right show-for-large-up">
 	<div class="left">
 		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
-		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
     		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+    		<li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
 		    <li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
 		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
 		</ul>

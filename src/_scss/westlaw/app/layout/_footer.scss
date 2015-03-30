@@ -73,8 +73,12 @@
 
 .lv-footer-legal {
     font-size: rem-calc(11);
-    line-height: 0;
+    // line-height: 0;
     color: grey;
+
+    img {
+        margin-top: -2px; // magic fix
+    }
 }
 
 //=========================================

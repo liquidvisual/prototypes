@@ -4,7 +4,7 @@
     <div class="row collapse is-full-width">
 
         <!-- Footer Links -->
-        <div class="medium-6 medium-push-6 columns">
+        <div class="medium-7 medium-push-5 columns">
             <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
                 <li><a href="{{ settings.help }}" target="_blank">Help</a></li>
                 <li class="has-dropdown"><span class="anchor">Sites</span></a>
@@ -15,15 +15,21 @@
                         <li><a href="{{ settings.westlaw_nz }}" target="_blank"><i class="fi-web"></i> Westlaw New Zealand</a></li>
                     </ul>
                 </li>
+                <li><a href="{{ settings.feedback }}" target="_blank">Feedback</a></li>
                 <li><a href="{{ settings.privacy_policy }}" target="_blank">Privacy Policy</a></li>
                 <li><a href="{{ settings.terms_of_use }}" target="_blank">Terms of Use</a></li>
             </ul>
         </div>
 
         <!-- Footer Legal -->
-        <div class="medium-6 medium-pull-6 columns">
+        <div class="medium-5 medium-pull-7 columns">
             <div class="text-center medium-text-left">
-                <small class="lv-footer-legal">&copy; <b>2015</b> <a href="{{ settings.thomson_reuters_au }}">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+                <small class="lv-footer-legal">
+                    <a href="{{ settings.thomson_reuters_au }}">
+                        <img class="hide-for-large-up" width="120" src="/img/westlaw/template/tr-logo-black@2x.png">
+                        <img class="show-for-large-up" width="120" src="/img/westlaw/template/tr-logo-white@2x.png">
+                    </a>&nbsp; (Professional) Australia LTD - ABN 64 058 668 | &copy; <b>2015</b>
+                </small>
             </div>
         </div>
 

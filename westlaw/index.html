@@ -100,7 +100,7 @@
     
 
     
-"><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+"><a href="/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
     		<li class="
 
 
@@ -109,6 +109,7 @@
 
     
 "><a href="/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+    		<li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
 		    <li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
 		    <li class="
 
@@ -245,8 +246,9 @@
 	<nav class="lv-context-menu-panel lv-user-menu js-user-menu" aria-hidden="true">
 		<ul>
     <li><a href="#LOGOUT"><img width="30" src="/assets/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
-	<li><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+	<li><a href="/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
 	<li><a href="/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+	<li><a href="/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
     <li><a href="/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
@@ -291,19 +293,15 @@
             </div>
 
             <!-- Preferred Results Format -->
-            <div class="row show-for-large-up">
-                <div class="medium-3 columns">
-                    <label class="text-left medium-text-right">
-                        <span class="text">Preferred results format:</span>
-                    </label>
+            <div class="row">
+                <div class="columns">
+                    <ul class="inline-list">
+                        <li><label><input type="radio" name="sf-result-type" value="Free Text" checked>&nbsp; Free Text</label></li>
+                        <li><label><input type="radio" name="sf-result-type" value="Title">&nbsp; Title</label></li>
+                        <li><label><input type="radio" name="sf-result-type" value="Citation">&nbsp; Citation</label></li>
+                    </ul>
                 </div>
-                <div class="medium-9 columns">
-                    <input type="radio" name="sf-result-type" value="toc" id="sf-tree-of-contents">
-                    <label for="sf-tree-of-contents" id="sf-tree-of-contents">Tree of Contents</label>
-                    <input type="radio" name="sf-result-type" value="list" id="sf-document-list" checked>
-                    <label for="sf-document-list" id="sf-document-list">Document List</label>
-                </div>
-            </div>
+            </div> <!-- .row -->
 
         </div>
     </div> <!-- .row -->
@@ -314,29 +312,16 @@
 <!-- DOCUMENT OPTIONS -->
 <div class="row">
     <div class="columns">
-        
-
-
-
-<h5><i class="fi-marker"></i>&nbsp; You are in:</h5>
-
-<!-- <a class="lv-breadcrumbs-expander right button tiny pill" href="#">Expand</a> -->
-
-<ul class="lv-breadcrumbs">
-    
-        
-            <li class="active">westlaw</li>
-        
-    
-</ul>
         <div class="lv-export-options disabled">
     <div class="row">
         <div class="medium-6 columns">
             <ul class="lv-inline-list small-gaps text-center medium-text-left">
+                <li><a title="Save to My Folders" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-save"></i></a></li>
+                <li><a title="Download" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-download"></i></a></li>
                 <li><a title="Print" class="ajax-modal" href="/modal_output/checkpoint/print-document.html"><i class="fi-print"></i></a></li>
-                <li><a title="Export" class="ajax-modal" href="/modal_output/checkpoint/export-document.html"><i class="fi-page-export-doc"></i></a></li>
                 <li><a title="Email" class="ajax-modal" href="/modal_output/checkpoint/email-document.html"><i class="fi-mail"></i></a></li>
-                <li><a title="Add to My Quicklinks" class="ajax-modal" href="/modal_output/checkpoint/add-to-my-quicklinks.html"><i class="fi-star"></i></a></li>
+                <li><a title="Create Alert" class="ajax-modal" href="/modal_output/checkpoint/add-to-my-quicklinks.html"><i class="fi-megaphone"></i></a></li>
+                <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-rss"></i></a></li>
             </ul>
         </div>
         <div class="medium-6 columns">
@@ -357,13 +342,8 @@
         </div>
     </div> <!-- .row -->
 </div> <!-- .lv-export-options -->
-    </div>
-</div>
 
-<!-- EXPAND LEVEL -->
-<div class="row">
-    <div class="columns text-right">
-        <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
+
     </div>
 </div>
 
@@ -400,6 +380,7 @@
                         <li><a href="http://www.westlaw.co.nz" target="_blank"><i class="fi-web"></i> Westlaw New Zealand</a></li>
                     </ul>
                 </li>
+                <li><a href="" target="_blank">Feedback</a></li>
                 <li><a href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
                 <li><a href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx" target="_blank">Terms of Use</a></li>
             </ul>

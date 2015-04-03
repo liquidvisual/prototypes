@@ -1,7 +1,7 @@
 /*
     EXPORT OPTIONS.CSS
 
-    - Last updated: 03.12.14
+    - Last updated: 03.04.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -45,7 +45,7 @@
         }
     }
 
-    select {
+    form, select {
         @media #{$medium-up} {
             margin-bottom: 0;
         }

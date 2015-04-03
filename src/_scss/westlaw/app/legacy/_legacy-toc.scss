@@ -1,7 +1,7 @@
 /*
     LEGACY TOC.CSS
 
-    - Last updated: 20.11.14
+    - Last updated: 31.03.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -35,12 +35,8 @@
 }
 
 .toc-root a {
-    color: $blue-color;
+    color: $link-color;
     font-size: rem-calc(14);
-
-    @media #{$medium-up} {
-        font-size: rem-calc(15);
-    }
 }
 
 .toc-root input[type="checkbox"] {
@@ -51,6 +47,7 @@
 // Stars & Icons - saved / not saved
 //=========================================
 
+// What is this?
 .toc-root .qlimg {
     @media #{$small-only} {
         display: none;
@@ -59,7 +56,7 @@
 
 .toc-root .qlimg:before {
     @extend .foundation-icons;
-    content: "\f1ee";
+    content: "\f1ee"; // star icon
     padding: rem-calc(0 5 0 0);
 }
 
@@ -70,7 +67,7 @@
 .toc-root .lnkProductInfo:before {
     @media #{$medium-up} {
         @extend .foundation-icons;
-        content: "\f15e"; // info
+        content: "\f15e"; // info icon
     }
 }
 
@@ -88,7 +85,15 @@
     color: $primary-color;
     padding: rem-calc(0 5);
 
+    margin: 2px;
+    border-radius: 3px;
+    border: 1px solid #B3B3B3;
+    padding: rem-calc(3 5);
+    font-size: rem-calc(12);
+
     @media #{$small-only} {
+        font-size: rem-calc(16);
+        padding: 0;
         width: 30px;
         height: 30px;
         line-height: 30px;

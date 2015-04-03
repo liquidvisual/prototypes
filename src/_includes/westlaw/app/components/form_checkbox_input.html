@@ -1,0 +1,13 @@
+{% assign title = include.title %}
+{% assign id = title | slugify %}
+
+<div class="row">
+    <div class="medium-3 columns">
+        <label for="sf-{{id}}" class="text-left medium-text-right">
+            <span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field.">{{title}}</span>
+        </label>
+    </div>
+    <div class="medium-9 columns">
+        <input type="checkbox" name="{{title}}" id="sf-{{id}}">
+    </div>
+</div>

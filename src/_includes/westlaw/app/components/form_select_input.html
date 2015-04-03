@@ -1,0 +1,22 @@
+{% assign title = include.title %}
+{% assign id = title | slugify %}
+
+<div class="row">
+    <div class="medium-3 columns">
+        <label for="sf-{{id}}" class="text-left medium-text-right">
+            <span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field.">{{ title }}</span>
+        </label>
+    </div>
+    <div class="medium-9 columns">
+        <select name="{{ title }}" id="sf-{{id}}">
+
+            <option value="All" selected>All</option>
+
+			<!-- Draw multiple options for dropdown example -->
+            {% for i in (1..10) %}
+            	<option value="option-{{i}}">Option {{i}}</option>
+            {% endfor %}
+
+        </select>
+    </div>
+</div>

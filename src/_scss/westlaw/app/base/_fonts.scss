@@ -1,5 +1,13 @@
+/*
+    FONTS.CSS
+
+    - Last updated: 03.04.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
 // FLAG FONT ICONS - NZ and AU
 // http://lipis.github.io/flag-icon-css/
+//-----------------------------------------------------------------
 
 .flag-icon {
   position: relative;
@@ -10,21 +18,37 @@
   background-position: 50%;
   background-repeat: no-repeat;
 }
+
 .flag-icon:before {
   content: "\00a0";
 }
+
 .flag-icon.flag-icon-squared {
   width: 1em;
 }
+
 .flag-icon-background {
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
 }
 
+.flag-icon-gb {
+  background-image: url(../../img/common/flags/gb.svg);
+}
+
+.flag-icon-cn {
+  background-image: url(../../img/common/flags/cn.svg);
+}
+
+.flag-icon-hk {
+  background-image: url(../../img/common/flags/hk.svg);
+}
+
 .flag-icon-au {
   background-image: url(../../img/common/flags/au.svg);
 }
+
 .flag-icon-au.flag-icon-squared {
   background-image: url(../../img/common/flags/1x1/au.svg);
 }
@@ -32,16 +56,20 @@
 .flag-icon-nz {
   background-image: url(../../img/common/flags/nz.svg);
 }
-.flag-icon-nz.flag-icon-squared {
-  background-image: url(../../img/common/flags/1x1/nz.svg);
-}
+
+// .flag-icon-nz.flag-icon-squared {
+//   background-image: url(../../img/common/flags/1x1/nz.svg);
+// }
+
+//-----------------------------------------------------------------
+// Font Awesome
+//-----------------------------------------------------------------
 
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-/* FONT PATH
- * -------------------------- */
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('../../fonts/fontawesome-webfont.eot');

@@ -19,20 +19,22 @@
 			<img class="hide-for-medium-up" width="40" src="/img/westlaw/template/logo-mobile-black@2x.png" alt="Thomson Reuters Westlaw">
 		</a>
 
-		<!-- Jurisdiction Select -->
-		<!-- <div class="lv-jurisdiction-select">
+		<!-- Site Select -->
+		<div class="lv-site-select show-for-medium-up">
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first">
-					<a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; International Sites</a>
+					<a href="#"><i class="fi-web"></i>&nbsp; Sites</a>
 				</li>
-				<li class="last">
-					<a href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
-				</li>
+				{% for item in site.data.westlaw.settings.sites %}
+					<li class="{% if forloop.last %} last {% endif %}">
+						<a href="#"><i class="flag-icon {{item.icon}}"></i>&nbsp; {{item.title}}</a>
+					</li>
+				{% endfor %}
 			</ul>
-		</div> --> <!-- .jurisdiction-select -->
+		</div> <!-- .lv-site-select -->
 
-	</div> <!-- .logo-switcher-wrapper -->
+	</div> <!-- .logo-wrapper -->
 
 </section>
 
@@ -40,11 +42,11 @@
 <section class="lv-user-profile text-right show-for-large-up">
 	<div class="left">
 		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
-		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
-    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
+    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
     		<li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
 		    <li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/westlaw/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
 		</ul>
 	</div>
 	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>{{ username | upcase }}</b> - <a href="#">Logout</a></div>

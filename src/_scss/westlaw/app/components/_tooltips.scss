@@ -1,7 +1,7 @@
 /*
     TOOLTIPS.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 02.04.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -14,7 +14,7 @@
 .lv-tooltip {
     position: relative;
     @media #{$medium-up} {
-        background: url(../img/ui/dots-black.png) repeat-x bottom;
+        background: url(../../img/common/ui/dots-black.png) repeat-x bottom;
     }
 }
 

@@ -2,7 +2,7 @@
 /*
     LEGACY PREFERENCES.CSS
 
-    - Last updated: 26.11.14
+    - Last updated: 03.04.15
     - hello@liquidvisual.com
 
     - Notes -
@@ -13,6 +13,14 @@
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Caution
+//-----------------------------------------------------------------
+
+#pagetitle {
+    margin-bottom: rem-calc(20); // header - but caution, may affect other areas. Choosing to style existing instead of in template.
+}
+
 //-----------------------------------------------------------------
 // Legacy Preferences
 //-----------------------------------------------------------------
@@ -37,20 +45,29 @@
 // Insert Foundation Grid
 //=========================================
 
-.preferenceRow {
+.preferenceRow,
+.prefrow {
     @include grid-row();
     margin-bottom: rem-calc(30);
 }
 
-.preferenceTitle {
+.preferenceTitle,
+.preflabel {
     @media #{$medium-up} {
         @include grid-column($columns:4, $offset:1);
         text-align: right;
     }
 }
 
-.preferenceContent {
+.preferenceContent,
+.prefinput {
     @media #{$medium-up} {
         @include grid-column(5);
     }
+}
+
+// Westlaw
+
+#updateprefs {
+    margin-top: rem-calc(40);
 }

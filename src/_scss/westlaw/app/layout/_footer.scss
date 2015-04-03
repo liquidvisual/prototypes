@@ -1,7 +1,7 @@
 /*
     FOOTER.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 03.04.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -89,7 +89,7 @@
     position: relative;
 
     @media #{$large-up} {
-        display: inline-block;
+        display: none; // hide for large
     }
 
     &:hover {
@@ -107,7 +107,7 @@
 }
 
 .lv-footer-links .lv-dropdown {
-    @extend .transition;
+    @include transition('opacity');
     opacity: 0;
     height: 0;
     overflow: hidden;

@@ -3,12 +3,15 @@ layout: westlaw/app/internal
 context_menu: "westlaw/app/context_menu_output/search_templates.html"
 ---
 
-<div class="row">
-    <div class="columns">
-        <h3 class="left">Basic</h3>
-        <hr>
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Basic</h3>
+            <hr>
+        </div>
     </div>
-</div>
+</header>
 
 <!-- SEARCH FORM -->
 <form class="lv-search-form" action="/research/search-results/" method="post" novalidate>
@@ -39,12 +42,12 @@ context_menu: "westlaw/app/context_menu_output/search_templates.html"
             </div> <!-- .row -->
 
         </div>
-    </div> <!-- .row -->
-</form>
+    </div>
+</form> <!-- .lv-search-form -->
 
 <!-- ************************ END FORM ************************ -->
 
-<!-- DOCUMENT OPTIONS -->
+<!-- EXPORT OPTIONS -->
 <div class="row">
     <div class="columns">
         {% include westlaw/app/export_options/search_basic.html %}
@@ -54,6 +57,6 @@ context_menu: "westlaw/app/context_menu_output/search_templates.html"
 <!-- TOC -->
 <div class="row">
     <div class="columns">
-        {% include checkpoint/app/toc_output/toc_basic.html %}
+        {% include westlaw/app/toc_output/toc_basic.html %}
     </div>
 </div>

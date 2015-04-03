@@ -22,11 +22,29 @@ privacy_policy: "http://www.thomsonreuters.com.au/terms/privacy-policy.aspx"
 terms_of_use: "http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx"
 feedback: "http://www.nicereply.com/thomson-reuters-anz.wlau/westlaw-au"
 
-# Site Links
-checkpoint_world: "https://www.checkpointworld.com"
-proview: "http://thomsonreuters.com/site/proview/"
-westlaw_au: "http://www.westlaw.com.au"
-westlaw_nz: "http://www.westlaw.co.nz"
-
-# Google Analytics
-google_analytics: "UA-XXXXXXXX-X"
+# International Sites
+sites:
+  - title: Westlaw Next
+    url: "http://a.next.westlaw.com"
+    icon: fi-web
+  - title: Westlaw International
+    url: "http://www.westlaw.co.nz"
+    icon: fi-web
+  - title: Westlaw UK
+    url: "http://login.wesklaw.co.uk"
+    icon: flag-icon-gb
+  - title: Westlaw CN
+    url: "http://app.westlawchina.com"
+    icon: flag-icon-cn
+  - title: Westlaw HK
+    url: "http://login.westlaw.com.hk"
+    icon: flag-icon-hk
+  - title: Checkpoint AU
+    url: "http://checkpointau.com.au"
+    icon: flag-icon-au
+  - title: Checkpoint World
+    url: "https://www.checkpointworld.com"
+    icon: fi-web
+  - title: Proview
+    url: "http://thomsonreuters.com/site/proview/"
+    icon: fi-web

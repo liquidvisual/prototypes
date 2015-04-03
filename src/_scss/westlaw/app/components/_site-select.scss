@@ -1,28 +1,28 @@
 /*
-    JURISDICTION SELECT.CSS
+    SITE-SELECT.CSS
 
-    - Last updated: 26.11.14
+    - Last updated: 03.04.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
-$jurisdiction-select-bg: $primary-color;
-$jurisdiction-select-bg-hover: lighten($primary-color, 3%);
+$site-select-bg: $primary-color;
+$site-select-bg-hover: lighten($primary-color, 3%);
 
 //-----------------------------------------------------------------
 // Jurisdiction Select
 //-----------------------------------------------------------------
 
-.lv-jurisdiction-select {
+.lv-site-select {
     position: absolute;
     // position: relative;
     top: rem-calc(9); // perfect vertical center
     display: inline-block;
     border: 1px solid white;
     border-radius: $global-radius;
-    background: $jurisdiction-select-bg;
+    background: $site-select-bg;
     overflow: hidden;
 
     @media #{$large-up} {
@@ -43,9 +43,12 @@ $jurisdiction-select-bg-hover: lighten($primary-color, 3%);
         margin: 0;
         text-align: left;
 
-        li:last-child,
-        li.last, {
+        li {
             display: none;
+
+            &.first {
+                display: block;
+            }
         }
     }
 
@@ -55,13 +58,13 @@ $jurisdiction-select-bg-hover: lighten($primary-color, 3%);
         padding: rem-calc(4 30 4 10);
 
         &:hover {
-            background: lighten($jurisdiction-select-bg-hover, 10%);
+            background: lighten($site-select-bg-hover, 10%);
             color: #222;
         }
     }
 }
 
-.lv-jurisdiction-select:hover ul li {
+.lv-site-select:hover ul li {
     display: block;
 }
 

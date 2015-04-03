@@ -1,0 +1,72 @@
+---
+layout: westlaw/app/internal
+context_menu: "westlaw/app/context_menu_output/search_newsroom.html"
+---
+
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Newsroom</h3>
+            <hr>
+        </div>
+    </div>
+</header>
+
+<!-- SEARCH FORM -->
+<form class="lv-search-form lv-partial-view collapsed" action="/research/results" method="post" novalidate>
+    <div class="row">
+        <div class="medium-11 large-10 columns">
+
+            <!-- Create Field Names -->
+            {% assign text_fields = "Free Text|Headline/Lead Paragraph|Author" | split: "|" %}
+
+            <!-- Draw Fields -->
+            {% for item in text_fields %}
+                {% include westlaw/app/components/form_text_input.html %}
+            {% endfor %}
+
+            <!-- Draw Select Field (Source Type) -->
+            {% include westlaw/app/components/form_select_input.html title="Source Type" %}
+
+            <!-- Create Field Names -->
+            {% assign text_fields = "Source Country|All Indexing|News Subject|Company|Industry|Region" | split: "|" %}
+
+            <!-- Draw Fields -->
+            {% for item in text_fields %}
+                {% include westlaw/app/components/form_text_input.html %}
+            {% endfor %}
+
+            <!-- Draw Date Fields -->
+            {% include westlaw/app/components/form_date_input.html title="Publication Date (from)" %}
+
+            <!-- Draw Submit Fields -->
+            {% include westlaw/app/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
+
+        </div>
+    </div>
+</form> <!-- .lv-search-form -->
+
+<!-- ************************ END FORM ************************ -->
+
+<!-- Form obscured on mobile (restricted height) - button will show all -->
+<div class="row">
+    <div class="medium-11 columns text-right">
+        <a class="lv-partial-view-btn lv-non-legacy button pill tiny" href="#">Expand</a>
+    </div>
+</div>
+
+<!-- DOCUMENT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        {% include common/snippets/breadcrumbs.html %}
+        {% include westlaw/app/export_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include westlaw/app/toc_output/toc_newsroom.html %}
+    </div>
+</div>

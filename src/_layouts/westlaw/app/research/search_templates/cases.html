@@ -1,285 +1,83 @@
 ---
-layout: checkpoint/app/internal
-context_menu: "checkpoint/app/context_menu_output/search_templates.html"
+layout: westlaw/app/internal
+context_menu: "westlaw/app/context_menu_output/search_cases.html"
 ---
 
-<div class="row">
-    <div class="columns">
-        <h3 class="left">Cases</h3>
-        <hr>
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Cases</h3>
+            <hr>
+        </div>
     </div>
-</div>
+</header>
 
 <!-- SEARCH FORM -->
 <form class="lv-search-form lv-partial-view collapsed" action="/research/results" method="post" novalidate>
     <div class="row">
         <div class="medium-11 large-10 columns">
 
-            <!-- Free Text -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="sf-keywords" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[0].title}}">Keywords</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="text" name="Keywords" id="sf-keywords">
-                </div>
-            </div>
+            <!-- Create Field Names -->
+            {% assign text_fields = "Free Text|Case Summary/Digest|Case Title/Party Name|Citation|Classification|Catchwords|Judge(s)|Court" | split: "|" %}
 
-            <!-- Case Title / Party Name -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="sf-case-title-party-name" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[1].title}}">Case Title / Party Name</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="text" name="Case Title / Party Name" id="sf-case-title-party-name">
-                </div>
-            </div>
+            <!-- Draw Fields -->
+            {% for item in text_fields %}
+                {% include westlaw/app/components/form_text_input.html %}
+            {% endfor %}
 
-            <!-- Citation -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="sf-citation" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[2].title}}">Citation</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="text" name="Citation" id="sf-citation">
-                </div>
-            </div>
+            <!-- Draw Select Field -->
+            {% include westlaw/app/components/form_select_input.html title="Jurisdiction" %}
 
-            <!-- Catchwords -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="sf-catchwords" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[3].title}}">Catchwords</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="text" name="Catchwords" id="sf-catchwords">
-                </div>
-            </div>
-
-            <!-- Judge(s) -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="sf-judges" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[4].title}}">Judges(s)</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="text" name="Judge(s)" id="sf-judges">
-                </div>
-            </div>
-
-            <!-- Court -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="sf-court" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[5].title}}">Court</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="text" name="Court" id="sf-court">
-                </div>
-            </div>
-
-            <!-- Jurisdiction -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="jurisdiction" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[6].title}}">Jurisdiction</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <select name="Jurisdiction" id="jurisdiction">
-                        <option value="All" selected>All Jurisdictions</option>
-                        <option value="Australian Captial Territory">Australian Captial Territory</option>
-                        <option value="Christmas Island">Christmas Island</option>
-                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                        <option value="Commonwealth of Australia">Commonwealth of Australia</option>
-                        <option value="New South Wales">New South Wales</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Norfolk Island">Norfolk Island</option>
-                        <option value="Northern Territory">Northern Territory</option>
-                        <option value="Queensland">Queensland</option>
-                        <option value="South Australia">South Australia</option>
-                        <option value="Tasmania">Tasmania</option>
-                        <option value="Victoria">Victoria</option>
-                        <option value="Western Australia">Western Australia</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Judgement Dates -->
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label for="judgement-start-date" class="text-left medium-text-right">
-                        <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[7].title}}">Judgement Date</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <div class="row">
-                        <div class="medium-4 columns">
-                            <input class="ui-datepicker" type="text" name="Judgement Start Date" placeholder="Start Date" id="judgement-start-date">
-                        </div>
-                        <div class="medium-4 columns">
-                            <input class="ui-datepicker" type="text" name="Judgement End Date" placeholder="End Date" id="judgement-end-date">
-                            <!-- Hidden for accessibility -->
-                            <label for="judgement-end-date" class="hide">Judgement End Date</label>
-                        </div>
-                        <div class="medium-4 columns">
-                            <input type="checkbox" name="Judgement Exact Date" id="judgement-exact-date">
-                            <label for="judgement-exact-date">Exact Date</label>
-                        </div>
-                    </div>
-                </div> <!-- .medium-9 -->
-            </div> <!-- .row -->
-
-            <!-- ************************ MORE OPTIONS ************************ -->
+            <!-- Draw Date Fields -->
+            {% include westlaw/app/components/form_date_input.html title="Judgement Date" %}
 
             <div class="lv-advanced-options hide">
 
-                <!-- Cases Cited (title) -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-cases-cited-title" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[8].title}}">Cases Cited (title)</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="text" name="Cases Cited (title)" id="sf-cases-cited-title">
-                    </div>
-                </div>
+                <!-- Create Field Names -->
+                {% assign text_fields = "Cases Cited (Title)|Cases Cited (Citation)|Legislation Cited (Provision)" | split: "|" %}
 
-                <!-- Cases Cited (citation) -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-cases-cited-citation" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[9].title}}">Cases Cited (citation)</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="text" name="Cases Cited (citation)" id="sf-cases-cited-citation">
-                    </div>
-                </div>
+                <!-- Draw Fields -->
+                {% for item in text_fields %}
+                    {% include westlaw/app/components/form_text_input.html %}
+                {% endfor %}
 
-                <!-- Legislation Cited (title) -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-legislation-cited-title" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[10].title}}">Legislation Cited (title)</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="text" name="legislation Cited (title)" id="sf-legislation-cited-title">
-                    </div>
-                </div>
+                <!-- Draw Checkbox -->
+                {% include westlaw/app/components/form_checkbox_input.html title="FirstPoint Verified Data Only" %}
 
-                <!-- Legislation Cited (provision) -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-legislation-cited-title" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[11].title}}">Legislation Cited (title)</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="text" name="legislation Cited (title)" id="sf-legislation-cited-title">
-                    </div>
-                </div>
+                <!-- Create Field Names -->
+                {% assign text_fields = "Words & Phrases|Legal Representative(s)" | split: "|" %}
 
-                <!-- Words & Phrases -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-words-and-phrases" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[12].title}}">Words &amp; Phrases</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="text" name="Words &amp; Phrases" id="sf-words-and-phrases">
-                    </div>
-                </div>
+                <!-- Draw Fields -->
+                {% for item in text_fields %}
+                    {% include westlaw/app/components/form_text_input.html %}
+                {% endfor %}
 
-                <!-- Reported / Unreported -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-reported-unreported" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[13].title}}">Reported / Unreported</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <select name="Reported / Unreported" id="sf-reported-unreported">
-                            <option selected disabled>All Cases</option>
-                            <option value="reported">Reported</option>
-                            <option value="unreported">Unreported</option>
-                        </select>
-                    </div>
-                </div>
+                <!-- Draw Select Fields -->
+                {% include westlaw/app/components/form_select_input.html title="Reported Unreported" %}
+                {% include westlaw/app/components/form_select_input.html title="Cases Updated" %}
 
-                <!-- Cases Updated -->
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="sf-cases-updated" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="{{site.data.checkpoint.cases_tooltips[14].title}}">Cases Updated</span>
-                        </label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <select name="Cases Updated" id="sf-cases-updated">
-                            <option selected disabled>Anytime</option>
-                            <option value="last-7-days">Last 7 days</option>
-                            <option value="last-15-days">Last 15 days</option>
-                            <option value="last-30-days">Last 30 days</option>
-                            <option value="last-60-days">Last 60 days</option>
-                            <option value="last-90-days">Last 90 days</option>
-                        </select>
-                    </div>
-                </div>
-
-            </div> <!-- .lv-more-options -->
-
-            <!-- ************************ END MORE OPTIONS ************************ -->
+            </div> <!-- .lv-advanced-options -->
 
             <!-- Toggle More Option Button -->
             <div class="row">
                 <div class="medium-offset-3 medium-9 columns">
-                    <a class="lv-advanced-options-btn button tiny knockout radius" href="#">Show More</a>
+                    <a class="lv-advanced-options-btn button tiny pill radius" href="#">Show More</a>
                 </div>
             </div>
 
-            <!-- Preferred Results Format -->
-            <div class="row show-for-large-up">
-                <div class="medium-3 columns">
-                    <label class="text-left medium-text-right">
-                        <span class="text">Preferred results format:</span>
-                    </label>
-                </div>
-                <div class="medium-9 columns">
-                    <input type="radio" name="sf-result-type" value="toc" id="sf-tree-of-contents">
-                    <label for="sf-tree-of-contents" id="sf-tree-of-contents">Tree of Contents</label>
-                    <input type="radio" name="sf-result-type" value="list" id="sf-document-list" checked>
-                    <label for="sf-document-list" id="sf-document-list">Document List</label>
-                </div>
-            </div>
+            <!-- Draw Submit Fields -->
+            {% include westlaw/app/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
 
-            <!-- Submit -->
-            <div class="row">
-                <div class="medium-offset-3 medium-9 columns">
-                    <!-- <button value="submit" class="button radius medium">Search</button> -->
-                    <!-- switch anchor for button on production -->
-                    <a href="/research/2007-fca-1526/" class="button radius medium">Search Cases</a>
-                </div>
-            </div>
+        </div>
+    </div>
+</form> <!-- .lv-search-form -->
 
-        </div> <!-- .columns -->
-    </div>  <!-- .row -->
-</form>
+
 
 <!-- ************************ END FORM ************************ -->
 
-<!-- Form restricted on mobile (small height) - button to show more -->
+<!-- Form obscured on mobile (restricted height) - button will show all -->
 <div class="row">
     <div class="medium-11 columns text-right">
         <a class="lv-partial-view-btn lv-non-legacy button pill tiny" href="#">Expand</a>
@@ -290,20 +88,13 @@ context_menu: "checkpoint/app/context_menu_output/search_templates.html"
 <div class="row">
     <div class="columns">
         {% include common/snippets/breadcrumbs.html %}
-        {% include checkpoint/app/export_options/search_advanced.html %}
-    </div>
-</div>
-
-<!-- EXPAND LEVEL -->
-<div class="row">
-    <div class="columns text-right">
-        <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
+        {% include westlaw/app/export_options/search_advanced.html %}
     </div>
 </div>
 
 <!-- TOC -->
 <div class="row">
     <div class="columns">
-        {% include checkpoint/app/toc_output/toc_cases.html %}
+        {% include westlaw/app/toc_output/toc_newsroom.html %}
     </div>
 </div>

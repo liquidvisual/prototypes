@@ -1,7 +1,7 @@
 ---
 layout: westlaw/app/research/search_templates/cases
-title: Search Cases
-permalink: /westlaw/cases/
+title: "Research: Cases"
+permalink: /westlaw/research/cases/
 ---
 
 <!--- This child document initializes the page in Jekyll. -->

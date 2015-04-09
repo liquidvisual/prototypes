@@ -1,12 +1,13 @@
 /*
-    Checkpoint SCSS
+    MAIN.SCSS
 
-    - Last updated: 20.03.15
+    - Last updated: 09.04.15
     - hello@liquidvisual.com
 */
 
 // Foundation
 @import "foundation/settings";
+@import "foundation/components/grid"; // Necessary for below
 
 // Variables
 @import "app/base/variables";
@@ -40,7 +41,7 @@
 @import "app/components/dropdowns";
 @import "app/components/export-options";
 @import "app/components/forms";
-// @import "app/components/jurisdiction-select";
+// @import "app/components/jurisdiction-select"; // checkpoint only
 @import "app/components/lists";
 @import "app/components/modal";
 @import "app/components/site-select";
@@ -52,9 +53,14 @@
 // @import "app/pages/dashboard";
 
 // Legacy
-@import "app/legacy/legacy";
-@import "app/legacy/legacy-document";
-@import "app/legacy/legacy-preferences";
-@import "app/legacy/legacy-search-templates";
-@import "app/legacy/legacy-toc";
-@import "app/legacy/legacy-doc-context";
+@import "app/legacy/checkpoint-document-original";
+// @import "app/legacy/westlaw-document-original"; // unless they are infact the same?
+@import "app/legacy/delivery-options";
+@import "app/legacy/document-context";
+@import "app/legacy/document";
+@import "app/legacy/general";
+@import "app/legacy/search-result-options";
+@import "app/legacy/search-results";
+@import "app/legacy/search-templates";
+@import "app/legacy/toc";
+@import "app/legacy/user-preferences";

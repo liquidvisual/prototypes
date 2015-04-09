@@ -1,0 +1,149 @@
+/*
+    SEARCH-RESULT-OPTIONS.CSS (LEGACY)
+
+    - Last updated: 09.04.15
+    - hello@liquidvisual.com
+
+    - Notes -
+
+    This mostly applies to the tabs that appear in the Context Menu (LHS).
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Search Result Options (Context Menu)
+//-----------------------------------------------------------------
+
+.lv-context-menu {
+
+	input[type="submit"] {
+		margin: 5px 15px 15px 15px;
+	}
+
+	#resultsummary {
+		padding: 15px;
+		font-size: 14px;
+		border: 1px solid #D4DCE3;
+		background: #F5F6F6;
+		margin: 15px;
+		border-radius: 4px;
+	}
+
+	#totalDocumentCount {
+		background: $tertiary-color;
+		color: white;
+		border-radius: 10px;
+		padding: 0 8px;
+		font-size: 13px;
+	}
+
+	#totalDocumentCount,
+	.result {
+		font-weight: bold;
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.lv-context-menu #searchoptions,
+.lv-context-menu #sessioncontainer {
+
+	a:before {
+		@extend .foundation-icons;
+		display: inline-block;
+		margin-right: 10px;
+		color: $primary-color;
+		font-size: 18px;
+	}
+
+	#editsearch a:before {
+		content: "\f194"; // Pencil
+	}
+	#newsearch a:before {
+		content: "\f16c"; // magnifying glass
+	}
+	#savesearch a:before {
+		content: "\f1ac"; // Save
+	}
+	#origresults a:before,
+	#backToPreviousStep a:before {
+		content: "\f10a"; // go back
+	}
+	.session a:before {
+		content: "\f12b"; // clock for sessions
+		margin-right: 5px;
+	}
+}
+
+//-----------------------------------------------------------------
+// Document Options (Context Menu) | Search Results, Recently Accessed
+//-----------------------------------------------------------------
+
+// .ui-widget * { outline: none; }​
+
+.lv-context-menu .ui-tabs-active a {
+	background: $tertiary-color;
+	color: white;
+	outline: none;
+}
+
+.lv-context-menu #docoptions {
+	margin-bottom: 30px;
+	border-bottom: 2px solid #D4DCE3;
+}
+
+//=========================================
+// search results and recently accessed docs are similiar - same icons
+//=========================================
+
+.lv-context-menu #recentDocumentsList li a:before,
+.lv-context-menu #searchResultPanel a:before,
+.lv-context-menu #docoptionscontent .doclist.toplevel a:before {
+	@extend .foundation-icons;
+	content: "\f18e"; // document icon
+	display: inline-block;
+	margin-right: 10px;
+	color: $primary-color;
+	font-size: 18px;
+}
+
+.lv-context-menu #searchResultPanel .active a:before {
+	color: white;
+}
+
+// green flag remove for now
+#resultsContainerForm img,
+.lv-context-menu .imgFlag {
+	display: none;
+}
+
+// Hide those little numbers - not used
+.lv-context-menu #searchResultPanel .docRank {
+	display: none !important;
+}
+
+//=========================================
+// Doc options - Search Results tab
+//=========================================
+
+.lv-context-menu #searchResultTools {
+	padding: 0 15px;
+	margin-bottom: 20px;
+
+	a {
+		display: inline-block;
+		line-height: 1;
+		// border: 2px solid $primary-color;
+		padding: 5px;
+		border: 0;
+		// border-radius: 3px;
+		color: $primary-color;
+	}
+}
+
+//=========================================
+//
+//=========================================

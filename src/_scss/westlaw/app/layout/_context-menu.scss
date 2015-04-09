@@ -235,20 +235,24 @@ $context-menu-border-color: #D4DCE3;
     }
 
     .active a:not(.active) {
-        // background: darken($secondary-color, 10%); //#5E6E7F;
         color: white;
-        background: #5E6E7F;
         font-weight: 600;
 
-        // &:before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 4px;
-        //     height: 100%;
-        //     background: red;
-        // }
+        @media #{$large-up} {
+            background: #5E6E7F;
+            // background: darken($secondary-color, 10%); //#5E6E7F;
+
+            // BRS
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 4px;
+            //     height: 100%;
+            //     background: red;
+            // }
+        }
     }
 }
 

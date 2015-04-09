@@ -1,6 +1,6 @@
 ---
-layout: westlaw/app/research/search_templates/newsroom
-title: Search Newsroom
+layout: westlaw/app/newsroom/newsroom
+title: Newsroom
 permalink: /westlaw/newsroom/
 ---
 

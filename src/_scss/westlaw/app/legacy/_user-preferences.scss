@@ -1,8 +1,7 @@
-@import "foundation/components/grid";
 /*
-    LEGACY PREFERENCES.CSS
+    USER-PREFERENCES.CSS (LEGACY)
 
-    - Last updated: 03.04.15
+    - Last updated: 09.04.15
     - hello@liquidvisual.com
 
     - Notes -
@@ -22,11 +21,21 @@
 }
 
 //-----------------------------------------------------------------
+// Allow gap for footer in content scroll
+//-----------------------------------------------------------------
+
+#sidebar {
+    height: auto !important;
+    // overflow: hidden;
+}
+
+//-----------------------------------------------------------------
 // Legacy Preferences
 //-----------------------------------------------------------------
 
 #prefForm {
     padding: rem-calc(30);
+    background: white;
 
     h2 {
         margin-bottom: rem-calc(30);

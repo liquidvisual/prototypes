@@ -1,4 +1,4 @@
-@import "foundation/components/buttons";
+// @import "foundation/components/buttons";
 /*
     BUTTONS.CSS
 
@@ -22,7 +22,7 @@
 input[type="button"],
 input[type="submit"]
  {
-    @include button;
+    // @include button;
     border-radius: $global-radius;
     cursor: pointer;
 }

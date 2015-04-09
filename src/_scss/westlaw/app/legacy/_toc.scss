@@ -1,7 +1,7 @@
 /*
-    LEGACY TOC.CSS
+    TOC.CSS (LEGACY)
 
-    - Last updated: 31.03.15
+    - Last updated: 09.04.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -174,4 +174,39 @@
 
 .toc-root .plus img {
     display: none;
+}
+
+//-----------------------------------------------------------------
+// FILTER SEARCH (Context Menu - mini toc)
+//-----------------------------------------------------------------
+
+#searchsummary #metadocs > ul {
+    margin-bottom: 15px;
+}
+
+// The UL dropdown (hidden until click)
+#searchsummary .resultMetadoc {
+    padding: 10px 15px;
+
+    li {
+        padding: 5px 0;
+    }
+
+    input[type="checkbox"] {
+        margin: 0;
+    }
+
+    a {
+        display: inline;
+        border: 0;
+        padding: 0;
+    }
+}
+
+#searchsummary .resultMetadocLink:before {
+    margin-right: 10px;
+
+    @media #{$medium-up} {
+        margin-right: 5px;
+    }
 }

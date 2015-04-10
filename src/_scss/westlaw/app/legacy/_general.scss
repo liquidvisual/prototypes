@@ -36,6 +36,18 @@
 	color: #999;
 	font-size: 14px;
 }
+
+// Workflow image (?)
+img.navImg {
+	@media #{$devices-only} {
+	    width: 100%;
+	}
+}
+
 //=========================================
-//
+// Prevent any delivery options in context menu
 //=========================================
+
+.lv-context-menu #groupdeliveryoptions {
+	display: none;
+}

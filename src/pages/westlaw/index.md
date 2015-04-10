@@ -19,7 +19,7 @@ permalink: /westlaw/
     }
 
     .lv-content-block {
-        padding: 30px;
+        /*padding: 30px;*/
     }
 
     .page-index > li > a {
@@ -48,7 +48,11 @@ permalink: /westlaw/
     <ol class="page-index">
         <li><a href="/westlaw/">Home</a> <small><em>(Redirect to /research on production)</em></small></li>
         <li><a href="/westlaw/research/">Research</a> <small><em>(equivilent to root)</em></small></li>
-        <li><a href="/westlaw/workflow/">Workflow</a></li>
+        <li><a href="/westlaw/workflow/">Workflow</a>
+            <ul>
+                <li><a href="/westlaw/workflow/document-01/">Ending a Relationship (WA) Flowchart</a></li>
+            </ul>
+        </li>
         <li><a href="#" class="disabled">Tools</a></li>
         <li><a href="/westlaw/alerts/" class="disabled">Alerts</a></li>
         <li><a href="#" class="disabled">Folders</a></li>
@@ -65,7 +69,7 @@ permalink: /westlaw/
                 <li><a href="/westlaw/research/basic-results-01/">Search: Confidentiality Agreement</a></li>
             </ul>
         </li>
-        <li><a href="/westlaw/cases/">Search Template - Cases</a></li>
+        <li><a href="/westlaw/research/cases/">Search Template - Cases</a></li>
         <li><a href="/westlaw/newsroom/">Search Template - Newsroom</a></li>
     </ol>
     <br>

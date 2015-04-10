@@ -1,4 +1,4 @@
-// @import "foundation/components/buttons";
+@import "foundation/components/buttons";
 /*
     BUTTONS.CSS
 
@@ -12,9 +12,12 @@
 // Buttons
 //-----------------------------------------------------------------
 
-.search-button i {
-    font-size: rem-calc(20);
-    line-height: 36px;
+.search-button {
+    line-height: 36px; // why does this need to be here? Stupid foundation
+    font-size: rem-calc(14); // bit weird
+    i {
+        font-size: rem-calc(20);
+    }
 }
 
 .lv-super input[type="button"],
@@ -22,7 +25,7 @@
 input[type="button"],
 input[type="submit"]
  {
-    // @include button;
+    @include button;
     border-radius: $global-radius;
     cursor: pointer;
 }

@@ -27,10 +27,7 @@
 	margin-bottom: 20px;
 }
 
-#deliveryForm {
-	display: none !important;
-}
-
+#deliveryForm,
 #documentNavPadOut {
 	display: none !important;
 }
@@ -67,25 +64,53 @@
 	display: none;
 }
 
-/* title header */
-#resultsContainerForm dd.titleBody {
-	font-size: 22px;
+//-----------------------------------------------------------------
+// Title Header
+//-----------------------------------------------------------------
+
+#resultsContainerForm dd.titleBody, // checkpoint
+#resultsContainerForm div.resultTitle p.resultTitle { // westlaw
+	font-size: 20px;
+	font-weight: 600;
+	color: $primary-color;
 }
 
-.resultMetadata dt,
-.resultTitle dt {
+.resultMetadata dt, // checkpoint
+.resultTitle dt { // checkpoint
 	clear: left;
 	float: left;
 	width: 130px;
 	padding: 2px 0;
 	margin-right: 15px;
+	background: red;
 }
 
-.resultMetadata dd,
-.resultTitle dd {
+.resultMetadata dd, // checkpoint
+.resultTitle dd { // checkpoint
 	float: left;
 	width: 80%;
 	padding: 2px 0;
+}
+
+.leftMetadata { // westlaw
+	// clear: left;
+	float: left;
+	font-weight: bold;
+	width: 150px;
+	// width: 130px;
+	// padding: 2px 0;/
+	// margin-right: 15px;
+	// background: red;
+}
+
+.rightMetadata {
+	// float: left;
+	// width: 20%;
+}
+
+// Highlighting in results - westlaw. Checkpoint does inline styles
+.nhit {
+	background: #FFFD38;
 }
 
 //=========================================

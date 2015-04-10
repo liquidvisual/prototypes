@@ -20,13 +20,22 @@
     }
 }
 
+.lv-context-menu .toc-root {
+    padding: 10px;
+}
+
+// Drop indentation and make flat listed when inside context menu (crap UX)
+.lv-context-menu .toc-root ul {
+    // margin-left: 0;
+}
+
 .toc-root ul ul li.plus input {
     margin-bottom: 0;
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Hit Targets
-//=========================================
+//-----------------------------------------------------------------
 
 // Images have no hit areas, not wrapped in anchors
 .toc-root .plus .expanded,
@@ -39,15 +48,22 @@
     font-size: rem-calc(14);
 }
 
+.lv-context-menu .toc-root a {
+    font-size: rem-calc(12);
+    padding: 0;
+}
+
+// Allow checkboxes to breathe
 .toc-root input[type="checkbox"] {
     margin-right: rem-calc(10);
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Stars & Icons - saved / not saved
-//=========================================
+//-----------------------------------------------------------------
 
-// What is this?
+// qlimg is the image of the star - we're hiding that and replacing with a psuedo element font
+
 .toc-root .qlimg {
     @media #{$small-only} {
         display: none;
@@ -58,8 +74,10 @@
     @extend .foundation-icons;
     content: "\f1ee"; // star icon
     padding: rem-calc(0 5 0 0);
+    color: #F2B435;
 }
 
+// Stars that are non-selected are greyed out
 .toc-root .qlimg.noSaved:before {
     color: lighten($tertiary-color, 40%);
 }
@@ -71,9 +89,9 @@
     }
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // PLUS + MINUS - BUTTONS
-//=========================================
+//-----------------------------------------------------------------
 
 .resultMetadocLink:before,
 .toc-root .plus .expanded:before,
@@ -82,31 +100,54 @@
 {
     @extend .foundation-icons;
     content: "\f176"; // minus
-    color: $primary-color;
-    padding: rem-calc(0 5);
-
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
     margin: 2px;
-    border-radius: 3px;
     border: 1px solid #B3B3B3;
-    padding: rem-calc(3 5);
+    border-radius: 3px;
     font-size: rem-calc(12);
+    color: $primary-color;
+    text-align: center;
 
     @media #{$small-only} {
         font-size: rem-calc(16);
-        padding: 0;
         width: 30px;
         height: 30px;
         line-height: 30px;
-        text-align: center;
-        margin: 2px;
-        border-radius: 3px;
-        border: 1px solid #B3B3B3;
     }
 }
 
-/* lead node is invisible - so all lines up */
+// .lv-context-menu .resultMetadocLink:before,
+// .lv-context-menu .toc-root .plus .expanded:before,
+// .lv-context-menu .toc-root .plus .collapsed:before,
+// .lv-context-menu .toc-root .plus .docLeaf:before
+// {
+//     font-size: rem-calc(16);
+//     width: 30px;
+//     height: 30px;
+//     line-height: 30px;
+// }
+
+// Node without children has invisible borders, so all line up
 .toc-root .plus .docLeaf:before {
     color: $body-bg;
+    border-color: $body-bg; //red;
+}
+
+.lv-context-menu .toc-root .plus .docLeaf:before {
+    // display: none;
+    color: white;
+    border-color: white;
+}
+
+.toc-root a {
+    display: inline;
+}
+
+// Westlaw mainly - prevents adding box twice unecessarily
+.toc-root .docName .docLeaf:before {
+    display: none;
 }
 
 /* prevent divs causing line breaks */
@@ -124,9 +165,9 @@
     }
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Gradient Shifter
-//=========================================
+//-----------------------------------------------------------------
 
 .toc-root .plus .plus .plus {
     @for $i from 1 through 20 {
@@ -161,6 +202,10 @@
         }
     }
 }
+
+//=========================================
+//
+//=========================================
 
 .collapsed .resultMetadocLink:before,
 .toc-root .plus .collapsed:before {

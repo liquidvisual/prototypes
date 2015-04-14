@@ -46,14 +46,23 @@ permalink: /westlaw/
     <h3 class="panel">Main Pages</h3>
 
     <ol class="page-index">
-        <li><a href="/westlaw/">Home</a> <small><em>(Redirect to /research on production)</em></small></li>
-        <li><a href="/westlaw/research/">Research</a> <small><em>(equivilent to root)</em></small></li>
+        <li><a href="/westlaw/">Home</a> <small>(Redirect to /research on production)</small></li>
+        <li><a href="/westlaw/research/">Research</a> <small>(equivilent to root)</small></li>
         <li><a href="/westlaw/workflow/">Workflow</a>
             <ul>
                 <li><a href="/westlaw/workflow/document-01/">Ending a Relationship (WA) Flowchart</a></li>
             </ul>
         </li>
-        <li><a href="#" class="disabled">Tools</a></li>
+        <li><a href="/westlaw/tools/">Tools</a></li>
+        <li><a href="/westlaw/newsroom/">Newsroom</a>
+            <ul>
+                <li><a href="/westlaw/newsroom/newsroom-results-01/">Most Recent News</a> <small>(Results)</small>
+                    <ul>
+                        <li><a href="/westlaw/newsroom/document-01/">Market Grows in Confidence</a> <small>(Document)</small></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li><a href="/westlaw/alerts/" class="disabled">Alerts</a></li>
         <li><a href="#" class="disabled">Folders</a></li>
         <li><a href="/westlaw/preferences/">User Preferences</a></li>
@@ -70,22 +79,21 @@ permalink: /westlaw/
             </ul>
         </li>
         <li><a href="/westlaw/research/cases/">Search Template - Cases</a></li>
-        <li><a href="/westlaw/newsroom/">Search Template - Newsroom</a></li>
     </ol>
     <br>
 
     <div class="panel">
         <h3>Document Samples for Testing</h3>
-        <del><p><b>Please note:</b> Context Menu (LHS) content has been intentionally excluded - as we already know how they display. The focus with these links is purely on the document body itself.</p></del>
+        <p><b>Please note:</b> Context Menu (LHS) content has been intentionally excluded - as we already know how they display. The focus with these links is purely on the document body itself.</p>
     </div>
 
 
 
 
-    <ol>
-        <li>Large tables: <a href="/westlaw/sample-01/">Table of Amending Legislation</a></li>
-        <li>Alt Style <a href="/westlaw/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a></li>
-        <li>Long Document <a href="/westlaw/sample-03/">YA 1 Definitions</a></li>
+    <ol class="page-index">
+        <li>Large tables: <a href="/westlaw/research/sample-01/">Table of Amending Legislation</a></li>
+        <li>Alt Style <a href="/westlaw/research/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a></li>
+        <li>Long Document <a href="/westlaw/research/sample-03/">YA 1 Definitions</a></li>
     </ol>
 
 </div>

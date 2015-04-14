@@ -21,13 +21,17 @@
 		margin: 5px 15px 15px 15px;
 	}
 
-	#resultsummary {
+	#resultsummary { // checkpoint
 		padding: 15px;
 		font-size: 14px;
 		border: 1px solid #D4DCE3;
 		background: #F5F6F6;
 		margin: 15px;
 		border-radius: 4px;
+	}
+
+	#docoptionscontent p {
+		padding: 15px;
 	}
 
 	#totalDocumentCount {

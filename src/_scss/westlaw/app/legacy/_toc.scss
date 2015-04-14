@@ -20,13 +20,14 @@
     }
 }
 
+// horizontal scrolling FTW
 .lv-context-menu .toc-root {
     padding: 10px;
-}
+    overflow-x: scroll;
 
-// Drop indentation and make flat listed when inside context menu (crap UX)
-.lv-context-menu .toc-root ul {
-    // margin-left: 0;
+    * {
+        white-space: nowrap;
+    }
 }
 
 .toc-root ul ul li.plus input {
@@ -118,21 +119,11 @@
     }
 }
 
-// .lv-context-menu .resultMetadocLink:before,
-// .lv-context-menu .toc-root .plus .expanded:before,
-// .lv-context-menu .toc-root .plus .collapsed:before,
-// .lv-context-menu .toc-root .plus .docLeaf:before
-// {
-//     font-size: rem-calc(16);
-//     width: 30px;
-//     height: 30px;
-//     line-height: 30px;
-// }
-
 // Node without children has invisible borders, so all line up
 .toc-root .plus .docLeaf:before {
     color: $body-bg;
-    border-color: $body-bg; //red;
+    // border-color: $body-bg; //red;
+    // border-color: red;
 }
 
 .lv-context-menu .toc-root .plus .docLeaf:before {

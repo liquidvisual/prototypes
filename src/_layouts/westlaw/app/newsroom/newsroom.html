@@ -3,6 +3,16 @@ layout: westlaw/app/internal
 context_menu: "westlaw/app/context_menu_output/search_newsroom.html"
 ---
 
+<!-- ADHOC JS FOR SIMULATION ONLY -->
+<script>
+    $(document).ready(function(){
+        // Point all links to the same template (demo purposes only)
+        var newLink = "/westlaw/newsroom/newsroom-results-01/";
+        $(".toc-root a").attr("href", newLink);
+    });
+</script>
+<!-- END ADHOC JS FOR SIMULATION ONLY -->
+
 <!-- HEADER -->
 <header class="header">
     <div class="row">
@@ -59,14 +69,16 @@ context_menu: "westlaw/app/context_menu_output/search_newsroom.html"
 <!-- DOCUMENT OPTIONS -->
 <div class="row">
     <div class="columns">
-        {% include common/snippets/breadcrumbs.html %}
+        <!-- { % include common/snippets/breadcrumbs.html %} -->
         {% include westlaw/app/export_options/search_advanced.html %}
     </div>
 </div>
 
+{% comment %}
 <!-- TOC -->
 <div class="row">
     <div class="columns">
         {% include westlaw/app/toc_output/toc_newsroom.html %}
     </div>
 </div>
+{% endcomment %}

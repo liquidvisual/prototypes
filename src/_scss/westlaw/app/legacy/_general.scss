@@ -39,6 +39,10 @@
 
 // Workflow image (?)
 img.navImg {
+	background: white;
+	padding: 15px;
+	border: 1px solid #ddd;
+
 	@media #{$devices-only} {
 	    width: 100%;
 	}

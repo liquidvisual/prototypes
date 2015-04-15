@@ -234,12 +234,17 @@ $context-menu-border-color: #D4DCE3;
         margin-right: rem-calc(10);
     }
 
-    .active a:not(.active) {
-        color: white;
+    .active > a:not(.active) {
+        color: #222;
         font-weight: 600;
 
         @media #{$large-up} {
             background: #5E6E7F;
+            color: white;
+
+            i {
+                color: white;
+            }
             // background: darken($secondary-color, 10%); //#5E6E7F;
 
             // BRS

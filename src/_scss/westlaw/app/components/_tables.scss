@@ -33,6 +33,10 @@ $footable-bg: #5F6E7E; //#5A5C67;
     }
 }
 
+//=========================================
+//
+//=========================================
+
 .wrapper {
     // background: red;
     // float: left;
@@ -130,6 +134,18 @@ td select {
 
 .footable {
     background: white url(../../img/westlaw/template/table-thead-bg.png) repeat-x; // hack
+
+    .footable-toggle {
+        display: none !important; // remove that plus minus thing
+    }
+
+    .fi-x {
+        color: $alert-color;
+    }
+
+    .fi-check {
+        color: $success-color;
+    }
 
     .footable .zebra,
     .footableX tr:nth-of-type(odd) {

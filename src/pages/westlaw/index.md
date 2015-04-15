@@ -64,7 +64,7 @@ permalink: /westlaw/
             </ul>
         </li>
         <li><a href="/westlaw/alerts/">Alerts</a></li>
-        <li><a href="#" class="disabled">Folders</a></li>
+        <li><a href="/westlaw/folders/" class="disabled">Folders</a></li>
         <li><a href="/westlaw/preferences/">User Preferences</a></li>
         <li><a href="/westlaw/history/" class="disabled">User History</a></li>
     </ol>
@@ -73,7 +73,7 @@ permalink: /westlaw/
     <h3 class="panel">Search Templates</h3>
 
     <ol class="page-index">
-        <li><a href="/westlaw/">Search Template - Basic</a>
+        <li><a href="/westlaw/research/">Search Template - Basic</a>
             <ul>
                 <li><a href="/westlaw/research/basic-results-01/">Search: Confidentiality Agreement</a></li>
             </ul>

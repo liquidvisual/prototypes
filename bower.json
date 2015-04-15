@@ -11,7 +11,8 @@
     "jquery.transit": "~0.9.12",
     "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#master",
     "nprogress": "~0.1.6",
-    "WOW": ">=0.1.9"
+    "WOW": ">=0.1.9",
+    "footable": "~2.0.3"
   },
   "devDependencies": {
   }

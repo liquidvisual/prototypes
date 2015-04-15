@@ -10,7 +10,7 @@
 //-----------------------------------------------------------------
 // Dropdowns
 //-----------------------------------------------------------------
-/*
+
 .lv-has-dropdown:hover .lv-dropdown {
     height: auto;
     opacity: 1;
@@ -44,7 +44,10 @@
         font-size: rem-calc(12);
         font-weight: 600;
         list-style: none;
-        text-align: left;
+    }
+
+    input {
+        margin-bottom: 0;
     }
 
     i {
@@ -52,17 +55,19 @@
         color: #94999C;
     }
 
-    a {
+    a,
+    .anchor {
         // @extend .transition;
         display: block;
         padding: rem-calc(10 15);
         border-bottom: 1px solid #D4DCE3; // better blue? #E1E4E6
         color: #505659;//#676767;
         font-size: rem-calc(14) !important;
+        text-align: left;
 
         &:hover {
             // color: $primary-color;
             background: #F2F4F5;
         }
     }
-}*/
+}

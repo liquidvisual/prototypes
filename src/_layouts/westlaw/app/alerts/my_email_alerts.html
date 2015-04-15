@@ -4,11 +4,133 @@ sidebar_details: "checkpoint/app/sidebar_content/alerts.html"
 context_menu: "westlaw/app/context_menu_output/alerts.html"
 ---
 
-<div class="row">
-    <div class="columns">
-        <h3 class="left">My Email Alerts</h3>
-        <hr>
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">My Email Alerts</h3>
+            <hr>
+        </div>
     </div>
-</div>
+</header>
 
-{{ content }}
+<!-- Tools -->
+<section class="lv-table-tools">
+	<div class="row">
+		<div class="medium-5 large-4 columns">
+			<div class="row">
+				<div class="small-3 columns">
+					<label for="search-filter" class="right inline">Search</label>
+				</div>
+				<div class="small-9 columns">
+					<input type="text" id="search-filter" placeholder="Enter Name or ID">
+				</div>
+			</div>
+		</div>
+		<div class="medium-7 large-8 columns text-right">
+
+			<a data-dropdown="drop1" class="button small radius">Toggle Columns <i class="fa fa-caret-down"></i></a>
+			<ul id="drop1" class="lv-dropdown" data-dropdown-content>
+				<li><label class="anchor"><input type="checkbox"> Alert Type</label></li>
+				<li><label class="anchor"><input type="checkbox"> Alert Name</label></li>
+				<li><label class="anchor"><input type="checkbox"> Client ID</label></li>
+				<li><label class="anchor"><input type="checkbox"> Frequency</label></li>
+				<li><label class="anchor"><input type="checkbox"> Notes</label></li>
+				<li><label class="anchor"><input type="checkbox"> Actions</label></li>
+				<li><label class="anchor"><input type="checkbox"> Date Created</label></li>
+				<li><span class="anchor"><input type="checkbox"> Status</span></li>
+				<li><a href="#"><i class="fi-undo"></i> Undo</a></li>
+			</ul>
+
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<!-- Footable Table -->
+<table class="footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10">
+	<thead>
+		<tr>
+			<th data-hide="phone" data-type="numeric">Alert Type</th>
+			<th>Alert Name</th>
+			<th data-hide="phone, tablet" data-type="numeric">Client ID</th>
+			<th data-hide="phone, tablet">Frequency</th>
+			<th data-hide="all">Notes</th>
+			<th data-hide="phone, tablet">Actions</th>
+			<th data-hide="phone">Date Created</th>
+			<th data-sort-ignore="true">Status</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for i in (1..100) %}
+		<tr>
+			<td data-title="ID">Individual</td>
+			<td>Cases for "confidentiality agreement" a really</td>
+			<td>{{i}}2981{{i}}</td>
+			<td>Monthly</td>
+			<td>note note note</td>
+			<td>
+				<a href="#"><i class="fi-pause"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a> &nbsp;
+				<a href="#"><i class="fi-widget"></i></a> &nbsp;
+				<a href="#"><i class="fi-magnifying-glass"></i></a> &nbsp;
+				<a href="#"><i class="fi-refresh"></i></a>
+			</td>
+			<td>14/04/2015</td>
+			<td>Active</td>
+
+			<!-- <td data-title="Applicant"><a href="#">{{forloop.index}}. Engelbert Humperdink</a></td>
+			<td data-title="Date">03/03/2015</td>
+			<td data-title="Rank">-</td>
+			<td data-title="Short List">
+				<select name="SaveInfo[0][YesMaybeNo1]">
+					<option selected> - </option>
+					<option>No</option>
+					<option>Maybe</option>
+					<option>Yes</option>
+				</select>
+			</td>
+			<td data-title="Status">
+				<select name="SaveInfo[0][Status1]">
+					<option value=""> -- Select from List -- </option>
+					<option value="22" selected="">Applied</option>
+					<option value="19184">Available</option>
+					<option value="32489">Induction Month 1</option>
+					<option value="32490">Induction Month 2</option>
+					<option value="32491">Induction Month 3</option>
+					<option value="669">Interview 1 Conducted</option>
+					<option value="684">Interview 1 Scheduled</option>
+					<option value="739">Interview 2 Conducted</option>
+					<option value="19208">Interview 2 Scheduled</option>
+					<option value="32488">Invited for Interview</option>
+					<option value="25">Not Successful</option>
+					<option value="741">Referee check in progress</option>
+					<option value="1397">Swept</option>
+					<option value="31501">Tools and Equipment Ordered</option>
+					<option value="31500">Training and Medicals Organised</option>
+					<option value="33278">Transferred to CRIS 21</option>
+					<option value="31499">Transferred to PayGlobal</option>
+					<option value="680">Unable to Contact</option>
+					<option value="27176">Unavailable</option>
+					<option value="26">Withdrawn</option>
+				</select>
+			</td>
+			<td data-title="Attachments" class="text-center"><i class="fi-paperclip"></i></td>
+			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a> <a href="/modal_output/notes.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="pill button tiny">Add Attachment</a></td>
+			<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
+			<td data-title="Notes">[select]</td>
+			<td data-title="Log">[select]</td>
+			<td data-title="Answers"><a href="#">Application</a> <a href="#">Admin</a></td>
+			<td data-title="All"><input type="checkbox"></td> -->
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+<!-- CLIENT SIDE PAGINATION -->
+<ul class="right pagination pagination-centered hide-if-no-paging"></ul>

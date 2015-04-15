@@ -28,7 +28,7 @@
     <link rel="shortcut icon" type='image/x-icon' href='{{ "/img/westlaw/template/favicon.ico" | prepend: site.assets }}'>
     <link rel="apple-touch-icon" sizes="152x152" href="{{ "/img/westlaw/template/apple-touch-icon.png" | prepend: site.assets }}">
 
-    <!-- CDN -->
+    <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
     <!-- build:css({src,.tmp}) /assets/css/westlaw/foundation.css -->
@@ -37,6 +37,7 @@
 
     <!-- build:css({src,.tmp}) /assets/css/westlaw/minified.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/_bower_components/footable/css/footable.core.css">
     <link rel="stylesheet" href="/css/westlaw/liquidvisual/liquidvisual.css">
     <link rel="stylesheet" href="/css/westlaw/main.css">
     <!-- endbuild -->
@@ -74,6 +75,11 @@
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
 
+    <script src="/_bower_components/footable/js/footable.js"></script>
+    <script src="/_bower_components/footable/js/footable.paginate.js"></script>
+    <script src="/_bower_components/footable/js/footable.sort.js"></script>
+    <script src="/_bower_components/footable/js/footable.filter.js"></script>
+
     <script src="/scripts/westlaw/legacy/jquery-ui.js"></script>
     <script src="/scripts/westlaw/adhoc-datepicker.js"></script>
     <script src="/scripts/westlaw/adhoc-export-options.js"></script>
@@ -85,6 +91,7 @@
     <script src="/scripts/westlaw/dashboard.js"></script>
     <script src="/scripts/westlaw/modal.js"></script>
     <script src="/scripts/westlaw/sidebar.js"></script>
+    <script src="/scripts/westlaw/tables.js"></script>
     <script src="/scripts/westlaw/tooltips.js"></script>
     <script src="/scripts/westlaw/main.js"></script>
     <!-- endbuild -->

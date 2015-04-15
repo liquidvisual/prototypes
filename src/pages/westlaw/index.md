@@ -63,7 +63,7 @@ permalink: /westlaw/
                 </li>
             </ul>
         </li>
-        <li><a href="/westlaw/alerts/" class="disabled">Alerts</a></li>
+        <li><a href="/westlaw/alerts/">Alerts</a></li>
         <li><a href="#" class="disabled">Folders</a></li>
         <li><a href="/westlaw/preferences/">User Preferences</a></li>
         <li><a href="/westlaw/history/" class="disabled">User History</a></li>

@@ -15,6 +15,11 @@ include: ['.htaccess']
 future: true
 show_drafts: true
 
+# Docs
+collections:
+  docs:
+    output: true
+
 # Markdown library
 markdown: kramdown
 #   auto_ids: true
@@ -29,6 +34,9 @@ markdown: kramdown
 #     coderay_tab_width: 4
 #     coderay_bold_every: 10
 #     coderay_css: style
+
+kramdown:
+  input: GFM
 
 # pygments: true - deprecated?
 highlighter: pygments

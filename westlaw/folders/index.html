@@ -15,12 +15,12 @@
         
         
             
-                Documentation - Westlaw
+                Folders - Westlaw
             
         
     </title>
 
-    <link rel="canonical" href="/westlaw/">
+    <link rel="canonical" href="/westlaw/folders/">
     <link rel="shortcut icon" type='image/x-icon' href='/assets/img/westlaw/template/favicon.ico'>
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
 
@@ -130,6 +130,8 @@
     
 
     
+
+    
 "><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
     		<li class="
 
@@ -138,12 +140,16 @@
     
 
     
+
+    active
 "><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
     		<li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
 		    <li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
 		    <li class="
 
 
+
+    
 
     
 
@@ -161,12 +167,14 @@
 <nav class="lv-navigation show-for-large-up">
     <div class="lv-topbar">
         <ul>
-    <li class=" active ">
+    <li class="">
         <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
     </li>
     <li class="
 
 
+
+    
 
     
 
@@ -181,6 +189,8 @@
     
 
     
+
+    
 ">
         <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
     </li>
@@ -191,12 +201,16 @@
     
 
     
+
+    
 ">
         <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
     </li>
     <li class="
 
 
+
+    
 
     
 
@@ -218,17 +232,41 @@
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
 		
+		    <!-- START WESTLAW **SIMULATED** OUTPUT -->
+
+<h1>My Folders</h1>
+
+<ul class="folders-list">
+    <li><a href="#"><i class="fi-folder primary-color"></i> My Searches</a></li>
+    <li class="active"><a href="#"><i class="fi-folder primary-color"></i> My Quicklinks</a>
+        <ul>
+            <li><a href="#">&nbsp;&nbsp;<i class="fi-folder primary-color"></i> Legal</a></li>
+            <li><a href="#">&nbsp;&nbsp;<i class="fi-folder primary-color"></i> 2015 Docs</a></li>
+            <li><a href="#">&nbsp;&nbsp;<i class="fi-folder primary-color"></i> Save for Later</a></li>
+        </ul>
+    </li>
+    <li><a href="#"><i class="fi-folder primary-color"></i> My Documents</a></li>
+    <li><a href="#"><i class="fi-folder primary-color"></i> My Cleardocs Documents</a></li>
+    <li><a href="#"><i class="fi-trash alert-color"></i> Deleted Items</a></li>
+</ul>
+
+<!-- END WESTLAW **SIMULATED** OUTPUT -->
+
+
+		
 	</nav> <!-- .lv-context-menu-panel -->
 
 	<!-- Top Menu - visible via JavaScript -->
 	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
 		<ul>
-    <li class=" active ">
+    <li class="">
         <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
     </li>
     <li class="
 
 
+
+    
 
     
 
@@ -243,6 +281,8 @@
     
 
     
+
+    
 ">
         <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
     </li>
@@ -253,12 +293,16 @@
     
 
     
+
+    
 ">
         <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
     </li>
     <li class="
 
 
+
+    
 
     
 
@@ -297,101 +341,109 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <style>
-    ul, ol {
-        margin-bottom: 15px;
-        font-size: 14px;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    ol > li {
-        margin-bottom: 15px;
-    }
-
-    .lv-content-block {
-        /*padding: 30px;*/
-    }
-
-    .page-index > li > a {
-        font-weight: bold;
-    }
-
-    .disabled {
-        color: #ddd;
-        font-weight: normal !important;
-    }
-
-    .panel p {
-        margin-bottom: 0;
-        font-size: 14px;
-        color: grey;
-    }
-</style>
-
-<div class="lv-content-block">
-
-    <h1>Documentation</h1>
-    <hr />
-
-    <h3 class="panel">Main Pages</h3>
-
-    <ol class="page-index">
-        <li><a href="/westlaw/">Home</a> <small>(Redirect to /research on production)</small></li>
-        <li><a href="/westlaw/research/">Research</a> <small>(equivilent to root)</small></li>
-        <li><a href="/westlaw/workflow/">Workflow</a>
-            <ul>
-                <li><a href="/westlaw/workflow/document-01/">Ending a Relationship (WA) Flowchart</a></li>
-            </ul>
-        </li>
-        <li><a href="/westlaw/tools/">Tools</a></li>
-        <li><a href="/westlaw/newsroom/">Newsroom</a>
-            <ul>
-                <li><a href="/westlaw/newsroom/newsroom-results-01/">Most Recent News</a> <small>(Results)</small>
-                    <ul>
-                        <li><a href="/westlaw/newsroom/document-01/">Market Grows in Confidence</a> <small>(Document)</small></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="/westlaw/alerts/">Alerts</a></li>
-        <li><a href="/westlaw/folders/">Folders</a> <small style="color: red;">In Progress</small></li>
-        <li><a href="/westlaw/preferences/">User Preferences</a></li>
-        <li><a href="/westlaw/history/" class="disabled">User History</a></li>
-    </ol>
-    <br />
-
-    <h3 class="panel">Search Templates</h3>
-
-    <ol class="page-index">
-        <li><a href="/westlaw/research/">Search Template - Basic</a>
-            <ul>
-                <li><a href="/westlaw/research/basic-results-01/">Search: Confidentiality Agreement</a></li>
-            </ul>
-        </li>
-        <li><a href="/westlaw/research/cases/">Search Template - Cases</a></li>
-    </ol>
-    <br />
-
-    <div class="panel">
-        <h3>Document Samples for Testing</h3>
-        <p><b>Please note:</b> Context Menu (LHS) content has been intentionally excluded - as we already know how they display. The focus with these links is purely on the document body itself.</p>
+                    <!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">My Folders</h3>
+            <hr>
+        </div>
     </div>
+</header>
 
+<!-- Export Options -->
+<div class="lv-export-options sticky-scroll disabled">
+    <ul class="lv-inline-list small-gaps text-center medium-text-left">
+        <li><a title="Add Subfolder" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-folder-add"></i></a></li>
+        <li><a title="Download" class="ajax-modal" href="/modal_output/checkpoint/export-document.html"><i class="fi-download"></i></a></li>
+        <li><a title="Print" class="ajax-modal" href="/modal_output/checkpoint/print-document.html"><i class="fi-print"></i></a></li>
+        <li><a title="Email" class="ajax-modal" href="/modal_output/checkpoint/email-document.html"><i class="fi-mail"></i></a></li>
+    </ul>
+</div> <!-- .lv-export-options -->
 
+<!-- Select All -->
+<input type="checkbox">Select All
 
-
-    <ol class="page-index">
-        <li>Large tables: <a href="/westlaw/research/sample-01/">Table of Amending Legislation</a></li>
-        <li>Alt Style <a href="/westlaw/research/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a></li>
-        <li>Long Document <a href="/westlaw/research/sample-03/">YA 1 Definitions</a></li>
-    </ol>
-
-</div>
-
-
+<!-- Footable Table -->
+<table class="js-footable footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10" data-limit-navigation="5">
+	<thead>
+		<tr>
+			<th data-sort-initial="false">Name</th>
+			<th data-hide="phone" data-type="numeric">Client ID</th>
+			<th data-hide="phone" data-type="numeric">Date Created</th>
+			<th data-hide="phone">Options</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<tr>
+			<td><input type="checkbox" name="folder-1"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder 1</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	
+		<tr>
+			<td><input type="checkbox" name="folder-2"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder 2</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	
+		<tr>
+			<td><input type="checkbox" name="folder-3"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder 3</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	
+		<tr>
+			<td><input type="checkbox" name="folder-4"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder 4</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	
+		<tr>
+			<td><input type="checkbox" name="folder-5"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder 5</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	
+		<tr>
+			<td><input type="checkbox" name="folder-6"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder 6</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	
+	</tbody>
+</table>
                 </div>
             </div>
         </div>

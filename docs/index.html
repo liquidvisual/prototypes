@@ -20,7 +20,7 @@
         
     </title>
 
-    <link rel="canonical" href="/westlaw/">
+    <link rel="canonical" href="/docs/">
     <link rel="shortcut icon" type='image/x-icon' href='/assets/img/westlaw/template/favicon.ico'>
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
 
@@ -161,7 +161,7 @@
 <nav class="lv-navigation show-for-large-up">
     <div class="lv-topbar">
         <ul>
-    <li class=" active ">
+    <li class="">
         <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
     </li>
     <li class="
@@ -223,7 +223,7 @@
 	<!-- Top Menu - visible via JavaScript -->
 	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
 		<ul>
-    <li class=" active ">
+    <li class="">
         <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
     </li>
     <li class="
@@ -297,100 +297,185 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <style>
-    ul, ol {
-        margin-bottom: 15px;
-        font-size: 14px;
-    }
+                    <h1 id="documentation">DOCUMENTATION</h1>
 
-    ul {
-        list-style: none;
-    }
+<p>Last updated: <strong>03.03.15</strong></p>
 
-    ol > li {
-        margin-bottom: 15px;
-    }
+<p>The public facing site is currently located at:<br />
+<a href="http://bigredsky.uat.liquidvisual.net">http://bigredsky.uat.liquidvisual.net</a></p>
 
-    .lv-content-block {
-        /*padding: 30px;*/
-    }
+<hr />
 
-    .page-index > li > a {
-        font-weight: bold;
-    }
+<h2 id="installation---setup">Installation &amp;  Setup</h2>
 
-    .disabled {
-        color: #ddd;
-        font-weight: normal !important;
-    }
+<p>This project is built with <a href="http://jekyllrb.com">Jekyll 2.5.3</a> - a static site generator. It also uses <a href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner and <a href="http://bower.io">Bower</a> for package management. This workflow was scaffolded with a <a href="http://yeoman.io">Yeoman</a> generator called <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> which simply automates the process of setting it all up.</p>
 
-    .panel p {
-        margin-bottom: 0;
-        font-size: 14px;
-        color: grey;
-    }
-</style>
+<p>The repo for all the source files are found here:</p>
 
-<div class="lv-content-block">
+<p><a href="https://github.com/liquidvisual/brs-0115">https://github.com/liquidvisual/brs-0115</a></p>
 
-    <h1>Documentation</h1>
-    <hr />
+<h3 id="on-mac">On Mac:</h3>
 
-    <h3 class="panel">Main Pages</h3>
+<p>You may need to install Ruby, Ruby Gems, NodeJS &amp; Git. There are detailed instructions on the <a href="http://jekyllrb.com/docs/installation/">Jekyll</a> website.</p>
 
-    <ol class="page-index">
-        <li><a href="/westlaw/">Home</a> <small>(Redirect to /research on production)</small></li>
-        <li><a href="/westlaw/research/">Research</a> <small>(equivilent to root)</small></li>
-        <li><a href="/westlaw/workflow/">Workflow</a>
-            <ul>
-                <li><a href="/westlaw/workflow/document-01/">Ending a Relationship (WA) Flowchart</a></li>
-            </ul>
-        </li>
-        <li><a href="/westlaw/tools/">Tools</a></li>
-        <li><a href="/westlaw/newsroom/">Newsroom</a>
-            <ul>
-                <li><a href="/westlaw/newsroom/newsroom-results-01/">Most Recent News</a> <small>(Results)</small>
-                    <ul>
-                        <li><a href="/westlaw/newsroom/document-01/">Market Grows in Confidence</a> <small>(Document)</small></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="/westlaw/alerts/">Alerts</a></li>
-        <li><a href="/westlaw/folders/">Folders</a> <small style="color: red;">In Progress</small></li>
-        <li><a href="/westlaw/preferences/">User Preferences</a></li>
-        <li><a href="/westlaw/history/" class="disabled">User History</a></li>
-    </ol>
-    <br />
+<pre><code class="language-shell">git clone git@github.com:liquidvisual/brs-0115.git
+cd brs-0115
+bundle install
+npm install
+bower install
+grunt serve
+# =&gt; Now browse to http://localhost:9292
+</code></pre>
 
-    <h3 class="panel">Search Templates</h3>
+<pre><code class="language-shell">git clone git@github.com:liquidvisual/brs-0115.git
+cd brs-0115
+</code></pre>
 
-    <ol class="page-index">
-        <li><a href="/westlaw/research/">Search Template - Basic</a>
-            <ul>
-                <li><a href="/westlaw/research/basic-results-01/">Search: Confidentiality Agreement</a></li>
-            </ul>
-        </li>
-        <li><a href="/westlaw/research/cases/">Search Template - Cases</a></li>
-    </ol>
-    <br />
+<pre><code class="language-json">{
+  "id":"3970e0fe-8564-4903-9a55-c5f8de49fb8b",
+  "premium":false,
+  "claimed":true,
+  "name":"synergy",
+  "custom_domain":"www.example.com",
+  "notification_email":"me@example.com",
+  "url":"http://www.example.com",
+  "admin_url":"https://api.netlify.com/sites/synergy",
+  "screenshot_url":null,
+  "created_at":"2013-09-17T05:13:08Z",
+  "updated_at":"2013-09-17T05:13:19Z",
+  "user_id":{"51f60d2d5803545326000005"},
+}
+</code></pre>
 
-    <div class="panel">
-        <h3>Document Samples for Testing</h3>
-        <p><b>Please note:</b> Context Menu (LHS) content has been intentionally excluded - as we already know how they display. The focus with these links is purely on the document body itself.</p>
-    </div>
+<p>For production:</p>
 
+<pre><code>grunt build # =&gt; to concat and minify etc. Creates './dist' folder.
+</code></pre>
 
+<h3 id="on-windows">On Windows:</h3>
 
+<p>Jekyll is very easy to set up on Mac OS X or Linux. On Windows, not so much. These resources should help:</p>
 
-    <ol class="page-index">
-        <li>Large tables: <a href="/westlaw/research/sample-01/">Table of Amending Legislation</a></li>
-        <li>Alt Style <a href="/westlaw/research/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a></li>
-        <li>Long Document <a href="/westlaw/research/sample-03/">YA 1 Definitions</a></li>
-    </ol>
+<p><a href="http://jekyllrb.com/docs/windows/#installation">Jekyll Docs on Windows</a><br />
+<a href="http://jekyll-windows.juthilo.com">Step by Step Guide</a></p>
 
-</div>
+<hr />
 
+<h2 id="referencing-the-build-folder">Referencing the Build Folder</h2>
+
+<p>The online repo that stores the build folder named <strong>/dist</strong> (generated from /src) can be found on a separate repo - under the <strong>gh-pages</strong> branch. Link below.</p>
+
+<p><a href="https://github.com/liquidvisual/brs-0115/tree/gh-pages">https://github.com/liquidvisual/brs-0115/tree/gh-pages</a></p>
+
+<p>Feel free to use it as a reference if things get hairy. Once you get the hang of the static Jekyll environment and its <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid templates</a> - you’ll be able to copy/paste mostly everything and substitute the basic templating syntax for your own.</p>
+
+<p>So to summarise:</p>
+
+<ol>
+  <li><a href="https://github.com/liquidvisual/brs-0115">/src</a> - for uncompiled templates, includes, Sass etc (human readable)</li>
+  <li><a href="https://github.com/liquidvisual/brs-0115/tree/gh-pages">/dist</a> - stored on the gh-pages branch. Is minified and compiled. (not human readable)</li>
+</ol>
+
+<p>Note: If you want to see what the code is compiled, <em>view source</em> on the <a href="http://bigredsky.uat.liquidvisual.net">public facing website</a>. The /dist folder is not meant to be human readable.</p>
+
+<hr />
+
+<h2 id="quick-start">Quick Start</h2>
+
+<p><strong>NOTE:</strong> If you happen to use <a href="http://www.sublimetext.com/3">Sublime Text</a> for a code IDE - it has a really handy plugin for syntax highlighting Jekyll templates. You can grab the <a href="https://sublime.wbond.net/packages/Jekyll">Jekyll package</a> via <a href="https://sublime.wbond.net">package control</a>.</p>
+
+<h3 id="copy-over-assets-directory">01. Copy Over /assets Directory</h3>
+
+<p>Jump into the <a href="https://github.com/liquidvisual/cp-beta/tree/gh-pages">dist folder</a> and grab the <em>entire</em> <strong>/assets</strong> folder. Put it into your project’s root directory. This contains all the compiled CSS, fonts, images and JavaScript. This is important as all paths are root relative to the <strong>/assets</strong> folder.</p>
+
+<p>That’s all you’ll need from the <strong>/dist</strong> directory. From this point on, all the action is in the <strong>/src</strong>.</p>
+
+<h3 id="access-layoutsmasterhtml">02. Access /_layouts/master.html</h3>
+
+<p>Start with this and substitute the template logic for your own as you build your page. When it comes to the assets, they compile into <strong>/assets</strong> on build so you’ll only need to do a bit of substitution.</p>
+
+<p>You can replace all of this:</p>
+
+<pre><code>&lt;!-- build:css /assets/css/minified.css --&gt;
+  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
+  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
+  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
+  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
+  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+
+<p>With this:</p>
+
+<pre><code>&lt;link rel="stylesheet" href="/assets/css/minified.css"&gt;
+</code></pre>
+
+<p>The same applies to Javascript. That’s probably the trickiest bit since it’s not so obvious. The end result will look like this:</p>
+
+<pre><code>&lt;script src="/scripts/priority-minified.js"&gt;&lt;/script&gt; &lt;!-- In the head --&gt;
+
+&lt;script src="/scripts/minified.js"&gt;&lt;/script&gt; &lt;!-- Before closing body --&gt;
+</code></pre>
+
+<h3 id="copy-over-partials-in-includes">03. Copy Over Partials in /_includes</h3>
+
+<p>Templates reference partials from this folder to keep things modular and easy to maintain. If possible, I’d recommend retaining these files as separate chunks to your main templates.</p>
+
+<hr />
+
+<h2 id="how-templating-works">How Templating Works</h2>
+
+<p><strong>NOTE:</strong> All of these folders live inside <strong>/src</strong> directory</p>
+
+<h3 id="layouts">/_layouts</h3>
+
+<p>Layouts are stored in the <strong>/_layouts</strong> folder and have 3 levels of heirarchy. This is to help maintenance. They inherit from the bottom up (starting from #3).</p>
+
+<ol>
+  <li>master.html</li>
+  <li>internal.html</li>
+  <li>leaf template (eg. dashboard.html or login.html)</li>
+</ol>
+
+<h3 id="includes">/_includes</h3>
+
+<p>Some templates will draw on partials, which are just small HTML chunks inside the <strong>/_includes</strong> folder. These includes will sometimes use global template variables from their parent template.</p>
+
+<h3 id="data">/_data</h3>
+
+<p>Some templates and includes will draw data (such as the navigation and locations listing) from YAML files located inside <strong>/_data</strong>. This keeps things external and templates are able to use basic loops and conditionals to interact with it, similiar to the logic in the back-end. This is for prototype purposes only - you would of course use your own data.</p>
+
+<h3 id="pages">/pages</h3>
+
+<p>Each Jekyll page is initiated with a single MARKDOWN file (leaf) acting as the point of entry. These files contain meta data, permalinks and page specific variables which get passed into the layouts. They also contain body text which is stored as:</p>
+
+<p>In the YAML front matter - these leaf pages will specify a template to use, eg. /public/login.html which will start at the leaf template and inherit up the chain.</p>
+
+<p><strong>IMPORTANT TO NOTE:</strong></p>
+
+<p>During the early stages of this prototype, leaf templates stored in /pages will contain a minified HTML dump of content <strong>sourced directly from the DOM output</strong> of the BigRedSky application. This is to ensure (and test) that most existing content can simply be dropped into the new responsive application frame without breaking. Although it probably will.</p>
+
+<p>As these leaf templates are recreated from the ground up to be responsive, they will start to omit their data dump from being inherited into its self. The <strong>/page</strong> data will become redundant.</p>
+
+<p>Eg. leaf templates (in <strong>/layout</strong>) will stop including:</p>
+
+<p>but the data will still exist in <strong>/pages</strong>, though it will no longer be used.</p>
+
+<h3 id="front-matter">Front Matter</h3>
+
+<p>Every layout and markdown file (except the master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for hinting and quick access.</p>
+
+<p>As a general rule of thumb; if variables are in the front-matter, they’re page variables and user editable. If they’re inside the actual layout - it’s for layout logic.</p>
+
+<hr />
+
+<h2 id="updating-compiled-assets">Updating Compiled Assets</h2>
+
+<h3 id="the-quick-way">The Quick Way</h3>
+
+<p>Simply create a new stylesheet or Javascript and link to it in the master.html. These files can store quick fixes and time sensitive updates. At a later time, they can be absorbed into the Sass files and recompiled with a <strong>grunt build</strong>.</p>
+
+<p>In future, when updates are made relating to CSS, JS, fonts or images - one only needs to copy over the <strong>dist/assets</strong> folder from the remote repo to receive the updates.</p>
 
                 </div>
             </div>

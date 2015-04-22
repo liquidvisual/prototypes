@@ -116,10 +116,32 @@ $include-text-selection-styles: true !default;
 //=============================================
 
 @if $include-code-styles {
+	pre {
+		background-color: #282828;
+		border-radius: 5px;
+		padding: rem-calc(15);
+		margin-bottom: rem-calc(20);
+		overflow-x: auto;
+		white-space: pre-wrap;       /* css-3 */
+		word-wrap: break-word;
+		max-width: 100%;
+		width: 100%;
+		word-break: break-all;
+	}
+
 	code {
-		background-color: #DAE0E7;
-		border-radius: 3px;
-		padding: 2px 4px;
+		border: 0;
+		color: #DAE0E7;
+		font-size: rem-calc(14);
+	}
+
+	pre code {
+		background: none;
+	}
+
+	.lv-stage {
+		// display: block !important;
+		// word-break: break-all;
 	}
 }
 

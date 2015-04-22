@@ -68,6 +68,25 @@ $tabs-navigation-hover-bg-color: #DDDFE7;
     }
 }
 
+//-----------------------------------------------------------------
+// Folders List
+//-----------------------------------------------------------------
+
+.lv-super .lv-context-menu .folders-list {
+    ul {
+        margin-left: rem-calc(15);
+    }
+
+    a {
+        background: none !important;
+        color: $body-font-color !important;
+    }
+
+    .active i {
+        color: black;
+    }
+}
+
 //=========================================
 //
 //=========================================

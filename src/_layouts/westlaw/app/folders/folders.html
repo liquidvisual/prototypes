@@ -3,13 +3,44 @@ layout: westlaw/app/internal
 context_menu: "westlaw/app/context_menu_output/folders.html"
 ---
 
-<div class="row">
-    <div class="columns">
-        <h3 class="left">My Folders</h3>
-        <hr>
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">My Folders</h3>
+            <hr>
+        </div>
     </div>
-</div>
+</header>
 
-<p>In progress...</p>
+<!-- Export Options -->
+{% include westlaw/app/export_options/folders.html %}
 
-{{ content }}
+<!-- Select All -->
+<input type="checkbox">Select All
+
+<!-- Footable Table -->
+<table class="js-footable footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10" data-limit-navigation="5">
+	<thead>
+		<tr>
+			<th data-sort-initial="false">Name</th>
+			<th data-hide="phone" data-type="numeric">Client ID</th>
+			<th data-hide="phone" data-type="numeric">Date Created</th>
+			<th data-hide="phone">Options</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for i in (1..6) %}
+		<tr>
+			<td><input type="checkbox" name="folder-{{i}}"> <i class="fi-folder"></i>&nbsp; Legal Cases Folder {{i}}</td>
+			<td>Unassigned</td>
+			<td>14/04/2015 - 22:47</td>
+			<td>
+				<a href="#"><i class="fi-folder-add"></i></a> &nbsp;
+				<a href="#"><i class="fi-pencil"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a>
+			</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

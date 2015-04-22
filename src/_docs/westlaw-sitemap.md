@@ -1,7 +1,8 @@
 ---
-layout: westlaw/app/internal
+layout: common/public/docs
 title: Documentation
-permalink: /westlaw/
+permalink: /westlaw-docs/
+context_menu: common/docs/context_menu_content.html
 ---
 
 <style>
@@ -64,7 +65,7 @@ permalink: /westlaw/
             </ul>
         </li>
         <li><a href="/westlaw/alerts/">Alerts</a></li>
-        <li><a href="/westlaw/folders/" class="disabled">Folders</a></li>
+        <li><a href="/westlaw/folders/">Folders</a> <small style="color: red;">In Progress</small></li>
         <li><a href="/westlaw/preferences/">User Preferences</a></li>
         <li><a href="/westlaw/history/" class="disabled">User History</a></li>
     </ol>

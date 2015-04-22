@@ -1,0 +1,42 @@
+---
+layout: westlaw/app/master
+---
+
+<style>
+    html, body, .lv-main, .lv-stage {
+        /*background: white;*/
+    }
+    .lv-context-menu-fixed {
+        top: 60px;
+        bottom: 0;
+    }
+</style>
+
+<!-- HEADER -->
+<div class="lv-header">
+    {% include common/docs/header.html %}
+</div>
+
+<!-- STAGE -->
+<section class="lv-stage">
+
+    <!-- CONTEXT MENU -->
+    <nav class="lv-context-menu">
+        {% include westlaw/app/menus/context_menu.html %}
+    </nav>
+
+    <!-- MAIN -->
+    <main class="lv-main">
+
+        <!-- CONTENT -->
+        <div class="lv-content">
+            <div class="row">
+                <div class="columns">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+    </main> <!-- .lv-main -->
+
+</section> <!-- .lv-stage -->

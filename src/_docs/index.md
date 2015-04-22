@@ -1,15 +1,16 @@
 ---
-layout: westlaw/app/internal
-title: Documentation
+layout: common/public/docs
+title: Welcome
 permalink: /docs/
+context_menu: common/docs/context_menu_content.html
 ---
 
 # DOCUMENTATION
 
-Last updated: **03.03.15**
+Last updated: **21.04.15**
 
 The public facing site is currently located at:
-[http://bigredsky.uat.liquidvisual.net](http://bigredsky.uat.liquidvisual.net)
+[http://prototypes.uat.liquidvisual.net](http://prototypes.uat.liquidvisual.net)
 
 ---
 

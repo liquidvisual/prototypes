@@ -19,6 +19,18 @@ show_drafts: true
 collections:
   docs:
     output: true
+    permalink: /docs/:path/
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "docs" # a collection in your site, in plural form
+    values:
+      layout: "common/public/docs"
+      context_menu: "common/docs/context_menu_content.html"
+
 
 # Markdown library
 markdown: kramdown

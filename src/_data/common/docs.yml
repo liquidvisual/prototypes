@@ -1,0 +1,55 @@
+# Docs Menu
+
+- title: Getting Started
+  include_children: true
+  children:
+    - title: Welcome
+      url: /docs/
+    - title: Installation & Setup
+      url: /docs/getting-started/installation-and-setup/
+    - title: Basic Usage
+      url: /docs/getting-started/basic-usage/
+    - title: Directory Structure
+      url: /docs/getting-started/directory-structure/
+    - title: Compatibility
+      url: /docs/getting-started/compatibility/
+
+- title: Basics
+  include_children: true
+  children:
+    - title: Templates
+      url: /docs/basics/templates/
+    - title: Data Files
+      url: /docs/basics/data-files/
+    - title: Assets
+      url: /docs/basics/assets/
+    - title: CSS Components
+      url: /docs/basics/css-components/
+    - title: JavaScript
+      url: /docs/basics/javascript/
+
+- title: Page Layouts
+  include_children: false
+  children:
+    - title: Dashboard
+      url: /docs/page-layouts/dashboard/
+    - title: Search Templates
+      url: /docs/page-layouts/search-templates/
+    - title: Results
+      url: /docs/page-layouts/results/
+    - title: Documents
+      url: /docs/page-layouts/documents/
+    - title: Alerts
+      url: /docs/page-layouts/alerts/
+    - title: Folders
+      url: /docs/page-layouts/folders/
+    - title: Preferences
+      url: /docs/page-layouts/preferences/
+
+- title: Miscellaneous
+  include_children: true
+  children:
+    - title: Upgrading
+      url: /docs/miscellaneous/upgrading/
+    - title: Troubleshooting
+      url: /docs/miscellaneous/troubleshooting/

@@ -1,3 +1,11 @@
+---
+layout: westlaw/app/internal
+title: Guide
+permalink: /westlaw/guide/
+---
+
+<!--- This child document initializes the page in Jekyll. -->
+
 <style>
     ul, ol {
         margin-bottom: 15px;
@@ -34,8 +42,16 @@
 
 <div class="lv-content-block">
 
-    <h1>Documentation</h1>
+    <h1>Westlaw Guide</h1>
     <hr>
+
+    <h3 class="panel">Global Pages</h3>
+
+    <p><strong><a href="/"><i class="fi-layout"></i>&nbsp; LOBBY</a></strong><br><strong>Tip:</strong> launch from any page by clicking the top left "Westlaw AU" Logo.</p>
+
+    <p><strong><a href="/docs/"><i class="fi-book"></i>&nbsp; DOCS</a></strong></p>
+
+    <p><strong><a href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; REPO</a></strong></p>
 
     <h3 class="panel">Main Pages</h3>
 
@@ -81,9 +97,6 @@
         <p><b>Please note:</b> Context Menu (LHS) content has been intentionally excluded - as we already know how they display. The focus with these links is purely on the document body itself.</p>
     </div>
 
-
-
-
     <ol class="page-index">
         <li>Large tables: <a href="/westlaw/research/sample-01/">Table of Amending Legislation</a></li>
         <li>Alt Style <a href="/westlaw/research/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a></li>
@@ -91,4 +104,3 @@
     </ol>
 
 </div>
-

@@ -1,74 +1,12 @@
-<style>
-	.lv-context-menu ul ul li a {
-		color: #eee;
-		margin-left: 20px;
-		display: none;
-	}
-
-	.lv-context-menu h2 + ul {
-		/*border-top: 1px solid #D4DCE3;*/
-	}
-</style>
-
-<h2>Getting Started</h2>
-<ul>
-	<li class="{% include common/snippets/is_active.html current_path="docs" %}"><a href="#">Welcome</a></li>
-	<li><a href="#">Installation &amp; Setup</a></li>
-	<li><a href="#">Basic Usage</a></li>
-	<li><a href="#">Directory Structure</a></li>
-	<li><a href="#">Compatibility</a></li>
-</ul>
-
-<h2>Basics</h2>
-<ul>
-	<li><a href="#">Templates</a>
+{% for doc_group in site.data.common.docs %}
+	<h3>{{ doc_group.title }}</h3>
+	{% if doc_group.include_children %}
 		<ul>
-			<li><a href="#">Layouts</a></li>
-			<li><a href="#">Includes</a></li>
+			{% for doc in doc_group.children %}
+				<li class="{% if doc.url == page.url %}active{% endif %}">
+					<a href="{{ doc.url }}">{{ doc.title }}</a>
+				</li>
+			{% endfor %}
 		</ul>
-	</li>
-	<li><a href="#">Data Files</a></li>
-	<li><a href="#">Assets</a></li>
-	<li><a href="#">CSS Components</a>
-		<ul>
-			<li><a href="#">Media Queries</a></li>
-			<li><a href="#">Sass</a></li>
-			<li><a href="#">TOC</a></li>
-			<li><a href="#">Breadcrumbs</a></li>
-			<li><a href="#">Export Options</a></li>
-		</ul>
-	</li>
-	<li><a href="#">JavaScript</a>
-		<ul>
-			<li><a href="#">Calendar Widget</a></li>
-			<li><a href="#">Modals</a></li>
-			<li><a href="#">Partial View</a></li>
-			<li><a href="#">Site Switcher</a></li>
-			<li><a href="#">Tooltips</a></li>
-		</ul>
-	</li>
-</ul>
-
-<h2>Page Layouts</h2>
-<ul>
-	<li><a href="#">Dashboard</a></li>
-	<li><a href="#">Search Templates</a>
-		<ul>
-			<li><a href="#">Research</a></li>
-			<li><a href="#">Workflow</a></li>
-			<li><a href="#">Tools</a></li>
-			<li><a href="#">Learning</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Results</a></li>
-	<li><a href="#">Documents</a></li>
-	<li><a href="#">Alerts</a></li>
-	<li><a href="#">Folders</a></li>
-	<li><a href="#">Preferences</a></li>
-</ul>
-
-<h2>Miscellaneous</h2>
-<ul>
-	<li><a href="#">Upgrading</a></li>
-	<li><a href="#">Troubleshooting</a></li>
-</ul>
+	{% endif %}
+{% endfor %}

@@ -15,7 +15,7 @@
         
         
             
-                Documentation - Westlaw
+                Welcome - Westlaw
             
         
     </title>
@@ -49,164 +49,53 @@
     <div class="lv-super">
         <div class="lv-page">
 
-            <!-- HEADER -->
-<div class="lv-header">
-    
+            <style>
+    html, body, .lv-main, .lv-stage {
+        /*background: white;*/
+    }
+    .lv-context-menu-fixed {
+        /*top: 60px;*/
+        /*bottom: 0;*/
+    }
+    .lv-context-menu ul ul li a {
+        color: #eee;
+        margin-left: 20px;
+        display: none;
+    }
 
-<section class="text-center large-text-left">
+    .lv-context-menu h2 + ul {
+        /*border-top: 1px solid #D4DCE3;*/
+    }
+</style>
+
+<!-- HEADER -->
+<div class="lv-header">
+    <section class="text-center large-text-left">
 
 	<!-- Mobile Hamburgers -->
 	<div class="left">
-		<a id="top-menu-btn" class="lv-hamburger left hide-for-large-up" href="#"><i class="fi-list"></i></a>
 		<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
 	</div>
-
-	<!-- User Menu Hamburger -->
-	<a id="user-menu-btn" class="lv-hamburger right hide-for-large-up" href="#"><i class="fi-results-demographics"></i></a>
 
 	<div class="lv-logo-wrapper">
 
 		<!-- Logo -->
-		<a title="westlaw®" class="lv-logo" href="/">
-			<img class="show-for-medium-up" width="120" src="/assets/img/westlaw/template/logo@2x.png" alt="Thomson Reuters Westlaw">
-			<img class="hide-for-medium-up" width="40" src="/assets/img/westlaw/template/logo-mobile-black@2x.png" alt="Thomson Reuters Westlaw">
-		</a>
+		<a class="lv-logo" href="/"><img width="120" src="/assets/img/common/template/docs-logo-type@2x.png"></a>
 
 		<!-- Site Select -->
 		<div class="lv-site-select show-for-medium-up">
 			<i class="fa fa-caret-down"></i>
 			<ul>
-				<li class="first">
-					<a href="#"><i class="fi-web"></i>&nbsp; Sites</a>
-				</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon fi-web"></i>&nbsp; Westlaw Next</a>
-					</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon fi-web"></i>&nbsp; Westlaw International</a>
-					</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon flag-icon-gb"></i>&nbsp; Westlaw UK</a>
-					</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon flag-icon-cn"></i>&nbsp; Westlaw CN</a>
-					</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon flag-icon-hk"></i>&nbsp; Westlaw HK</a>
-					</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Checkpoint AU</a>
-					</li>
-				
-					<li class="">
-						<a href="#"><i class="flag-icon fi-web"></i>&nbsp; Checkpoint World</a>
-					</li>
-				
-					<li class=" last ">
-						<a href="#"><i class="flag-icon fi-web"></i>&nbsp; Proview</a>
-					</li>
-				
+				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
+				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
 	</div> <!-- .logo-wrapper -->
 
 </section>
-
-<!-- User Menu Buttons -->
-<section class="lv-user-profile text-right show-for-large-up">
-	<div class="left">
-		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
-		    <li class="
-
-
-
-    
-
-    
-"><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
-    		<li class="
-
-
-
-    
-
-    
-"><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
-    		<li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
-		    <li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-		    <li class="
-
-
-
-    
-
-    
-"><a href="/westlaw/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
-		</ul>
-	</div>
-	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>JOHN SMITH</b> - <a href="#">Logout</a></div>
-</section>
-
-
 </div>
-
-<!-- NAVIGATION -->
-<nav class="lv-navigation show-for-large-up">
-    <div class="lv-topbar">
-        <ul>
-    <li class="">
-        <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
-    </li>
-    <li class="
-
-
-
-    
-
-    
-">
-        <a href="/westlaw/research/"><i class="fi-magnifying-glass"></i> Research</a>
-    </li>
-    <li class="
-
-
-
-    
-
-    
-">
-        <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
-    </li>
-    <li class="
-
-
-
-    
-
-    
-">
-        <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
-    </li>
-    <li class="
-
-
-
-    
-
-    
-">
-        <a href="/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
-    </li>
-</ul>
-    </div>
-</nav>
 
 <!-- STAGE -->
 <section class="lv-stage">
@@ -217,6 +106,80 @@
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
+		
+		    
+	<h3>Getting Started</h3>
+	
+		<ul>
+			
+				<li class="active">
+					<a href="/docs/">Welcome</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/installation-and-setup/">Installation & Setup</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/basic-usage/">Basic Usage</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/directory-structure/">Directory Structure</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/compatibility/">Compatibility</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Basics</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/basics/templates/">Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/data-files/">Data Files</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/css-components/">CSS Components</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/javascript/">JavaScript</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Page Layouts</h3>
+	
+
+	<h3>Miscellaneous</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a>
+				</li>
+			
+		</ul>
+	
+
 		
 	</nav> <!-- .lv-context-menu-panel -->
 
@@ -266,6 +229,16 @@
 ">
         <a href="/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
     </li>
+    <li class="
+
+
+
+    
+
+    
+">
+        <a href="/westlaw/guide/"><i class="fi-info"></i> Guide</a>
+    </li>
 </ul>
 	</nav> <!-- .lv-context-menu-panel -->
 
@@ -297,16 +270,14 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="documentation">DOCUMENTATION</h1>
+                    <h1 id="welcome">Welcome</h1>
 
-<p>Last updated: <strong>03.03.15</strong></p>
+<p>Last updated: <strong>24.04.15</strong></p>
 
 <p>The public facing site is currently located at:<br />
-<a href="http://bigredsky.uat.liquidvisual.net">http://bigredsky.uat.liquidvisual.net</a></p>
+<a href="http://prototypes.uat.liquidvisual.net">http://prototypes.uat.liquidvisual.net</a></p>
 
 <hr />
-
-<h2 id="installation---setup">Installation &amp;  Setup</h2>
 
 <p>This project is built with <a href="http://jekyllrb.com">Jekyll 2.5.3</a> - a static site generator. It also uses <a href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner and <a href="http://bower.io">Bower</a> for package management. This workflow was scaffolded with a <a href="http://yeoman.io">Yeoman</a> generator called <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> which simply automates the process of setting it all up.</p>
 
@@ -329,22 +300,6 @@ grunt serve
 
 <pre><code class="language-shell">git clone git@github.com:liquidvisual/brs-0115.git
 cd brs-0115
-</code></pre>
-
-<pre><code class="language-json">{
-  "id":"3970e0fe-8564-4903-9a55-c5f8de49fb8b",
-  "premium":false,
-  "claimed":true,
-  "name":"synergy",
-  "custom_domain":"www.example.com",
-  "notification_email":"me@example.com",
-  "url":"http://www.example.com",
-  "admin_url":"https://api.netlify.com/sites/synergy",
-  "screenshot_url":null,
-  "created_at":"2013-09-17T05:13:08Z",
-  "updated_at":"2013-09-17T05:13:19Z",
-  "user_id":{"51f60d2d5803545326000005"},
-}
 </code></pre>
 
 <p>For production:</p>
@@ -378,9 +333,13 @@ cd brs-0115
 
 <p>Note: If you want to see what the code is compiled, <em>view source</em> on the <a href="http://bigredsky.uat.liquidvisual.net">public facing website</a>. The /dist folder is not meant to be human readable.</p>
 
-<hr />
+<h1 id="quick-start">Quick Start</h1>
 
-<h2 id="quick-start">Quick Start</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem install jekyll
+~ <span class="nv">$ </span>jekyll new myblog
+~ <span class="nv">$ </span><span class="nb">cd </span>myblog
+~/myblog <span class="nv">$ </span>jekyll serve
+<span class="c"># =&gt; Now browse to http://localhost:4000</span></code></pre></div>
 
 <p><strong>NOTE:</strong> If you happen to use <a href="http://www.sublimetext.com/3">Sublime Text</a> for a code IDE - it has a really handy plugin for syntax highlighting Jekyll templates. You can grab the <a href="https://sublime.wbond.net/packages/Jekyll">Jekyll package</a> via <a href="https://sublime.wbond.net">package control</a>.</p>
 
@@ -396,7 +355,7 @@ cd brs-0115
 
 <p>You can replace all of this:</p>
 
-<pre><code>&lt;!-- build:css /assets/css/minified.css --&gt;
+<pre><code class="language-html">&lt;!-- build:css /assets/css/minified.css --&gt;
   &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
   &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
   &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
@@ -407,12 +366,12 @@ cd brs-0115
 
 <p>With this:</p>
 
-<pre><code>&lt;link rel="stylesheet" href="/assets/css/minified.css"&gt;
+<pre><code class="language-html">&lt;link rel="stylesheet" href="/assets/css/minified.css"&gt;
 </code></pre>
 
 <p>The same applies to Javascript. That’s probably the trickiest bit since it’s not so obvious. The end result will look like this:</p>
 
-<pre><code>&lt;script src="/scripts/priority-minified.js"&gt;&lt;/script&gt; &lt;!-- In the head --&gt;
+<pre><code class="language-html">&lt;script src="/scripts/priority-minified.js"&gt;&lt;/script&gt; &lt;!-- In the head --&gt;
 
 &lt;script src="/scripts/minified.js"&gt;&lt;/script&gt; &lt;!-- Before closing body --&gt;
 </code></pre>
@@ -421,229 +380,13 @@ cd brs-0115
 
 <p>Templates reference partials from this folder to keep things modular and easy to maintain. If possible, I’d recommend retaining these files as separate chunks to your main templates.</p>
 
-<hr />
-
-<h2 id="how-templating-works">How Templating Works</h2>
-
-<p><strong>NOTE:</strong> All of these folders live inside <strong>/src</strong> directory</p>
-
-<h3 id="layouts">/_layouts</h3>
-
-<p>Layouts are stored in the <strong>/_layouts</strong> folder and have 3 levels of heirarchy. This is to help maintenance. They inherit from the bottom up (starting from #3).</p>
-
-<ol>
-  <li>master.html</li>
-  <li>internal.html</li>
-  <li>leaf template (eg. dashboard.html or login.html)</li>
-</ol>
-
-<h3 id="includes">/_includes</h3>
-
-<p>Some templates will draw on partials, which are just small HTML chunks inside the <strong>/_includes</strong> folder. These includes will sometimes use global template variables from their parent template.</p>
-
-<h3 id="data">/_data</h3>
-
-<p>Some templates and includes will draw data (such as the navigation and locations listing) from YAML files located inside <strong>/_data</strong>. This keeps things external and templates are able to use basic loops and conditionals to interact with it, similiar to the logic in the back-end. This is for prototype purposes only - you would of course use your own data.</p>
-
-<h3 id="pages">/pages</h3>
-
-<p>Each Jekyll page is initiated with a single MARKDOWN file (leaf) acting as the point of entry. These files contain meta data, permalinks and page specific variables which get passed into the layouts. They also contain body text which is stored as:</p>
-
-<p>In the YAML front matter - these leaf pages will specify a template to use, eg. /public/login.html which will start at the leaf template and inherit up the chain.</p>
-
-<p><strong>IMPORTANT TO NOTE:</strong></p>
-
-<p>During the early stages of this prototype, leaf templates stored in /pages will contain a minified HTML dump of content <strong>sourced directly from the DOM output</strong> of the BigRedSky application. This is to ensure (and test) that most existing content can simply be dropped into the new responsive application frame without breaking. Although it probably will.</p>
-
-<p>As these leaf templates are recreated from the ground up to be responsive, they will start to omit their data dump from being inherited into its self. The <strong>/page</strong> data will become redundant.</p>
-
-<p>Eg. leaf templates (in <strong>/layout</strong>) will stop including:</p>
-
-<p>but the data will still exist in <strong>/pages</strong>, though it will no longer be used.</p>
-
-<h3 id="front-matter">Front Matter</h3>
-
-<p>Every layout and markdown file (except the master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for hinting and quick access.</p>
-
-<p>As a general rule of thumb; if variables are in the front-matter, they’re page variables and user editable. If they’re inside the actual layout - it’s for layout logic.</p>
-
-<hr />
-
-<h2 id="updating-compiled-assets">Updating Compiled Assets</h2>
-
-<h3 id="the-quick-way">The Quick Way</h3>
-
-<p>Simply create a new stylesheet or Javascript and link to it in the master.html. These files can store quick fixes and time sensitive updates. At a later time, they can be absorbed into the Sass files and recompiled with a <strong>grunt build</strong>.</p>
-
-<p>In future, when updates are made relating to CSS, JS, fonts or images - one only needs to copy over the <strong>dist/assets</strong> folder from the remote repo to receive the updates.</p>
-
                 </div>
             </div>
         </div>
 
-        <!-- FOOTER -->
-        <footer class="lv-footer">
-            
-
-<div class="lv-footer-inner">
-    <div class="row collapse is-full-width">
-
-        <!-- Footer Links -->
-        <div class="medium-7 medium-push-5 columns">
-            <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
-                <li><a href="http://training.thomsonreuters.com.au/products/westlaw-au/" target="_blank">Help</a></li>
-
-                <li class="has-dropdown">
-                    <span class="anchor">Sites</span>
-                    <ul class="lv-dropdown">
-                        
-                            <li><a href="#"><i class="flag-icon fi-web"></i>&nbsp; Westlaw Next</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon fi-web"></i>&nbsp; Westlaw International</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon flag-icon-gb"></i>&nbsp; Westlaw UK</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon flag-icon-cn"></i>&nbsp; Westlaw CN</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon flag-icon-hk"></i>&nbsp; Westlaw HK</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Checkpoint AU</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon fi-web"></i>&nbsp; Checkpoint World</a></li>
-                        
-                            <li><a href="#"><i class="flag-icon fi-web"></i>&nbsp; Proview</a></li>
-                        
-                    </ul>
-                </li>
-
-                <li><a href="http://www.nicereply.com/thomson-reuters-anz.wlau/westlaw-au" target="_blank">Feedback</a></li>
-                <li><a href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
-                <li><a href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx" target="_blank">Terms of Use</a></li>
-            </ul>
-        </div>
-
-        <!-- Footer Legal -->
-        <div class="medium-5 medium-pull-7 columns">
-            <div class="text-center medium-text-left">
-                <small class="lv-footer-legal">
-                    <a href="http://www.thomsonreuters.com.au">
-                        <img class="hide-for-large-up" width="120" src="/assets/img/westlaw/template/tr-logo-black@2x.png">
-                        <img class="show-for-large-up" width="120" src="/assets/img/westlaw/template/tr-logo-white@2x.png">
-                    </a>&nbsp; (Professional) Australia LTD - ABN 64 058 668 | &copy; <b>2015</b>
-                </small>
-            </div>
-        </div>
-
-    </div> <!-- .row -->
-</div> <!-- .lv-footer-inner -->
-        </footer>
-
     </main> <!-- .lv-main -->
 
-    <!-- SIDEBAR -->
-    <aside class="lv-sidebar">
-        <div class="lv-sidebar-inner">
-
-	<!-- SPECIAL TABS -->
-	<ul class="lv-tabs">
-		<li class="active"><a title="Hints" href="#"><i class="fi-lightbulb"></i><span class="text">Hints</span></a></li>
-		<li><a title="Links" href="#"><i class="fi-star"></i><span class="text">Links</span></a></li>
-		<li><a title="History" href="#"><i class="fi-clock"></i><span class="text">History</span></a></li>
-		<li class="collapse-btn"><a title="Hide" href="#"><i class="fi-arrow-right"></i><span class="text">Hide</span></a></li>
-	</ul> <!-- .lv-tabs -->
-
-	<!-- TABS CONTENT -->
-	<div class="tabs-content">
-
-		<!-- HINTS -->
-		<section class="content active">
-			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
-				<h1>Hints</h1>
-				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
-			</header>
-
-			
-				<h3>Tips for Searching</h3>
-
-<p>Westlaw® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' <strong>(AND)</strong> connector in between each term.</p>
-
-<p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
-<p><a class="ajax-modal button small radius knockout" href="/modal_output/westlaw/terms-and-connectors.html">See All Connectors</a></p>
-
-<hr>
-
-<h3>Need Assistance?</h3>
-
-<p>Don't hesitate to call our Customer Help Desk on the number below.</p>
-<p><a href="tel:1800020548" class="button small radius knockout">1800 020 548</a></p>
-			
-		</section>
-
-		<!-- LINKS -->
-		<section class="content">
-			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
-				<h1>Links</h1>
-				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
-			</header>
-			<p class="right"><a class="button tiny pill" href="#" data-edit="#favourites-list">Edit</a></p>
-
-<p class="text-center"><a href="#" class="button radius small knockout">Favourite This Page</a></p>
-
-<ul id="favourites-list" class="lv-ui-list">
-	<li>
-		<a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of a quicklink</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of a quicklink</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
-	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
-</ul>
-
-
-		</section>
-
-		<!-- HISTORY -->
-		<section class="content">
-			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
-				<h1>History</h1>
-				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
-			</header>
-			<p>No history is available at this time.</p>
-		</section>
-
-	</div> <!-- .tabs-content -->
-</div> <!-- .lv-siderbar-inner -->
-    </aside>
-
 </section> <!-- .lv-stage -->
-
-<!-- TOUCH MENU -->
-<div class="lv-touch-menu hide-for-large-up">
-    <div class="icon-bar four-up">
-    <a class="item" href="/westlaw/" id="home-btn">
-        <i class="fi-home"></i>
-        <label>Home</label>
-    </a>
-    <a class="item" id="hints-btn">
-        <i class="fi-lightbulb"></i>
-        <label>Hints</label>
-    </a>
-    <a class="item" id="favourites-btn">
-        <i class="fi-star"></i>
-        <label>Links</label>
-    </a>
-    <a class="item" id="history-btn">
-        <i class="fi-clock"></i>
-        <label>History</label>
-    </a>
-</div>
-</div>
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->

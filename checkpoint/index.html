@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Checkpoint">
+    <title>
+        
+        
+            
+                Checkpoint Dashboard - 
+            
+        
+    </title>
+
+    <link rel="canonical" href="/checkpoint/">
+    <link rel="shortcut icon" type='image/x-icon' href='/assets/img/checkpoint/template/favicon.ico'>
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/checkpoint/template/apple-touch-icon-144x144.png">
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/checkpoint/foundation.css">
+
+    <link rel="stylesheet" href="/assets/css/checkpoint/minified.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/assets/css/checkpoint/minified-ie8.css">
+    <![endif]-->
+
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="lv-super">
+        <div class="lv-page">
+
+            <div class="homepage">
+
+    <!-- HEADER -->
+    <div class="lv-header FixedTop">
+        
+
+<section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
+	<div class="left">
+		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+		<a id="context-menu-btn" class="lv-hamburger left  remove " href="#"><i class="fi-results"></i></a>
+	</div>
+
+	<!-- User Menu Hamburger -->
+	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+
+	<div class="lv-logo-wrapper">
+
+		<!-- Logo -->
+		<a title="Checkpoint®" class="lv-logo" href="/">
+			<img class="show-for-medium-up" width="152" src="/assets/img/checkpoint/template/logo-type@2x.png" alt="Thomson Reuters Checkpoint">
+			<img class="hide-for-medium-up" width="40" src="/assets/img/checkpoint/template/logo-mobile-black@2x.png" alt="Thomson Reuters Checkpoint">
+		</a>
+
+		<!-- Jurisdiction Select -->
+		<div class="lv-jurisdiction-select">
+			<i class="fa fa-caret-down"></i>
+			<ul>
+				<li class="first">
+					<a class="hide-for-medium-up" href="#">AU</a>
+					<a class="show-for-medium-up hide-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; AU</a>
+					<a class="show-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a>
+				</li>
+				<li class="last">
+					<a class="hide-for-medium-up" href="#">NZ</a>
+					<a class="show-for-medium-up hide-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; NZ</a>
+					<a class="show-for-large-up" href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
+
+				</li>
+			</ul>
+		</div> <!-- .jurisdiction-select -->
+
+	</div> <!-- .logo-switcher-wrapper -->
+
+</section>
+
+<!-- User Profile -->
+<section class="lv-user-profile text-right show-for-large-up">
+	<div class="left">
+		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
+		    <li class="
+
+
+
+    
+
+    
+"><a href="/checkpoint/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+    		<li class="
+
+
+
+    
+
+    
+"><a href="/checkpoint/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+		    <li class="
+
+
+
+    
+
+    
+"><a href="/checkpoint/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+		    <li><a href="/modal_output/checkpoint/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+		    <li class="
+
+
+
+    
+
+    
+"><a href="/checkpoint/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+		</ul>
+	</div>
+	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>JOHN SMITH</b> - <a href="#">Logout</a></div>
+</section>
+
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="lv-navigation show-for-large-up">
+        <div class="lv-topbar">
+            <ul>
+    <li class="">
+        <a href="/checkpoint/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+">
+        <a href="/checkpoint/research/"><i class="fi-magnifying-glass"></i> Research</a>
+        <ul class="lv-topbar-dropdown">
+            <li><a href="/checkpoint/research/">Basic</a></li>
+            <li><a href="/checkpoint/research/cases/">Cases</a></li>
+            <li><a href="/checkpoint/research/cases/">Legislation / Commentary</a></li>
+            <li><a href="/checkpoint/research/cases/">Journals</a></li>
+            <li><a href="/checkpoint/research/cases/">News</a></li>
+            <li><a href="/checkpoint/research/cases/">Government and Regulatory</a></li>
+        </ul>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+ show-for-xlarge-up">
+        <a href="/checkpoint/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+ show-for-xlarge-up">
+        <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+">
+        <a href="/checkpoint/learning/"><i class="fi-info"></i> Learning</a>
+    </li>
+</ul>
+        </div>
+    </nav>
+
+    <!-- STAGE -->
+    <section class="lv-stage">
+
+        <!-- MAIN -->
+        <main class="lv-main">
+            <div class="row">
+                <div class="columns">
+                    <div class="row">
+    <div class="columns">
+        <ul class="lv-dashboard-grid">
+            <li>
+                <!-- CALENDAR -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>Tax and Accounting Compliance Calendar</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <p><a href="#"></a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <select name="budget" class="radius">
+                            <option selected disabled>All Events</option>
+                            <option value="Tax">Tax</option>
+                            <option value="PAYG">PAYG</option>
+                            <option value="BAS">BAS</option>
+                            <option value="Superannuation">Superannuation</option>
+                            <option value="SGC">SGC</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="ASIC and Accounting">ASIC and Accounting</option>
+                            <option value="Public Holiday">Public Holiday</option>
+                            <option value="FBT">FBT</option>
+                        </select>
+                    </form>
+                    <div id="datepicker"></div> <!-- JQuery UI Calendar -->
+                
+    </div>
+</div>
+
+                <!-- BASIC SEARCH -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>Basic Search</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <p><a class="ajax-modal" href="/modal_output/checkpoint/terms-and-connectors.html"><i class="fi-lightbulb"></i> Advanced searching hints and tips</a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <div class="row collapse postfix-radius">
+                            <div class="small-8 columns">
+                                <input name="q" type="text" placeholder="Type Keywords">
+                            </div>
+                            <div class="small-4 columns">
+                                <!-- Switch anchor for button on production -->
+                                <!-- <button type="submit" class="button flat radius postfix">Search</button> -->
+                                <a href="/research/tax-exempt-10-deduct/" class="button flat radius postfix">Search</a>
+                            </div>
+                        </div>
+                    </form>
+                
+    </div>
+</div>
+
+                <!-- ADVANCED SEARCH -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>Advanced Search</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <ul>
+                        <li><a href="/research/cases/">Cases</a></li>
+                        <li><a href="/research/cases/">Legislation / Commentary</a></li>
+                        <li><a href="/research/cases/">Journals</a></li>
+                        <li><a href="/research/cases/">News</a></li>
+                        <li><a href="/research/cases/">Government and Regulatory</a></li>
+                    </ul>
+                
+    </div>
+</div>
+
+            </li>
+            <li>
+                <!-- MY QUICKLINKS -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>My Quicklinks</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <ul>
+                        <li><a href="#">News Services - WTB</a></li>
+                        <li><a href="http://www.checkpointau.com.au/maf/app/fulldocument?endChunk=1&parentguid=AUNZ_CURRAWARE_TOC%7C%7CIca0737b0713a11e49e2888ff8c71c53d&startChunk=1&bcguid=AUNZ_TOC%7C%7CI8f455ebc4c7331ffa567550e53ec5247&docguid=Icbcc6790713a11e49e2888ff8c71c53d">WTB - Issue 49 Table of Contents</a></li>
+                    </ul>
+                
+    </div>
+</div>
+
+                <!-- MY CLEARDOCS -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>My Cleardocs</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <h5 class="subheader"><i>There have been no assembled documents saved.</i></h5>
+                
+    </div>
+</div>
+
+                <!-- MY PRODUCTS -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>My Products</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <ul>
+                        <li><a href="/research/">Tax Q and A - Submit a question</a></li>
+                        <li><a href="/research/">A-Z of Trusts</a></li>
+                        <li><a href="/research/">Accountant's Manual</a></li>
+                        <li><a href="/research/">Accounting &amp; ASIC Compliance</a></li>
+                        <li><a href="/research/">Ageing – Post Retirement Strategies</a></li>
+                        <li><a href="/research/">Alert24 - Accounting &amp; Audit</a></li>
+                        <li><a href="/research/">Alert24 - Administrative Law</a></li>
+                        <li><a href="/research/">Alert24 - Banking &amp; Finance</a></li>
+                        <li><a href="/research/">Alert24 - Bankruptcy &amp; Insolvency</a></li>
+                        <li><a href="/research/">Alert24 - Building &amp; Construction</a></li>
+                        <li><a href="/research/">Alert24 - Commercial Law</a></li>
+                        <li><a href="/research/">Alert24 - Competition &amp; Trade Practices</a></li>
+                        <li><a href="/research/">Alert24 - Contract Law</a></li>
+                        <li><a href="/research/">Alert24 - Corporations</a></li>
+                        <li><a href="/research/">Alert24 - Court Practice &amp; Litigation</a></li>
+                        <li><a href="/research/">Alert24 - Criminal Law</a></li>
+                        <li><a href="/research/">Alert24 - Family Law</a></li>
+                        <li><a href="/research/">Alert24 - FBT</a></li>
+                        <li><a href="/research/">Alert24 - Financial Services Regulation</a></li>
+                        <li><a href="/research/">Alert24 - General Practice</a></li>
+                        <li><a href="/research/">Alert24 - GST</a></li>
+                    </ul>
+                    <br>
+                    <a href="/alerts/">More Products</a>
+                
+    </div>
+</div>
+
+            </li>
+            <li>
+                <!-- CUSTOMER SERVICES -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>Customer Service</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <ul>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                    </ul>
+                
+    </div>
+</div>
+
+                <!-- NEWS HEADLINES -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>News Headlines</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <ul>
+                        <li><a href="">Dependant spouse tax rebate denied</a></li>
+                        <li><a href="">GST: Some ITC claims allowed: partial win for taxpayer</a></li>
+                        <li><a href="">ATO Decision Impact Statements: ATS Pacific; PTTEP Australasia (Ashmore Cartier); Retirement Village Operator</a></li>
+                        <li><a href="">Developing countries to play greater role in BEPS project</a></li>
+                        <li><a href="">GST: development lease arrangements and government agencies</a></li>
+                        <li><a href="">Institutional investors back global tax reform modernisation and transparency</a></li>
+                        <li><a href="">Meaning of interest held by ultimate recipient</a></li>
+                        <li><a href="">Non-resident investing in debt interests</a></li>
+                        <li><a href="">Transfer pricing: relevance of actual commercial or financial relations</a></li>
+                        <li><a href="">ASIC seeks court order to stop property promoter from providing unlicensed financial product advice on SMSFs</a></li>
+                    </ul>
+                
+    </div>
+</div>
+
+                <!-- MY TOOLS -->
+                
+                <div class="lv-content-block">
+    <div class="lv-content-block-header">
+        <h3>My Tools</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="lv-content-block-inner">
+        
+                    <ul>
+                        <li><a href="/tools/">Accountant's Manual</a></li>
+                        <li><a href="/tools/">ASIC Forms Toolkit</a></li>
+                        <li><a href="/tools/">Asset Impairment Toolkit</a></li>
+                        <li><a href="/tools/">Australian Audit Guide and Toolkit for Self Managed Superannuation Funds</a></li>
+                        <li><a href="/tools/">Australian Audit Manual and Toolkit for SMEs</a></li>
+                        <li><a href="/tools/">Australian Governance Professionals Handbook</a></li>
+                        <li><a href="/tools/">Australian Valuation Handbook</a></li>
+                        <li><a href="/tools/">CGT Guide for SME Practitioners</a></li>
+                        <li><a href="/tools/">Cleardocs (Document Generation)</a></li>
+                        <li><a href="/tools/">Company Tax Return Preparation Checklist</a></li>
+                    </ul>
+                    <br>
+                    <a class="button radius knockout tiny" href="/tools/">More Tools</a>
+                
+    </div>
+</div>
+
+            </li>
+        </ul>
+
+    </div> <!-- .columns -->
+</div> <!-- .row -->
+
+<!--- This child document initializes the page in Jekyll. -->
+                </div>
+            </div>
+        </main>
+
+    </section> <!-- .stage -->
+
+    <!-- FOOTER -->
+    <footer class="lv-footer">
+        
+
+<div class="row collapse is-full-width">
+
+    <!-- Footer Links -->
+    <div class="medium-6 medium-push-6 columns">
+        <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
+            <li><a href="http://training.thomsonreuters.com.au/products/checkpoint/" target="_blank">Help</a></li>
+            <li class="has-dropdown"><span class="anchor">Sites</span></a>
+                <ul class="lv-dropdown">
+                    <li><a href="https://www.checkpointworld.com" target="_blank"><i class="fi-web"></i> Checkpoint World</a></li>
+                    <li><a href="http://thomsonreuters.com/site/proview/" target="_blank"><i class="fi-web"></i> Proview</a></li>
+                    <li><a href="http://www.westlaw.com.au" target="_blank"><i class="fi-web"></i> Westlaw Australia</a></li>
+                    <li><a href="http://www.westlaw.co.nz" target="_blank"><i class="fi-web"></i> Westlaw New Zealand</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
+            <li><a href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx" target="_blank">Terms of Use</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Legal -->
+    <div class="medium-6 medium-pull-6 columns">
+        <div class="text-center medium-text-left">
+            <small class="lv-footer-legal">&copy; <b>2014</b> <a href="http://www.thomsonreuters.com.au">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+        </div>
+    </div>
+
+</div> <!-- .row -->
+    </footer>
+
+</div> <!-- .homepage -->
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
+        <ul>
+    <li class="">
+        <a href="/checkpoint/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+">
+        <a href="/checkpoint/research/"><i class="fi-magnifying-glass"></i> Research</a>
+        <ul class="lv-topbar-dropdown">
+            <li><a href="/checkpoint/research/">Basic</a></li>
+            <li><a href="/checkpoint/research/cases/">Cases</a></li>
+            <li><a href="/checkpoint/research/cases/">Legislation / Commentary</a></li>
+            <li><a href="/checkpoint/research/cases/">Journals</a></li>
+            <li><a href="/checkpoint/research/cases/">News</a></li>
+            <li><a href="/checkpoint/research/cases/">Government and Regulatory</a></li>
+        </ul>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+ show-for-xlarge-up">
+        <a href="/checkpoint/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+ show-for-xlarge-up">
+        <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+">
+        <a href="/checkpoint/learning/"><i class="fi-info"></i> Learning</a>
+    </li>
+</ul>
+    </nav>
+
+    <!-- OFF-CANVAS MENU (RIGHT) -->
+    <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
+        <ul>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | Logout</small></a></li>
+    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+    <li><a href="/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+</ul>
+    </nav>
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/checkpoint/minified.js"></script>
+
+    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

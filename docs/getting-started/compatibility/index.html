@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Westlaw">
+    <title>
+        
+        
+            
+                Compatibility - Westlaw
+            
+        
+    </title>
+
+    <link rel="canonical" href="/docs/getting-started/compatibility/">
+    <link rel="shortcut icon" type='image/x-icon' href='/assets/img/westlaw/template/favicon.ico'>
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
+
+    <!-- Google Fonts CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/foundation.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/minified.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css">
+    <![endif]-->
+
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="lv-super">
+        <div class="lv-page">
+
+            <style>
+    html, body, .lv-main, .lv-stage {
+        /*background: white;*/
+    }
+    .lv-context-menu-fixed {
+        /*top: 60px;*/
+        /*bottom: 0;*/
+    }
+    .lv-context-menu ul ul li a {
+        color: #eee;
+        margin-left: 20px;
+        display: none;
+    }
+
+    .lv-context-menu h2 + ul {
+        /*border-top: 1px solid #D4DCE3;*/
+    }
+</style>
+
+<!-- HEADER -->
+<div class="lv-header">
+    <section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
+	<div class="left">
+		<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+	</div>
+
+	<div class="lv-logo-wrapper">
+
+		<!-- Logo -->
+		<a class="lv-logo" href="/"><img width="120" src="/assets/img/common/template/docs-logo-type@2x.png"></a>
+
+		<!-- Site Select -->
+		<div class="lv-site-select show-for-medium-up">
+			<i class="fa fa-caret-down"></i>
+			<ul>
+				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
+				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+			</ul>
+		</div> <!-- .lv-site-select -->
+
+	</div> <!-- .logo-wrapper -->
+
+</section>
+</div>
+
+<!-- STAGE -->
+<section class="lv-stage">
+
+    <!-- CONTEXT MENU -->
+    <nav class="lv-context-menu">
+        <div class="lv-context-menu-fixed">
+
+	<!-- Dynamic Content - each page will point to a partial to pass through -->
+	<nav class="lv-context-menu-panel" aria-hidden="true">
+		
+		    
+	<h3>Getting Started</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/">Welcome</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/installation-and-setup/">Installation & Setup</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/basic-usage/">Basic Usage</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/directory-structure/">Directory Structure</a>
+				</li>
+			
+				<li class="active">
+					<a href="/docs/getting-started/compatibility/">Compatibility</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Basics</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/basics/templates/">Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/data-files/">Data Files</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/css-components/">CSS Components</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/javascript/">JavaScript</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Page Layouts</h3>
+	
+
+	<h3>Miscellaneous</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a>
+				</li>
+			
+		</ul>
+	
+
+		
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- Top Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
+		<ul>
+    <li class="">
+        <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+">
+        <a href="/westlaw/research/"><i class="fi-magnifying-glass"></i> Research</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+">
+        <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+">
+        <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+">
+        <a href="/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
+    </li>
+    <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+">
+        <a href="/westlaw/guide/"><i class="fi-info"></i> Guide</a>
+    </li>
+</ul>
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- User Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-user-menu js-user-menu" aria-hidden="true">
+		
+
+<ul>
+    <li><a href="#LOGOUT"><img width="30" src="/westlaw/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
+	<li><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
+	<li><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+	<li><a href="/westlaw/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
+    <li><a href="/westlaw/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/westlaw/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+    <li><a href="/westlaw/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+    <li><a href=""><i class="fi-male"></i>&nbsp; Help</a></li>
+</ul>
+	</nav> <!-- .lv-context-menu-panel -->
+
+</div> <!-- .lv-context-menu-fixed -->
+
+
+    </nav>
+
+    <!-- MAIN -->
+    <main class="lv-main">
+
+        <!-- CONTENT -->
+        <div class="lv-content">
+            <div class="row">
+                <div class="columns">
+                    <h1 id="compatibility">Compatibility</h1>
+
+                </div>
+            </div>
+        </div>
+
+    </main> <!-- .lv-main -->
+
+</section> <!-- .lv-stage -->
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/westlaw/minified.js"></script>
+
+    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

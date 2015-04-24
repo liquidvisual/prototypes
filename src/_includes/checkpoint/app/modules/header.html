@@ -15,7 +15,7 @@
 
 		<!-- Logo -->
 		<a title="Checkpoint®" class="lv-logo" href="/">
-			<img class="show-for-medium-up" width="152" src="/img/checkpoint/template/logo.png" alt="Thomson Reuters Checkpoint">
+			<img class="show-for-medium-up" width="152" src="/img/checkpoint/template/logo-type@2x.png" alt="Thomson Reuters Checkpoint">
 			<img class="hide-for-medium-up" width="40" src="/img/checkpoint/template/logo-mobile-black@2x.png" alt="Thomson Reuters Checkpoint">
 		</a>
 
@@ -45,11 +45,11 @@
 <section class="lv-user-profile text-right show-for-large-up">
 	<div class="left">
 		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
-		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
-    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
-		    <li class="{% include common/snippets/is_active.html current_path="history" %}"><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/checkpoint/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/checkpoint/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="history" %}"><a href="/checkpoint/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
 		    <li><a href="/modal_output/checkpoint/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/checkpoint/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
 		</ul>
 	</div>
 	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>{{ username | upcase }}</b> - <a href="#">Logout</a></div>

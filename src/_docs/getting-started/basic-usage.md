@@ -2,4 +2,4 @@
 title: Basic Usage
 ---
 
-# Title Here
+# Basic Usage

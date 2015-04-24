@@ -2,6 +2,8 @@
 title: Templates
 ---
 
+# Templates
+
 ## How Templating Works
 
 **NOTE:** All of these folders live inside **/src** directory

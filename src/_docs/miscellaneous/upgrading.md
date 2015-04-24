@@ -2,7 +2,7 @@
 title:
 ---
 
-## Updating Compiled Assets
+# Upgrading
 
 ### The Quick Way
 

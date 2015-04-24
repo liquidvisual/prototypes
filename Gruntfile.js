@@ -202,7 +202,9 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= yeoman.dist %>'
       },
-      html: ['<%= yeoman.dist %>/index.html', '<%= yeoman.dist %>/westlaw/index.html']
+      html: ['<%= yeoman.dist %>/index.html',
+             '<%= yeoman.dist %>/westlaw/index.html',
+             '<%= yeoman.dist %>/checkpoint/index.html']
     },
     usemin: {
       options: {

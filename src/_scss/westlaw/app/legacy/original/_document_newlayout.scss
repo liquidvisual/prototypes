@@ -1,0 +1,153 @@
+
+.sharedInfo .paragraphTitle {display:none}
+#headerAndContainer #breadcrumb {display:none}
+#breadcrumbbar #breadcrumb {display:block;padding-left:0;padding-top:5px;}
+#breadcrumbbar  {border-bottom:1px solid #d2d2d2;padding-bottom:5px;}
+#content #maincontent {margin-top:0px;padding-bottom:50px !important}
+#content #maincontent #navbar { background-color: #FFFFFF;position: fixed;width: 985px;z-index: 200;}
+#content.documentonly #maincontent #navbar { width:97%;max-width: 1240px;}
+
+#dragger {    background: none repeat scroll 0 0 #F2F2F2;    border-left: 1px solid #D2D2D2;    border-right: 1px solid #D2D2D2;    float: right;    margin-left: 242px;    margin-top: 1px;    position: fixed;    width: 5px;    z-index: 1000;}
+#dragger:hover {cursor:e-resize}
+#tocectory li {margin:0;white-space:nowrap !important;}
+
+#content #maincontent #navbar #searchOptionsNav {border-bottom:1px solid #d2d2d2;padding-bottom:5px;padding-top:5px;width:100%}
+#backResult a, #backResultSidebar a {background: url(../images/icons/ico_back.png) no-repeat 0 0;padding-left:25px;}
+#newSearch a { background: url("../images/icons/ico_newsearch.png") no-repeat scroll 0 0 transparent;display: block; height: 20px; padding-left: 25px;}
+#content #maincontent #documenttitlebar {border-bottom:1px solid #d2d2d2;padding:10px 0;}
+#content #maincontent #documenttitlebar h1 {border-bottom:0px;}
+#content #maincontent #documenttitlebar h1 img, #content #maincontent #documenttitlebar h1 a{line-height:11px;display:inline-block;padding-top:0px}
+#content #maincontent #documentoptions {margin-top:8px;border-bottom:1px solid #d2d2d2;padding-bottom:5px;}
+#content #maincontent #documentoptions ul#ulDeliveryContainer {float:left;display:inline;margin-top:3px;;}
+#content #maincontent #documentoptions #deliveryForm {padding-top:0;} 
+#content #maincontent #documentoptions ul#ulDeliveryContainer li {margin-top:0; float:left;margin-right:5px;margin-left:3px;}
+#content #maincontent #documenttabs {margin-top:8px;padding-bottom:50px;}
+#content #maincontent #documenttabs p {float:left;}
+#content #maincontent #documenttabs ul {float:left;}
+#content #maincontent #documenttabs ul {margin:0.4em 0}
+#content #maincontent #documenttabs ul li{display:inline;padding:0 10px}
+#content #maincontent #documenttabs ul li.activeTab {font-weight:bold;color:#000;}
+#content #maincontent #documenttabs ul li.activeTab a {color:#000}
+#content #maincontent #documenttabs div {display:inline;}
+#tabbedresultshelper a {background:url(../images/icons/ico_lightbulb16.png) no-repeat 0 0;padding-left:20px;padding-top:2px;}
+#documentsTabs div#selectTab {border:none !important;padding:0 !important}
+#content #maincontent #documenttitlebar h1{font-family:KnowledgeRegular, Arial, Helvetica, Sans-serif;font-size:1.6em;margin:0px 0 0 0;padding-bottom:0;text-transform:none;color:#000}
+#content #maincontent #documenttitlebar h2{font-family:KnowledgeLight, Arial, Helvetica, Sans-serif;font-size:1.2em;margin-top:0;padding-top:0;font-weight:normal;font-style:italic;text-transform:none;color:#000}
+#fake-bottombar {display:none;}
+#sidebar  h1{margin:0;background: #fff;border-bottom: 1px solid #D2D2D2;text-transform:none;font-family: KnowledgeRegular,Arial,Helvetica,sans-serif;font-size: 1.3em;font-weight: normal; height: 27px;padding: 10px 0 0 10px;}
+#content #sidebar h3 {    color: #505050;    font-family: KnowledgeLight,Arial,Helvetica,Sans-serif;    font-size: 1.5em;    font-weight: normal;    margin: 0;    padding: 20px 0 0 10px;}
+#sidebar p {margin:0.5em 10px;font-size:0.9em;}
+.bottombar {display:none;}
+#searchOptions, #navBar {display: block !important;margin: 0 0px 0px !important;}
+
+#content ul#documentIndex {display:inline-block;}
+#content #jumpto {font-weight:bold;display:inline-block;margin-right:10px;background:url(../images/icons/ico_jumpto.png) no-repeat 0 0;padding-left:20px;}
+#content ul#documentIndex li {margin:0.25em 20px 0.25em 0;display:inline-block;}
+#content ul#documentIndex li a {background:url("../images/icons/ico_endcascade.gif") no-repeat scroll 0 -2px;padding-left:15px;font-weight:bold;}
+#content a.backToTopLink {background:url(../images/icons/ico_backtotop.png) no-repeat 0 0;padding-left:20px;padding-top:2px;font-weight:bold;}
+#content #jumpto {font-weight:bold;}
+#documentoptionsnotes {float:left;}
+#maincontent a.next {display:block;text-indent:-9999px;background:url(../images/sprite_docnav.png) no-repeat -118px -0px;width:25px;height:25px}
+#maincontent a.prev {display:block;text-indent:-9999px;background:url(../images/sprite_docnav.png) no-repeat -2px -0px;width:25px;height:25px}
+
+#maincontent a.next:hover {background-position:-145px -0px}
+#maincontent a.prev:hover {background-position:-29px -0px}
+
+#maincontent a.next:active {background-position:-169px -0px}
+#maincontent a.prev:active {background-position:-55px -0px}
+
+#maincontent .navgroup {margin:0 0px 0 20px;}
+#maincontent .navlabel {padding:2px 5px 0px 5px;}
+
+#maincontent div.nextghost {background:url(../images/sprite_docnav.png) no-repeat -197px -0px;width:25px;height:25px;text-indent:-9999px}
+#maincontent div.prevghost {background:url(../images/sprite_docnav.png) no-repeat -83px -0px;width:25px;height:25px;text-indent:-9999px;}
+
+.prevDoc, .nextDoc, .navigationText {float: left;padding: 0 6px;}
+#maincontent .navlabel {    padding: 6px 5px 0;}
+#maincontent .navgroup { margin: 0 0 0 20px;}
+.navgroup {float: left; margin-right: 5px;}
+#navBar {float:right;}
+
+#backResult {float:left;width:20%;padding-top:4px;}
+
+#docContent a.docicon {background:url(../images/docicons/ico-doc.png) no-repeat 100% 0;display:inline-block;padding-right:20px;}
+#docContent a.pdficon {background:url(../images/docicons/ico-pdf.png) no-repeat 100% 0;display:inline-block;padding-right:20px;}
+#docContent a.rtficon {background:url(../images/docicons/ico-rtf.png) no-repeat 100% 0;display:inline-block;padding-right:20px;}
+#docContent a.txticon {background:url(../images/docicons/ico-txt.png) no-repeat 100% 0;display:inline-block;padding-right:20px;}
+#docContent a.xlsicon {background:url(../images/docicons/ico-xls.png) no-repeat 100% 0;display:inline-block;padding-right:20px;}
+
+
+#backResultSidebar {margin-left:10px;margin-bottom:5px;}
+#backResultSearchbar {float:left;width:200px;background: url(../images/icons/ico_back.png) no-repeat 0 0;padding-left:25px;margin-top:5px;}
+#docSearchBar {float:right;width:395px;text-align:right;height:28px;}
+#nosearch #container #content fieldset {padding-bottom: 0;}
+#maincontent #fieldSet {background:none;border-radius:0;margin:0;}
+#maincontent #fieldSet .clear {display:none;}
+#maincontent #fieldSet #searchInputs {float: left; margin-bottom:0px;margin-top:0; width: 350px;;}
+#maincontent #fieldSet #searchInputs #general {margin: 0 0 0px 0px;padding-right: 0;}
+#maincontent #fieldSet #searchInputs #general input {width:330px;background:none;border: 1px solid #d2d2d2;border-radius: 5px 5px 5px 5px;height: 24px;line-height: 25px;padding: 0 9px;}
+#maincontent #fieldSet #searchButtons {float:right;width:35px;margin-top:0px;}
+#maincontent #fieldSet #templateSubmit input {filter:none;background: transparent url(../images/sprite_docnav.png) no-repeat -226px 0px !important;;text-indent:-9999px;border: 0px;border-radius: 0;
+	position:relative;right:auto;text-align: center;text-decoration: none;width:auto;text-transform: uppercase;width:25px;margin-top:3px;margin-bottom:0px;}
+#searchForm {display:block;float:right;padding:0;}
+#content #sidebar ul.toplevel {margin:0 0px 0 0;padding:0;list-style-type:none}
+#content #sidebar ul.toplevel li {border:0;display:block;background:url("../images/ui-bg_glass_100_f6f6f6_1x400.png") repeat-x scroll 50% 50% #F6F6F6 !important;margin:0;border-radius:0 0 0 0;font-size:1em;float:none;width:100%;border-bottom:1px dotted #d2d2d2 !important;padding:7px 0 7px 0px}
+#content #sidebar ul.toplevel li:hover {background:#f0f8fc !important} 
+#content #sidebar ul.toplevel li a {display:block;border:0;float:none;padding:0 0 0 10px;color:#000;font-weight:bold;}
+#content #sidebar ul.toplevel li.active {background:#095c7f url(../images/bg-sidebar-li.gif) repeat-x 0px 0px !important;}
+#content #sidebar ul.toplevel li.active a {color:#fff !important;}
+#content #sidebar ul.toplevel li .docLinks a {display: inline; font-weight: normal; color: #005DA2;}
+#content #sidebar ul.toplevel  li:last-child {border-bottom:1px solid #d2d2d2}
+#content #sidebar .toplevel  {background:url(../images/bg_vershade-sidebar.gif) repeat-x bottom left;padding-bottom:6px !important;}
+#content #sidebar ul.toplevel li.ui-state-active {background:#095c7f url(../images/bg-sidebar-li.gif) repeat-x 0px 0px !important;color:#fff !important;}
+#content #sidebar ul.toplevel li.ui-state-active a {color:#fff !important}
+#content #sidebar ul#qlinks li a.lightbulbhelper {background: url("../images/icons/ico_lightbulb16.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);color: #005A84 !important;font-weight: normal;padding-left: 20px;padding-top: 2px;}
+#content #sidebar #docoptionstabs #docoptions {border: 0 none;}
+#content #searchSummary ul#docoptions {margin:0;}
+#content #searchSummary .ui-tabs .ui-tabs-panel {padding:0 !important}
+#content #searchSummary .ui-corner-all {border-radius:0 !important}
+#content #searchSummary .ui-tabs {padding:0 !important}
+#content #searchSummary .ui-widget-content {border:0 !important}
+#content #sidebar .running_header h2 {margin-top:10px;margin-bottom:5px;;font-weight:bold;}
+#content #sidebar .running_header li {white-space: normal !important}
+
+
+#content #sidebar #doc-context #loading-context, #content #sidebar #doc-context #loadingToc {background: url("../images/pleasewait.gif") no-repeat scroll 50% 40% transparent;text-indent:-9999px;height: 175px;margin: 0; text-align: center;width: 100%;}
+#content #sidebar #select-context ul {margin:0 0px 0 0;padding:0;list-style-type:none}
+#content #sidebar #select-context ul li {border:0;display:block;background:url("../images/ui-bg_glass_100_f6f6f6_1x400.png") repeat-x scroll 50% 50% #F6F6F6 !important;margin:0;border-radius:0 0 0 0;font-size:1em;float:none;width:100%;border-bottom:1px dotted #d2d2d2 !important;padding:7px 0 7px 0px}
+#content #sidebar #select-context ul li a {display:block;border:0;float:none;padding:0 0 0 10px;color:#005a84;font-weight:normal;cursor:pointer}
+#content #sidebar #select-context ul li a:hover {text-decoration:underline}
+#content #sidebar #select-context ul li.active {background:#095c7f url(../images/bg-sidebar-li.gif) repeat-x 0px 0px !important;}
+#content #sidebar #select-context ul li.active a {color:#fff !important;}
+#content #sidebar #select-context {background:url(../images/bg_vershade-sidebar.gif) repeat-x bottom left;padding-bottom:6px !important;}
+#content #sidebar #select-context .error {margin:40px 10px;color:#999;font-style:italic;}
+
+
+#content #sidebar #select-context ul li.ui-state-active {background:#095c7f url(../images/bg-sidebar-li.gif) repeat-x 0px 0px !important;color:#fff !important;}
+#content #sidebar #select-context ul li.ui-state-active a {color:#fff !important}
+
+
+.showonlyfp {margin-top:25px;font-weight:bold;}
+
+
+#sidebar ul#searchResultPanel {margin-top:20px;}
+#sidebar ul#searchResultPanel li {border-top:1px solid #b2b2b2;margin:0;padding:0;background-color:#fff !important;}
+#sidebar ul#searchResultPanel li ul.docLinks {border-top: 1px dotted #D2D2D2 !important;}
+#sidebar ul#searchResultPanel li ul.docLinks li {margin:0;padding:0;border-top:0;}
+#sidebar ul#searchResultPanel li ul.docLinks li a {background: url(../images/icons/ico_file12.png) no-repeat 10px 50% transparent;color: #005a84;display: block;font-weight: normal;padding: 3px 10px 3px 30px;}
+#sidebar ul#searchResultPanel li ul.docLinks li a:hover {text-decoration:underline;}
+
+#sidebar .navigationLinks {padding:10px;}
+#sidebar .navigationLinks span#navDisabled{display:none;}
+#content #sidebar .navigationLinks a {background: none repeat scroll 0 0 #FFFFFF;border: 0px;border-radius: 0px 0px 0px 0px;color: #005a84;display: inline-block;padding: 2px 4px;text-align: center;text-decoration: underline;}
+#content #sidebar .navigationLinks .currentPage {background: none repeat scroll 0 0 transparent;border: 1px solid #D2D2D2;border-radius: 5px 5px 5px 5px;color: #505050;cursor: default;padding: 5px;}
+
+#docContent .green {display:inline-block;margin-top:3px;}
+
+#sidebar #docoptions #searchSummary p , #sidebar #docoptions #searchSummary span {display:block;margin:0.5em 0 0.5em 10px;}
+#sidebar #docoptions #tree .plus span {}
+#tree .plus a {color:#005a84;}
+#tree .plus a:hover {text-decoration:underline}
+
+#asyncspinnerresearch {background: url("../images/pleasewait.gif") no-repeat scroll 50% 40% transparent;text-indent:-9999px;height: 175px;margin: 0; text-align: center;width: 100%;}
+#sidebar ul.doclist li a {display:block;padding:6px 10px 6px 30px;color:#145DA4;font-weight:normal;background:url(../images/ico_file12.png) no-repeat 10px 50%;}

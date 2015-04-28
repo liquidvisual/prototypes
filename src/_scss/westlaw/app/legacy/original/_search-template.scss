@@ -1,0 +1,762 @@
+/*-----------Search Template-----------*/
+
+.searchrow {margin:0 0 3px 0;width:100%}
+.searchrow .searchlabel {float:left;text-align:right;width:30%;padding-right:2%;font-size:0.9em;margin-top:2px;}
+.searchrow .searchhelp {float:left;margin-top:4px;width:4%;min-width:25px;text-align:left}
+.searchrow .searchinput {float:left;width:60%}
+.sourceDirectoryLink {margin-left:36%}
+
+/*date specific - responsive */
+form #advancedSearch .searchrow .searchinputfrom, .searchrow .searchinputto {float:left;width:20%;text-align:left;max-height:24px;white-space:nowrap;}
+form #advancedSearch .searchrow .searchinputfrom input, .searchrow .searchinputto input, .searchrow .datetohidden input{display:inline-block;width:70% !important;}
+form #advancedSearch .searchrow .searchinputfrom img, form #advancedSearch .searchrow .searchinputto img {position:absolute}
+form #advancedSearch .searchrow .searchlabelto {float:left;padding:0 1%;width:2%;}
+form #advancedSearch .searchrow .searchlabelto label,  form #advancedSearch .searchrow .searchextactdatecheckbox label {display:inline-block;padding-top:5px;text-align:left;}
+form #advancedSearch .searchrow .searchextactdatecheckbox {float:left;padding-left:2%;text-align:left;width:15%}
+form #advancedSearch .searchrow .searchextactdatecheckbox input {width:auto;}
+#frtPara .searchhelp {display:none}
+
+#toolsText .searchhelp {display:block}
+
+#general #frtPara .searchlabel {display:none;}
+#general #frtPara .searchinput {width:100%;float:none;} 
+#general #refinePara .searchinput {
+	width: 100%;
+	float: none;
+	margin-top: -6px;
+} 
+#fieldSet #searchInputs {
+	width: 75%;
+	float:left;
+	margin-bottom: 5px;
+	margin-top: 25px;
+	position: relative;
+	z-index: 1;
+	padding-left: 10px;
+}
+
+#fieldSet #searchButtons {
+	width:20%;float:right;
+}
+#fieldSet #searchButtons input, #fieldSet #searchButtons a{
+margin-top:25px;
+padding:6px 0;
+display:block;
+width:80%;
+font-size:1.1em;
+	}
+#content p#frtPara{
+	margin:0;
+}
+
+#fieldSet #searchInputs #general label {
+	text-transform: uppercase;
+	color: #fe8106;
+	padding-right: 10px;
+}
+
+#fieldSet #searchInputs #general {
+	margin: 0px 0 5px 30px;
+}
+
+form#searchForm label{
+	margin: 5px 0px 10px 0px;
+	text-align: right;
+}
+
+form #generalRadioButton label {
+	color: #005DA2;
+	font-size: 1em;
+	margin: 0px;	
+	padding: 0px 10px 0px 0px;
+	text-align: left;
+	vertical-align: middle;
+}	
+
+form #generalRadioButton #toolsSearchTypePara .searchlabel, form #generalRadioButton #toolsSearchTypePara .searchhelp {
+	display: none;
+}
+
+form.toolSearchForm #fieldSet #generalRadioButton {
+	padding: 0 0 5px 0;
+	margin-left: 35%;
+}
+
+form #advancedSearch div label, 
+form #advancedSearchMore div label {
+	color: #505050; 
+	text-align: right;
+	display:block;
+}	
+	
+form #advancedSearch div label#oneDateLabel,
+form #advancedSearch div label#toReleaseDateLabel,
+form #advancedSearch div label#toJudgmentDateLabel,
+{
+	margin: 10px 0px 10px 0px;
+	padding: 0px 8px 0px 0px;
+	text-align: left;
+}
+
+#fieldSet #searchInputs #general input {
+	height: 31px;
+	border: 1px solid #BEB8AC;
+	line-height: 32px;
+	/*max-width: 870px;*/
+	padding: 0 9px;
+	width: 98%; /* 96.5% ??? */
+}
+
+#fieldSet #searchInputs #general input:focus, #advancedSearch input:focus {
+
+box-shadow: 0 0 10px rgba(0, 90,132, 0.5);-webkit-box-shadow: 0 0 10px rgba(0, 90,132,  0.5);-o-box-shadow: 0 0 10px rgba(0, 90,132,  0.5);	-ie-box-shadow: 0 0 10px rgba(0, 90,132,  0.5);-moz-box-shadow: 0 0 10px rgba(0, 90,132,  0.5);border-color:rgba(0, 90,132, 0.75)
+}
+
+#fieldSet #templateSubmit input {
+
+}
+
+#searchButtons #searchButton
+{
+	
+	}
+	
+
+#fieldSet #templateSubmit input.buttonsecondary{
+	background: -moz-linear-gradient(top, #efefef,#dadada); 
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#dadada));
+	border: 1px solid #b2b2b2;
+}
+#fieldSet.disabled #templateSubmit input, #fieldSet.disabled #templateSubmit input:hover{
+	background: -moz-linear-gradient(top, silver,grey ) !important; 
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(silver), to(grey)); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='silver', endColorstr='grey') !important;
+	border: 1px solid silver !important;
+}
+
+#fieldSet #templateSubmit input.basic {
+	float: left;
+	width: 160px;
+	-moz-border-radius: 0px 7px 7px 0px;
+	border-radius: 0px 7px 7px 0px;
+}
+
+#fieldSet #templateSubmit input.advanced {
+	position: absolute;
+	width: 160px;
+	border-radius: 7px;
+}
+
+#fieldSet #generalRadioButton {
+	padding: 10px 0 0 30px;;
+}
+
+#fieldSet #generalRadioButton p {
+	display: inline;
+}
+
+#fieldSet #generalRadioButton input {
+	vertical-align: middle;
+	margin-top: -1px;
+	*margin-top: -4px;
+	margin-top: -1.5px \0/ !important;
+}
+
+#fieldSet {
+	background:#F9F7F6;
+	border:1px solid #BEB8AC;
+	margin: 5px 0px 0px;
+	border-radius: 7px 7px 7px 7px;
+	padding-bottom: 10px;
+}
+.refinesearch #fieldSet {padding-bottom:17px;}
+#nosearch fieldSet {border:0;}
+
+#fieldSet.disabled {
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+#generalRadioButton {
+	color:white;
+	font-size: 8pt;
+}
+
+#advancedSearch p, #advancedSearchMore p{
+	margin: 5px 0px 0px 0px;
+	height:30px;
+	width:100%;
+	text-align: right;
+	clear:both;
+	*clear:both !important;
+	
+}
+
+#advancedSearch p:first-child {
+	margin-top: 3px;
+}
+
+#advancedSearch p#toJudgmentDatePara,
+#advancedSearch p#toReleaseDatePara {
+	margin-bottom: 0px \0/ !important;
+}
+
+#advancedSearchMore p#citedpartyPara {
+	margin-top: 0px \0/ !important;
+	*margin: 1px 0px 0px 0px ;
+}
+
+#advancedSearch p#toJudgmentDatePara label#toJudgmentDateLabel,
+#advancedSearch p#toReleaseDatePara label#toReleaseDateLabel,
+#advancedSearch p#toYearPara label#toYearLabel{
+	padding: 0px 0px 0px 5px !important; 
+}
+
+#advancedSearch {
+}
+
+#advancedSearchMore {
+}
+
+#advancedSearchMore {
+	padding-bottom: 10px;
+}
+
+#advancedSearch #judgmentDatePara .searchinput, #advancedSearch #decidedDatePara .searchinput, #advancedSearch #releaseDatePara .searchinput {width:19%}
+#advancedSearch #toJudgmentDatePara .searchinput, #advancedSearch #toReleaseDatePara .searchinput  {width:66%}
+#advancedSearch #toJudgmentDatePara .searchlabel, #advancedSearch #toReleaseDatePara .searchlabel  {width:20%}
+#advancedSearch #judgmentDatePara .searchinput input, #advancedSearch #decidedDatePara .searchinput input, #advancedSearch #toJudgmentDatePara .searchinput input  {width:70%}
+#toJudgmentDatePara, #toReleaseDatePara {margin-left:-38%;}
+.ui-datepicker {
+ width: 17em; padding: .2em .2em 0; font-size: 100%;
+}
+#advancedSearch #judgmentDatePara,
+#advancedSearch #releaseDatePara,
+#advancedSearch #decidedDatePara,
+#advancedSearch #yearPara {
+	display:block;	
+	clear:both;
+	margin-bottom: 5px !important;
+	*margin-bottom: 0px !important;
+	clear:inherit !important;
+	float: left;
+}
+
+#advancedSearch #toJudgmentDatePara,
+#advancedSearch #toYearPara,
+#advancedSearch #toReleaseDatePara {
+	display:inline;
+	visibility:visible;
+	clear:none !important;
+	width: 30%;
+}
+
+#advancedSearch #toJudgmentDatePara,
+#advancedSearch #toReleaseDatePara,
+#advancedSearch #toYearPara {
+	float: right;
+}	
+
+
+#advancedSearch #oneDatePara input{
+	margin-top:3px;
+	margin-left: 3px;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+	width: auto !important;
+}
+
+#advancedSearch #oneDatePara label {
+}
+#advancedSearch #toJudgmentDatePara label,
+#advancedSearch #toReleaseDatePara label,
+#advancedSearch #decidedDatePara label {
+}
+#advancedSearch #oneDatePara {margin-top:-5px;;}
+
+
+#advancedSearch input[type=text], #advancedSearch input[type=checkbox], #advancedSearch input[type=button], #advancedSearch input[type=select], 
+#toolsText input[type=text], #toolsText input[type=checkbox], #toolsText input[type=button], #toolsText input[type=select],
+#toolsRadioButton input[type=text], #toolsRadioButton input[type=checkbox], #toolsRadioButton input[type=button], #toolsRadioButton input[type=select],
+#toolsTypeRadioButton input[type=text], #toolsTypeRadioButton input[type=checkbox], #toolsTypeRadioButton input[type=button], #toolsTypeRadioButton input[type=select],
+#advancedSearchMore input[type=text], #advancedSearchMore input[type=button], #advancedSearchMore input[type=select]{
+	border: 1px solid #b2b2b2;
+	padding: 2px 0px;
+	background-color: #ffffff;
+	width:100%;
+}
+
+#advancedSearchMore select,
+#toolsText select,
+#toolsRadioButton select,
+#toolsTypeRadioButton select,
+#advancedSearch select#ruleType,
+#advancedSearch select#jurisdiction,
+#advancedSearch select#recordType,
+#advancedSearch select#jurisdictionLegis,
+#advancedSearch select#legisJurisdiction,
+#advancedSearch select#legisJuris,
+#advancedSearch select#caseType,
+#advancedSearch select#caseUpdated,
+#advancedSearch select#riskType,
+#advancedSearch select#indusSector,
+#advancedSearch select#indusSubSector,
+#advancedSearch select#degreeInjury,
+#advancedSearch select#publicationType,
+#advancedSearch select#toolType,
+#advancedSearch select#subjectArea,
+#advancedSearchMore select#appeal,
+#advancedSearchMore select#caseUpdated,
+#advancedSearchMore select#caseType,
+#advancedSearchMore select#guideJudgments,
+#advancedSearchMore select#reportedCases,
+#advancedSearchMore select#reportedUpdates {
+    
+	width: 100%;
+	border: 1px solid #b2b2b2;
+    background-color: #ffffff;
+    
+}
+
+#advancedSearch select, #advancedSearchMore select {padding:1px 0px;
+}
+
+#advancedSearchLink, #advancedSearchLinkBasic {
+  	color: #FFFFFF;
+  	font-size: 10px;
+  	font-weight: bold;
+	position: absolute;
+	height: 10px;
+  	width: 131px;
+  	line-height: 10px;
+  	padding: 7px 10px 0;
+  	text-decoration: none;
+}
+
+#advancedSearchLink {
+	top: 65px;
+	right: 30px;
+  	padding: 5px 1px 0 10px;
+}
+
+#advancedSearchLinkBasic {
+	margin: 5px 0;
+	padding: 0;
+	right: 35px;
+	text-align: right;
+}
+
+#advancedSearchLinkBasic {
+	display: none;
+	top: 65px;
+}
+
+/*
+#advancedSearchClearLink {
+	position:absolute;
+	right:30px;
+	width:155px;
+	top: 70px;
+}*/
+
+#advancedSearch #seeMore { 
+	height:11px;
+	background-color:transparent;
+	font-weight:bold;
+	font-size:10px; 
+	display:inline;
+}
+	
+#advancedSearch	#seeLess {
+	height:11px;
+	background-color:transparent;
+	font-weight:bold;
+	font-size:10px; 
+	display:none;
+}
+
+#judgmentDatePara .ui-datepicker-trigger,
+#toJudgmentDatePara .ui-datepicker-trigger,
+#releaseDatePara .ui-datepicker-trigger,
+#toReleaseDatePara .ui-datepicker-trigger,
+#decidedDatePara .ui-datepicker-trigger{
+	margin-top:1px !important;
+	*margin-left:2px !important; /* IE 6 7 */
+	*margin-top:2px !important; /* IE 6 7 */
+	position:absolute !important;
+}
+
+#advancedSearch #advancedSearchCalendarLink{
+	color:#FFFFFF;
+}
+
+#searchtypeAdvancePara{
+	width:180px;
+	display:inline;
+}
+
+/*AdvancedSearch Legislation*/
+
+#advancedSearch #legislationBoxPara label#legislationBoxLabel,
+#advancedSearch #commentaryBoxPara label#commentaryBoxLabel {
+	*margin-left: 20px;
+	*padding-left: 5px;
+}
+
+#advancedSearch #legislationBoxPara input, 
+#advancedSearch #commentaryBoxPara input {
+	width:auto;
+	float:left;
+	margin-top:4px;
+	background-color: transparent;
+	border: 0;
+}
+
+#advancedSearch #legislationBoxPara, #advancedSearch #commentaryBoxPara {
+}
+
+#advancedSearch #legislationBoxPara {
+}
+
+#advancedSearch #legTitlePara, 
+#advancedSearch #provisionPara {
+	display:block;
+	clear:both;
+	float:left;
+	margin-bottom: 10px !important;
+	*margin-bottom:0px;
+	clear:inherit !important;
+}
+
+#advancedSearch #provisionPara {
+	width: 550px;
+	*width: 546px;
+}
+
+#advancedSearch #legTitlePara {
+	width: 385px;
+}
+
+#advancedSearch #legTitlePara input {
+	width:200px;
+}
+
+/* #advancedSearch #legislationProvisionPara { */
+/* 	width: 380px; */
+/* } */
+
+#advancedSearch #provisionNoPara input {
+	width: 80px;
+}
+
+#advancedSearch #provisionPara select#provision {
+	height: 30px \0/ !important;
+	width: 287px;
+	*width: 283px;
+	padding: 4px 2px 4px 2px;
+	border: 1px solid #606060;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px;
+    background-color: #ffffff;
+    float: right;
+    *float: none;
+}
+    
+/* #advancedSearch #legislationProvisionPara input { */
+/* 	width:80px; */
+/* 	width: 78px \0/ !important; */
+/* } */
+
+/****************************************************
+*	Options in advance search fieldset for options	*
+*****************************************************/
+
+.optionAdvance {
+	float:right;
+	margin-bottom:20px
+
+}
+
+
+/*************************************************************************************************************************************
+ * The following is for the thesaurus
+ *************************************************************************************************************************************/
+#thMain {
+	padding: 0;
+}
+
+#searchtemplate .thInfo.text {
+	margin-left: 25%;
+}
+
+#searchtemplate .thOverallInfo {
+	margin-left: 10px;
+}
+
+#thDropArea {
+	position: absolute;
+	background: white;
+	border: 1px solid #b2b2b2;
+	margin-right: 0px;
+	overflow: auto;
+}
+#thDropArea #thProgress {
+	background-image: url(../images/ajax-loader-toc.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+#thDropArea #thResults {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#thDropArea #thResults .thResList{
+	height:200px !important;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-size: 0.9em;
+}
+#thDropArea #thResults .thResList ul{
+	font-size: 1em;
+}
+.thActiveDroppable {
+	background-color: #e9d19f;
+}
+.thTerm, #thResults li {
+	color: #005a84;
+	margin:0px;
+	padding:5px 10px;
+	
+	cursor: pointer;
+}
+
+.thTerm, #thResults li:hover {
+	color: #005a84;
+	text-decoration:underline;
+	background-color:#e9eef5;
+}
+#thNav {
+display:none;
+}
+.thEquivTerm {
+	font-weight: normal;
+}
+#thNav span {
+	font-weight: bold;
+	color: #1657A7;
+	margin: 0 2px;
+	cursor: pointer;
+}
+#thNav span.current {
+	text-decoration: none;
+	font-weight: normal;
+	color: black;
+}
+.thNextButton {
+	background: url(../images/search/next.png) no-repeat 0 50%;
+	padding-left: 20px;
+	color: white !important;
+}
+.thPrevButton {
+	background: url(../images/search/previous.png) no-repeat 100% 50%;
+	padding-right: 14px;
+	color: white !important;
+}
+.thInfo.text {
+	clear: both;
+	padding-top: 10px;
+	padding-left: 0px;
+	display: block;
+}
+.thInfo a {
+	color:#005a84;
+	margin-right: 5px;
+}
+.thInfo a:hover {
+	color:#005a84;
+	text-decoration:underline;
+	margin-right: 5px;
+}
+
+.thInfo.progress {
+	background: url(../images/ajax-loader-toc.gif) no-repeat 0 4px;
+	margin-left:-3%;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	margin-top:20px;
+}
+
+.taxonomyInfo.progress {
+	background: url(../images/ajax-loader-toc.gif) no-repeat 0 4px;
+	margin-left:-3%;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	margin-top:20px;
+	position:relative;
+}
+
+#multiselect .taxonomyInfo.progress {
+	background: url(../images/ajax-loader-toc.gif) no-repeat 0 2px;
+	margin-left:-3%;
+	display:inline-block;
+	padding-left: 0px;
+	height:20px;
+	width:20px;
+	padding-bottom: 0px;
+	margin-top:-7px;
+	position:absolute;
+
+	}
+	
+
+.thOverallInfo span.progress {
+	background-image: url(../images/progress-wheel-small-cached.gif);
+	background-repeat: no-repeat;
+	padding-left: 15px;
+}
+
+li.expandable div.thRelatedTerms,
+li.expandable div.thEquivTerms {
+	display: none;
+}
+
+.thEquivTerms {
+	margin-top: 5px;
+}
+
+.thTermGroupsCap {
+	font-weight: bold;
+}
+.thDragHandler {
+	background: url(../../images/treeview/flecha.gif) no-repeat 50%;
+	padding-left: 12px;
+	cursor: pointer;
+	margin-left: 4px;
+}
+
+.thesaurus label {
+	margin-top: 5px;
+}
+
+#thResults .treeview .hitarea {
+	height: 13px;
+}
+
+#thResults .thResList .collapsable {
+	background: none;
+}
+
+#thResults .thResList div.collapsable-hitarea {
+	background: url("../../images/treeview/menos.gif") no-repeat;
+}
+
+#thResults .thResList div.expandable-hitarea {
+	background: url("../../images/treeview/mas.gif") no-repeat;
+}
+
+#thResults .treeview li.expandable {
+	background: none;
+}
+
+/**** Numero de norma ****/
+
+#numNormDiv #numeroNorma{
+	font-family: tahoma;
+	font-size: 11px;
+	color: #666666;
+	border: solid 1px #D5D5D5;
+	padding: 3px;
+}
+
+#numNormDiv .ej{
+	font-family: tahoma;
+	font-size: 10px;
+	color: #999999;
+	margin: 3px 3px 8px 0px;
+	height: 20px;
+	line-height: 20px;
+}
+
+/*** Hel Text Fields ***/
+
+.helpText {
+	overflow: hidden;
+	clear: both;
+	background-color: #E9EEF5;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #b2b2b2;
+	color: #505050;
+	width: 250px;
+	z-index: 2000;
+	position: absolute;
+	left: 0;	
+}
+	
+.helpText .leyend {
+	font-size: 0.8em;
+	text-align: left;
+	padding: 5px;
+	cursor: text;
+	line-height: normal;
+	font-family: Verdana, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.helpText .leyend a {
+	text-decoration: underline;
+}
+
+.pg_std_table {
+	border: 2px solid #98AFC7;
+}
+
+.pg_std_row {
+	border: 1px solid #98AFC7;
+
+}
+
+.pg_std_th {
+	padding:2px;
+}
+
+#fieldSet #searchInputsTracker {
+	width: 80%;
+	float:left;
+	margin-bottom: 5px;
+	margin-top: 25px;
+}
+
+#fieldSet #searchInputsTracker #general label {
+	text-transform: uppercase;
+	color: #fe8106;
+	padding-right: 10px;
+}
+
+form #advancedSearchMore .searchrow .searchinputfrom {float:left;width:20%;text-align:left;max-height:24px;white-space:nowrap;}
+form #advancedSearchMore .searchrow .searchinputfrom input{display:inline-block;width:70% !important;}
+form #advancedSearchMore .searchrow .searchinputfrom img, form #advancedSearchMore .searchrow .searchinputto img {position:absolute}
+form #advancedSearchMore .searchrow .searchlabelto {float:left;padding:0 1%;width:2%;}
+form #advancedSearchMore .searchrow .searchlabelto label,  form #advancedSearchMore .searchrow .searchextactdatecheckbox label {display:inline-block;padding-top:5px;text-align:left;}
+form #advancedSearchMore .searchrow .searchextactdatecheckbox {float:left;padding-left:2%;text-align:left;width:15%}
+form #advancedSearchMore .searchrow .searchextactdatecheckbox input {width:auto;}
+
+#fieldSet #searchInputs #general input {
+	line-height: 1; /* instead of 31px */
+}
+.firstPoint {
+	position: relative;
+}
+.firstPointVisible .firstPoint:after {
+	content: "";
+    border: 1px solid #beb8ac;
+    border-radius: 7px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    z-index: -1;
+}
+#advancedSearchMoreLink {
+	display: none;
+}
+form div#searchInputs div#advancedSearchMore div#firstPointVerifiedRecordsPara.searchrow div.searchinput {
+	width: 0;
+}

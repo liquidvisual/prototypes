@@ -1,0 +1,169 @@
+
+a#logoutcta {display:block;float:right;width:100px;}
+a#cancellogoutcta {display:block;float:left;width:75px;}
+#logoutctas {margin-top:30px;}
+a#myresearchcta {display:block;color:#005a84;text-decoration:underline;background:url(../images/icons/ico_myresearch.png) no-repeat 0 0;padding-left:25px;margin-top:15px;}
+#ui-dialog-title-ppvwarningmodal {background:url(../images/icons/ico_ppv.png) no-repeat 0 0;padding-left:25px;padding-top:2px;}
+.no-close .ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+.jqmWindow {
+	position: fixed;
+	width: 342px;
+	display: none;
+	height: 255px;
+	top: 25%;
+	left: 60%;
+	border-radius: 5px;
+	background-color: #ffffff;
+	border: 1px  solid  #000000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.dialogHeader {
+	padding-left: 7px;
+	height: 25px;
+	padding-top: 7px;
+	background-color:  #0083bf;
+	background: -moz-linear-gradient(top, #0083bf, #005a84);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#0083bf), to(#005a84));
+	filter : progid:DXImageTransform.Microsoft.Gradient(
+    		 gradientType=0,startColorStr=#0083bf,
+        	 endColorStr=#005a84);
+	border-bottom: 1px  solid  #000000;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	color:  #ffffff;
+	font-weight: bold;
+}
+
+#warningPop .error {
+	position: absolute;
+	text-align: center;
+	line-height: normal;
+	float: left;
+	color: #505050;
+	font-size: 1em;
+	top: 20%;
+	right: 4%;
+	left: 4%;
+}
+
+.errorIcon {
+	position: absolute;
+	top: 20%;
+	left: 4%;
+}
+.jqmOverlay {
+	// filter: ?alpha(opacity=100)?;
+	opacity: 0.0;
+}
+* HTML .jqmWindow {
+	position: absolute;
+	top: expression((document.documentElement.scrollTop || document.body.scrollTop) + math.round(17 * (document.documentElement.offsetheight || document.body.clientheight) / 100) + 'px');
+}
+
+.smallModalButton {
+	background: #005a84;
+	background: -moz-linear-gradient(top, #0083bf, #005a84);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#0083bf), to(#005a84));
+	filter : progid:DXImageTransform.Microsoft.Gradient(
+    		 gradientType=0,startColorStr=#0083bf,
+        	 endColorStr=#005a84);
+
+	border: 1px solid #00375e;
+	*border: 0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100px;
+	cursor: pointer;
+}
+
+.smallModalButton:hover {
+	background: #0099c4;
+	background: -moz-linear-gradient(top, #0099c4, #00c3ec);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#00c3ec), to(#0099c4));
+	filter : progid:DXImageTransform.Microsoft.Gradient(
+        gradientType=0,startColorStr=#0083bf,
+        endColorStr=#005a84);
+	border: 1px solid #00375e;
+	*border: 0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #00375e;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100px;
+}
+
+.smallModalButton:active {
+	background: #00375e;
+	background: -moz-linear-gradient(top, #005da2, #00375e);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#005da2), to(#00375e));
+	filter : progid:DXImageTransform.Microsoft.Gradient(
+        gradientType=0,startColorStr=#0083bf,
+        endColorStr=#005a84);
+	border: 1px solid #000000;
+	*border: 0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100px;
+}
+
+.disabledButton, .disabledButton:hover, .disabledButton:active {
+	background: gray !important;
+	cursor: default !important;
+	color: lightGray !important;
+}
+
+.closeIcon {
+	background-image: url("../images/global/close.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 16px;
+	float: right;
+	height: 16px;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}
+
+.closeIcon:hover {
+	background-image: url("../images/global/closehover.gif");
+	background-repeat: no-repeat;
+}
+.buttons {
+	position: absolute;
+	top: 82%;
+	left: 22.5%;
+}
+
+.buttons #viewResearch {
+	margin-left: -28px;
+	width: auto !important;
+}
+
+.buttons #exit {
+	margin-left: 15px;
+}

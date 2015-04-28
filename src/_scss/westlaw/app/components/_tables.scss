@@ -55,6 +55,15 @@ table {
     // border-spacing: 0;
 }
 
+// Override inline styles
+table th[style],
+table td[style] {
+    border-width: 1px;
+    border-color: #ddd;
+    border-left: 0;
+    border-right: 0;
+}
+
 td,
 td select {
     font-size: $paragraph-font-size;

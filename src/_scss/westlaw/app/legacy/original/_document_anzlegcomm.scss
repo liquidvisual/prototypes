@@ -1,0 +1,164 @@
+.docContent #wrapperContentLegcomm {
+	float:left;
+	width: 70%;
+	margin:10px 0 0;
+}
+
+.docContent #wrapperContentLegcomm p {
+	margin: 0;
+}
+
+.docContent #wrapperContentLegcomm #overrideTD {
+	padding: 12px 0px;
+	vertical-align: bottom;
+}
+
+/* ANZSUP-5484 */
+.docContent #collapsibleHeadingBody #commentaryContainer,
+.docContent #collapsibleHeadingBody #commentaryNoteContainer,
+.docContent #collapsibleHeadingBody #historyNoteContainer,
+.docContent #collapsibleHeadingBody #currencyStatusContainer,
+#docContent div#editorialNoteContainer{
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #F2F2F2;
+    -moz-border-radius: 5px;
+    width: 95%;
+}
+
+.docContent #collapsibleHeadingBody #commentaryNoteContainer .collapsibleHeading,
+.docContent #collapsibleHeadingBody #historyNoteContainer .collapsibleHeading,
+.docContent #collapsibleHeadingBody #currencyStatusContainer .collapsibleHeadingPit
+{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.docContent #collapsibleHeadingBody #currencyStatusContainer {
+	margin-left:0;
+}
+
+.docContent .index .marginLeft-1 {
+	margin:0;
+	padding-left:1.5em;
+}
+
+.docContent .index .marginLeft-2 {
+	margin:0;
+	padding-left:3em;
+}
+
+.docContent .index .marginLeft-3 {
+	margin:0;
+	padding-left:4.5em;
+}
+
+.docContent .index .marginLeft-4 {
+	margin:0;
+	padding-left:6em;
+}
+
+.docContent #wrapperContentLegcomm .listBody {
+	padding-left: 85px;
+}
+
+.docContent #wrapperContentLegcomm li {
+	margin-top:0;
+	margin-bottom:0;
+	line-height: 1.8em;
+}
+
+.docContent #wrapperContentLegcomm li .listBody {
+	padding-left: 55px;
+}
+
+.docContent #wrapperContentLegcomm .listBody.heading2,
+.docContent #wrapperContentEncyclo .listBody.heading2 {
+	padding-left: 105px;
+}
+
+.docContent .collapsibleHeadingFuture {
+	background:#ffd980;
+	border: 1px solid #ffbb19;
+	color: #505050;
+	cursor:pointer;
+	padding: 5px;
+	margin-top: 15px;
+	font-size: 1.0em;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-transform: uppercase;
+	overflow: hidden;   /* override the wrapper in your print stylesheet as overflow: visible otherwise it will only print the first page.*/
+	margin-bottom: 1em;
+}
+
+.docContent .collapsibleHeadingPit {
+	background:#CCE6F2;
+	border: 1px solid #0083BF;
+	color: #0083BF;
+	cursor:pointer;
+	padding: 5px;
+	margin-top: 15px;
+	font-size: 1.0em;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-transform: uppercase;
+	overflow: hidden;   /* override the wrapper in your print stylesheet as overflow: visible otherwise it will only print the first page.*/
+	margin-bottom: 1em;
+}
+
+.docContent .collapsibleHeadingRepealed {
+	background: #ED8484;
+	border: 1px solid #DF2222;
+	color: #505050;
+	cursor:pointer;
+	padding: 5px;
+	margin-top: 15px;
+	font-size: 1.0em;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-transform: uppercase;
+	overflow: hidden;   /* override the wrapper in your print stylesheet as overflow: visible otherwise it will only print the first page.*/
+	margin-bottom: 1em;
+}
+
+.docContent .collapsibleHeadingUnamended {
+	background: #46166B;
+	border: 1px solid #46166B;
+	color: #FFFFFF;
+	cursor:pointer;
+	padding: 5px;
+	margin-top: 15px;
+	font-size: 1.0em;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-transform: uppercase;
+	overflow: hidden;   /* override the wrapper in your print stylesheet as overflow: visible otherwise it will only print the first page.*/
+	margin-bottom: 1em;
+}
+
+.docContent .progressItemRow {
+	padding-bottom:5px;
+	float:left;
+	width:100%;
+}
+
+.docContent .pdfversion{
+	margin-left : 10px;
+}
+
+#pdfVersionPopup {background:url(../images/pleasewait.gif) 50% 40% no-repeat}
+
+#pdfVersionPopup .docContent .spacing{
+	padding-bottom: 0.25em;
+    padding-top: 0.25em;
+}
+
+div#wrapperContentLegcomm.pdfVersion .spacing {
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+}
+
+div#wrapperContentLegcomm.pdfVersion .heading2 {
+	font-size: 1.5em;
+}

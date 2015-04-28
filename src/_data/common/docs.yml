@@ -29,7 +29,7 @@
       url: /docs/basics/javascript/
 
 - title: Page Layouts
-  include_children: false
+  include_children: true
   children:
     - title: Dashboard
       url: /docs/page-layouts/dashboard/

@@ -1,0 +1,426 @@
+.pdc-para {
+	padding-left:2.8em;
+	line-height: 1.5em;
+}
+
+.pdc-para span.para-label{
+	display:inline-block;
+	margin-left:-2.8em;
+	min-width:2.3em;
+	padding-right:0.5em;
+}
+
+blockquote {margin-left:2.8em !important; padding-left:0.5in;}
+
+blockquote * > .g:first-child {display:inline-block; margin-left:-0.5em;}
+blockquote .para-label > .g:first-child {display:inline-block; margin-left:-0.5em;}
+
+#documentsTabs .docContent {
+	font-size: 1em;
+	line-height:1.5em;
+}
+
+#documentsTabs .docContent .equation {
+    text-align:center;
+}
+
+#documentsTabs .docContent .cite-group{
+    padding-left:0.5cm;
+}
+
+#documentsTabs .docContent .my-cite {
+    background-color:#000000;
+}
+
+#documentsTabs .docContent span.party-role{
+    font-style:italic;
+}
+
+/*
+#documentsTabs .docContent ul{
+    padding-left:0px;
+}
+*/
+
+#documentsTabs .docContent ul.list-alfha{
+    margin:0px 15px;
+}
+
+#documentsTabs .docContent ul.list-alfha p{
+    margin:4px 0px 0px 0px;
+}
+
+#documentsTabs .docContent ul.list-alfha li.label{
+    float:left;
+    margin:12px 0 0;
+	font-weight: normal !important;
+}
+
+#documentsTabs .docContent ul.list-alfha li.body{
+    display:table;
+}
+
+#documentsTabs .docContent blockquote ul.list-alfha li.body {
+	display:table;
+	margin:10px 0 0;
+}
+
+#documentsTabs .docContent ol{
+	margin-left:1cm;
+}
+
+#documentsTabs .docContent div.court-dates{
+    float:right;
+}
+
+#documentsTabs .docContent cite{
+    font-style:italic;
+}
+
+.docContent .order-block{
+    font-style:italic;
+    margin-left: 33%;
+}
+
+#documentsTabs .docContent .full-text{
+    border-top: 1px dashed black;
+    padding-top:1em;
+    margin-top:1em;
+}
+
+/* CSS new WLANZ  */
+
+#documentsTabs .docContent a {
+	color: #005DA2;
+	font-size: 1em;
+	line-height:1.5em;
+	padding: 0 0 3px;
+}
+
+#documentsTabs a.documentLink:hover,
+#relatedDocsTab a.document-link:hover,
+#documentsTabs #virtualBreadcrumb a:hover {
+	color: #00C3EC;
+	text-decoration: underline;
+}
+
+#documentsTabs a:visited {
+	color: #005A84;
+	text-decoration: none;
+}
+
+#documentsTabs .docContent p .emph {
+	font-weight: bold;
+}
+
+#documentsTabs .docContent p .underline {
+	text-decoration: underline;
+}
+
+#documentsTabs span.pageNumber {
+	font-weight:bold;
+	padding:8px 0;
+	text-align:center;
+	display: block;
+}
+
+#documentsTabs .docContent p.pdc-num {
+	display:block;
+	float:left;
+	margin:1px 10px 10px;
+	position:relative;
+}
+
+#documentsTabs .docContent p.headNoteTitle {
+	font-weight: bold;
+	margin: 20px 0px 10px 0px;
+}
+
+#documentsTabs .docContent span.blockQuote {
+	margin: 0px;
+	font-style:italic;
+}
+
+#documentsTabs .docContent #facts p.paragraph,
+#documentsTabs .docContent #holdings p.paragraph,
+#documentsTabs .docContent #judgGroup p.paragraph,
+#documentsTabs .docContent #repVersionGroup p.paragraph{
+	padding:3px 0px;
+	margin:0px;
+}
+
+#documentsTabs .docContent #facts ul p.paragraph,
+#documentsTabs .docContent #holdings ul p.paragraph,
+#documentsTabs .docContent #judgGroup ul p.paragraph {
+	margin:0px;
+}
+
+
+#virtualBreadcrumb ul li {
+	display: inline;
+	padding:7px 0;
+}
+
+#relatedDocs {
+	float: right;
+	width:206px;
+	margin: 10px 0px 0px 0px;
+}
+
+#relatedDocs .head {
+	background: gainsboro;
+	border: 1px solid #BABABA;
+	color: #000000;
+	padding: 5px;
+	margin:0px;
+	text-align:center;
+}
+
+#summaryCase,
+#citatorGroup,
+#authGroup,
+#judgGroup,
+#repVersionGroup,
+#citedDocGroup {
+	float:left;
+	width: 70%;
+	margin:10px 0 0;
+}
+
+#chunkDiv {
+	display: inline-block;
+	width: 620px;
+	margin:0px 0 15px;
+	width: 100%;
+	text-align: center;
+	*padding: 15px 0px 10px 0px;
+}
+
+#summaryCase ul,
+#citingGroup ul,
+#historyGroup ul,
+#authGroup ul,
+#judgGroup ul,
+#repVersionGroup ul {
+	margin:0px 0px 17px 0px;
+}
+
+.deliveryHover {
+	border: 1px solid #999999/*{borderColorHover}*/;
+	background: #dadada/*{bgColorHover}*/ 50%/*{bgHoverXPos}*/ 50%/*{bgHoverYPos}*/ repeat-x/*{bgHoverRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #212121/*{fcHover}*/;
+}
+
+#documentsTabs .docContent ul.footnote {
+	display: table;
+}
+
+#documentsTabs .docContent ul.footnote li.label{
+    float:left;
+    margin:10px 8px 0px 0px;
+    font-size:9pt;
+}
+
+#documentsTabs .docContent ul.footnote li.body{
+    display:table;
+    font-size:9pt;
+}
+
+#content .docContent .footnote a.footnoteRet {
+	text-decoration:none;
+}
+
+div.chunckingLinks {
+	text-align:center;
+}
+
+#documentsTabs #chunkDiv a:hover {
+	background: #0099C4;
+	background: -moz-linear-gradient(top, #00C3EC, #0099C4 );
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#00C3EC), to(#0099C4));
+	border: 1px solid #005A84;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #000000;
+	font-size: 1em;
+	padding: 5px 10px 5px 10px;
+	*padding: 6px 10px 5px 10px;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+#documentsTabs #chunkDiv a {
+	background: #0083BF;
+	background: -moz-linear-gradient(top, #0083BF ,#005A84);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#0083BF), to(#005A84));
+	border: 1px solid #005A84;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: white !important;
+	font-size: 1em;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#documentsTabs #chunkDiv a,
+#documentsTabs span.currentChunk {
+	*padding: 6px 10px 5px 10px;
+}
+
+#documentsTabs #chunkDiv span.greyChunk {
+	*padding: 3px 10px 5px 10px;
+}
+
+#documentsTabs #chunkDiv span.greyChunk img {
+	*padding-top: 4px;
+}
+
+span.currentChunk {
+	background: #d2d2d2;
+	border: 1px solid #b2b2b2;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	font-size: 1em;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	cursor: default;
+}
+
+span.greyChunk {
+	background: #BABABA;
+	background: -moz-linear-gradient(top, #BABABA, #828282);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#BABABA), to(#828282));
+	border: 1px solid #505050;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: black;
+	font-size: 1em;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	cursor: default;
+}
+
+span.greyChunk,
+a.navFirst,
+a.navPrevious {
+	margin-right: 4.5px;
+}
+
+a.navLast {
+	margin-left: 4.5px;
+}
+
+div.headNoteItem {
+	padding: 0px 0px;
+}
+
+span.positiveFlag, a.positiveFlag,
+span.negativeFlag, a.negativeFlag,
+span.neutralFlag, a.neutralFlag,
+span.yellowFlag, a.yellowFlag,
+span.blueH, a.blueH,
+span.greenC, a.greenC {
+	background-repeat: no-repeat;
+	background-position: center top;
+	vertical-align: middle;
+	padding: 2px 4px;
+}
+/*
+span.greenC, a.greenC {
+    background-image: url("../images/global/green_C.png");
+}
+
+span.blueH, a.blueH {
+    background-image: url("../images/global/blue_H.png");
+}
+
+span.positiveFlag, a.positiveFlag {
+    background-image: url("../images/global/flag_green.jpg");
+}
+
+span.negativeFlag, a.negativeFlag {
+    background-image: url("../images/global/flag_red.png");
+}
+
+span.neutralFlag, a.neutralFlag {
+    background-image: url("../images/global/flag_blue.jpg");
+}
+
+span.yellowFlag, a.yellowFlag {
+    background-image: url("../images/global/flag_yellow.png");
+}
+*/
+a.cited-case-link {
+	font-style: italic;
+}
+
+ul.history-class {
+	padding: 0 0 0 20px !important;
+}
+
+ul.history-class ul {
+	padding: 0 0 0 20px !important;
+	margin: 8px 0 !important;
+}
+
+#container a.PPV {
+	color: #0083bf;
+	/*background-image: url("../images/ppv_active.png");*/
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 3px 0px 3px 0;
+}
+
+p.paragraphCatchPhrase {
+    margin: 0;
+    padding: 6px 0;
+    font-style: italic;
+}
+
+#issues,
+#facts,
+#holdings {
+	padding: 6px 0;
+}
+
+.italicBlock{
+	font-style: italic;
+}
+
+li.citingCases {
+	margin: 0px 0px 0px 25px !important;
+	list-style: disc;
+}
+
+.blockquote {
+	color: #000000;
+}
+
+.list-alfha {
+	color: #000000;
+}
+
+.body{
+	color: #000000;
+}
+
+#firstTaxonomyLine{
+	padding: 0px 0px 50px 0px;
+	background-image: url("../images/hbarcl.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.metaHeader {display:table-row;}
+.metaHeader > b {display:table-cell;padding-right:1em;}
+.metaHeader > span {display:table-cell;}
+
+.docContent .consideration{
+	padding-left: 1.5em;
+}

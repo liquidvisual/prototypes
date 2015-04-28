@@ -1,0 +1,40 @@
+/*
+ * Copyright 2009 Thomson Reuters Global Resources AG. All Rights Reserved.
+ * Proprietary and Confidential information of TRGR.
+ * Disclosure, Use or Reproduction without the written authorization of TRGR is prohibited.
+ */
+
+#debug {
+	background-color: #eee;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+#debug .links {
+	font-size: .7em;
+}
+#debugTable {
+	display: none;
+}
+#debugTable table {
+	background-color: #fff;
+	margin: 20px;
+}
+#debugTable table, #debugTable td, #debugTable th {
+	border: 1px solid #666;
+	border-collapse: collapse;
+	padding: 3px;
+}
+#debugTable thead th {
+	background-color: #666;
+	color: #fff;
+}
+#debugTable tr.high {
+	background-color: #fde6c4;
+}
+#debugTable th {
+	font-weight: bold;
+}
+#debugTable table td {
+	border: 1px solid #333;
+}

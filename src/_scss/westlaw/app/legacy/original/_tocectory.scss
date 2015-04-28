@@ -1,0 +1,152 @@
+ol, ul {list-style:none outside none;}
+#loadingToc {	height: 20px;	margin-left:20px;	background: url("../../images/ajax-loader-toc.gif") no-repeat transparent;}
+#documentview #loadingToc {margin-left:10px}
+#tocNodes img:hover {cursor:pointer}
+#tocectory #tree {	display: none;}
+#searchLeftPanel {	width: 26%;	float: left;}
+#searchLeftPanel .tabs {	padding: 10px;}
+#searchLeftPanel H1 {	background-color: #F2F1EF;	border: solid 1px #DBDBDB;	font-size: 11px;	font-family: tahoma;	color:#62615F;	font-weight:bold;	padding: 2px 2px 2px 10px;	height: 18px;	line-height: 18px;}
+#searchLeftPanel .tabs li {	list-style-type: none;	list-style-position: outside;	padding-left: 20px;	background-image: url(../../images/cuadrito.gif);	background-repeat: no-repeat;	background-position: 5px 5px;	padding-bottom: 5px;}
+#searchLeftPanel .tabs li a:hover {	text-decoration:underline;}
+#rightPanel{	width: 72%;	float: right;	padding-top: 2%;}
+#tocNodes {	margin: 10px 0px 60px 0px;}
+#tocNodes ul {	padding-left: 10px;}
+#tocNodes ul#tree {padding-left:0}
+#tocNodes li.loading {	background-image: url("../../images/ajax-loader-toc.gif");	background-repeat: no-repeat;	padding-left: 23px;}
+#tocNodes li.error-message {	padding-left: 30px;	font-size: smaller;	color: red;}
+#tocNodes li.noAccess {	padding-left: 15px;	color: #808080;}
+#tocNodes li.docLeaf span {	visibility: hidden;}
+#tocectory #tree span.extLinkTxt {float: none; cursor: default;background: url("../../images/icons/ico_externallink.png") no-repeat 100% 2px;padding-right:20px;}
+
+#returntobasic {padding:0px 0px 5px 0; }
+#returntobasic a {background: url("../../images/icons/ico_back.png") no-repeat scroll 0 0 transparent;padding:0 0 0 25px;color:#005a84;}
+
+/* TOC Search */
+
+#tocSrchTrm {width:200px; border: 1px solid #BEB8AC;margin-right:10px;padding:2px;height:18px;}
+#tocSearchForm {margin-top:2px;}
+#tocSearchDialog {float:left;display:inline;}
+.tocSearchError {float:left; margin:0px 0 0 10px;border-radius:4px;border:1px solid #d93100;color:#D93100;font-weight:bold;background: #FFCCB8 url(../../images/icons/ico_alert.png) no-repeat 5px 50%;padding:4px 10px 3px 30px;}
+
+#backResultTocSearch { background: url("../../images/icons/ico_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin:10px 10px 0 10px;
+    padding-left: 25px;
+}
+#backResultTocSearch a {color:#005A84}
+#sidebar #tochelper {margin-top:15px;margin-bottom:5px;float:none;;}
+#sidebar #tocSrchTrm {width:140px;margin-top:0}
+#sidebar #tocSearchForm {margin-left:10px;}
+#sidebar .tocSearchError  {margin:10px 10px 5px 0px}
+
+#maincontent > #browsetoc {margin-top:30px;}
+#maincontent #tocectory.defaultContainer {border-top:1px solid #d2d2d2 }
+#maincontent #tocectory {margin-top:0px;}
+
+#maincontent #tocheader {padding-bottom:18px;background:url(../../images/bg-vertshade.gif) repeat-x 0 100%;margin-bottom:10px; }
+#sidebar #tocheader {border-bottom: 1px solid #D2D2D2; padding-bottom: 7px;}
+
+/*#tocNodes li.docLeaf img {	float: left;}*/
+.inline {	display: inline;}
+#tocNodes li.docLeaf .docName {	max-width: 85%;	display:inline; zoom:1;}
+.doc-save-link,.doc-print-link {	cursor: pointer;}
+/* Search template css specific for tocectory page*/
+#subSearch #searchForm {	width: 100%;}
+/* #searchForm {width:680px;} */
+.showSeaching {	text-align: right;	width: 80%;}
+#searching {	float: right;}/*Generic Hide*/
+#container .hide{	display: none;	left:30px;}
+
+.running_header { background-color: #F9F7F6;    border: 1px solid #BEB8AC; border-radius: 5px 5px 5px 5px;    padding: 5px 5px 10px 15px; margin-bottom: 15px;}
+#sidebar .running_header {margin:10px 10px 20px 10px;padding:0px 5px 10px 15px;;font-size:0.9em;font-weight:normal;}
+#sidebar .running_header h2 {margin-left:-8px;}
+#sidebar .running_header a {font-weight:normal;}
+#sidebar .running_header ul {margin:0px 0px -0px;}
+#sidebar .running_header ul li {padding-left:15px;margin-left:-8px;}
+#ulDeliveryContainer {margin-top:3px;}
+#sidebar #groupdeliveryoptions {border-top:1px solid  #d2d2d2;padding-top:10px;}
+#tocectory {margin: 0px 0 0 0;	padding-top: 7px;}
+/*#tocectory a {	color: #333333;	font-size: 11px;	text-decoration:none;}
+#tocectory a:hover {	text-decoration:underline;}#tocectory a i {	color: #999999;}*/
+#sidebar #tocectory #tree {white-space:nowrap !important}
+#tocectory #tree span {
+cursor: pointer;
+display:inline-block;
+*display:inline;
+*zoom:1;
+margin-top:5px;
+min-width:12px;
+}
+#tocectory #tree span.firstPointIndex {float:none;cursor:default;display:inline;margin:0;color:#777;font-size:0.8em;}
+#tocectory #tree li {margin-top:0px;margin-bottom:0px;clear: both;}
+#tocectory #tree li div .hidden{	background: white;	border: 1.5px solid #F89A1E;	margin-right: 25px;	overflow: hidden;	padding: 10px;;	color: #333333;	background-color: #FEF8EE;}
+.qlimg.noSaved {	cursor: pointer;}
+.qlimg.noSaved img.imgSaved {	display: none;}
+.qlimg.saved img.imgNoSaved {	display: none;}
+#tocectory #tree .hits {	display: none;}
+#tocectory #tree .checked .hits {	display: inline! important;}
+#tocectory .nodeName {	padding-bottom: 15px;}
+#tocectory #saveToc {	cursor: pointer;	color: #0083BF;	text-decoration: underline;}
+#tocectory .plus {	color: #333333;}
+#tocectory .searchTocNode {	color: #F79E2A;	padding-bottom: 8px;	height: 100px;	display: block;}
+.selec_tree {	color: #333333;		font-weight:bold;	padding: 0px;}
+#running_header h2 {font-size:1.0em;}
+#running_header ul {margin-left:0;padding-left:0;}
+#running_header ul li {background:url(../../images/ico_cascade.png) no-repeat 0 0;padding-left:15px;;;}
+#running_header ul li.endcascade {background:url(../../images/ico_endcascade.gif) no-repeat 0 0;padding-left:15px;;;}
+#limpiar {	float:right;	margin-top: 3px;}
+#limpiar .limpiar {	border: none;	color: #0083BF;	text-align: center;	width: 67px;	height: 22px;	background-image:url(../../images/back_boton2.gif);	cursor: pointer;	font-size: 11px;	margin-top: 0px;}
+.leaf {	padding-left: 0px;	font-weight: normal;	font-size: 12px;}
+#tree li.noAccess {	color:#808080;	padding-left:0px;}
+#tree .noAccess input,#tree .noAccess img,#tree .noAccess i {	float: left;}
+#tree .noAccess i {	margin-left: 5px;}
+#tree .noAccess img {	margin-top: 3px;}
+.noAccess input{	display:block;	margin-left:24px;	margin-left:21px\9}
+.ui-widget-overlay {	background-color: DarkGray;	opacity: 0.5;	left: 0;	position: absolute;	top: 0;}
+.ui-widget-header{	background-color: #005a84;	border: 1px solid #005a84;	color: #FFFFFF;	font-weight: bold;}
+.ui-draggable .ui-dialog-titlebar{	cursor:move;}
+.ui-dialog .ui-dialog-titlebar{	padding:0.5em 1em 0.3em;	position:relative;}
+.ui-helper-clearfix{	display:block;}
+.ui-dialog .ui-dialog-title {	margin:0.1em 16px 0.2em 0;}
+.ui-icon{	display: none;}
+.ui-widget-content{	border:1px solid #DDDDDD;	color:#333333;}
+.ui-dialog .ui-dialog-content {	background:#fff repeat scroll 0 0;	border:0 none;	overflow:auto;	padding:0.5em 1em;	position:relative;	min-height: 0px;}
+.labelField {	width: 25%;	text-align: left;}
+.inputField {	width: 60%;}
+.formButtons {	padding:10% 0 3px 5px;	text-align:center;}
+.inputClass {	padding: 2px;	font-size: 11px;	color: #838383;	font-family: tahoma;	background-color: #fff;	border: 1px solid #cccccc;	font-weight: normal;}
+.labelField {	font-size: 11px;	color: #646464;	display: inline-block;	font-weight: normal;	padding: 5px 5px 15px 0;}
+.inputField {	font-size: 11px;	color: #646464;	display: inline-block;	font-weight: normal;	text-align: left;	padding: 3px 0 3px 0;}
+.expandTo {	cursor: pointer;}
+#ulLeft {	float: left;	width: 50%;}
+#ulRight {	float: left;}
+.topLi {	margin-bottom: 20px;}
+li a.active {font-weight: bold;}
+/* Quicklinks modal */
+#quickLinkPanel, #quickLinkPanelDoc {width:280px;}
+#quickLinkForm {height:125px;}
+#quickLinkForm .formlabel, #quickLinkFormDoc .formlabel{float:left;width:60px;text-align:right;padding-right:20px;}
+#quickLinkForm .inputField, #quickLinkFormDoc .inputField{float:right;width:200px;padding:0;}
+#quickLinkForm .inputField input[type="text"], #quickLinkFormDoc .inputField input[type="text"] {width:190px;color:#000;padding:3px;}
+
+.tri-state {
+    box-shadow: 0 0 1px 1px #005a84; 
+   
+}
+
+#tocectory li.plus .buildLinkContainer {
+	cursor: pointer;
+}
+
+/* product info*/
+body #documentContainer #docContent #productInfoContainer {}
+body #documentContainer #docContent #productInfoTabContainer li {list-style-type:disc;margin-left:35px;} 
+body #documentContainer #docContent #productInfoTabContainer ol {list-style-type:decimal;margin-left:35px;}
+body #documentContainer #docContent #productInfoTabContainer {margin:0.5em;}
+body #documentContainer #docContent #productInfoTabContainer .productInfoTabLink {display:inline-block;padding:0.25em 0;font-weight:bold;}
+body #documentContainer #docContent #productInfoTabContainer .prodInfoTitle {margin-bottom:0.75em;} 
+body #documentContainer #docContent #productInfoTabContainer .bold {color:#ff8800}
+body #documentContainer #docContent #productInfoTabContainer #tab-links {margin-bottom:2em;}
+body #documentContainer #docContent #productInfoTabContainer h4 {font-family:KnowledgeMedium, Arial, Helvetica, Sans-serif;font-size:1.4em;font-weight:normal;}
+body #documentContainer #docContent #productInfoTabContainer p {line-height:1.6;margin:0.75em 0}
+body #documentContainer #docContent #productInfoTabContainer a {text-decoration: underline; color: #145DA4;}
+/* End product info*/

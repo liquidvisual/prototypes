@@ -98,9 +98,9 @@ permalink: /westlaw/guide/
     </div>
 
     <ol class="page-index">
-        <li>Large tables: <a href="/westlaw/research/sample-01/">Table of Amending Legislation</a></li>
-        <li>Alt Style <a href="/westlaw/research/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a></li>
-        <li>Long Document <a href="/westlaw/research/sample-03/">YA 1 Definitions</a></li>
+        <li>Large tables: <a href="/westlaw/research/sample-01/">Table of Amending Legislation</a> <small>(<a href="http://www.westlaw.com.au/maf/wlau/app/document?docguid=Ib5692f3f9ff411e0a942f53c5c101aad&isTocNav=true&tocDs=AUNZ_AU_LEGCOMM_TOC&startChunk=1&endChunk=1">Original</a>)</small></li>
+        <li>Alt Style <a href="/westlaw/research/sample-02/">[136.0104] Table of CGT Events That Can Happen to "Necessary Connection" Assets</a> <small>(<a href="http://www.westlaw.com.au/maf/wlau/app/document?docguid=Ifaf90c04fd6311e0b498f51455fed0bd&isTocNav=true&tocDs=AUNZ_AU_LEGCOMM_TOC&startChunk=1&endChunk=1">Original</a>)</small></li>
+        <li>Long Document <a href="/westlaw/research/sample-03/">YA 1 Definitions</a> <small>(<a href="http://www.westlaw.com.au/maf/wlau/app/document?docguid=If44c8fc7011e11e18eefa443f89988a0&isTocNav=true&tocDs=AUNZ_NZ_LEGCOMM_TOC&startChunk=1&endChunk=1">Original</a>)</small></li>
     </ol>
 
 </div>

@@ -24,6 +24,9 @@
 @import "app/base/fonts";
 @import "app/base/foundation-icons";
 
+// Original Legacy
+@import "app/legacy/original/all";
+
 // Layout
 @import "app/layout/context-menu";
 @import "app/layout/footer";
@@ -53,16 +56,14 @@
 // Pages
 // @import "app/pages/dashboard";
 
-// Legacy
-@import "app/legacy/checkpoint-document-original";
-// @import "app/legacy/westlaw-document-original"; // unless they are infact the same?
-@import "app/legacy/delivery-options";
-@import "app/legacy/document-context";
-@import "app/legacy/document";
-@import "app/legacy/general";
-@import "app/legacy/search-result-options";
-@import "app/legacy/search-results";
-@import "app/legacy/search-templates";
-@import "app/legacy/toc";
-@import "app/legacy/user-preferences";
-// @import "app/legacy/westlaw-results-original";
+// Legacy Overrides
+@import "app/legacy/overrides/delivery-options";
+@import "app/legacy/overrides/document-context";
+@import "app/legacy/overrides/document";
+@import "app/legacy/overrides/general";
+@import "app/legacy/overrides/search-result-options"; // context menu mostly
+// @import "app/legacy/overrides/search-results-checkpoint"; // overrides
+@import "app/legacy/overrides/search-results-westlaw"; // overrides
+@import "app/legacy/overrides/search-templates";
+@import "app/legacy/overrides/toc";
+@import "app/legacy/overrides/user-preferences";

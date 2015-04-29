@@ -1,0 +1,71 @@
+---
+layout: westlaw/internal
+context_menu: "westlaw/context_menu_output/search_templates.html"
+---
+
+<!-- ADHOC JS FOR SIMULATION ONLY -->
+<script>
+    $(document).ready(function(){
+        // Point all links to the same template (demo purposes only)
+        var newLink = "/workflow/annual-trust-distributions-workflow/";
+        $(".toc-root a").attr("href", newLink);
+    });
+</script>
+<!-- END ADHOC JS FOR SIMULATION ONLY -->
+
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Tools</h3>
+            <hr>
+        </div>
+    </div>
+</header>
+
+<!-- SEARCH FORM -->
+<form class="lv-search-form lv-partial-view collapsed" action="/research/results" method="post" novalidate>
+    <div class="row">
+        <div class="medium-11 large-10 columns">
+
+            <!-- Create Field Names -->
+            {% assign text_fields = "Keyword(s)" | split: "|" %}
+
+            <!-- Draw Fields -->
+            {% for item in text_fields %}
+                {% include westlaw/components/form_text_input.html %}
+            {% endfor %}
+
+            <div class="row">
+                <div class="medium-offset-3 columns">
+                    <ul class="inline-list">
+                        <li><label><input type="radio" name="sf-free-text" value="Free Text" checked>&nbsp; Free Text</label></li>
+                        <li><label><input type="radio" name="sf-tool-title" value="Tool Title">&nbsp; Tool Title</label></li>
+                    </ul>
+                </div>
+            </div> <!-- .row -->
+
+            <!-- Draw Select Field -->
+            {% include westlaw/components/form_select_input.html title="Tool Type" %}
+            {% include westlaw/components/form_select_input.html title="Subject Area" %}
+
+            <!-- Draw Submit Fields -->
+            {% include westlaw/components/form_submit_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
+
+        </div>
+    </div>
+</form> <!-- .lv-search-form -->
+
+<!-- EXPORT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        {% include westlaw/export_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include westlaw/toc_output/toc_workflow.html %}
+    </div>
+</div>

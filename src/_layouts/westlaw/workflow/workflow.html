@@ -1,0 +1,38 @@
+---
+layout: westlaw/internal
+context_menu: "westlaw/context_menu_output/search_templates.html"
+---
+
+<!-- ADHOC JS FOR SIMULATION ONLY -->
+<script>
+    $(document).ready(function(){
+        // Point all links to the same template (demo purposes only)
+        var newLink = "/westlaw/workflow/document-01/";
+        $(".toc-root a").attr("href", newLink);
+    });
+</script>
+<!-- END ADHOC JS FOR SIMULATION ONLY -->
+
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Workflow</h3>
+            <hr>
+        </div>
+    </div>
+</header>
+
+<!-- EXPORT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        {% include westlaw/export_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include westlaw/toc_output/toc_workflow.html %}
+    </div>
+</div>

@@ -1,0 +1,90 @@
+---
+layout: westlaw/internal
+sidebar_details: "checkpoint/app/sidebar_content/alerts.html"
+context_menu: "westlaw/context_menu_output/alerts.html"
+---
+
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">My Email Alerts</h3>
+            <hr>
+        </div>
+    </div>
+</header>
+
+<!-- Tools -->
+<section class="lv-table-tools">
+	<div class="row">
+		<div class="medium-4 columns">
+			<input type="text" id="search-filter" placeholder="Search Filter">
+		</div>
+		<div class="medium-2 columns">
+			<select class="js-footable-page-size-select">
+				<option value="10">Show 10</option>
+				<option value="25">Show 25</option>
+				<option value="50">Show 50</option>
+				<option value="100">Show 100</option>
+			</select>
+		</div>
+		<div class="medium-6 columns text-right">
+
+			<a data-dropdown class="button small radius show-for-medium-up lv-unselectable">Toggle Columns <i class="fa fa-caret-down"></i></a>
+			<ul data-dropdown-content class="lv-dropdown">
+				<li><label class="anchor"><input type="checkbox"> Alert Type</label></li>
+				<li><label class="anchor"><input type="checkbox"> Alert Name</label></li>
+				<li><label class="anchor"><input type="checkbox"> Client ID</label></li>
+				<li><label class="anchor"><input type="checkbox"> Frequency</label></li>
+				<li><label class="anchor"><input type="checkbox"> Notes</label></li>
+				<li><label class="anchor"><input type="checkbox"> Actions</label></li>
+				<li><label class="anchor"><input type="checkbox"> Date Created</label></li>
+				<li><span class="anchor"><input type="checkbox"> Status</span></li>
+				<li><a href="#"><i class="fi-undo"></i> Undo</a></li>
+			</ul>
+
+		</div>
+	</div>
+</section>
+
+<!-- Footable Table -->
+<table class="js-footable footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10" data-limit-navigation="5">
+	<thead>
+		<tr>
+			<th data-hide="phone" data-sort-initial="true">Alert Type</th>
+			<th>Alert Name</th>
+			<th data-hide="phone, tablet" data-type="numeric">Client ID</th>
+			<th data-hide="phone, tablet">Frequency</th>
+			<th data-hide="all">Notes</th>
+			<th data-hide="phone, tablet">Actions</th>
+			<th data-hide="phone" data-type="numeric">Date Created</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for i in (1..100) %}
+		<tr>
+			<td>Individual</td>
+			<td>Cases for "confidentiality agreement" a really</td>
+			<td>{{i}}2981{{i}}</td>
+			<td>Monthly</td>
+			<td>note note note</td>
+			<td>
+				<a href="#"><i class="fi-pause"></i></a> &nbsp;
+				<a href="#"><i class="fi-x"></i></a> &nbsp;
+				<a href="#"><i class="fi-widget"></i></a> &nbsp;
+				<a href="#"><i class="fi-magnifying-glass"></i></a> &nbsp;
+				<a href="#"><i class="fi-refresh"></i></a>
+			</td>
+			<td>14/04/2015</td>
+			<td>Active</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+<!-- Total number of entries -->
+<p class="left"><strong>100</strong> Total Entries</p>
+
+<!-- CLIENT SIDE PAGINATION -->
+<ul class="right pagination pagination-centered hide-if-no-paging"></ul>

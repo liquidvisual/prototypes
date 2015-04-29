@@ -1,8 +1,8 @@
 ---
-layout: westlaw/app/research/search_results/basic_results_01
+layout: westlaw/research/search_results/basic_results_01
 title: "Research: Basic - Confidentiality Agreement"
 permalink: /westlaw/research/basic-results-01/
-context_menu: "westlaw/app/context_menu_output/search_summary_01.html"
+context_menu: "westlaw/context_menu_output/search_summary_01.html"
 ---
 
 <!--- The following is copied directly from the DOM -->

@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/workflow/workflow
+layout: westlaw/workflow/workflow
 title: Workflow
 permalink: /westlaw/workflow/
 ---

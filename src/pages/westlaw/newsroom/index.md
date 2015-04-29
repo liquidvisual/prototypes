@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/newsroom/newsroom
+layout: westlaw/newsroom/newsroom
 title: Newsroom
 permalink: /westlaw/newsroom/
 ---

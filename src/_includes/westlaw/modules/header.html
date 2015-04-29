@@ -1,0 +1,68 @@
+{% assign username = "John Smith" %}
+
+<section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
+	<div class="left">
+		<a id="top-menu-btn" class="lv-hamburger left hide-for-large-up" href="#"><i class="fi-list"></i></a>
+		<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+	</div>
+
+	<!-- User Menu Hamburger -->
+	<a id="user-menu-btn" class="lv-hamburger right hide-for-large-up" href="#"><i class="fi-results-demographics"></i></a>
+
+	<div class="lv-logo-wrapper">
+
+		<!-- Logo -->
+		<a title="westlaw®" class="lv-logo" href="/">
+			<img class="show-for-medium-up" width="120" src="/img/westlaw/template/logo-type@2x.png" alt="Thomson Reuters Westlaw">
+			<img class="hide-for-medium-up" width="40" src="/img/westlaw/template/logo-mobile-black@2x.png" alt="Thomson Reuters Westlaw">
+		</a>
+
+		<!-- Site Select -->
+		<div class="lv-site-select show-for-medium-up">
+			<i class="fa fa-caret-down"></i>
+			<ul>
+				<li class="first">
+					<a href="#"><i class="fi-web"></i>&nbsp; Sites</a>
+				</li>
+				{% for item in site.data.westlaw.settings.sites %}
+					<li class="{% if forloop.last %} last {% endif %}">
+						<a href="#"><i class="flag-icon {{item.icon}}"></i>&nbsp; {{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div> <!-- .lv-site-select -->
+
+	</div> <!-- .logo-wrapper -->
+
+</section>
+
+<!-- User Menu Buttons -->
+<section class="lv-user-profile text-right show-for-large-up">
+	<div class="left">
+		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
+		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
+    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+    		<li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
+		    <li><a href="/modal_output/westlaw/westlaw/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/westlaw/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+		</ul>
+	</div>
+	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>{{ username | upcase }}</b> - <a href="#">Logout</a></div>
+</section>
+
+{% comment %}
+	<section class="lv-user-profile text-right show-for-large-up">
+		<div class="left">
+			<a class="logout-btn" href="#">LOGOUT</a>
+		</div>
+		<div class="right lv-user-profile-pic" href="#">
+			<img src="/img/common/ui/no-face.png" alt="Profile Pic">
+			<i class="fa fa-caret-down"></i>
+			<div class="lv-user-profile-dropdown">
+				{% include westlaw/menus/user_menu.html %}
+			</div>
+		</div>
+	</section>
+{% endcomment %}

@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/research/search_templates/cases
+layout: westlaw/research/search_templates/cases
 title: "Research: Cases"
 permalink: /westlaw/research/cases/
 ---

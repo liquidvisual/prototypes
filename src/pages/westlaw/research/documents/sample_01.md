@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/research/documents/document_01
+layout: westlaw/research/documents/document_01
 title: "Table of Amending Legislation"
 permalink: /westlaw/research/sample-01/
 ---

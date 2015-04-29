@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/alerts/manage_contact_permissions
+layout: westlaw/alerts/manage_contact_permissions
 title: Alerts - Manage Contact Permissions
 permalink: /westlaw/alerts/manage-contact-permissions/
 ---

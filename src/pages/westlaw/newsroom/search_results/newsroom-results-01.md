@@ -1,8 +1,8 @@
 ---
-layout: westlaw/app/newsroom/search_results/results_01
+layout: westlaw/newsroom/search_results/results_01
 title: "Newsroom - Australian News"
 permalink: /westlaw/newsroom/newsroom-results-01/
-context_menu: "westlaw/app/context_menu_output/newsroom_results_01.html"
+context_menu: "westlaw/context_menu_output/newsroom_results_01.html"
 ---
 
 <!--- The following is copied directly from the DOM -->

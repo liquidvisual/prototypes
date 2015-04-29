@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/internal
+layout: westlaw/internal
 title: Guide
 permalink: /westlaw/guide/
 ---

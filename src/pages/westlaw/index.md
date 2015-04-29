@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/research/search_templates/basic
+layout: westlaw/research/search_templates/basic
 title: "Research: Basic"
 permalink: /westlaw/
 ---

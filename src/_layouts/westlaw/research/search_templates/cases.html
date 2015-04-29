@@ -1,0 +1,98 @@
+---
+layout: westlaw/internal
+context_menu: "westlaw/context_menu_output/search_cases.html"
+---
+
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Cases</h3>
+            <hr>
+        </div>
+    </div>
+</header>
+
+<!-- SEARCH FORM -->
+<form class="lv-search-form lv-partial-view collapsed" action="/research/results" method="post" novalidate>
+    <div class="row">
+        <div class="medium-11 large-10 columns">
+
+            <!-- Create Field Names -->
+            {% assign text_fields = "Free Text|Case Summary/Digest|Case Title/Party Name|Citation|Classification|Catchwords|Judge(s)|Court" | split: "|" %}
+
+            <!-- Draw Fields -->
+            {% for item in text_fields %}
+                {% include westlaw/components/form_text_input.html %}
+            {% endfor %}
+
+            <!-- Draw Select Field -->
+            {% include westlaw/components/form_select_input.html title="Jurisdiction" %}
+
+            <!-- Draw Date Fields -->
+            {% include westlaw/components/form_date_input.html title="Judgement Date" %}
+
+            <div class="lv-advanced-options hide">
+
+                <!-- Create Field Names -->
+                {% assign text_fields = "Cases Cited (Title)|Cases Cited (Citation)|Legislation Cited (Provision)" | split: "|" %}
+
+                <!-- Draw Fields -->
+                {% for item in text_fields %}
+                    {% include westlaw/components/form_text_input.html %}
+                {% endfor %}
+
+                <!-- Draw Checkbox -->
+                {% include westlaw/components/form_checkbox_input.html title="FirstPoint Verified Data Only" %}
+
+                <!-- Create Field Names -->
+                {% assign text_fields = "Words & Phrases|Legal Representative(s)" | split: "|" %}
+
+                <!-- Draw Fields -->
+                {% for item in text_fields %}
+                    {% include westlaw/components/form_text_input.html %}
+                {% endfor %}
+
+                <!-- Draw Select Fields -->
+                {% include westlaw/components/form_select_input.html title="Reported Unreported" %}
+                {% include westlaw/components/form_select_input.html title="Cases Updated" %}
+
+            </div> <!-- .lv-advanced-options -->
+
+            <!-- Toggle More Option Button -->
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <a class="lv-advanced-options-btn button tiny pill radius" href="#">Show More</a>
+                </div>
+            </div>
+
+            <!-- Draw Submit Fields -->
+            {% include westlaw/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
+
+        </div>
+    </div>
+</form> <!-- .lv-search-form -->
+
+<!-- ************************ END FORM ************************ -->
+
+<!-- Form obscured on mobile (restricted height) - button will show all -->
+<div class="row">
+    <div class="medium-11 columns text-right">
+        <a class="lv-partial-view-btn lv-non-legacy button pill tiny" href="#">Expand</a>
+    </div>
+</div>
+
+<!-- DOCUMENT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        {% include common/snippets/breadcrumbs.html %}
+        {% include westlaw/export_options/search_advanced.html %}
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include westlaw/toc_output/toc_newsroom.html %}
+    </div>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/research/documents/document_01
+layout: westlaw/research/documents/document_01
 title: '[136.0104] Table of CGT events That Can Happen to "Necessary Connection" Assets'
 permalink: /westlaw/research/sample-02/
 ---

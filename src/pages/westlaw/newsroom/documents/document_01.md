@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/newsroom/documents/document_01
+layout: westlaw/newsroom/documents/document_01
 title: "Market Grows in Confidence"
 permalink: /westlaw/newsroom/document-01/
 ---

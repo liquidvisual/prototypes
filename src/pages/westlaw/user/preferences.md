@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/user/preferences
+layout: westlaw/user/preferences
 title: User Preferences
 permalink: /westlaw/preferences/
 ---

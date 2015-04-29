@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/folders/folders
+layout: westlaw/folders/folders
 title: Folders
 permalink: /westlaw/folders/
 ---

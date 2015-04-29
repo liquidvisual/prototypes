@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/tools/tools
+layout: westlaw/tools/tools
 title: Tools
 permalink: /westlaw/tools/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/alerts/my_email_alerts
+layout: westlaw/alerts/my_email_alerts
 title: Alerts
 permalink: /westlaw/alerts/
 ---

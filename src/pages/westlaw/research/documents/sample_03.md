@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/research/documents/document_01
+layout: westlaw/research/documents/document_01
 title: "YA 1 Definitions"
 permalink: /westlaw/research/sample-03/
 ---

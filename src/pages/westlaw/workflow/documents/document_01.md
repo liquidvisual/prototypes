@@ -1,5 +1,5 @@
 ---
-layout: westlaw/app/workflow/documents/document_01
+layout: westlaw/workflow/documents/document_01
 title: "Ending a Relationship (WA) Flowchart"
 permalink: /westlaw/workflow/document-01/
 ---

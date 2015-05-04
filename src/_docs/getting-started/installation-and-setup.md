@@ -15,21 +15,22 @@ The repo for all the source files are found here:
 You may need to install Ruby, Ruby Gems, NodeJS & Git. There are detailed instructions on the [Jekyll](http://jekyllrb.com/docs/installation/) website.
 
 ```shell
-git clone git@github.com:liquidvisual/brs-0115.git
-cd brs-0115
+git clone git@github.com:liquidvisual/prototypes.git
+cd prototypes
 bundle install
 npm install
 bower install
+ulimit -n 10240 # => increase limit on files watched
 grunt serve
 # => Now browse to http://localhost:9292
 ```
 
-```shell
-git clone git@github.com:liquidvisual/brs-0115.git
-cd brs-0115
-```
+<div class="panel">
+	<strong>More about 'ulimit' on OSX</strong>
+	<p>Given the large amount of files being watched by Browsersync - you'll probably need to set the higher limit each session since it's quite small by default on OSX (Windows is known to be fine). See <a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a> for more info.</p>
+</div>
 
-For production:
+Build for production:
 
     grunt build # => to concat and minify etc. Creates './dist' folder.
 

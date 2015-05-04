@@ -28,8 +28,19 @@ defaults:
       path: ""
       type: "docs" # a collection in your site, in plural form
     values:
-      layout: "common/public/docs"
+      layout: "common/docs/docs"
+      site_type: "westlaw" # one or the other, doesn't matter
       context_menu: "common/docs/context_menu_content.html"
+  -
+    scope:
+      path: "pages/westlaw"
+    values:
+      site_type: "westlaw"
+  -
+    scope:
+      path: "pages/checkpoint"
+    values:
+      site_type: "checkpoint"
 
 
 # Markdown library

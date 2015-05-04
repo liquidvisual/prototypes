@@ -1,0 +1,118 @@
+/*
+    SEARCH-RESULTS-CHECKPOINT.CSS (LEGACY)
+
+    - Last updated: 09.04.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Results
+//-----------------------------------------------------------------
+
+#resultsContainerForm {
+	margin-bottom: 50px;
+
+	.resultCheckBox {
+		float: left;
+		margin-right: 15px;
+		padding-top: 8px;
+	}
+}
+
+#navbar {
+	padding: 0 !important;
+	width: auto !important;
+	margin-bottom: 20px;
+}
+
+#deliveryForm,
+#documentNavPadOut {
+	display: none !important;
+}
+
+#prefForm,
+#resultsContainerForm .result {
+	background: white;
+	padding: 20px; // THIS IS A PROBLEM
+	border: 1px solid #DDDDDD; // THIS IS A PROBLEM
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.05);
+}
+
+#documentDisplay {
+	background: white;
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding: 20px; // THIS IS A PROBLEM
+	border: 1px solid #DDDDDD; // THIS IS A PROBLEM
+	box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.05);
+
+	@media #{$small-only} {
+	    padding: 0; // THIS IS A PROBLEM
+	    border: 0;
+	}
+}
+
+#resultsContainerForm ul {
+	list-style: none;
+	margin: 0;
+}
+
+#resultsContainerForm dt.titleLabel {
+	display: none;
+}
+
+//-----------------------------------------------------------------
+// Title Header
+//-----------------------------------------------------------------
+
+#resultsContainerForm dd.titleBody, // checkpoint
+#resultsContainerForm div.resultTitle p.resultTitle { // westlaw
+	font-size: 20px;
+	font-weight: 600;
+	color: $primary-color;
+}
+
+.resultMetadata dt, // checkpoint
+.resultTitle dt { // checkpoint
+	clear: left;
+	float: left;
+	width: 130px;
+	padding: 2px 0;
+	margin-right: 15px;
+	background: red;
+}
+
+.resultMetadata dd, // checkpoint
+.resultTitle dd { // checkpoint
+	float: left;
+	width: 80%;
+	padding: 2px 0;
+}
+
+.leftMetadata { // westlaw
+	// clear: left;
+	float: left;
+	font-weight: bold;
+	width: 150px;
+	// width: 130px;
+	// padding: 2px 0;/
+	// margin-right: 15px;
+	// background: red;
+}
+
+.rightMetadata {
+	// float: left;
+	// width: 20%;
+}
+
+// Highlighting in results - westlaw. Checkpoint does inline styles
+.nhit {
+	background: #FFFD38;
+}
+
+//=========================================
+//
+//=========================================

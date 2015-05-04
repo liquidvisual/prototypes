@@ -5,7 +5,11 @@
 	<!-- Mobile Hamburgers -->
 	<div class="left">
 		<a id="top-menu-btn" class="lv-hamburger left hide-for-large-up" href="#"><i class="fi-list"></i></a>
-		<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+
+		<!-- Only show if context-menu content is available -->
+		{% if page.context_menu %}
+			<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+		{% endif %}
 	</div>
 
 	<!-- User Menu Hamburger -->

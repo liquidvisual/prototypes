@@ -1,0 +1,111 @@
+/*
+    PARTIAL VIEW.CSS
+
+    - Last updated: 28.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Partial View on Search Templates
+//-----------------------------------------------------------------
+
+.lv-partial-view {
+	position: relative;
+
+	&.collapsed {
+		overflow: hidden;
+
+		@media (max-width: 1024px) {
+			height: rem-calc(150);
+		}
+
+		@media #{$small-only} {
+            margin-bottom: 0;
+            height: rem-calc(220);
+        }
+	}
+}
+
+//=========================================
+// Partial View Btn
+//=========================================
+
+.lv-super .lv-partial-view-btn {
+	display: none;
+
+	@media (max-width: 1024px) {
+	    display: inline-block;
+	}
+}
+
+//-----------------------------------------------------------------
+// Advanced Options - extends to Search Templates
+//-----------------------------------------------------------------
+
+.lv-super .lv-advanced-options {
+	@media (max-width: 1024px) {
+	   display: inherit;
+	}
+}
+
+.lv-super .lv-advanced-options-btn {
+	@media (max-width: 1024px) {
+	   display: none;
+	}
+}
+
+//-----------------------------------------------------------------
+// Partial View on Breadcrumbs
+//-----------------------------------------------------------------
+
+.lv-breadcrumbs-expander {
+	position: relative;
+	top: 5px;
+	right: 5px;
+	display: inline-block;
+}
+
+//-----------------------------------------------------------------
+// Partial View on RESULTS SCREEN ONLY (Targets Legacy)
+//-----------------------------------------------------------------
+
+#resultsContainerForm .result {
+	position: relative;
+
+	@media (max-width: 1024px) { // 768 MAX
+
+		.documentLink,
+		.resultMetadata .titleBody {
+			font-size: rem-calc(16);
+			line-height: 1.4;
+		}
+
+		&.collapsed {
+			.resultMetadata {
+				margin-bottom: 0;
+				overflow: hidden;
+			}
+
+			.resultMetadata * {
+				display: none;
+			}
+
+			.resultMetadata .titleBody,
+			.resultMetadata .titleBody * {
+				display: inline;
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		// Button
+		.lv-partial-view-btn {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			margin: 0;
+		}
+	}
+}

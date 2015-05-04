@@ -1,57 +1,55 @@
 /*
-    MAIN.SCSS
+    WESTLAW CSS
 
-    - Last updated: 09.04.15
+    - Last updated: 04.05.15
     - hello@liquidvisual.com
 */
 
 // Foundation
 @import "foundation/settings";
-@import "foundation/components/grid"; // Necessary for below
+@import "foundation/components/grid"; // needed
 
 // Variables
 @import "app/base/variables";
 
-// Common
-@import "../common/mixins";
-@import "../common/tabs";
+// Base
+@import "../common/app/base/mixins";
+@import "../common/app/base/fonts";
+@import "../common/app/base/foundation-icons";
 
 // Helpers
-@import "app/helpers/partial-view";
+@import "../common/app/helpers/partial-view"; // notice B
 @import "app/helpers/special";
-
-// Base
-@import "app/base/fonts";
-@import "app/base/foundation-icons";
 
 // Original Legacy
 @import "app/legacy/original/all";
 
 // Layout
-@import "app/layout/context-menu";
-@import "app/layout/footer";
-@import "app/layout/header";
-@import "app/layout/global-header";
-@import "app/layout/page";
-@import "app/layout/sidebar";
-@import "app/layout/stage";
-@import "app/layout/touch-menu";
+@import "../common/app/layout/context-menu";
+@import "../common/app/layout/footer";
+@import "../common/app/layout/header";
+@import "../common/app/layout/global-header";
+@import "../common/app/layout/page";
+@import "../common/app/layout/sidebar";
+@import "../common/app/layout/stage";
+@import "../common/app/layout/touch-menu";
 
 // Components
-@import "app/components/breadcrumbs";
-@import "app/components/buttons";
-@import "app/components/datepicker";
-@import "app/components/dropdowns";
-@import "app/components/export-options";
-@import "app/components/forms";
+@import "../common/app/components/breadcrumbs";
+@import "../common/app/components/buttons";
+@import "../common/app/components/datepicker";
+@import "../common/app/components/dropdowns";
+@import "../common/app/components/export-options";
+@import "../common/app/components/forms";
 // @import "app/components/jurisdiction-select"; // checkpoint only
-@import "app/components/lists";
-@import "app/components/modal";
-@import "app/components/site-select";
-@import "app/components/tables";
-@import "app/components/tooltips";
-@import "app/components/topbar";
-@import "app/components/user-profile";
+@import "../common/app/components/lists";
+@import "../common/app/components/modal";
+@import "../common/app/components/site-select";
+@import "../common/app/components/tables";
+@import "../common/app/components/tabs";
+@import "../common/app/components/tooltips";
+@import "../common/app/components/topbar";
+@import "../common/app/components/user-profile";
 
 // Pages
 // @import "app/pages/dashboard";

@@ -23,7 +23,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: $header-height;
+    height: $mobile-header-height;
     // background: #FE9241;
     background: $body-bg url(../../img/checkpoint/template/nav-gradient.png) repeat-x; /* fallback */
     z-index: 110; // bring above nav

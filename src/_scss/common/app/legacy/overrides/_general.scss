@@ -1,0 +1,57 @@
+/*
+    GENERAL.CSS (LEGACY)
+
+    - Last updated: 09.04.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Context Menu
+//-----------------------------------------------------------------
+
+// All headings should be the same level heirarchically
+.lv-context-menu h1,
+.lv-context-menu h2,
+.lv-context-menu h3 {
+	font-size: 20px; // style has H4
+	text-align: center;
+	margin: 15px;
+}
+
+.lv-context-menu ul {
+	list-style: none;
+	margin: 0;
+}
+
+.lv-context-menu .searchTemplateHelpIcon {
+	display: none; // remove until later, hard to implement responsive
+}
+//-----------------------------------------------------------------
+// Sessions
+//-----------------------------------------------------------------
+
+.lv-context-menu #sessioncontainer .na {
+	color: #999;
+	font-size: 14px;
+}
+
+// Workflow image (?)
+img.navImg {
+	background: white;
+	padding: 15px;
+	border: 1px solid #ddd;
+
+	@media #{$devices-only} {
+	    width: 100%;
+	}
+}
+
+//=========================================
+// Prevent any delivery options in context menu
+//=========================================
+
+.lv-context-menu #groupdeliveryoptions {
+	display: none;
+}

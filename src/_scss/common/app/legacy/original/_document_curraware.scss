@@ -1,0 +1,222 @@
+/* TODO: appropriate copyright notice */
+
+#sharedInfo{
+	padding: 0px 0px 38px 0px;
+	background-image: url("../images/hbarcl.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+}
+.inlineblock{
+	display: inline-block;
+	width: 100%;
+}
+
+.metadataItem {
+	display: table;
+	width: 100%;
+	line-height: 0.8em;
+}
+
+.articleItem{
+	display: table;
+	width: 100%;
+	line-height: 1.5em;
+}
+/*#sharedInfo, .label {
+	font-size: 16px;
+	line-height: 1.3em;
+}*/
+
+#documentsTabs .docContent #footnotesContent p {
+	font-size: 0.8em;
+	line-height: 1.3em;
+	margin: 5px auto;
+}
+
+#documentsTabs .docContent #articleContent p {
+	font-size: 0.8em;
+	line-height: 1.3em;
+	margin: 5px auto;
+}
+
+#documentsTabs .rdocTab ul {
+	list-style: inside;
+}
+
+.label {
+	font-weight: bold;
+}
+
+.docContent .strong {
+	font-weight:bold;
+}
+
+.footnoteReference{
+	font-weight: bold;
+}
+
+#documentsTabs .docContent #sharedInfo #paragraphTitle {
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-bottom: 15px;
+}
+
+#sharedInfo div, #articleContainer, #footnotesContainer {
+	margin-bottom: 5px;
+}
+/*
+#sharedInfo div {
+	padding-left: 5px;
+}
+*/
+#articleContainer, #footnotesContainer {
+	width: 100%;
+	margin-bottom:10px
+}
+
+#articleContent p, #footnotesContent p{
+	width: 98%;
+	text-align: justify;
+}
+
+#articleContent p.blockQuote{
+	width:84%;
+}
+
+
+a.footnoteNumber {
+	vertical-align: text-top;
+	font-size: 8pt;
+	color: #0083BF;
+}
+
+#articleLabel, #footnotesLabel {
+	background: #DCDCDC;;
+	border: 1px solid #C1C1C1;
+	color: #505050;
+	padding:5px;
+	cursor:pointer;
+	margin:0 0 5px !important;
+}
+
+#articleLabel .arrow, #footnotesLabel .arrow {
+	float: right;
+	*margin: -21px 5px 0px 0px;
+}
+
+.link {
+	cursor: pointer;
+}
+
+.orderedlist{
+	width: 98%;
+	margin: 5px auto;
+}
+
+.orderedlist .listitem {
+	text-align: justify;
+	font-size: 0.8em;
+	line-height: 1.3em;
+}
+
+#paragraph {
+	margin:0px 0px 16px 0px;
+}
+
+table.tracking {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+
+	border-width: 0px;
+	// border-spacing: ;
+	border-style: solid;
+	border-color: black;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.tracking th {
+	border-width: 1px;
+	border-style: inset;
+	border-color: black;
+	background-color: white;
+	text-align: center;
+	// -moz-border-radius: ;
+}
+table.tracking thead tr th{
+	font-weight: bold !important;
+}
+
+table.tracking td {
+	border-width: 1px;
+	border-style: inset;
+	border-color: black;
+	background-color: white;
+	text-align: center;
+	// -moz-border-radius: ;
+}
+
+.leftCol-shared {
+	float:left !important;
+	width: 15% !important;
+}
+.rightCol-shared {
+	float:right !important;
+	width: 85% !important;
+}
+
+.docContent .leftCol-article {
+	float:left !important;
+	width: 25% !important;
+}
+
+.docContent .rightCol-article {
+	float:right !important;
+	width: 75% !important;
+}
+div.slideBody div#paragraph div ol {
+	list-style-type: decimal;
+	margin-left: 15px;
+	margin-right: 15px;
+	line-height: 1.5em;
+}
+
+div.slideBody div#paragraph div ul,div#collapsibleHeadingBody div#paragraph div ul{
+	list-style-type: disc;
+	margin-left: 15px;
+	margin-right: 15px;
+	line-height: 1.5em;
+}
+
+div.slideBody div#paragraph div ol li,
+div.slideBody div#paragraph div ul li,
+div#collapsibleHeadingBody div#paragraph div ul li{
+	margin-left: 40px;
+	padding-left: 10px;
+	text-align: justify;
+}
+
+table.updater {
+	border:none;
+	border-collapse: collapse;
+}
+
+table.updater thead {
+	border:none;
+}
+
+table.updater tr.divider td {
+	/*border-top: 1px solid #000000;*/
+	border-bottom: 1px solid #000000;
+}
+
+table.updater .center{
+	text-align:center;
+}

@@ -1,0 +1,320 @@
+/*
+    CONTEXT-MENU.CSS
+
+    - Last updated: 25.02.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$context-menu-bg: white;
+$context-menu-border-color: #D4DCE3;
+
+//*****************************************************************
+// Context Menu - Layout
+//*****************************************************************
+
+.lv-context-menu {
+    display: none; // Hidden on mobile by default, JS will show
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: $context-menu-width;
+    height: 100%;
+    background: $context-menu-bg;
+    border-right: 2px solid $context-menu-border-color;
+    // Can't have z-index, needs behind main which slides
+    // z-index: 1;
+
+    // Becomes table-cell on large, affects stage content
+    @media #{$large-up} {
+        display: table-cell !important; // override .lv-show simply
+        position: relative;
+        left: 0;
+        vertical-align: top;
+        border-width: 1px;
+    }
+
+    &.lv-show {
+        display: block;
+    }
+}
+
+//=========================================
+// Context Menu Fixed - Layout
+//=========================================
+
+.lv-context-menu-fixed {
+    position: fixed;
+    top: 0; //$header-height + $nav-height;
+    bottom: 0;
+    left: 0;
+    width: $context-menu-width;
+
+    // Account for the footer on large
+    @media #{$large-up} {
+        top: $header-height + $nav-height;
+        bottom: $footer-height;
+    }
+}
+
+//=========================================
+// Context Menu Scroller - Layout
+//=========================================
+
+//.lv-context-menu-scroller {
+    // position: relative;
+    // width: $context-menu-width;
+    // height: 100%;
+    // overflow: auto;
+    // -webkit-overflow-scrolling: touch;
+//}
+
+//=========================================
+// Context Menu Panel - Layout
+//=========================================
+
+.lv-context-menu-panel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // padding-bottom: rem-calc(30);
+    // background: $secondary-color;
+    // padding-top: rem-calc(200);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+//=========================================
+// Static UI Context Menu
+//=========================================
+
+.lv-context-menu-panel.lv-top-menu,
+.lv-context-menu-panel.lv-user-menu {
+    background: $secondary-color;
+    padding-top: rem-calc(20);
+    display: none;
+
+    // Only show on devices
+    &.lv-show {
+        @media #{$devices-only} {
+            display: block;
+        }
+    }
+
+    a {
+        border-bottom: 1px solid darken($secondary-color, 4%);
+        color: #ADADAD;
+        margin-left: 20px;
+        padding-left: 0;
+    }
+}
+
+//*****************************************************************
+//
+//*****************************************************************
+
+//=========================================
+// Logo
+//=========================================
+
+.lv-context-menu .lv-logo {
+    display: block;
+    padding: rem-calc(30 0 30 0);
+    text-align: center;
+
+    img {
+        width: rem-calc(130);
+    }
+}
+
+//=========================================
+// User
+//=========================================
+
+.lv-context-menu-user {
+    margin: rem-calc(0 15 10 15);
+    padding-bottom: rem-calc(15);
+    border-bottom: 1px solid darken($secondary-color, 10%);
+
+    .user {
+        // @include truncate(220px);
+        color: white;
+        font-weight: 600;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .logout {
+        padding-left: rem-calc(25);
+    }
+}
+
+//=========================================
+// Expander - little arrow up
+//=========================================
+
+.lv-context-menu-user-group .lv-expander {
+    padding: rem-calc(15);
+    font-weight: 700;
+    // margin: rem-calc(15 15  15);
+
+    &:after {
+        // @include transition(opacity);
+        opacity: 0;
+        position: absolute;
+        content: "\f0de";
+        font-family: "FontAwesome";
+        font-size: rem-calc(16);
+        font-weight: normal;
+        line-height: 1.5;
+        right: rem-calc(30);
+    }
+
+    &:hover:after {
+        display: inline-block;
+        opacity: 1;
+        color: lighten($secondary-color, 10%);
+    }
+
+    &.lv-expander-hidden {
+        margin: rem-calc(15);
+        border-radius: 3px;
+        background: lighten($secondary-color, 10%);
+        color: #b8b9ba;
+
+        &:after {
+            opacity: 1;
+            content: "\f0dd";
+            right: rem-calc(15);
+            font-size: rem-calc(17); // ever so slight pixel correcting
+            line-height: 0.6;
+            color: $secondary-color;
+        }
+    }
+}
+
+//=========================================
+// Links
+//=========================================
+
+.lv-context-menu {
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    a {
+        transition: none;
+        position: relative;
+        display: block;
+        padding: rem-calc(12 15);
+        // padding: rem-calc(8 15);
+        font-size: rem-calc(13);
+        color: $body-font-color;
+        // border-bottom: 1px solid $context-menu-border-color;
+        // line-height: 1;
+        @media #{$large-up} {
+            padding: rem-calc(10 15);
+        }
+    }
+
+    .active a {
+        // background: #5E6E7F;
+        // color: white;
+    }
+
+    i {
+        position: relative;
+        top: 2px; // hack align
+        font-size: rem-calc(17);
+        line-height: 0;
+        margin-right: rem-calc(10);
+    }
+
+    .active > a:not(.active) {
+        color: #222;
+        font-weight: 600;
+
+        @media #{$large-up} {
+            background: #5E6E7F;
+            color: white;
+
+            i {
+                color: white;
+            }
+            // background: darken($secondary-color, 10%); //#5E6E7F;
+
+            // BRS
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 4px;
+            //     height: 100%;
+            //     background: red;
+            // }
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// Dropdown
+//-----------------------------------------------------------------
+
+.lv-context-menu .lv-has-dropdown.active > a {
+    color: $primary-color;
+    cursor: pointer;
+
+    // Minimize button
+    &:after {
+        // content: "\f0de";
+        content: "\f146";
+        position: absolute;
+        right: rem-calc(15);
+        // font-size: rem-calc(16);
+        // line-height: 0.5;
+        color: $primary-color;
+        font-family: 'FontAwesome';
+    }
+}
+
+.lv-context-menu .lv-dropdown {
+    height: 0;
+    overflow: hidden;
+}
+
+.lv-context-menu .lv-has-dropdown.active .lv-dropdown {
+    height: auto;
+}
+
+.lv-context-menu .lv-dropdown a {
+    padding: rem-calc(8 25);
+}
+
+//=========================================
+// Hovers
+//=========================================
+
+@media #{$large-up} {
+    .lv-context-menu-user-group a:hover {
+        color: white;
+        background: darken($secondary-color, 4%);
+    }
+
+    // Dropdowns red
+    .lv-context-menu-user-group .lv-dropdown a:hover {
+        background: $primary-color;
+    }
+}
+
+//=========================================
+// Active States
+//=========================================
+
+.lv-context-menu-user-group .lv-dropdown .active a {
+    background: $primary-color;
+}

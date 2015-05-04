@@ -1,0 +1,54 @@
+/*
+    DOCUMENT.CSS (LEGACY)
+
+    - Last updated: 09.04.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Document
+//-----------------------------------------------------------------
+
+#documentContainer {
+	padding: 20px;
+	border: 1px solid #DDDDDD;
+	background: white;
+	box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.05);
+}
+
+//-----------------------------------------------------------------
+// Bottom
+//-----------------------------------------------------------------
+
+// #documentDisplay {
+// 	overflow-x: hidden;
+// 	// max-width: 290px;
+
+// 	@media #{$small-only} {
+// 	    * {
+// 	    	// padding: 0 !important;
+// 	    }
+// 	}
+
+// 	img {
+// 		display: none;
+// 	}
+// }
+
+// #documentDisplay .wrapper {
+// 	@include grid-row();
+
+// 	.leftMetadata {
+// 		@include grid-column(3);
+// 	}
+
+// 	.rightMetadata {
+// 		@include grid-column(9);
+// 	}
+// }
+
+//=========================================
+//
+//=========================================

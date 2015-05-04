@@ -1,0 +1,90 @@
+/*
+    DELIVERY-OPTIONS.CSS (LEGACY)
+
+    - Last updated: 09.04.15
+    - hello@liquidvisual.com
+
+    - Notes -
+
+    Delivery options are icons for 'print', 'save' etc
+
+    This may very well be redundant - check after document check
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Research Search Form
+// #documentoptionicons span[title="Print documents"],
+// #documentoptionicons span[title="Download documents"],
+// #documentoptionicons span[title="Email documents"],
+// #documentoptionicons span[title="Create Individual alert"],
+// #documentoptionicons span[title="Create Organisational alert"],
+// #documentoptionicons #rsslink {
+//-----------------------------------------------------------------
+
+#documentoptionicons .fullpageicon {
+	display: none; // Disabled for this prototype
+}
+
+#documentoptionicons .deliveryicon,
+#documentoptionicons .saveicon,
+#documentoptionicons .save2icon,
+#documentoptionicons .temporalAlertIcon,
+#documentoptionicons .temporalOrgAlertIcon,
+#documentoptionicons #rsslink {
+
+	// position: relative;
+	width: rem-calc(40);
+	height: rem-calc(40);
+	cursor: pointer;
+
+	img {
+		display: none;
+	}
+
+	&:before {
+		@extend .foundation-icons;
+		content: "\f19f";
+		font-size: rem-calc(30);
+		color: $primary-color;
+		padding: 5px;
+		content: "\f1ee";
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+#documentoptionicons #save2Container:before {
+	content: "\f1ac";
+}
+#documentoptionicons #printContainer:before {
+	content: "\f19f";
+}
+#documentoptionicons #saveContainer:before {
+	content: "\f188";
+}
+#documentoptionicons #emailContainer:before {
+	content: "\f16d";
+}
+#documentoptionicons #emailContainer:before {
+	content: "\f16d";
+}
+#documentoptionicons #temporalAlertContainer:before {
+	content: "\f101";
+}
+#documentoptionicons #save2Container.temporalOrgAlertIcon:before {
+	content: "\f203";
+}
+#documentoptionicons #rsslink:before {
+	content: "\f1aa";
+}
+#prevTermHide {
+	display: none;
+}
+
+//=========================================
+//
+//=========================================

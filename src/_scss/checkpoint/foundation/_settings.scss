@@ -41,7 +41,7 @@ $row-width: rem-calc(1140);
 // Global
 
 // We use these to control various global styles
-$body-bg: #DEDEDE; //#F5F6F6; // f6f6f6
+$body-bg: #F5F6F6; //#DEDEDE; //; // f6f6f6
 $body-font-color: #777;
 $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -56,8 +56,10 @@ $font-smoothing: antialiased;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #FC8946; //#FF8000;
-$secondary-color: #666666; //#e7e7e7;
+$primary-color: #FC8946;
+$secondary-color: #666666;
+$tertiary-color: #5E6E7E;
+$contrast-color: #FA894E; // cp
 $alert-color: #DB3A48; //#f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
@@ -187,7 +189,7 @@ $subheader-font-weight: 300; //$font-weight-normal;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc(14);
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);

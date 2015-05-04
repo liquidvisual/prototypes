@@ -1,0 +1,146 @@
+/*
+    FOOTER.CSS
+
+    - Last updated: 03.04.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Footer
+//-----------------------------------------------------------------
+
+.lv-footer {
+    position: relative;
+    padding: rem-calc(20 15 20 15);
+    z-index: 30;
+
+    @media #{$large-up} {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: $footer-height;
+        line-height: $footer-height;
+        padding: rem-calc(0 15);
+        background: $footer-background;
+    }
+
+    .lv-footer-inner {
+        @media #{$devices-only} {
+            border-top: 1px solid #E6E6E6;
+            padding-top: rem-calc(10);
+        }
+    }
+
+    a,
+    .anchor {
+        color: $body-font-color;
+        @media #{$large-up} {
+            color: white;
+        }
+    }
+}
+
+//=========================================
+// Footer Links
+//=========================================
+
+.lv-footer-links a,
+.lv-footer-links .anchor {
+    @extend .transition;
+    font-size: rem-calc(12);
+    cursor: pointer;
+
+    @media #{$large-up} {
+        line-height: $footer-height;
+    }
+
+    /* needs some bigger gaps */
+    @media #{$medium-up} {
+        padding: rem-calc(0 5);
+    }
+
+    &:hover {
+        color: grey;
+    }
+}
+
+//=========================================
+// Footer Legal
+//=========================================
+
+.lv-footer-legal {
+    font-size: rem-calc(11);
+    // line-height: 0;
+    color: grey;
+
+    img {
+        margin-top: -2px; // magic fix
+    }
+}
+
+//=========================================
+// Dropdown
+//=========================================
+
+.lv-footer-links li.has-dropdown {
+    position: relative;
+
+    @media #{$large-up} {
+        display: none; // hide for large
+    }
+
+    &:hover {
+        background: lighten($footer-background, 10%);
+
+        a {
+            color: white; // override grey
+        }
+    }
+
+    &:hover .lv-dropdown {
+        height: auto;
+        opacity: 1;
+    }
+}
+
+.lv-footer-links .lv-dropdown {
+    @include transition('opacity');
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: rem-calc(200);
+    font-size: rem-calc(12);
+    font-weight: 600;
+    list-style: none;
+    margin: 0;
+    text-align: left;
+    background: lighten($footer-background, 10%);
+    border-radius: $global-radius $global-radius 0 0;
+
+    a {
+        transition: none;
+        display: block;
+        padding: rem-calc(0 15);
+        line-height: $footer-height;
+        border-top: 1px solid $footer-background;
+
+        &:hover {
+            background: $footer-background;
+        }
+
+        i {
+            padding-right: rem-calc(5);
+            color: $primary-color;
+        }
+    }
+
+    li:first-child a {
+        border: 0;
+    }
+}

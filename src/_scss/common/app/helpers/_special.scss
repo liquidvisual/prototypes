@@ -1,0 +1,47 @@
+/*
+    SPECIAL.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.lv-super .pagination {
+    display: inline-block; // so we can text-align it
+}
+
+.postfix {
+    position: relative;
+    left: -2px;
+}
+
+.row.is-full-width {
+    max-width: none;
+}
+
+.lv-loading {
+	position: relative;
+	visibility: hidden;
+
+	&:after {
+		content: "Loading...";
+		visibility: visible;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.primary-color {
+	color: $primary-color;
+}
+
+.alert-color {
+	color: $alert-color;
+}

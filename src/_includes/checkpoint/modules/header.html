@@ -1,0 +1,74 @@
+{% assign username = "John Smith" %}
+
+<section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
+	<div class="left">
+		<a id="top-menu-btn" class="lv-hamburger left hide-for-large-up" href="#"><i class="fi-list"></i></a>
+
+		<!-- Only show if context-menu content is available -->
+		{% if page.context_menu %}
+			<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+		{% endif %}
+	</div>
+
+	<!-- User Menu Hamburger -->
+	<a id="user-menu-btn" class="lv-hamburger right hide-for-large-up" href="#"><i class="fi-results-demographics"></i></a>
+
+	<div class="lv-logo-wrapper">
+
+		<!-- Logo -->
+		<a title="Checkpoint®" class="lv-logo" href="/">
+			<img class="show-for-medium-up" width="155" src="/img/checkpoint/template/logo-type@2x.png" alt="Thomson Reuters Checkpoint">
+			<img class="hide-for-medium-up" width="40" src="/img/checkpoint/template/logo-mobile-black@2x.png" alt="Thomson Reuters Checkpoint">
+		</a>
+
+		<!-- Site Select -->
+		<div class="lv-site-select">
+			<i class="fa fa-caret-down"></i>
+			<ul>
+				<li class="first">
+					<a class="hide-for-medium-up" href="#">AU</a>
+					<a class="show-for-medium-up hide-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; AU</a>
+					<a class="show-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a>
+				</li>
+				<li class="last">
+					<a class="hide-for-medium-up" href="#">NZ</a>
+					<a class="show-for-medium-up hide-for-large-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; NZ</a>
+					<a class="show-for-large-up" href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
+				</li>
+			</ul>
+		</div> <!-- .lv-site-select -->
+
+	</div> <!-- .logo-switcher-wrapper -->
+
+</section>
+
+<!-- User Profile -->
+<section class="lv-user-profile text-right show-for-large-up">
+	<div class="left">
+		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
+		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/checkpoint/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/checkpoint/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="history" %}"><a href="/checkpoint/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+		    <li><a href="/modal_output/checkpoint/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/checkpoint/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+		</ul>
+	</div>
+	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>{{ username | upcase }}</b> - <a href="#">Logout</a></div>
+</section>
+
+{% comment %}
+	<section class="lv-user-profile text-right show-for-large-up">
+		<div class="left">
+			<a class="logout-btn" href="#">LOGOUT</a>
+		</div>
+		<div class="right lv-user-profile-pic" href="#">
+			<img src="/img/ui/no-face.png" alt="Profile Pic">
+			<i class="fa fa-caret-down"></i>
+			<div class="lv-user-profile-dropdown">
+				{% include checkpoint/app/menus/user_menu.html %}
+			</div>
+		</div>
+	</section>
+{% endcomment %}

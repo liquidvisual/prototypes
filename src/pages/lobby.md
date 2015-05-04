@@ -1,5 +1,5 @@
 ---
-layout: common/public/landing
+layout: common/docs/lobby
 title: Choose Prototype
 permalink: /
 ---

@@ -1,0 +1,116 @@
+/*************************************************************************************************************************************
+ * Treeview
+ *************************************************************************************************************************************/
+.treeview {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 532px;
+	left:613px !important;
+}
+.notification .treeview {
+	margin-top: 18px !important; 
+}
+.treeview,
+.treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: sans-serif;
+}
+.treeCloseLink {
+	float:right;
+	text-decoration: none;
+	color: black;
+	background: url(../../images/general/btn-cross-o.gif) no-repeat 0px 50%;
+	padding-left: 22px;
+	cursor: pointer;
+}
+.treeWait {
+	text-decoration: none;
+	color: black;
+	background: url(../../images/progress-wheel-big-cached.gif) no-repeat 0px 50%;
+	padding-left: 22px;
+	position:absolute;
+	height:100px;
+}
+.hide{
+	display:none;
+}
+.leaf {
+	cursor: pointer;
+	padding-left: 15px;
+	font-weight: normal;
+	font-size: 12px;
+	background: url(../../images/favourites/Hoja_Doc.gif) no-repeat 0px 50%;
+}
+.treeview .hitarea {
+	height: 16px;
+	width: 16px;
+	padding: 0;
+	border: 0;
+	margin-left: -16px;
+	background-color: transparent;
+	float: left;
+	cursor: pointer;
+}
+
+.treeview .expandable-hitarea {
+	background-image: url(../../images/treeview/tv-expandable.gif);
+	background-position: 0px -3px;
+}
+.treeview .lastExpandable-hitarea {
+	background-image: url(../../images/treeview/tv-expandable-last.gif);
+	background-position: 0px -3px;
+}
+.treeview .collapsable-hitarea {
+	background-image: url(../../images/treeview/tv-collapsable.gif);
+	background-position: 0px -3px;
+}
+.treeview .lastCollapsable-hitarea {
+	background-image: url(../../images/treeview/tv-collapsable-last.gif);
+	background-position: 0px -3px;
+}
+/* Fix for IE */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+.treeview li.leaf { 
+	cursor: pointer;
+}
+.treeview li.leaf:hover { 
+	text-decoration: underline;
+}
+.treeview a.selected {
+	background-color: #eee;
+}
+.treeview .hover { 
+	color: orange;
+	cursor: pointer;
+}
+.treeview li { 
+	background: url(../../images/treeview/tv-item.gif) no-repeat; 
+}
+.treeview li.collapsable{
+	background: url(../../images/treeview/tv-collapsable.gif) no-repeat; 
+}
+.treeview li.expandable { 
+	background: url(../../images/treeview/tv-expandable.gif) no-repeat; 
+}
+.treeview li.last { 
+	background: url(../../images/treeview/tv-item-last.gif) no-repeat; 
+}
+.treeview li.lastCollapsable { 
+	background-image: url(../../images/treeview/tv-collapsable-last.gif); 
+}
+.treeview li.lastExpandable {
+	background-image: url(../../images/treeview/tv-expandable-last.gif); 
+}
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { 
+}

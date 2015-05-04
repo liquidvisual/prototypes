@@ -1,0 +1,112 @@
+/*
+    DOCUMENT-CONTEXT.CSS (LEGACY)
+
+    - Last updated: 09.04.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Document Styling Taken from Checkpoint
+// Document in context is the mini breadcrumb trail and - "section contains(?)" - "YOU ARE IN"
+//-----------------------------------------------------------------
+
+.lv-context-menu #dochierarchy, // checkpoint
+.lv-context-menu #breadcrumb_container, // westlaw
+.lv-context-menu #tocectory #running_header > ul { // westlaw
+    // overflow-x: scroll;
+    margin: 10px;
+    padding: 10px;
+    background: #F5F6F6;
+    border: 1px solid #D4DCE3;
+    border-radius: $global-radius;
+}
+
+//=========================================
+// Checkpoint
+//=========================================
+
+.lv-context-menu #dochierarchy ul, // cp
+.lv-context-menu #tocectory #running_header > ul { // wl
+    // padding-left: 5px;
+
+    .active a, // checkpoint
+    .endcascade a { // sneaky westlaw hack
+        background: none;
+        font-weight: bold;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        color: $blue-color;
+        border-bottom: 0;
+        font-size: 13px;
+        padding: 5px 0;
+
+        &:before {
+            @extend .foundation-icons;
+            content: "\f198";
+            // content: "↳";
+            color: $contrast-color;
+            font-size: 10px;
+            margin-right: 5px;
+
+            // background: white;
+            width: 15px;
+            text-align: center;
+            height: 15px;
+            line-height: 13px;
+
+            border-radius: 2px;
+        }
+    }
+}
+
+//=========================================
+// Westlaw
+//=========================================
+
+.lv-context-menu #breadcrumb_container #breadcrumb > div {
+
+    span:last-child {
+        background: none;
+        font-weight: bold;
+    }
+
+    span {
+        display: inline-block;
+        width: 100%;
+        color: $blue-color;
+        border-bottom: 0;
+        font-size: 13px;
+        padding: 5px 0;
+
+        &:before {
+            @extend .foundation-icons;
+            content: "\f198";
+            // content: "↳";
+            color: $contrast-color;
+            font-size: 10px;
+            margin-right: 5px;
+
+            // background: white;
+            width: 15px;
+            text-align: center;
+            height: 15px;
+            line-height: 13px;
+
+            border-radius: 2px;
+        }
+    }
+}
+
+.lv-super .lv-context-menu #dochierarchy > .tree > li > a {
+    &:before {
+        background: none;
+        // border: 1px solid #B3B3B3;
+        color: grey;
+    }
+}

@@ -1,0 +1,79 @@
+/*
+    STAGE.CSS
+
+    - Last updated: 17.03.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Stage
+//-----------------------------------------------------------------
+
+.lv-stage {
+    display: table; // this is needed
+    // position: absolute;
+    // position: relative;
+    // top: 1px; // fixes strange bug in Safari at 1025
+    width: 100%; // Stop right gaps, essential
+    height: 100%;
+    overflow: hidden; // prevent scrollbars when menu slides out overflow-y didn't work on FF
+
+    @media #{$large-up} {
+        // padding-top: $header-height + $nav-height;
+    }
+}
+
+//-----------------------------------------------------------------
+// Main Content Area
+//-----------------------------------------------------------------
+
+.lv-main {
+    display: table-header; // trust me
+    padding: rem-calc(($mobile-header-height+30) 0 $touch-menu-height 0); // account for header
+    min-height: 100vh; // Awesome, this forces main to have full height with low content
+    // height: 100%; // !! DO NOT USE: This creates unwanted padding at top when content is low height
+    background: $body-bg; // Main conceals the context menu underneath - so needs a BG color
+    // box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+
+    // Stops wide content breaking out of the frame
+    @media #{$small-only} {
+        max-width: 100vw;
+        overflow-x: auto;
+    }
+
+    @media #{$medium-up} {
+        padding: rem-calc(($mobile-header-height+30) 20 $touch-menu-height 20); // bottom has to be zero or else full-content will create top gap
+    }
+
+    @media #{$large-up} {
+        // padding-top: rem-calc(20);
+        padding-top: $header-height + $nav-height + 20; // risky? 20.03.15
+        border-radius: 5px 0 0 0;
+    }
+}
+
+//-----------------------------------------------------------------
+// Positions resume on desktop regardless of last mobile state
+//-----------------------------------------------------------------
+
+.lv-page-lock-overlay[style],
+.lv-global-header[style],
+.lv-header[style],
+.lv-context-menu[style],
+.lv-main[style],
+.lv-sidebar[style],
+.lv-touch-menu[style] {
+    @media #{$large-up} {
+            -ms-transform: none !important;
+        -webkit-transform: none !important;
+                transform: none !important;
+    }
+}
+
+// .lv-super .lv-sidebar[style] {
+//     @media #{$large-up} {
+//         webkit-transform: translate3d(0, 0, 0) !important;
+//     }
+// }

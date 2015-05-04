@@ -54,8 +54,8 @@
     border-right: 1px solid #D4DCE3;
     border-radius: $global-radius $global-radius;
     box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
-    // opacity: 0;
-    // height: 0;
+    opacity: 0;
+    height: 0;
     overflow: hidden;
     display: none;
 
@@ -85,11 +85,13 @@
     a,
     .anchor {
         display: block;
-        padding: rem-calc(10 15);
+        padding: rem-calc(14);
         border-bottom: 1px solid #D4DCE3; // better blue? #E1E4E6
         color: #505659;//#676767;
-        font-size: rem-calc(14) !important;
+        // font-size: rem-calc(14) !important;
+        line-height: 1.2;
         text-align: left;
+        font-weight: 600;
 
         &:hover {
             background: #F2F4F5;

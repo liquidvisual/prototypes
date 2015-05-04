@@ -73,7 +73,6 @@
 
 .lv-footer-legal {
     font-size: rem-calc(11);
-    // line-height: 0;
     color: grey;
 
     img {
@@ -89,14 +88,12 @@
     position: relative;
 
     @media #{$large-up} {
-        display: none; // hide for large
+        // display: none; // hide for large
     }
 
     &:hover {
-        background: lighten($footer-background, 10%);
-
-        a {
-            color: white; // override grey
+        @media #{$large-up} {
+            background: lighten($footer-background, 10%);
         }
     }
 
@@ -108,30 +105,36 @@
 
 .lv-footer-links .lv-dropdown {
     @include transition('opacity');
+    display: block; // override dropdowns scss
     opacity: 0;
     height: 0;
     overflow: hidden;
     position: absolute;
+    top: auto;
+    right: auto;
     bottom: 100%;
     left: 0;
-    width: rem-calc(200);
-    font-size: rem-calc(12);
-    font-weight: 600;
-    list-style: none;
-    margin: 0;
-    text-align: left;
-    background: lighten($footer-background, 10%);
-    border-radius: $global-radius $global-radius 0 0;
+    width: rem-calc(220);
+
+
+    @media #{$large-up} {
+        background: lighten($footer-background, 10%);
+        border-radius: $global-radius $global-radius 0 0;
+        box-shadow: 0; //weird
+        border: 0;
+    }
 
     a {
-        transition: none;
-        display: block;
-        padding: rem-calc(0 15);
-        line-height: $footer-height;
-        border-top: 1px solid $footer-background;
+        transition: none; // UX
+        width: 100%; // override lv-inline-list
 
-        &:hover {
-            background: $footer-background;
+        @media #{$large-up} {
+            color: white;
+            border-color: $footer-background;
+
+            &:hover {
+                background: $footer-background;
+            }
         }
 
         i {
@@ -140,7 +143,7 @@
         }
     }
 
-    li:first-child a {
+    li:last-child a {
         border: 0;
     }
 }

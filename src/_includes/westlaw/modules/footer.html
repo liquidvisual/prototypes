@@ -1,4 +1,4 @@
-{% assign settings = site.data.westlaw.settings %}
+{% assign settings = site.data.{{page.site_type}}.settings %}
 
 <div class="lv-footer-inner">
     <div class="row collapse is-full-width">
@@ -11,13 +11,13 @@
                 <li class="has-dropdown">
                     <span class="anchor">Sites</span>
                     <ul class="lv-dropdown">
-                        {% for item in site.data.westlaw.settings.sites %}
+                        {% for item in settings.sites %}
                             <li><a href="#"><i class="flag-icon {{item.icon}}"></i>&nbsp; {{item.title}}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
 
-                <li><a href="{{ settings.feedback }}" target="_blank">Feedback</a></li>
+                <li><a href="{{ settings.feedback }}" target="_blank">Feedback {{ settings.title }}</a></li>
                 <li><a href="{{ settings.privacy_policy }}" target="_blank">Privacy Policy</a></li>
                 <li><a href="{{ settings.terms_of_use }}" target="_blank">Terms of Use</a></li>
             </ul>

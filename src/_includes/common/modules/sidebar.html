@@ -40,11 +40,11 @@
 				    {% if page.sidebar_details %}
 				    	{% include {{ page.sidebar_details }} %}
 				    {% else %}
-				    	{% include westlaw/sidebar_content/hints/default.html %}
+				    	{% include {{ page.site_type | append: "/sidebar_content/" | append: "hints" | append: "/default.html" }} %}
 				    {% endif %}
 
 				{% else %}
-					{% include westlaw/sidebar_content/{{item.title}}/default.html %}
+					{% include {{ page.site_type | append: "/sidebar_content/" | append: item.title | append: "/default.html" }} %}
 				{% endif %}
 
 			</section>

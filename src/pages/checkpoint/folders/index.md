@@ -1,5 +1,5 @@
 ---
-layout: checkpoint/folders/folders
+layout: westlaw/folders/folders
 title: My Folders
 context_menu: "checkpoint/context_menu_output/folders.html"
 ---

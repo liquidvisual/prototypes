@@ -1,7 +1,6 @@
 ---
 layout: common/internal
 title: Guide
-permalink: /westlaw/guide/
 ---
 
 <!--- This child document initializes the page in Jekyll. -->
@@ -47,15 +46,32 @@ permalink: /westlaw/guide/
 
     <h3 class="panel">Global Pages</h3>
 
+
+    <ol>
+        {% assign pages = site.pages | where: "site_type", "westlaw" | sort: "url" %}
+        {% for item in pages %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a> - <small>{{ item.url }}</small></li>
+        {% endfor %}
+    </ol>
+
+
+
     <p><strong><a href="/"><i class="fi-layout"></i>&nbsp; LOBBY</a></strong><br><strong>Tip:</strong> launch from any page by clicking the top left "Westlaw AU" Logo.</p>
-
     <p><strong><a href="/docs/"><i class="fi-book"></i>&nbsp; DOCS</a></strong></p>
-
     <p><strong><a href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; REPO</a></strong></p>
 
     <h3 class="panel">Main Pages</h3>
 
     <ol class="page-index">
+        {% for item in site.data.westlaw.settings.top_menu %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a> - <small>{{ item.url }}</small></li>
+        {% endfor %}
+        {% for item in site.data.westlaw.settings.user_menu %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a> - <small>{{ item.url }}</small></li>
+        {% endfor %}
+    </ol>
+
+    <!-- <ol class="page-index">
         <li><a href="/westlaw/">Home</a> <small>(Redirect to /research on production)</small></li>
         <li><a href="/westlaw/research/">Research</a> <small>(equivilent to root)</small></li>
         <li><a href="/westlaw/workflow/">Workflow</a>
@@ -77,7 +93,7 @@ permalink: /westlaw/guide/
         <li><a href="/westlaw/folders/">Folders</a> <small style="color: red;">In Progress</small></li>
         <li><a href="/westlaw/preferences/">User Preferences</a></li>
         <li><a href="/westlaw/history/" class="disabled">User History</a></li>
-    </ol>
+    </ol> -->
     <br>
 
     <h3 class="panel">Search Templates</h3>

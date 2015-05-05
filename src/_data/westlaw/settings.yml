@@ -18,39 +18,39 @@ facebook: ""
 # Top Menu
 top_menu:
   - title: Research
-    url: /westlaw/research/
+    url: /pages/westlaw/research/search-templates/basic/
     icon: fi-magnifying-glass
     visibility:
 
   - title: Workflow
-    url: /westlaw/workflow/
+    url: /pages/westlaw/workflow/
     icon: fi-graph-bar
     visibility:
 
   - title: Tools
-    url: /westlaw/tools/
+    url: /pages/westlaw/tools/
     icon: fi-wrench
     visibility:
 
   - title: Newsroom
-    url: /westlaw/newsroom/
+    url: /pages/westlaw/newsroom/
     icon: fi-info
     visibility:
 
   - title: Guide
-    url: /westlaw/guide/
+    url: /pages/westlaw/guide/
     icon: fi-book
     visibility:
 
 # User Menu
 user_menu:
   - title: Alerts
-    url: /westlaw/alerts/
+    url: /pages/westlaw/alerts/
     icon: fi-megaphone
     visibility:
 
   - title: Folders
-    url: /westlaw/folders/
+    url: /pages/westlaw/folders/
     icon: fi-folder
     visibility:
 
@@ -70,7 +70,7 @@ user_menu:
     visibility:
 
   - title: Preferences
-    url: /westlaw/preferences/
+    url: /pages/westlaw/user/preferences/
     icon: fi-widget
     visibility:
 
@@ -82,7 +82,7 @@ user_menu:
 # Touch Menu
 touch_menu:
   - title: Home
-    url: /westlaw/
+    url: /pages/westlaw/
     id: home-btn
     icon: fi-home
     visibility:

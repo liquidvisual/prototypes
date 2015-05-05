@@ -18,44 +18,44 @@ facebook: ""
 # Top Menu
 top_menu:
   - title: Research
-    url: /checkpoint/research/
+    url: /pages/checkpoint/research/search-templates/basic/
     icon: fi-magnifying-glass
     visibility:
 
   - title: Workflow
-    url: /checkpoint/workflow/
+    url: /pages/checkpoint/workflow/
     icon: fi-graph-bar
     visibility: show-for-large-up
 
   - title: Tools
-    url: /checkpoint/tools/
+    url: /pages/checkpoint/tools/
     icon: fi-wrench
     visibility: show-for-large-up
 
   - title: Learning
-    url: /checkpoint/learning/
+    url: /pages/checkpoint/learning/
     icon: fi-info
     visibility:
 
   - title: Guide
-    url: /checkpoint/guide/
+    url: /pages/checkpoint/guide/
     icon: fi-book
     visibility:
 
 # User Menu
 user_menu:
   - title: Alerts
-    url: /checkpoint/alerts/
+    url: /pages/checkpoint/alerts/
     icon: fi-megaphone
     visibility:
 
   - title: Folders
-    url: /checkpoint/folders/
+    url: /pages/checkpoint/folders/
     icon: fi-folder
     visibility:
 
   - title: History
-    url: "#coming"
+    url: /pages/checkpoint/user/history/
     icon: fi-clock
     visibility:
 
@@ -65,7 +65,7 @@ user_menu:
     visibility:
 
   - title: Preferences
-    url: /checkpoint/preferences/
+    url: /pages/checkpoint/user/preferences/
     icon: fi-widget
     visibility:
 
@@ -77,7 +77,7 @@ user_menu:
 # Touch Menu
 touch_menu:
   - title: Home
-    url: /checkpoint/
+    url: /pages/checkpoint/
     id: home-btn
     icon: fi-home
     visibility:

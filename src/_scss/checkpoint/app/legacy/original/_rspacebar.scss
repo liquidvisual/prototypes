@@ -1,0 +1,122 @@
+/* rspacebar.css shared by search results and doc view */   
+    #rspaceBar{margin:0; padding:7px 0 0 0; height:27px;}
+        #rspaceBar li{line-height:1.7em; font-size:0.85em;}
+   
+		#wrapCustom{float:right; display:inline;}
+		
+	        /* floating right */
+			.rspaceBarWrap{display:inline; }
+			
+	        	/* custom  - create case alert, link builder, pinning*/
+	            .displayImg{display:none;}
+	            	
+	            #maincontent #documentoptions #documentnavigation {width: 46%!important;}										
+		        /* rspace - Foldering */
+		        /* disable rspace for ie 6 */
+		        #wrapFoldering{position:relative; display:none; margin-right: 12px;}
+		        
+		            #buttonFoldering, #buttonTocFoldering{width:18px; height:20px; background:url(../../images/icons/folder_page.png) no-repeat; float:left; display:inline; margin-left: 15px;}
+		                #buttonFoldering .inner{display:none; cursor:pointer;}
+		
+						/* hide by default.*/
+						#inFolderList{display:none; padding:2px 1px; width:140px; position:absolute; top:20px; left:-19px;background-color: white;}
+							#inFolderList li a{width:130px !important; padding:0 5px;}
+		            #actionpanel{position:absolute; left:0; top:0; display:none;}
+		                #rspaceactions,#rspaceactions .right{text-align:left;}
+		                #rspaceactions{}
+		                    #rspaceactions .right{}
+					#buttonList li {
+						width: 95%!important;
+						color:#6E8DaC!important;
+					}
+					#buttonList li a:hover, #inFolderList li a:hover{
+						background: #0083BF;
+						background: -moz-linear-gradient(top, #00C3EC,#0083BF); 
+						background: -webkit-gradient(linear, 0 0, 0 100%, from(#00C3EC), to(#0083BF));
+						background: linear-gradient(top, #00C3EC, #0083BF);
+						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#00C3EC', endColorstr='#0083BF');
+						color: white;
+					}
+					/* hide via default and show onload if triggers exist.*/
+										/* hide via default and show onload if triggers exist.*/
+					#dialogFoldering{top:21px; left:-19px; width:144px;}
+						#addDocToFolder{display:none;}
+						#addPdfToFolder{display:none;}
+						#viewInFolders{display:none;}
+					
+					.resultListFolfering div{top:21px; left:-2px!important; width:144px;}	
+					#content #buttonList li{
+						display:none;
+					}
+
+				/*	#dialogFoldering .dialogxInner2{width:140px;} */						
+						
+				.disable #buttonFoldering{cursor:auto; background-image:url(../../images/rspace/rspace_bar/icon_foldering_disable.gif);}
+					
+		        /* delivery - email, print, save */
+		        #wrapDelivery{position:relative;}
+		            #buttonDelivery{width:43px; height:20px; background:url(../../images/rspace/rspace_bar/icon_delivery.gif) no-repeat; float:left; display:inline;}
+		                #buttonDelivery .inner{display:none;}
+		                
+		             #wrapDelivery ul,
+		             #container #wrapDelivery ul{
+		             	display:none;
+		             }
+		             
+		          /* custom dialog - wider to cater for additional long text. */                  
+		             #dialogDelivery{width:148px;}
+		             #dialogDelivery .dialogxInner2{
+		             	width:140px;
+		             }
+		             #wrapDelivery #dialogDelivery,
+		             #wrapDelivery .dialogxInner1,
+		             #wrapDelivery .dialogxInner2
+		             {		             	
+		             	background-image:url(../../images/rspace/rspace_bar/dialog_delivery/dialogx_vert_sprite.gif);
+		             }
+		             
+		             #wrapDelivery #dialogDelivery .dialogxInner1{
+		             	background-position:-288px 100%;
+		             }  
+		             #wrapDelivery #dialogDelivery .dialogxInner2{
+		             	background-position:-144px 0;
+		             }   
+		                                
+		                                
+		             	#wrapDelivery .dialogx ul,
+		             	#container #wrapDelivery .dialogx ul{
+		             		display:inline;
+		             	}
+		             /* override advanced.css */
+		             	#container #sectionTitleSplit .dialogx ul{		             	
+		             		background:none;
+		             		cursor:auto;
+		             		float:none;
+		             		padding:0;
+						}
+		             	#container #sectionTitleSplit .dialogx li{padding-left:0;}
+		             	#container #sectionTitleSplit .dialogx li a{color:#4A6D8B;}		             	
+		             /* end - override advanced.css */
+		             	
+		        	#dialogDelivery{right:0; top:21px;}
+		        	
+				#wrapLinkBuilder{}
+					/* link builder link */
+		            #relBuildLink{width:29px; height:20px; background:url(../../images/rspace/rspace_bar/icons_custom.gif) no-repeat 0 -38px; float:left; display:inline;}
+						#relBuildLink .inner{display:none;}
+						
+		            	/* link builder pop up */
+						#lbContainer{right:0; margin:27px 0 0 0;}	
+													        						
+		        #wrapCaseAlerts{} 
+					/* create case alert */
+					#relCreateCaseAlert{width:26px; height:20px; background:url(../../images/rspace/rspace_bar/icons_custom.gif) no-repeat 0 0; float:left; display:inline;}
+					    #relCreateCaseAlert .inner{display:none;}
+			
+
+		        #wrapRss{} 
+					/* create case alert */
+					#buttonRssFeed{width:20px; height:20px; background:url(../../images/rspace/rspace_bar/icon_rssfeed.png) no-repeat 0 0; float:left; display:inline;}
+					    #buttonRssFeed .inner{display:none;}
+					    
+										

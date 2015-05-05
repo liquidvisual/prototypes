@@ -1,7 +1,7 @@
 /*
     WESTLAW CSS
 
-    - Last updated: 04.05.15
+    - Last updated: 05.05.15
     - hello@liquidvisual.com
 */
 
@@ -20,9 +20,6 @@
 // Helpers
 @import "../common/app/helpers/partial-view"; // notice B
 @import "app/helpers/special";
-
-// Original Legacy
-@import "app/legacy/original/all";
 
 // Layout
 @import "../common/app/layout/context-menu";

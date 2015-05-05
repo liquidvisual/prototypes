@@ -1,7 +1,7 @@
 /*
     CHECKPOINT SCSS
 
-    - Last updated: 04.05.15
+    - Last updated: 05.05.15
     - hello@liquidvisual.com
 */
 
@@ -12,6 +12,9 @@
 // Variables
 @import "app/base/variables";
 
+// legacy
+@import "app/legacy/original/all";
+
 // Base
 @import "../common/app/base/mixins";
 @import "../common/app/base/fonts";
@@ -20,9 +23,6 @@
 // Helpers
 @import "app/helpers/partial-view"; // notice A
 @import "app/helpers/special";
-
-// Original Legacy
-@import "../westlaw/app/legacy/original/all"; // will this work? Replace with own CP
 
 // Layout
 @import "../common/app/layout/context-menu";
@@ -65,9 +65,9 @@
 @import "../westlaw/app/legacy/overrides/user-preferences";
 
 // Legacy
-// @import "app/legacy/legacy";
-// @import "app/legacy/legacy-document";
-// @import "app/legacy/legacy-preferences";
-// @import "app/legacy/legacy-search-templates";
-// @import "app/legacy/legacy-toc";
-// @import "app/legacy/legacy-doc-context";
+@import "app/legacy/overrides/legacy";
+@import "app/legacy/overrides/legacy-document";
+// @import "app/legacy/overrides/legacy-preferences";
+// @import "app/legacy/overrides/legacy-search-templates";
+// @import "app/legacy/overrides/legacy-toc";
+// @import "app/legacy/overrides/legacy-doc-context";

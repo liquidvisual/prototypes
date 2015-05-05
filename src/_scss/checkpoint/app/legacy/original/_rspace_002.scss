@@ -1,0 +1,42 @@
+.growlContainer {
+    display: none;
+    position: absolute;
+    width: 240px;
+    z-index: 1010;
+}
+.growlContainer {top: 45%;  right: 38%;}
+
+#container .growlContainer { top: 7px; right: 7px;}
+
+.growl {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    padding: 2px;
+    padding-left: 30px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.growl.success {
+    background-color: #F0FFE8;
+    background-image: url(../../images/rspace/growl/success.png);
+    background-position: 10px;
+    border-color: #D5F7C5;
+    padding-top: 10px;
+    
+}
+
+.growl.error {
+    background-color: #FFFEDF;
+    background-image: url(../../images/rspace/growl/error.png);
+    border-color: #FEDD72;
+}
+
+.growlContent {
+    font-size: 0.8em;
+    display: block;
+    min-height: 30px;
+    margin-left: 12%;
+}

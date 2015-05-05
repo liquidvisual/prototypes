@@ -1,0 +1,73 @@
+/* jselect  #####################################################################*/
+/* doc_view - this was originally in base.css which was too broad a naming convention. */
+#selectMenu{position:absolute;z-index:500;background: none repeat scroll 0 0 #FFFFFF;}
+#selectMenu #infolderlink{cursor:pointer; display:inline; background-color:white;}
+#selectMenu #inFolderList{position:absolute;z-index:3000;left:0;width:auto;display:none;top:66px;}
+#inFolderList a span{white-space:nowrap;}
+.jselectArea,.jselectUnfoundText{cursor:pointer;position:relative;display:inline-block;margin-left:0px;}
+/* specific highlight types - jselectHighlightX, jselectSnippetX, jselectNoteX */
+.jselectHighlightX{
+	background-color: #f87d9b !important;
+	margin-right : 0 !important;
+	display: inline;
+}
+.jselectHighlightHover,	.jselectHighlightHover .jselectArea{
+	background-color: #F3F315;
+}
+/* classes to align notes in the middle or beginning of the text */
+.jnoteMiddleOfText {
+	margin-left : 20px !important;
+	margin-right : 0px !important;
+}
+.jnoteBeginningOfText {		
+	margin-right : 0px !important;
+}
+.jselectNoteX,	.jselectNoteX .jselectHighlightX{		background-color:#f87d9b !important;		}
+.jselectSnippetX,	.jselectSnippetX .jselectHighlightX,	.jselectSnippetX .jselectNoteX{		background-color:#00FFFF !important;	}
+.SearchTermCurrent .jselectHighlightX{background-color:#D2F7E1 !important;	}
+.nhit .jselectHighlightX{background-color:yellow !important;}
+.highlight .jselectHighlightX{background-color:#D2F7E1	}
+/* Hover Snippet Menu - In Folder*/
+#jsSnippetMenu{position:absolute; top:0; left:0; display:none; padding:4px 10px;}
+#jsSnippetMenu dt,#jsSnippetMenu dd{margin:0; padding:0; display:inline;}
+#jsSnippetMenu dt{font-weight:bold;}				
+/* Click Highlight Menu - Remove Highlight */
+#jsHighlightMenu{position:absolute; top:0; left:0; display:none; padding:4px 10px; background-color:white;}	
+/* unfound items */
+#jselectUnfoundArea{	margin: 38px 0 38px 20px;    padding: 4px;    width: 95%;}
+.jselectUnfoundItem{display:block; clear:both;}
+.jselectUnfoundType{float:left; display:inline;}
+.jselectUnfoundText{}
+.ui-dialog-content #OK{margin:10px 0 0 0;}
+.jselectArea .SearchTerm,.SearchTerm .jselectArea{	background-color:#ffff00 !important;}
+.noteDialog{position:absolute;top:0;right:4px;width:180px;height:310px;border:1px solid #aaa;z-index:2;	background:#FEFEE9 url(../../images/rspace/bg_note_title.png) repeat-x;	border-bottom:2px solid #999;border-right:2px solid #999;}
+.noteDialog .die{position:absolute; top:10px; right:10px; width:12px; height:11px;  background:url(../../images/rspace/note_x.png) no-repeat; 	display:none;}
+.noteHead{padding:7px 10px 7px 22px; height:28px; background:url(../../images/rspace/note_folder_icon.png) no-repeat 7px 7px;}
+.noteDate{margin:0; padding:0; font-size:0.8em; color:#252525; font-weight:normal;}
+.noteTitle{margin:0; padding:0; color:#252525; font-size:1em; font-weight:normal; }
+.noteMain{padding:4px; }
+.noteTextarea{padding:4px; resize: none; border:1px solid #aaa; color:#252525; width:162px; height:208px; overflow-x:hidden;}
+.noteContent{padding:3px; color:#252525; width:166px; height:212px; font-size:0.9em; overflow-x:hidden;}
+.noteButtons{padding:4px;}
+ul.unfoundItemTitle {font-size: 0.8em;list-style: none outside none;margin:0px;	padding:0px;color: #565656;clear: both;font-weight: bold;}
+ul.detailsUnfoundItem {	border-top: 1px solid #d4d0c8;}
+ul.unfoundItemTitle li {padding: 1px 2px 0px 2px;margin: 0px;display: inline;background: none!important;}
+ul.unfoundItemTitle li.detailsUnfoundItemTitleItem {withd: 50px;}
+ul.unfoundItemTitle li span.unfoundItemLink {font-weight: normal;cursor: pointer;	color: #0083BF;    height: auto;    line-height: normal;    padding: 0;    white-space: normal;    width: auto;}
+.unfoundItemBody{margin: 20px;}
+#divHeaderUnfound{background-color: #DFDFDF;border: 1px solid #D4D0C8;border-radius: 8px 8px 0 0;cursor: pointer;padding: 5px;font-weight:bold;font-size:1.2em;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);color: #BB0000;}
+#divFooterUnfound{background-color: #DFDFDF;border: 1px solid #D4D0C8;border-radius: 0px 0px 8px 8px;cursor: pointer;padding: 1px;font-size:0.5em;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);}
+#jselectUnfoundContainerAnnotations{	padding: 5px;	font-size:1.2em;}
+#highlightingNoteContainer {float:left; position: relative;}
+#rspaceFooterBox, #rspaceHeaderBox {	clear:both;	width:80%;}
+.highlightNotePadding {	float:left!important;	width:77%!important;}
+img.noteIcon {position:absolute;top:3px;left:-20px;}
+#annotationsLoadingMsg {font-size: 1.1em;font-weight: bold;padding: 25px 35px 25px 0;text-align: center;}
+#annotationsLoadingMsg img.annotationsLoadingImg {    padding: 0px 5px;    vertical-align: -13px;}
+/* end jselect  #####################################################################*/
+/* Override of JQUI menu */
+body .ui-menu {list-style:none;padding: 2px;	margin: 0;	display:block;	float: left;}
+body .ui-menu .ui-menu {	margin-top: -3px;}
+body .ui-menu .ui-menu-item {	margin:0;	padding: 0;	zoom: 1;	float: left;	clear: left;	width: 100%;}
+body .ui-menu .ui-menu-item a {	text-decoration:none;	display:block;	padding:.2em .4em;	line-height:1.5;	zoom:1;}
+body .ui-menu .ui-menu-item a.ui-state-hover,.ui-menu .ui-menu-item a.ui-state-active {	font-weight: normal;	margin: -1px;}

@@ -1,0 +1,133 @@
+/* HTML */
+
+	/* body{overflow-x:hidden;} jquery dialog hidden grey block is too wide. */
+				
+	#container{position:relative; z-index:2; margin:0 0 3px 0; width:100%; /*background:url(../../images/rspace/folders-home/bgtopleft_sprite.gif) no-repeat 100% -52px #7B9FC1;*/ float:left; display:inline;}
+
+	/*fix linkbuilder */
+	#docDeliveryLinks .linkBuilderContainerJS{margin:0; width:auto; float:none; display:none;}
+
+/* note: rspacebar.css contains inherited css */
+    #rspaceBar{clear:both; background:#C8D8E7; width:100%; }
+
+        #rspaceBar #docHeader li{font-size:1em;}
+        
+        /* docHeader container */
+        #docHeader{border:none; margin:0 0 0 7px; color:#4B6E8E; font-size:0.85em; float:left; display:inline;}
+        /* fix ie 6 */
+        
+   
+        #docHeader{width:500px;}
+			#docNavigation{width:100%; float:left; display:inline;}
+
+            /* searchNav */
+            #searchNav {margin:0; padding:0; float:left; display:inline;}
+                #searchNav li{margin:0 7px 0 0; padding:0; list-style-type:none; font-weight:bold; float:left; display:inline;}
+                    #searchNav #document-navposanchorfirst,
+                    #searchNav #document-navposanchornext,
+                    #searchNav #searchNavFirstDisabled,
+                    #searchNav #searchNavNextDisabled{
+                    	margin:0 3px 0 0;
+                    }
+                    #searchNav a,
+                    #searchNav .disabled
+                    {
+                        width:14px; height:19px; background:url(../../images/rspace/folders-home/search_nav_sprite.gif) no-repeat; float:left; display:inline;
+                    }
+                    /* pagination links */
+
+                    
+                    #searchNav #document-navposanchorfirst a{background-position:0 -152px; width:16px; }
+                    #searchNav #document-navposanchorprev a{background-position:0 0;}
+                    #searchNav #document-navposanchornext a{background-position:0 -38px;}
+                    #searchNav #document-navposanchorlast a{background-position:0 -190px; width:16px;}
+
+                    /* disabled pagination links */
+                    #searchNav #searchNavFirstDisabled span.disabled{background-position:0 -228px; width:16px;}
+                    #searchNav #searchNavPrevDisabled span.disabled{background-position:0 -76px;}
+                    #searchNav #searchNavNextDisabled span.disabled{background-position:0 -114px;}
+                    #searchNav #searchNavLastDisabled span.disabled{background-position:0 -266px; width:16px;}
+
+                        #searchNav li a .inner,
+                        #searchNav li .disabled .inner{
+                            display:none;
+                        }
+					#searchNavResults{display:block;}
+                    	#searchNavResultsOf{font-weight:normal;}
+
+            /* search terms */
+            #termNav{margin:0; float:left; display:inline;}/* display:none;*/
+                #termNav ul{margin:0; padding:0;}
+                	#termNav li{margin:0 7px 0 0; float:left; display:inline; list-style-type:none;}
+                    	#termNav a{width:14px; height:19px; background:url(../../images/rspace/folders-home/search_nav_sprite.gif) no-repeat; float:left; display:inline;}
+                        	#termNav a img,
+                        	#termNav a .inner{display:none;}
+                        /* inactive */
+                        #docHeader #document-navtermprev a{background-position:0 -76px;}
+                        #docHeader #document-navtermnext a{background-position:0 -114px;}
+
+                        /* active */
+                        #docHeader #document-navtermprev .on{background-position:0 0;}
+                        #docHeader #document-navtermnext .on{background-position:0 -38px;}
+
+                	#docHeader #searchTermText{}
+
+            /* recent docs */
+            #recDocLink{margin:0; line-height:1.7em; float:left; display:inline; position:relative;}
+                #recDocLink a, #recDocLink a span{
+                    float:left;
+                    display:inline;
+                    background:url(../../images/rspace/folders-home/action_panel_dropdown.gif) no-repeat 0 0;
+                    text-decoration:none;
+                }
+                #recDocLink a{padding:0; background-position:0 0; color:#4B6E8E;}
+                    #recDocLink .inner1{background-position:100% -40px;}
+                        #recDocLink .inner2{margin:0 19px 0 2px; padding:0 6px; height:20px; background-position:0 -20px; background-repeat:repeat-x;}
+
+                #recDocLink a:hover{background-position:0 -60px;}
+                    #recDocLink a:hover .inner1{background-position:100% -100px;}
+                        #recDocLink a:hover .inner2{background-position: 0 -80px;}
+		
+		        #viewLinks{margin:0 7px 0 0; width:23px; height:20px; background:url(../../images/rspace/pin.gif) no-repeat; cursor:pointer; float:right; display:inline}
+					#viewLinks .groupInner{display:none;}
+
+		        #fullscreen{margin:0 7px 0 0; width:23px; height:20px; background:url(../../images/rspace/rspace_bar/icons_custom.gif) no-repeat 0 -76px; cursor:pointer; float:right; display:inline; }
+		        /*hide until initialised. Tabular view does not support this feature.*/
+		        #fullscreen{display:none;}
+					#fullscreen span{display:none;}
+		
+				#pdfLink{margin:1px 6px 0 0; float:right; display:inline; /*font-size:0.85em; line-height:1.7em;*/}
+					#pdfLink a{color:#4B6E8E; display:block; width:18px; height:18px; background:url(../../images/rspace/pdf-icon.gif) no-repeat scroll 0 0;}
+						#pdfLink .inner{display:none;}
+			
+#docContainer{clear:both;}
+	/*fix ie7 horizontal scroll */
+	/* recent document window popup pane #########################################*/
+	#recDoc{margin:5px 0 0 0;}
+	
+
+	#researchSpaceHiddenForm{display:none;}
+	/* remove dark blue title */
+	#doc-related-info-title{display:none;}
+	
+	/* testig overrides */
+	/*
+	#searchNav{display:none !important;}
+	#termNav{display:none !important;}
+	#recDocLink{margin:0 0 0 316px;}
+	*/
+	
+	/*#docHeader{width:800px;}*/
+	#docHeader{width:700px;}
+		#docNavigation{padding:0 0 0 230px;}
+			#recDocLink{margin:0 6px 0 0; float:left !important; display:inline;}
+			#searchNav{float:left !important;}
+			#termNav{float:left !important;}
+	/*
+	#docHeader{width:624px;}
+	#recDocLink{margin:0 0 0 230px;}
+	#searchNav{float:right;}
+	#termNav{float:right;}
+	*/
+	
+	

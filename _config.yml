@@ -42,6 +42,7 @@ defaults:
     values:
       site_type: "checkpoint"
 
+permalink: pretty
 
 # Markdown library
 markdown: kramdown

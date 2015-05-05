@@ -1,0 +1,56 @@
+/*
+ * Copyright 2009 Thomson Reuters Global Resources AG. All Rights Reserved.
+ * Proprietary and Confidential information of TRGR.
+ * Disclosure, Use or Reproduction without the written authorization of TRGR is prohibited.
+ */
+ 
+ body {
+ 	color: #333;
+ 	font-family: arial, helvetica, sans-serif;
+ 	font-size: 80%;
+ }
+ 
+ a {
+ 	color: #0083bf;
+ 	text-decoration: none; 	
+ }
+ a:hover {
+ 	text-decoration: underline;
+ }
+ 
+ em, i {
+ 	font-style: italic;
+ }
+ 
+ b, strong {
+ 	font-weight: bold;
+ }
+
+.hide{
+	display:none;
+}
+
+.clear{
+	clear:both;
+	height:1px;
+}
+
+.control,
+.controlButton {
+	float: left;
+	width: 16px;
+	height: 16px;
+	border: 0;
+	margin: 2px;
+	background-repeat: none;
+	background-position: center;
+	cursor: pointer;
+}
+
+.minimize-control {
+	background: url("../images/ico-widgetminimise.png") no-repeat 0 0;
+}
+
+.maximize-control {
+	background: url("../images/ico-widgetmaximise.png") no-repeat 0 0;
+}

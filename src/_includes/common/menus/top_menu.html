@@ -2,7 +2,7 @@
 
 <ul>
     <li class="{% if page.url == "/{{page.site_type}}/" %} active {% endif %}">
-        <a href="/{{page.site_type}}/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+        <a href="/pages/{{page.site_type}}/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
     </li>
     {% for item in settings.top_menu %}
         {% assign path = item.title | downcase %}

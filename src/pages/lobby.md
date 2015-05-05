@@ -77,8 +77,16 @@ permalink: /
                 <h1>Choose Prototype...</h1>
                 <br>
                 <ul class="small-block-grid-2">
-                    <li><a class="logo-cp" href="/checkpoint/guide/"><img width="100%" src="/img/common/template/cp-logo@2x.png" alt="Checkpoint"></a></li>
-                    <li><a class="logo-wl" href="/westlaw/guide/"><img width="100%" src="/img/common/template/wl-logo@2x.png" alt="Westlaw"></a></li>
+                    <li>
+                        <a class="logo-cp" href="/pages/checkpoint/guide/">
+                            <img width="100%" src="/img/common/template/cp-logo@2x.png" alt="Checkpoint">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="logo-wl" href="/pages/westlaw/guide/">
+                            <img width="100%" src="/img/common/template/wl-logo@2x.png" alt="Westlaw">
+                        </a>
+                    </li>
                 </ul>
                 <br>
                 <a class="button" href="/docs/"><i class="fi-book"></i>&nbsp; Docs</a>

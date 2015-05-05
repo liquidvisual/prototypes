@@ -1,0 +1,21 @@
+#newsfeedContainer
+{
+	margin:15px;
+	font-size: 13px;
+}
+
+#newsfeedContainer .newsfeed_paragraph, #newsfeedContainer .paragraph {
+	margin: 10px !important;
+	text-align: justify !important;
+}
+
+#newsfeedContainer li {
+	margin-top:10px !important;
+	margin-left: 30px  !important;
+	margin-bottom: 10px !important;
+	margin-right:5px !important;
+}
+
+#newsfeedContainer .newsfeedhead {
+	font-weight: bold !important;
+}

@@ -1,0 +1,31 @@
+/*
+ * Copyright 2009 Thomson Reuters Global Resources AG. All Rights Reserved.
+ * Proprietary and Confidential information of TRGR.
+ * Disclosure, Use or Reproduction without the written authorization of TRGR is prohibited.
+ */
+ 
+ 
+ .buttonsecondary {
+	display:inline-block;
+	background: -moz-linear-gradient(top, #efefef,#dadada); 
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#dadada));
+	background: -ms-linear-gradient(top left, #efefef 0%, #dadada 100%);
+	background: -o-linear-gradient(top left, #efefef 0%, #dadada 100%);
+	background: -moz-linear-gradient(top left, #efefef 0%, #dadada 100%);
+	background: -webkit-linear-gradient(top left, #efefef 0%, #dadada 100%);
+	background: linear-gradient(to bottom right, #efefef 0%, #dadada 100%);
+	
+	border: 1px solid #D3D3D3;	
+	font-weight: normal;display: inline-block;overflow: visible;padding: 0.25em 0.5em;text-align: center;	
+	border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;
+	color: #555555;
+	font-size: 1em;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none !important;
+	}
+	
+#mainCols { width:1280px; }
+#mainCols #docBody { width:930px;}
+#mainCols #folderheading {width: 990px; display: block; margin-left: 268px; margin-top: 9px;}
+	

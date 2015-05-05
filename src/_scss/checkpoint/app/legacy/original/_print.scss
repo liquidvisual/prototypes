@@ -1,0 +1,27 @@
+* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+   a[href]:after {
+    content: none !important;
+  }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+  header {display:none !important;}
+  header#printheader {display:block !important}
+#maincontent {float:none !important;width:100% !important;margin:0 !important;}
+#uppernavgroup {display:none !important}
+#docContent {width:100% !important;}
+#jurisdiction {display:none !important}
+#authnavbar {display:none !important}
+#sidebar {float:none !important;display:none !important;}
+#docoptionstabs, #docoptionscontent {display:none !important;}
+#documentlistcontainer {width:80% !important}
+#dragger {display:none !important}
+#navbar {display:none !important}
+	#documentNavPadOut {display:none !important}

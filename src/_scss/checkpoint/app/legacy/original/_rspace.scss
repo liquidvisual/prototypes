@@ -1,0 +1,470 @@
+
+/* links ############################################################################*/
+
+	/* all links */
+		a,
+		#docContainer a,
+		#docContainer a:visited,
+		a:hover,
+		#container a:hover,
+		#docContainer a:hover,
+		a:active, 
+		#optionDiv a{
+			outline:none;
+		    /*color:#4E6D8C;*/
+		    color:#005DA2;	    
+		}	
+		
+	/* default state */
+		a,
+		#docContainer a,
+		#docContainer a:visited{
+			text-decoration:none;
+		}
+		
+	/* hover state */
+		a:hover
+		,#container a:hover
+		,#docContainer a:hover{
+		    /*color:#6E8DaC;*/
+		    text-decoration:underline;
+		}
+	/* treedialog hover state */
+        #docContainer #userFolders a:hover,
+        #treeDialog a:hover{
+        	text-decoration:none;
+        }	
+        	
+	/* disabled state */
+		#docContainer li a.disabled
+		,#docContainer li a.disabled:visited{
+			color:#999;
+			cursor:auto;
+		}
+		#userFoldersInDialog ul li a.disabled ins{
+			background:url(../../images/rspace/folders-home/disabled_folder.png) no-repeat 0 0px !important;
+		}
+		
+		a.disabled {
+			color : lightgrey !important;
+			text-decoration : none !important;
+		}
+		
+/* buttons  ############################################################################*/
+		a.rsWlukButton {
+		    background: transparent url('../../images/wluk-button-a.gif') no-repeat scroll top right;
+		    color: #333333;
+		    display: block;
+		    float: left;
+		    font-family: Verdana,Arial,Helvetica,sans-serif;
+		    font-size: 1.2em;
+		    font-weight: bold;
+		    height: 22px;
+		    margin: 0 6px 0 0;
+		    padding: 0 14px 0 0; /* sliding doors padding */
+		    text-decoration: none;
+		}	
+		a.rsWlukButton span {
+		    background: transparent url('../../images/wluk-button-span.gif') no-repeat;
+		    display: block;
+		    line-height: 14px;
+		    padding: 4px 0 4px 14px;
+		} 
+		
+		a.rsWlukButton:active {
+		    background-position: bottom right;
+		    color: #000;
+		}
+		
+		a.rsWlukButton:active span {
+		    background-position: bottom left;
+		
+		} 
+		
+		a.rsWlukButton input{
+		
+		}
+	
+/* LIBRARY */
+
+		.clear{clear:both; font-size:0; height:0; line-height:0;}
+	
+	/* dropdown - dialogx  ############################################################################*/
+		.dialogx,
+		.dialogxInner1,
+		.dialogxInner2{
+			background:url(../../images/rspace/dialogx_vert_sprite.gif) no-repeat;
+			float:left;
+			display:inline;		
+		}
+			.dialogx input{font-size:1em;}
+			.dialogx input.text{ 
+				border:1px solid #999;
+				padding:1px 0 0 0;
+				color:#4E6D8C;	
+				height:19px;
+				line-height:19px;
+				font-size:11px;
+			}
+		
+		.dialogx{position:absolute; z-index:999; background-position:0 0; }
+			.dialogxInner1{ background-position:-264px 100%;}
+				.dialogxInner2{margin:2px 0; padding:0 2px; width:128px; background-position:-132px 0; background-repeat:repeat-y;}
+				
+					.dialogx ul{margin:0; padding:0;}
+						.dialogx li{clear:both; margin:0; padding:0; list-style-type:none; }
+						
+							.dialogx a{padding:0; width:100%; background-color:#F2F2F2; color:#4A6D8B; float:left; display:inline;}
+								.dialogx .buttonInner{margin:0 0 0 5px; float:left; display:block; cursor:pointer;}
+								.dialogx a:hover .buttonInner{color: #FFA500 }/*ie8*/
+							
+							.dialogx li.odd a{background-color:white;}
+
+		/* override dialogx */
+		#dialogFoldering,
+		#dialogFoldering .dialogxInner1,
+		#dialogFoldering .dialogxInner2{
+			background-image:url(../../images/rspace/dialogx_vert_sprite_2.gif);		
+		}
+		#dialogFoldering .dialogxInner1{background-position:-288px 100%;}
+		#dialogFoldering .dialogxInner2{background-position:-144px 0; width:140px;}
+		
+		body .blockUI{z-index:99999999 !important; background-color:"#000000 !important"}
+	/* span button ############################################################################*/
+				.spanButton,
+		.spanButton .inner1,
+		.spanButton .inner2{
+			float:left; display: block; height: 16px;
+		}
+					.spanButton input,
+					.dialogx .spanButton input{
+						text-indent:0; border:none; margin:0; padding:0; line-height:14px; height:16px; width:auto; outline:0; color: #333333; cursor:pointer;  background:none; float:left; display:inline;
+					}
+					.spanButton input,
+					.ui-widget .spanButton input{
+						font-size:1.2em; font-weight:bold;
+					}
+					/* override ipPersonalisation.css */
+					#crudPanelInDialog .spanButton input
+					,#dialogActionPanel .spanButton input{
+						font-size:1.1em !important;
+						font-weight:bold !important;
+						margin-right: 5pt !important;
+					}
+					
+					
+		/* on click */
+		.spanButton:active{background-position: bottom right;}
+			.spanButton .inner1:active{background-position: bottom left;}
+		
+			/* firefox fix for extra button padding */
+			.spanButton input::-moz-focus-inner{border:0; padding:0;}
+			
+		.deliveryDialog{ /*overflow:hidden !important; */}
+		
+		/* span button disbabled */
+		.spanButtonDisabled{background-image:url('../../images/wluk-button-a-disabled.gif');}		
+			.spanButtonDisabled .inner1{background-image:url('../../images/wluk-button-span-disabled.gif');}
+			.spanButtonDisabled .inner1:active{background-position: top right !important;}
+
+
+	/* jstree  ############################################################################*/
+		
+	
+		#userFolders a:visited {color:#3d3d3d;}
+		
+		#userFolders a:hover,
+		#userFolders .jstree-hovered{
+			/*background-color:#7C9EC1;
+			border-color:#7C9EC1;
+			color:white;*/	
+			text-decoration:none;									
+		}
+		#userFolders .jstree-clicked
+		,#treeDialog .jstree-clicked{
+			border-color:#7C9EC1;
+		}
+
+		#treeDialog{/*background:#F5F5F5;*/ overflow-x:hidden;/* ie 7*/}
+		
+		
+		
+        #userFolders li
+        ,#userFolders ins
+         
+        ,#treeDialog li
+        ,#treeDialog ins
+        {
+             background:none;
+             line-height:inherit;
+             min-height:inherit;
+        }	
+      
+		#userFolders a > ins,
+		#treeDialog a > ins,
+		#userFolders ins,
+		#treeDialog ins{
+			height:16px !important;			
+		}
+
+         #userFolders li a,
+         #treeDialog li a{
+         	line-height:16px; height:16px;
+         	padding-right:6px !important;
+         	padding-left:2px !important;
+         	border:none;
+         }
+         #treeDialog li a.jstree-hovered,
+         #userFolders li a.jstree-hovered{
+         	background:#e7f4f9;
+         }
+            
+	     /* margin left for all jstree lis, except the first */
+	     #userFolders li li
+	     ,#treeDialog li li{
+	     	margin-left:18px;
+	     }
+	     #userFolders li
+	     ,#treeDialog li{
+	     	margin-left:0; 
+	     	padding:2px 0; 
+	     	cursor:pointer;
+	     }
+
+
+		#userFolders li.jstree-open
+		,#treeDialog li.jstree-open
+		{
+			background:url(../../images/rspace/folders-home/minus.gif) no-repeat 0 3px;
+		}
+		
+		#userFolders li.jstree-closed
+		,#treeDialog li.jstree-closed
+		{
+			background:url(../../images/rspace/folders-home/plus.gif) no-repeat 0 3px;
+		}
+		.jstree ins{width:9px;}
+
+		/* bin folder */
+		#userFolders li[rel="bin"] > a > ins
+		{
+			/*background:url(../../images/rspace/folders-home/trash.png) no-repeat 0 0 !important;*/
+			background:url(../../images/icons/rspace/trash.gif) no-repeat 0 0 !important;
+		}
+		
+		/* normal folder */
+		#userFolders li a ins
+		,#treeDialog li a ins
+		
+		/* not bin folder*/
+		,#userFolders li.jstree-last li a ins
+		,#userFolders li li.jstree-last a ins
+		           
+		,#treeDialog li.jstree-last li a ins
+		,#treeDialog li li.jstree-last a ins
+		{
+		       width:22px;
+		       background:url(../../images/rspace/folders-home/normal_folder.png) no-repeat 0 0px;
+		       cursor:pointer;
+		}
+		
+		/*shared folder tree dialog*/
+		#userFoldersInDialog li.shared > a ins {
+			width:17px;
+            background:url(../../images/rspace/folders-home/shared_unwritable.png) no-repeat 0 0 !important;
+            cursor:pointer;
+		}
+		
+		/*shared folder tree dialog*/
+		#userFoldersInDialog li.shared.writable> a ins {
+			width:17px;
+            background:url(../../images/rspace/folders-home/shared_writable.png) no-repeat 0 0 !important;
+            cursor:pointer;
+		}
+		
+
+		/* clicked folder */
+		#docContainer .jstree-researchspace a.jstree-clicked
+		,#docContainer .jstree-researchspace a.jstree-clicked:hover
+		
+		,#treeDialog .jstree-researchspace a.jstree-clicked
+		,#treeDialog .jstree-researchspace a.jstree-clicked:hover
+		{
+		    background:#7C9EC1;
+		    color:white;                        
+		}	
+				
+/* Add To Folder Dialog Box ########################################################## */
+#crudPanelInDialog form {
+	margin: 0 0px 0 0;
+	padding: 0;
+	width: 100%
+}
+
+#addFolderFormDialog #childFolderName {
+	width: 190px;
+	border-color: 1px solid #d2d2d2 !important;
+	height: 30px;
+}
+
+#crudPanelInDialog {
+	margin-right: 20px;
+	font: 99% sans-serif;
+}
+
+#userFoldersInDialog {
+	background: white !important;
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	clear: both;
+	margin: 10px 0 10px 0 !important;
+	padding: 10px;
+	height: 200px !important;
+	width: 90% !important;
+	float: left;
+	display: inline;
+	overflow: auto;
+}
+
+#treeDialog {
+	/*font-size: 0.85em;*/
+}
+
+#treeDialog input.text {
+	border: 1px solid #d2d2d2;
+	padding: 0;
+	height: 27px !important;
+	line-height: 20px !important;
+	float: left;
+	display: inline;
+	width: auto;
+	left: 0;
+	position: static;
+	background: white;
+}
+
+#addFolderFormDialog #childFolderSubmit {
+	background: url("../../images/bg-sidebar-li.gif") repeat-x scroll 50%
+		50% #ff9100;
+	color: #ffffff !important;
+	font-weight: bold;
+	padding: 0.15em 0.5em !important;
+}
+
+#treeDialog #dialogactionbutton {
+	background: url("../../images/bg-sidebar-li.gif") repeat-x scroll 50%
+		50% #ff9100;
+	color: #ffffff !important;
+	font-weight: bold;
+	padding: 0.15em 0.5em !important;
+}
+
+#treeDialog #dialogclosebutton {
+	color: #555555;
+    font-weight: normal;
+    padding: 0.15em 0.5em !important;
+    text-transform: none;
+}
+
+#treeDialog
+ 
+input
+.text
+,
+{
+margin
+:
+0
+ 
+5
+px
+ 
+0
+0;
+display
+:
+ 
+block
+;
+ 
+height
+:
+ 
+22
+px
+;
+
+				
+}																
+#dialogActionPanel {
+	clear: both;
+	margin: 0 20px 0 0;
+}
+
+#dialogActionPanel .doctitle {
+	text-align: left;
+	margin: 10px 5px;
+}
+
+#dialogActionPanel .buttons {
+	text-align: right;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+#dialogActionPanel #document_titleLabel {
+	font-weight: bold;
+}
+
+#dialogActionPanel .primary {
+	background: url("../../images/bg-sidebar-li.gif") repeat-x scroll 50%
+		50% #ff9100;
+	color: #fff;
+	font-weight: bold;
+}
+
+#dialogActionPanel .spanButtonDisabled {
+    background: url("../../images/bg-sidebar-li.gif") repeat-x scroll 50% 50% !important;
+    color: lightgrey !important;
+    cursor: not-allowed;
+}	
+
+#dialogActionPanel #document_title {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	color: #000;
+	padding: 2px;
+	width: 85%;
+}
+				
+#formBlockRight #submitButton {
+	background: url("../../images/bg-sidebar-li.gif") repeat-x scroll 50% 50% #ff9100 !important;
+	display: inline;
+}
+
+#formBlockRight #closeButton {
+	display: inline;
+}
+    			
+    			
+					
+/* submit click preloder */
+.preloader{margin:0 0 0 5px; width:20px; height:20px; background:url(../../images/rspace/preloader_20.gif) no-repeat; float:left; display:inline; display:none;}
+
+.linkSharingPermissionRemove
+{
+	background-image: url("../../images/delete.png");
+    cursor: pointer;
+    float: right;
+    height: 12px;
+    margin: 6px 5px 0;
+    width: 12px;
+}
+.linkSharingPermissionRemove:hover
+{
+	background-image: url("../../images/delete_hover.png");
+    
+}		
+	
+	body #documentDisplay{padding-top: 16px;}	

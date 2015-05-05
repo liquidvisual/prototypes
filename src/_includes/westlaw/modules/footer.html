@@ -1,4 +1,4 @@
-{% assign settings = site.data.{{page.site_type}}.settings %}
+{% assign settings = site.data[page.site_type].settings %}
 
 <div class="lv-footer-inner">
     <div class="row collapse is-full-width">
@@ -17,7 +17,7 @@
                     </ul>
                 </li>
 
-                <li><a href="{{ settings.feedback }}" target="_blank">Feedback {{ settings.title }}</a></li>
+                <li><a href="{{ settings.feedback }}" target="_blank">Feedback</a></li>
                 <li><a href="{{ settings.privacy_policy }}" target="_blank">Privacy Policy</a></li>
                 <li><a href="{{ settings.terms_of_use }}" target="_blank">Terms of Use</a></li>
             </ul>
@@ -30,7 +30,7 @@
                     <a href="{{ settings.thomson_reuters_au }}">
                         <img class="hide-for-large-up" width="120" src="/img/westlaw/template/tr-logo-black@2x.png">
                         <img class="show-for-large-up" width="120" src="/img/westlaw/template/tr-logo-white@2x.png">
-                    </a>&nbsp; (Professional) Australia LTD - ABN 64 058 668 | &copy; <b>2015</b>
+                    </a>&nbsp; (Professional) Australia LTD - ABN 64 058 668 - &copy; <b>{{ site.time | date: '%Y' }}</b>
                 </small>
             </div>
         </div>

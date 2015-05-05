@@ -235,8 +235,13 @@ $context-menu-border-color: #D4DCE3;
     }
 
     .active > a:not(.active) {
-        color: #222;
-        font-weight: 600;
+        // color: #222;
+        // font-weight: 600;
+        color: white;
+
+        i {
+            color: $primary-color;
+        }
 
         @media #{$large-up} {
             background: #5E6E7F;

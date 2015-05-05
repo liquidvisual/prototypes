@@ -1,3 +1,4 @@
+{% assign settings = site.data[page.site_type].settings %}
 {% assign username = "John Smith" %}
 
 <section class="text-center large-text-left">
@@ -44,15 +45,18 @@
 
 </section>
 
-<!-- User Profile -->
+<!-- User Menu Buttons -->
 <section class="lv-user-profile text-right show-for-large-up">
 	<div class="left">
 		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
-		    <li class="{% include common/snippets/is_active.html current_path="alerts" %}"><a href="/checkpoint/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
-    		<li class="{% include common/snippets/is_active.html current_path="folders" %}"><a href="/checkpoint/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
-		    <li class="{% include common/snippets/is_active.html current_path="history" %}"><a href="/checkpoint/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-		    <li><a href="/modal_output/checkpoint/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-		    <li class="{% include common/snippets/is_active.html current_path="preferences" %}"><a href="/checkpoint/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+
+			{% for item in settings.user_menu %}
+				{% assign path = item.url | downcase %}
+				<li class="{% include common/snippets/is_active.html current_path=path %} {{ item.visibility }}">
+					<a href="{{ item.url }}"><i class="{{ item.icon }}"></i>&nbsp; {{ item.title }}</a>
+				</li>
+			{% endfor %}
+
 		</ul>
 	</div>
 	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>{{ username | upcase }}</b> - <a href="#">Logout</a></div>

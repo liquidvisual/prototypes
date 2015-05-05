@@ -15,11 +15,97 @@ address: "ABC Street, Earth"
 # Social Networks
 facebook: ""
 
+# Top Menu
+top_menu:
+  - title: Research
+    url: /checkpoint/research/
+    icon: fi-magnifying-glass
+    visibility:
+
+  - title: Workflow
+    url: /checkpoint/workflow/
+    icon: fi-graph-bar
+    visibility: show-for-large-up
+
+  - title: Tools
+    url: /checkpoint/tools/
+    icon: fi-wrench
+    visibility: show-for-large-up
+
+  - title: Learning
+    url: /checkpoint/learning/
+    icon: fi-info
+    visibility:
+
+  - title: Guide
+    url: /checkpoint/guide/
+    icon: fi-book
+    visibility:
+
+# User Menu
+user_menu:
+  - title: Alerts
+    url: /checkpoint/alerts/
+    icon: fi-megaphone
+    visibility:
+
+  - title: Folders
+    url: /checkpoint/folders/
+    icon: fi-folder
+    visibility:
+
+  - title: History
+    url: "#coming"
+    icon: fi-clock
+    visibility:
+
+  - title: Client ID
+    url: "#modal-output"
+    icon: fi-torso
+    visibility:
+
+  - title: Preferences
+    url: /checkpoint/preferences/
+    icon: fi-widget
+    visibility:
+
+  - title: Help
+    url: "http://training.thomsonreuters.com.au/products/westlaw-au/"
+    icon: fi-info
+    visibility: hide-for-large-up
+
+# Touch Menu
+touch_menu:
+  - title: Home
+    url: /checkpoint/
+    id: home-btn
+    icon: fi-home
+    visibility:
+
+  - title: Hints
+    url: "#"
+    id: hints-btn
+    icon: fi-lightbulb
+    visibility:
+
+  - title: Links
+    url: "#"
+    id: favourites-btn
+    icon: fi-star
+    visibility:
+
+  - title: Community
+    url: "#"
+    id: history-btn
+    icon: fi-torsos
+    visibility:
+
 # Links
 thomson_reuters_au: "http://www.thomsonreuters.com.au"
 help: "http://training.thomsonreuters.com.au/products/checkpoint/"
 privacy_policy: "http://www.thomsonreuters.com.au/terms/privacy-policy.aspx"
 terms_of_use: "http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx"
+feedback: "http://www.nicereply.com/thomson-reuters-anz.wlau/westlaw-au"
 
 # Site Links
 checkpoint_world: "https://www.checkpointworld.com"
@@ -27,5 +113,17 @@ proview: "http://thomsonreuters.com/site/proview/"
 westlaw_au: "http://www.westlaw.com.au"
 westlaw_nz: "http://www.westlaw.co.nz"
 
-# Google Analytics
-google_analytics: "UA-XXXXXXXX-X"
+# International Sites
+sites:
+  - title: Checkpoint World
+    url: "https://www.checkpointworld.com"
+    icon: fi-web
+  - title: Proview
+    url: "http://thomsonreuters.com/site/proview/"
+    icon: fi-web
+  - title: Westlaw AU
+    url: "http://www.westlaw.com.au"
+    icon: fi-web
+  - title: Westlaw NZ
+    url: "http://www.westlaw.co.nz"
+    icon: fi-web

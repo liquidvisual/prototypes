@@ -15,6 +15,96 @@ address: "ABC Street, Earth"
 # Social Networks
 facebook: ""
 
+# Top Menu
+top_menu:
+  - title: Research
+    url: /westlaw/research/
+    icon: fi-magnifying-glass
+    visibility:
+
+  - title: Workflow
+    url: /westlaw/workflow/
+    icon: fi-graph-bar
+    visibility:
+
+  - title: Tools
+    url: /westlaw/tools/
+    icon: fi-wrench
+    visibility:
+
+  - title: Newsroom
+    url: /westlaw/newsroom/
+    icon: fi-info
+    visibility:
+
+  - title: Guide
+    url: /westlaw/guide/
+    icon: fi-book
+    visibility:
+
+# User Menu
+user_menu:
+  - title: Alerts
+    url: /westlaw/alerts/
+    icon: fi-megaphone
+    visibility:
+
+  - title: Folders
+    url: /westlaw/folders/
+    icon: fi-folder
+    visibility:
+
+  - title: Contacts
+    url: "#modal-output"
+    icon: fi-address-book
+    visibility:
+
+  - title: History
+    url: "#coming"
+    icon: fi-clock
+    visibility:
+
+  - title: Client ID
+    url: "#modal-output"
+    icon: fi-torso
+    visibility:
+
+  - title: Preferences
+    url: /westlaw/preferences/
+    icon: fi-widget
+    visibility:
+
+  - title: Help
+    url: "http://training.thomsonreuters.com.au/products/westlaw-au/"
+    icon: fi-info
+    visibility: hide-for-large-up
+
+# Touch Menu
+touch_menu:
+  - title: Home
+    url: /westlaw/
+    id: home-btn
+    icon: fi-home
+    visibility:
+
+  - title: Hints
+    url: "#"
+    id: hints-btn
+    icon: fi-lightbulb
+    visibility:
+
+  - title: Links
+    url: "#"
+    id: favourites-btn
+    icon: fi-star
+    visibility:
+
+  - title: History
+    url: "#"
+    id: history-btn
+    icon: fi-clock
+    visibility:
+
 # Links
 thomson_reuters_au: "http://www.thomsonreuters.com.au"
 help: "http://training.thomsonreuters.com.au/products/westlaw-au/"

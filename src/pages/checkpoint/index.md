@@ -1,5 +1,5 @@
 ---
-layout: westlaw/research/search_templates/basic
+layout: checkpoint/research/search_templates/basic
 title: "Research: Basic"
 permalink: /checkpoint/
 ---

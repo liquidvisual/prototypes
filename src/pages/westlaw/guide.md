@@ -21,7 +21,7 @@ permalink: /westlaw/guide/
     }
 
     .lv-content-block {
-        /*padding: 30px;*/
+        padding: 30px;
     }
 
     .page-index > li > a {

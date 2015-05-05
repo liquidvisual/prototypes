@@ -21,7 +21,7 @@ permalink: /checkpoint/guide/
     }
 
     .lv-content-block {
-        /*padding: 30px;*/
+        padding: 30px;
     }
 
     .page-index > li > a {
@@ -42,7 +42,7 @@ permalink: /checkpoint/guide/
 
 <div class="lv-content-block">
 
-    <h1>Westlaw Guide</h1>
+    <h1>Checkpoint Guide</h1>
     <hr>
 
     <h3 class="panel">Global Pages</h3>

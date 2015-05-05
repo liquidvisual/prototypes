@@ -1,16 +1,17 @@
 ---
-layout: checkpoint/app/internal
-context_menu: "checkpoint/app/context_menu_output/search_templates.html"
+layout: common/internal
+context_menu: "checkpoint/context_menu_output/search_templates.html"
 ---
 
-<div class="row">
-    <div class="columns">
-        <h3 class="left">Basic</h3>
-        <!-- Optional hint on mobile -->
-        <p class="right"><a href="/modal_output/checkpoint/terms-and-connectors.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
-        <hr>
+<!-- HEADER -->
+<header class="header">
+    <div class="row">
+        <div class="columns">
+            <h3 class="left">Basic</h3>
+            <hr>
+        </div>
     </div>
-</div>
+</header>
 
 <!-- SEARCH FORM -->
 <form class="lv-search-form" action="/research/search-results/" method="post" novalidate>
@@ -20,45 +21,40 @@ context_menu: "checkpoint/app/context_menu_output/search_templates.html"
             <!-- Keyword Search -->
             <div class="row collapse">
                 <div class="small-10 medium-9 columns">
-                    <input name="q" type="text" placeholder="Type keywords to search">
+                    <input name="Search" type="text" placeholder="Type keywords to search">
                 </div>
                 <div class="small-2 medium-3 columns">
                     <!-- Switch anchor for button on production -->
                     <!-- <button type="submit" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> Search</button> -->
-                    <a href="/research/tax-exempt-10-deduct/" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Search</span></a>
+                    <a href="#" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Search</span></a>
                 </div>
             </div>
 
             <!-- Preferred Results Format -->
             <div class="row show-for-large-up">
-                <div class="medium-3 columns">
-                    <label class="text-left medium-text-right">
-                        <span class="text">Preferred results format:</span>
-                    </label>
+                <div class="columns">
+                    <ul class="inline-list">
+                        <li><label><input type="radio" name="sf-result-type" value="Free Text" checked>&nbsp; Tree of Contents</label></li>
+                        <li><label><input type="radio" name="sf-result-type" value="Title">&nbsp; Document List</label></li>
+                    </ul>
                 </div>
-                <div class="medium-9 columns">
-                    <input type="radio" name="sf-result-type" value="toc" id="sf-tree-of-contents">
-                    <label for="sf-tree-of-contents" id="sf-tree-of-contents">Tree of Contents</label>
-                    <input type="radio" name="sf-result-type" value="list" id="sf-document-list" checked>
-                    <label for="sf-document-list" id="sf-document-list">Document List</label>
-                </div>
-            </div>
+            </div> <!-- .row -->
 
         </div>
-    </div> <!-- .row -->
-</form>
+    </div>
+</form> <!-- .lv-search-form -->
 
 <!-- ************************ END FORM ************************ -->
 
-<!-- DOCUMENT OPTIONS -->
+<!-- BREADCRUMBS + EXPORT OPTIONS -->
 <div class="row">
     <div class="columns">
         {% include common/snippets/breadcrumbs.html %}
-        {% include checkpoint/app/export_options/search_basic.html %}
+        {% include checkpoint/export_options/search_basic.html %}
     </div>
 </div>
 
-<!-- EXPAND LEVEL -->
+<!-- EXPAND LEVEL (CHECKPOINT ONLY) -->
 <div class="row">
     <div class="columns text-right">
         <p>Expand level: <a href="#">1</a> | <a href="#">2</a></p>
@@ -68,6 +64,6 @@ context_menu: "checkpoint/app/context_menu_output/search_templates.html"
 <!-- TOC -->
 <div class="row">
     <div class="columns">
-        {% include checkpoint/app/toc_output/toc_basic.html %}
+        {% include checkpoint/toc_output/toc_basic.html %}
     </div>
 </div>

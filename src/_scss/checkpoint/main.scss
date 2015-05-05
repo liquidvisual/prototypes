@@ -53,6 +53,17 @@
 // Pages
 @import "app/pages/dashboard";
 
+@import "../westlaw/app/legacy/overrides/delivery-options";
+@import "../westlaw/app/legacy/overrides/document-context";
+@import "../westlaw/app/legacy/overrides/document";
+@import "../westlaw/app/legacy/overrides/general";
+@import "../westlaw/app/legacy/overrides/search-result-options"; // context menu mostly
+// @import "../westlaw/app/legacy/overrides/search-results-checkpoint"; // overrides
+@import "../westlaw/app/legacy/overrides/search-results-westlaw"; // overrides
+@import "../westlaw/app/legacy/overrides/search-templates";
+@import "../westlaw/app/legacy/overrides/toc";
+@import "../westlaw/app/legacy/overrides/user-preferences";
+
 // Legacy
 // @import "app/legacy/legacy";
 // @import "app/legacy/legacy-document";

@@ -1,0 +1,44 @@
+<div class="lv-export-options disabled">
+    <div class="row">
+        <div class="medium-6 columns">
+            <ul class="lv-inline-list small-gaps text-center medium-text-left">
+                <li><a title="Save to My Folders" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-save"></i></a></li>
+                <li><a title="Download" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-download"></i></a></li>
+                <li><a title="Print" class="ajax-modal" href="/modal_output/checkpoint/print-document.html"><i class="fi-print"></i></a></li>
+                <li><a title="Email" class="ajax-modal" href="/modal_output/checkpoint/email-document.html"><i class="fi-mail"></i></a></li>
+                <li><a title="Create Alert" class="ajax-modal" href="/modal_output/checkpoint/add-to-my-quicklinks.html"><i class="fi-megaphone"></i></a></li>
+                <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-rss"></i></a></li>
+            </ul>
+        </div>
+        <div class="medium-6 columns">
+            <form novalidate action="/research/search-results/" method="post">
+                <div class="row">
+                    <div class="medium-5 columns text-center medium-text-right">
+                        <label class="inline">Browse By:</label>
+                    </div>
+                    <div class="medium-7 columns">
+                        <select id="browseByBasic">
+                            <option value="anzbycontenttype" selected="selected">Content Type</option>
+                            <option value="anzhmbyproduct">Product Title</option>
+                            <option value="anzbypracticearea">Practice Area</option>
+                            <option value="anzhmbyjurisdiction">Jurisdiction</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> <!-- .row -->
+</div> <!-- .lv-export-options -->
+
+{% comment %}
+<div class="lv-export-options sticky-scroll">
+    <ul class="lv-inline-list small-gaps text-center medium-text-left">
+        <li><a title="Save to My Folders" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-save"></i></a></li>
+        <li><a title="Download" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-download"></i></a></li>
+        <li><a title="Print" class="ajax-modal" href="/modal_output/checkpoint/print-document.html"><i class="fi-print"></i></a></li>
+        <li><a title="Email" class="ajax-modal" href="/modal_output/checkpoint/email-document.html"><i class="fi-mail"></i></a></li>
+        <li><a title="Create Alert" class="ajax-modal" href="/modal_output/checkpoint/add-to-my-quicklinks.html"><i class="fi-megaphone"></i></a></li>
+        <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-rss"></i></a></li>
+    </ul>
+</div> <!-- .lv-export-options -->
+{% endcomment %}

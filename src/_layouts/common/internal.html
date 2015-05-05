@@ -4,13 +4,13 @@ layout: common/master
 
 <!-- HEADER -->
 <div class="lv-header">
-    {% include {{page.site_type}}/modules/header.html %}
+    {% include {{page.site_type}}/modules/header.html %} <!-- Unique -->
 </div>
 
 <!-- NAVIGATION -->
 <nav class="lv-navigation show-for-large-up">
     <div class="lv-topbar">
-        {% include westlaw/menus/top_menu.html %} <!-- Share this -->
+        {% include common/menus/top_menu.html %} <!-- Common -->
     </div>
 </nav>
 
@@ -19,7 +19,7 @@ layout: common/master
 
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
-        {% include westlaw/menus/context_menu.html %} <!-- Share this -->
+        {% include common/menus/context_menu.html %} <!-- Common -->
     </nav>
 
     <!-- MAIN -->
@@ -36,19 +36,19 @@ layout: common/master
 
         <!-- FOOTER -->
         <footer class="lv-footer">
-            {% include westlaw/modules/footer.html %} <!-- Share this -->
+            {% include common/modules/footer.html %} <!-- Common -->
         </footer>
 
     </main> <!-- .lv-main -->
 
     <!-- SIDEBAR -->
     <aside class="lv-sidebar">
-        {% include westlaw/modules/sidebar.html %}
+        {% include common/modules/sidebar.html %} <!-- Common -->
     </aside>
 
 </section> <!-- .lv-stage -->
 
 <!-- TOUCH MENU -->
 <div class="lv-touch-menu hide-for-large-up">
-    {% include westlaw/menus/touch_menu.html %}
+    {% include common/menus/touch_menu.html %} <!-- Common -->
 </div>

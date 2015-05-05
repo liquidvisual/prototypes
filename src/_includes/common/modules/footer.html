@@ -1,0 +1,39 @@
+{% assign settings = site.data[page.site_type].settings %}
+
+<div class="lv-footer-inner">
+    <div class="row collapse is-full-width">
+
+        <!-- Footer Links -->
+        <div class="medium-7 medium-push-5 columns">
+            <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
+                <li><a href="{{ settings.help }}" target="_blank">Help</a></li>
+
+                <li class="has-dropdown">
+                    <span class="anchor">Sites</span>
+                    <ul class="lv-dropdown">
+                        {% for item in settings.sites %}
+                            <li><a href="#"><i class="flag-icon {{item.icon}}"></i>&nbsp; {{item.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                <li><a href="{{ settings.feedback }}" target="_blank">Feedback</a></li>
+                <li><a href="{{ settings.privacy_policy }}" target="_blank">Privacy Policy</a></li>
+                <li><a href="{{ settings.terms_of_use }}" target="_blank">Terms of Use</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer Legal -->
+        <div class="medium-5 medium-pull-7 columns">
+            <div class="text-center medium-text-left">
+                <small class="lv-footer-legal">
+                    <a href="{{ settings.thomson_reuters_au }}">
+                        <img class="hide-for-large-up" width="120" src="/img/westlaw/template/tr-logo-black@2x.png">
+                        <img class="show-for-large-up" width="120" src="/img/westlaw/template/tr-logo-white@2x.png">
+                    </a>&nbsp; (Professional) Australia LTD - ABN 64 058 668 - &copy; <b>{{ site.time | date: '%Y' }}</b>
+                </small>
+            </div>
+        </div>
+
+    </div> <!-- .row -->
+</div> <!-- .lv-footer-inner -->

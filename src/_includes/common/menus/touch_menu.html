@@ -1,0 +1,10 @@
+{% assign settings = site.data[page.site_type].settings %}
+
+<div class="icon-bar four-up">
+    {% for item in settings.touch_menu %}
+        <a class="item" href="{{ item.url }}" id="{{ item.id }}">
+            <i class="{{ item.icon }}"></i>
+            <label>{{ item.title }}</label>
+        </a>
+    {% endfor %}
+</div>

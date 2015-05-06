@@ -1,10 +1,9 @@
 ---
 layout: checkpoint/research/search_results/result_01
-title: Research Results
+title: "Research Results: 'tax exempt! +10 deduct!' (Doc Listing)"
+type: search_result
 context_menu: "checkpoint/context_menu_output/search_summary_01.html"
 ---
-
-<!-- Search Term: tax exempt! +10 deduct! -->
 
 <!-- START CHECKPOINT OUTPUT -->
 

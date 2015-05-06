@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/search_results/result_01
-title: Research Results
+title: "Research Results: 'tax exempt! +10 deduct!' + 'corporate' + filter: 'exempt commentary' (Doc Listing)"
+type: search_result
 context_menu: "checkpoint/context_menu_output/search_summary_03.html"
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Checklist of Employer Deductions
+title: "Sample 04: 'Checklist of Employer Deductions'"
+type: sample_document
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

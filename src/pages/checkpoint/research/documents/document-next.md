@@ -1,7 +1,8 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Recurring Employee Declarations
-context_menu: "checkpoint//context_menu_output/document_options_02.html"
+title: "Research: 'Document 2/2 - Recurring Employee Declarations'"
+type: document
+context_menu: "checkpoint/context_menu_output/document_options_02.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

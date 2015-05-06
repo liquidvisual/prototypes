@@ -1,0 +1,143 @@
+---
+layout: common/internal
+---
+
+{% assign settings = site.data[page.site_type].settings %}
+
+<style>
+    .lv-guide ul, ol {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .lv-guide ul {
+        list-style: none;
+    }
+
+    .lv-guide ol > li {
+        margin-bottom: 15px;
+    }
+
+    .lv-guide.lv-content-block {
+        padding: 30px;
+    }
+
+    .lv-guide .disabled {
+        color: #ddd;
+        font-weight: normal !important;
+    }
+
+    .lv-guide .panel {
+        margin-bottom: 30px;
+    }
+
+    .lv-guide .panel p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: grey;
+    }
+</style>
+
+<section class="lv-content-block lv-guide">
+
+    <h1>{{ page.title }}</h1>
+    <hr>
+
+    <!-- GLOBAL PAGES -->
+    <h3 class="panel">Global Pages</h3>
+    <p><strong><a href="/"><i class="fi-layout"></i>&nbsp; LOBBY</a></strong><br><strong>Tip:</strong> launch from any page by clicking the top left logo.</p>
+    <p><strong><a href="/docs/"><i class="fi-book"></i>&nbsp; DOCS</a></strong></p>
+    <p><strong><a href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; REPO</a></strong></p>
+    <br>
+
+    <!-- MAIN PAGES -->
+    <h3 class="panel">Main Pages</h3>
+    <ol>
+        {% for item in site.data[page.site_type].settings.top_menu %}
+            {% unless item.exclude_from_guide %}
+                <li><a title="Layout: {{ item.layout }}" href="{{ item.url }}"><strong>{{ item.title }}</strong></a> - <small>{{ item.url }}</small></li>
+            {% endunless %}
+        {% endfor %}
+
+        {% for item in site.data[page.site_type].settings.user_menu %}
+            {% unless item.exclude_from_guide %}
+                <li><a title="Layout: {{ item.layout }}" href="{{ item.url }}"><strong>{{ item.title }}</strong></a> - <small>{{ item.url }}</small></li>
+            {% endunless %}
+        {% endfor %}
+    </ol>
+    <br>
+
+    <!-- SEARCH TEMPLATES -->
+    <h3 class="panel">Search Templates</h3>
+    <ol>
+        {% assign pages = site.pages | where: "type", "search_template" | where: "site_type", page.site_type | sort: "url" %}
+        {% for item in pages %}
+            <li><a title="Layout: {{ item.layout }}" href="{{ item.url }}">
+
+            <!-- Make more readable -->
+            {% assign split_title = item.title | split: ':' %}
+            <strong>{{ split_title[0] }}:</strong> {{ split_title[1] }}
+
+            </a> - <small>{{ item.url }}</small></li>
+        {% endfor %}
+    </ol>
+    <br>
+
+    <!-- SEARCH RESULTS -->
+    <h3 class="panel">Search Results</h3>
+    <ol>
+        {% assign pages = site.pages | where: "type", "search_result" | where: "site_type", page.site_type | sort: "url" %}
+        {% for item in pages %}
+            <li><a title="Layout: {{ item.layout }}" href="{{ item.url }}">
+
+            <!-- Make more readable -->
+            {% assign split_title = item.title | split: ':' %}
+            <strong>{{ split_title[0] }}:</strong> {{ split_title[1] }}
+
+            </a> - <small>{{ item.url }}</small></li>
+        {% endfor %}
+    </ol>
+    <br>
+
+    <!-- DOCUMENTS -->
+    <h3 class="panel">Documents</h3>
+    <ol>
+        {% assign pages = site.pages | where: "type", "document" | where: "site_type", page.site_type | sort: "url" %}
+        {% for item in pages %}
+            <li><a title="Layout: {{ item.layout }}" href="{{ item.url }}">
+
+            <!-- Make more readable -->
+            {% assign split_title = item.title | split: ':' %}
+            <strong>{{ split_title[0] }}:</strong> {{ split_title[1] }}
+
+            </a> - <small>{{ item.url }}</small></li>
+        {% endfor %}
+    </ol>
+    <br>
+
+    <!-- DOCUMENT SAMPLES -->
+    <div class="panel">
+        <h3>Document Samples for Testing</h3>
+        <p><b>Please note:</b> Context Menu (LHS) content has been intentionally excluded - as we already know how they display. The focus with these links is purely on the document body itself.</p>
+    </div>
+    <ol>
+        {% assign pages = site.pages | where: "type", "sample_document" | where: "site_type", page.site_type | sort: "url" %}
+        {% for item in pages %}
+            <li><a title="Layout: {{ item.layout }}" href="{{ item.url }}">
+
+            <!-- Make more readable -->
+            {% assign split_title = item.title | split: ':' %}
+            <strong>{{ split_title[0] }}:</strong> {{ split_title[1] }}
+
+            </a>
+
+            {% if item.original_url %}
+                <small>(<a style="color: #F8894E;" href="{{ item.original_url }}">Original URL</a>)</small>
+            {% endif %}
+
+             - <small>{{ item.url }}</small></li>
+        {% endfor %}
+    </ol>
+    <br>
+
+</section>

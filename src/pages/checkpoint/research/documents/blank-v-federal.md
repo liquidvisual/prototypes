@@ -1,7 +1,8 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Blank v Federal Commisioner of Taxation (No 2)
-context_menu: "checkpoint//context_menu_output/document_options_03.html"
+title: "Research: 'Document 1/1 - Blank v Federal Commisioner of Taxation (No 2)'"
+type: document
+context_menu: "checkpoint/context_menu_output/document_options_03.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Tax-exempt Body Entertainment Fringe Benefits
+title: "Research: 'Document 1/2 - Tax-exempt Body Entertainment Fringe Benefits'"
+type: document
 context_menu: "checkpoint/context_menu_output/document_options_01.html"
 ---
 

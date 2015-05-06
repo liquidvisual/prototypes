@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Engagement Acceptance and Continuance
+title: "Sample 02: 'Engagement Acceptance and Continuance'"
+type: sample_document
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

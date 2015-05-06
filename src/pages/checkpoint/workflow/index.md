@@ -1,9 +1,6 @@
 ---
 layout: checkpoint/workflow/workflow
-title: Workflow
+title: "Workflow"
 ---
 
-<!-- START CHECKPOINT OUTPUT -->
-
-
-<!-- END CHECKPOINT OUTPUT -->
+<!--- This child document initializes the page in Jekyll. -->

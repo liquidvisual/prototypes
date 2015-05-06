@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/workflow/documents/document_01
-title: Annual Trust Distributions Workflow
+title: "Workflow: 'Document 1/1 - Annual Trust Distributions Workflow'"
+type: document
 context_menu: "checkpoint/context_menu_output/document_options_04.html"
 ---
 

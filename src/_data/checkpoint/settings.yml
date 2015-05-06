@@ -1,16 +1,15 @@
 # GLOBAL SITE SETTINGS
 
 # General
-seo_title: ""
-title: ""
+seo_title: "Checkpoint"
+title: "Checkpoint Prototype"
 company: "Thomson Reuters"
 description: ""
 
 # Contact Info
-email: test@example.com
+email: support@thomsonreuters.com
 phone: 1800 020 548
 fax: (05) 555 555
-address: "ABC Street, Earth"
 
 # Social Networks
 facebook: ""
@@ -41,6 +40,7 @@ top_menu:
     url: /pages/checkpoint/guide/
     icon: fi-book
     visibility:
+    exclude_from_guide: true
 
 # User Menu
 user_menu:
@@ -63,6 +63,7 @@ user_menu:
     url: "#modal-output"
     icon: fi-torso
     visibility:
+    exclude_from_guide: true
 
   - title: Preferences
     url: /pages/checkpoint/user/preferences/
@@ -73,6 +74,7 @@ user_menu:
     url: "http://training.thomsonreuters.com.au/products/westlaw-au/"
     icon: fi-info
     visibility: hide-for-large-up
+    exclude_from_guide: true
 
 # Touch Menu
 touch_menu:

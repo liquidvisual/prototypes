@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: YA 1 Definitions
+title: "Sample 05: 'YA 1 Definitions'"
+type: sample_document
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

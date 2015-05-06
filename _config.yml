@@ -14,34 +14,6 @@ include: ['.htaccess']
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
 show_drafts: true
-
-# Docs
-collections:
-  docs:
-    output: true
-    permalink: /docs/:path/
-
-# Defaults
-defaults:
-  -
-    scope:
-      path: ""
-      type: "docs" # a collection in your site, in plural form
-    values:
-      layout: "common/docs/docs"
-      site_type: "westlaw" # one or the other, doesn't matter
-      context_menu: "common/docs/context_menu_content.html"
-  -
-    scope:
-      path: "pages/westlaw"
-    values:
-      site_type: "westlaw"
-  -
-    scope:
-      path: "pages/checkpoint"
-    values:
-      site_type: "checkpoint"
-
 permalink: pretty
 
 # Markdown library
@@ -72,3 +44,37 @@ highlighter: pygments
 
 gems:
   - jekyll-sitemap
+
+#----------------------------------------------------------------
+# Collections
+# ---------------------------------------------------------------
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+#----------------------------------------------------------------
+# Defaults
+# ---------------------------------------------------------------
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "docs" # a collection in your site, in plural form
+    values:
+      layout: "common/public/docs"
+      site_type: "westlaw" # one or the other, doesn't matter
+      context_menu: "common/docs/context_menu_content.html"
+  -
+    scope:
+      path: "pages/westlaw"
+    values:
+      site_type: "westlaw"
+  -
+    scope:
+      path: "pages/checkpoint"
+    values:
+      site_type: "checkpoint"
+

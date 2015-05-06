@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Annuities and Pensions - Life Expectation Factors
+title: "Sample 03: 'Annuities and Pensions - Life Expectation Factors'"
+type: sample_document
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

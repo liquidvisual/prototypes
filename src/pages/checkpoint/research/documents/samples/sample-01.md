@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/research/documents/document_01
-title: Table of Amending Legislation
+title: "Sample 01: 'Table of Amending Legislation'"
+type: sample_document
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

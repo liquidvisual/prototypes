@@ -35,7 +35,9 @@ $('.lv-advanced-options-btn').click(function(e){
 // needs to be in the markup to prevent FLAUC
 //-----------------------------------------------------------------
 
-$('.lv-partial-view, #resultsContainerForm .result').each(function(){
+var partialTargets = $('.lv-partial-view, #resultsContainerForm .result');
+
+partialTargets.each(function(){
     var $this = $(this);
     var expander = $('.lv-partial-view-btn.lv-non-legacy');
     var expanderOnPage = expander.length;

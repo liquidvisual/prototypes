@@ -35,7 +35,8 @@
     <!-- endbuild -->
 
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/assets/css/{{page.site_type}}/minified-ie8.css">
+    <link rel="stylesheet" href="/assets/css/{{page.site_type}}/foundation-ie8.css">
+    <link rel="stylesheet" href="/assets/css/{{page.site_type}}/app-ie8.css">
     <![endif]-->
 
     <!-- Priority Scripts -->
@@ -59,34 +60,34 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <!-- build:js(src) /assets/scripts/westlaw/minified.js -->
+    <!-- build:js(src) /assets/scripts/{{ page.site_type }}/app.js -->
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/_bower_components/jquery.transit/jquery.transit.js"></script>
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
-
     <script src="/_bower_components/footable/js/footable.js"></script>
     <script src="/_bower_components/footable/js/footable.paginate.js"></script>
     <script src="/_bower_components/footable/js/footable.sort.js"></script>
     <script src="/_bower_components/footable/js/footable.filter.js"></script>
+    <script src="/scripts/common/vendor/jquery-ui.js"></script>
+    <script src="/scripts/common/app/context-menu.js"></script>
+    <script src="/scripts/common/app/dashboard.js"></script>
+    <script src="/scripts/common/app/dropdowns.js"></script>
+    <script src="/scripts/common/app/modal.js"></script>
+    <script src="/scripts/common/app/sidebar.js"></script>
+    <script src="/scripts/common/app/tables.js"></script>
+    <script src="/scripts/common/app/tooltips.js"></script>
+    <script src="/scripts/common/app/main.js"></script>
+    <!-- endbuild -->
 
-    <script src="/scripts/westlaw/legacy/jquery-ui.js"></script>
-    <script src="/scripts/westlaw/adhoc-datepicker.js"></script>
-    <script src="/scripts/westlaw/adhoc-export-options.js"></script>
-    <script src="/scripts/westlaw/adhoc-filter-toc.js"></script>
-    <script src="/scripts/westlaw/adhoc-list-delete.js"></script>
-    <script src="/scripts/westlaw/adhoc-toc.js"></script>
-
-    <script src="/scripts/westlaw/context-menu.js"></script>
-    <script src="/scripts/westlaw/dashboard.js"></script>
-    <script src="/scripts/westlaw/dropdowns.js"></script>
-    <script src="/scripts/westlaw/modal.js"></script>
-    <script src="/scripts/westlaw/sidebar.js"></script>
-    <script src="/scripts/westlaw/tables.js"></script>
-    <script src="/scripts/westlaw/tooltips.js"></script>
-    <script src="/scripts/westlaw/main.js"></script>
+    <!-- build:js(src) /assets/scripts/{{ page.site_type }}/adhoc-only.js -->
+    <script src="/scripts/common/adhoc/adhoc-datepicker.js"></script>
+    <script src="/scripts/common/adhoc/adhoc-export-options.js"></script>
+    <script src="/scripts/common/adhoc/adhoc-filter-toc.js"></script>
+    <script src="/scripts/common/adhoc/adhoc-list-delete.js"></script>
+    <script src="/scripts/common/adhoc/adhoc-toc.js"></script>
     <!-- endbuild -->
 
     <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->

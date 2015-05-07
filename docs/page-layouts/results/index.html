@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Westlaw">
+    <title>Results - Westlaw</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/westlaw/template/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
+
+    <!-- Google Fonts CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/foundation.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/legacy-core.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/app.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css">
+    <![endif]-->
+
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="lv-super">
+        <div class="lv-page">
+
+            <style>
+    html, body, .lv-main, .lv-stage {
+        /*background: white;*/
+    }
+
+    /* move this into SCSS soon */
+    @media (min-width: 1024px) {
+        .lv-context-menu-fixed {
+            top: 60px;
+            bottom: 0;
+        }
+    }
+
+    .lv-context-menu ul ul li a {
+        color: #eee;
+        margin-left: 20px;
+        display: none;
+    }
+
+    /*.lv-context-menu h3 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color: black;
+        border-bottom: 1px solid #D4DCE3;
+    }*/
+
+    .lv-context-menu h2 + ul {
+        /*border-top: 1px solid #D4DCE3;*/
+    }
+</style>
+
+<!-- HEADER -->
+<div class="lv-header">
+    <section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
+	<div class="left">
+		<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+	</div>
+
+	<div class="lv-logo-wrapper">
+
+		<!-- Logo -->
+		<a class="lv-logo" href="/"><img width="143" src="/assets/img/common/template/docs-logo-type@2x.png"></a>
+
+		<!-- Site Select -->
+		<div class="lv-site-select show-for-medium-up">
+			<i class="fa fa-caret-down"></i>
+			<ul>
+				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
+				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+			</ul>
+		</div> <!-- .lv-site-select -->
+
+	</div> <!-- .logo-wrapper -->
+
+</section>
+</div>
+
+<!-- STAGE -->
+<section class="lv-stage">
+
+    <!-- CONTEXT MENU -->
+    <nav class="lv-context-menu">
+        <div class="lv-context-menu-fixed">
+
+	<!-- Dynamic Content - each page will point to a partial to pass through -->
+	<nav class="lv-context-menu-panel" aria-hidden="true">
+		
+		    
+	<h3>Getting Started</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/">Welcome</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/installation-and-setup/">Installation & Setup</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/basic-usage/">Basic Usage</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/directory-structure/">Directory Structure</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/compatibility/">Compatibility</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Basics</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/basics/templates/">Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/data-files/">Data Files</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/css-components/">CSS Components</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/javascript/">JavaScript</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Page Layouts</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/page-layouts/dashboard/">Dashboard</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/search-templates/">Search Templates</a>
+				</li>
+			
+				<li class="active">
+					<a href="/docs/page-layouts/results/">Results</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/documents/">Documents</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/alerts/">Alerts</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/folders/">Folders</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/preferences/">Preferences</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Miscellaneous</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a>
+				</li>
+			
+		</ul>
+	
+
+		
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- Top Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
+		
+
+<ul>
+    
+
+    	
+
+		
+		    <li class="">
+		        <a href="/pages/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+		    </li>
+		
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/research/search-templates/basic/"><i class="fi-magnifying-glass"></i> Research</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/guide/"><i class="fi-book"></i> Guide</a>
+	        </li>
+        
+
+    
+</ul>
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- User Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-user-menu js-user-menu" aria-hidden="true">
+		
+
+<ul>
+    <li><a href="#LOGOUT"><img width="30" src="/assets/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
+
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/coming-soon.html"><i class="fi-address-book"></i>&nbsp; Contacts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="#coming"><i class="fi-clock"></i>&nbsp; History</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/change-client-id.html"><i class="fi-torso"></i>&nbsp; Client ID</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/user/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ hide-for-large-up">
+			<a class="" href="http://training.thomsonreuters.com.au/products/westlaw-au/"><i class="fi-info"></i>&nbsp; Help</a>
+		</li>
+	
+</ul>
+	</nav> <!-- .lv-context-menu-panel -->
+
+</div> <!-- .lv-context-menu-fixed -->
+    </nav>
+
+    <!-- MAIN -->
+    <main class="lv-main">
+
+        <!-- CONTENT -->
+        <div class="lv-content">
+            <div class="row">
+                <div class="columns">
+                    <h1 id="results">Results</h1>
+
+<p>The “Search Results” template is probably one of the most problematic due to the large amount of varying content and styles. This prototype’s template consists of existing app DOM output and has not been re-written in anyway. The idea is to try and re-style the existing markup so these templates don’t have to be written.</p>
+
+<h3 id="concerns">Concerns</h3>
+
+<p>The markup differs considerably between Checkpoint and Westlaw. The latter is much harder to override since it’s overly dependant on a long list of styles. Checkpoint has more consistent and predictable markup, Eg. each search result is contained within a separate <code>&lt;div class="result"&gt;&lt;/div&gt;</code> making it easy to target and create show/hide functionality with a JavaScript inserted snippet on mobile (see <a href="/docs/basics/javascript/">JavaScript</a>).</p>
+
+<p>Checkpoint’s styles are able to be rewritten - however Westlaw <strong>requires</strong> the existing CSS to really function properly. This makes it extremely hard to work with and override.</p>
+
+<p>Westlaw at present, incorporates the existing stylesheet from the app. An overriding stylesheet is then placed after it which targets only mobile through a media query - this then performs a blanket reset which strips margins, floats, margins and padding that would otherwise cause alignment issues with the responsive application frame.</p>
+
+<p>Curiously the headings of the results in Westlaw are <strong>NOT</strong> anchor links. I suspect these may function as links with some sort of JavaScript intervening. Checkpoint on the other hand, has anchors as headings - which is more predicatble.</p>
+
+<h3 id="partial-view-and-westlaw-limitations">Partial View and Westlaw Limitations</h3>
+
+<p>As mentioned above, this template utilises a JavaScript snippet which inserts a show/hide button on device views. On Checkpoint this works fine, although given the problematic markup of Westlaw with results not being wrapped predictably, this feature has been omitted. At present the mobile view of results is mostly unreadable on mobile because of the wrapping issue which causes excessive scrolling - a fix would require appropriate wrapping of the result elements. Right now, each result is split into multiple result divs, which makes it impossible to target correctly.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </main> <!-- .lv-main -->
+
+</section> <!-- .lv-stage -->
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/westlaw/app.js"></script>
+
+    <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
+
+    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
+
+    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

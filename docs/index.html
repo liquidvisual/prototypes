@@ -11,17 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Westlaw">
-    <title>
-        
-        
-            
-                Welcome - Westlaw
-            
-        
-    </title>
+    <title>Welcome - Westlaw</title>
 
-    <link rel="canonical" href="/docs/">
-    <link rel="shortcut icon" type='image/x-icon' href='/assets/img/westlaw/template/favicon.ico'>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/westlaw/template/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
 
     <!-- Google Fonts CDN -->
@@ -29,7 +21,9 @@
 
     <link rel="stylesheet" href="/assets/css/westlaw/foundation.css">
 
-    <link rel="stylesheet" href="/assets/css/westlaw/minified.css">
+    <link rel="stylesheet" href="/assets/css/westlaw/legacy-core.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/app.css">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css">
@@ -53,15 +47,29 @@
     html, body, .lv-main, .lv-stage {
         /*background: white;*/
     }
-    .lv-context-menu-fixed {
-        /*top: 60px;*/
-        /*bottom: 0;*/
+
+    /* move this into SCSS soon */
+    @media (min-width: 1024px) {
+        .lv-context-menu-fixed {
+            top: 60px;
+            bottom: 0;
+        }
     }
+
     .lv-context-menu ul ul li a {
         color: #eee;
         margin-left: 20px;
         display: none;
     }
+
+    /*.lv-context-menu h3 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color: black;
+        border-bottom: 1px solid #D4DCE3;
+    }*/
 
     .lv-context-menu h2 + ul {
         /*border-top: 1px solid #D4DCE3;*/
@@ -164,6 +172,38 @@
 
 	<h3>Page Layouts</h3>
 	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/page-layouts/dashboard/">Dashboard</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/search-templates/">Search Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/results/">Results</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/documents/">Documents</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/alerts/">Alerts</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/folders/">Folders</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/preferences/">Preferences</a>
+				</li>
+			
+		</ul>
+	
 
 	<h3>Miscellaneous</h3>
 	
@@ -185,60 +225,105 @@
 
 	<!-- Top Menu - visible via JavaScript -->
 	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
-		<ul>
-    <li class="">
-        <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
-    </li>
-    <li class="
+		
+
+<ul>
+    
+
+    	
+
+		
+		    <li class="">
+		        <a href="/pages/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+		    </li>
+		
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
     
 
     
-">
-        <a href="/westlaw/research/"><i class="fi-magnifying-glass"></i> Research</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/research/search-templates/basic/"><i class="fi-magnifying-glass"></i> Research</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
     
 
     
-">
-        <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
     
 
     
-">
-        <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
     
 
     
-">
-        <a href="/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
     
 
     
-">
-        <a href="/westlaw/guide/"><i class="fi-info"></i> Guide</a>
-    </li>
+ ">
+	            <a href="/pages/westlaw/guide/"><i class="fi-book"></i> Guide</a>
+	        </li>
+        
+
+    
 </ul>
 	</nav> <!-- .lv-context-menu-panel -->
 
@@ -247,20 +332,97 @@
 		
 
 <ul>
-    <li><a href="#LOGOUT"><img width="30" src="/westlaw/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
-	<li><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
-	<li><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
-	<li><a href="/westlaw/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
-    <li><a href="/westlaw/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-    <li><a href="/westlaw/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/westlaw/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
-    <li><a href=""><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li><a href="#LOGOUT"><img width="30" src="/assets/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
+
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/coming-soon.html"><i class="fi-address-book"></i>&nbsp; Contacts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ ">
+			<a class="" href="#coming"><i class="fi-clock"></i>&nbsp; History</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/change-client-id.html"><i class="fi-torso"></i>&nbsp; Client ID</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/user/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+ hide-for-large-up">
+			<a class="" href="http://training.thomsonreuters.com.au/products/westlaw-au/"><i class="fi-info"></i>&nbsp; Help</a>
+		</li>
+	
 </ul>
 	</nav> <!-- .lv-context-menu-panel -->
 
 </div> <!-- .lv-context-menu-fixed -->
-
-
     </nav>
 
     <!-- MAIN -->
@@ -279,106 +441,12 @@
 
 <hr />
 
-<p>This project is built with <a href="http://jekyllrb.com">Jekyll 2.5.3</a> - a static site generator. It also uses <a href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner and <a href="http://bower.io">Bower</a> for package management. This workflow was scaffolded with a <a href="http://yeoman.io">Yeoman</a> generator called <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> which simply automates the process of setting it all up.</p>
+<p>The purpose of this project is to test and assess the impact of a responsive retro-fitting of both Checkpoint and Westlaw. The original goal was to design and create a responsive user interface (referred to as the ‘Application Frame’ throughout this document) that could accomodate large portions of existing code without too much modification.</p>
 
-<p>The repo for all the source files are found here:</p>
+<p>This has been successful <strong>to a point</strong>, so far. The complexity of search templates across both applications require a re-write of those form elements to be responsive - these cannot be retro-fitted. I have however devised a simple way to generate templates with little effort using a series of includes and variables which I will explain later on.</p>
 
-<p><a href="https://github.com/liquidvisual/brs-0115">https://github.com/liquidvisual/brs-0115</a></p>
+<p>Mostly everything else is using markup directly output from the DOM. The premise of this working hinges on the fact that all CSS is essentially left behind - save for what is included with the prototype. JavaScript will carry over from the apps, but this is expected to conflict at certain points.</p>
 
-<h3 id="on-mac">On Mac:</h3>
-
-<p>You may need to install Ruby, Ruby Gems, NodeJS &amp; Git. There are detailed instructions on the <a href="http://jekyllrb.com/docs/installation/">Jekyll</a> website.</p>
-
-<pre><code class="language-shell">git clone git@github.com:liquidvisual/brs-0115.git
-cd brs-0115
-bundle install
-npm install
-bower install
-grunt serve
-# =&gt; Now browse to http://localhost:9292
-</code></pre>
-
-<pre><code class="language-shell">git clone git@github.com:liquidvisual/brs-0115.git
-cd brs-0115
-</code></pre>
-
-<p>For production:</p>
-
-<pre><code>grunt build # =&gt; to concat and minify etc. Creates './dist' folder.
-</code></pre>
-
-<h3 id="on-windows">On Windows:</h3>
-
-<p>Jekyll is very easy to set up on Mac OS X or Linux. On Windows, not so much. These resources should help:</p>
-
-<p><a href="http://jekyllrb.com/docs/windows/#installation">Jekyll Docs on Windows</a><br />
-<a href="http://jekyll-windows.juthilo.com">Step by Step Guide</a></p>
-
-<hr />
-
-<h2 id="referencing-the-build-folder">Referencing the Build Folder</h2>
-
-<p>The online repo that stores the build folder named <strong>/dist</strong> (generated from /src) can be found on a separate repo - under the <strong>gh-pages</strong> branch. Link below.</p>
-
-<p><a href="https://github.com/liquidvisual/brs-0115/tree/gh-pages">https://github.com/liquidvisual/brs-0115/tree/gh-pages</a></p>
-
-<p>Feel free to use it as a reference if things get hairy. Once you get the hang of the static Jekyll environment and its <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid templates</a> - you’ll be able to copy/paste mostly everything and substitute the basic templating syntax for your own.</p>
-
-<p>So to summarise:</p>
-
-<ol>
-  <li><a href="https://github.com/liquidvisual/brs-0115">/src</a> - for uncompiled templates, includes, Sass etc (human readable)</li>
-  <li><a href="https://github.com/liquidvisual/brs-0115/tree/gh-pages">/dist</a> - stored on the gh-pages branch. Is minified and compiled. (not human readable)</li>
-</ol>
-
-<p>Note: If you want to see what the code is compiled, <em>view source</em> on the <a href="http://bigredsky.uat.liquidvisual.net">public facing website</a>. The /dist folder is not meant to be human readable.</p>
-
-<h1 id="quick-start">Quick Start</h1>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem install jekyll
-~ <span class="nv">$ </span>jekyll new myblog
-~ <span class="nv">$ </span><span class="nb">cd </span>myblog
-~/myblog <span class="nv">$ </span>jekyll serve
-<span class="c"># =&gt; Now browse to http://localhost:4000</span></code></pre></div>
-
-<p><strong>NOTE:</strong> If you happen to use <a href="http://www.sublimetext.com/3">Sublime Text</a> for a code IDE - it has a really handy plugin for syntax highlighting Jekyll templates. You can grab the <a href="https://sublime.wbond.net/packages/Jekyll">Jekyll package</a> via <a href="https://sublime.wbond.net">package control</a>.</p>
-
-<h3 id="copy-over-assets-directory">01. Copy Over /assets Directory</h3>
-
-<p>Jump into the <a href="https://github.com/liquidvisual/cp-beta/tree/gh-pages">dist folder</a> and grab the <em>entire</em> <strong>/assets</strong> folder. Put it into your project’s root directory. This contains all the compiled CSS, fonts, images and JavaScript. This is important as all paths are root relative to the <strong>/assets</strong> folder.</p>
-
-<p>That’s all you’ll need from the <strong>/dist</strong> directory. From this point on, all the action is in the <strong>/src</strong>.</p>
-
-<h3 id="access-layoutsmasterhtml">02. Access /_layouts/master.html</h3>
-
-<p>Start with this and substitute the template logic for your own as you build your page. When it comes to the assets, they compile into <strong>/assets</strong> on build so you’ll only need to do a bit of substitution.</p>
-
-<p>You can replace all of this:</p>
-
-<pre><code class="language-html">&lt;!-- build:css /assets/css/minified.css --&gt;
-  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
-  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
-  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
-  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
-  &lt;link rel="stylesheet" href="/css/some-css-file.css"&gt;
-&lt;!-- endbuild --&gt;
-</code></pre>
-
-<p>With this:</p>
-
-<pre><code class="language-html">&lt;link rel="stylesheet" href="/assets/css/minified.css"&gt;
-</code></pre>
-
-<p>The same applies to Javascript. That’s probably the trickiest bit since it’s not so obvious. The end result will look like this:</p>
-
-<pre><code class="language-html">&lt;script src="/scripts/priority-minified.js"&gt;&lt;/script&gt; &lt;!-- In the head --&gt;
-
-&lt;script src="/scripts/minified.js"&gt;&lt;/script&gt; &lt;!-- Before closing body --&gt;
-</code></pre>
-
-<h3 id="copy-over-partials-in-includes">03. Copy Over Partials in /_includes</h3>
-
-<p>Templates reference partials from this folder to keep things modular and easy to maintain. If possible, I’d recommend retaining these files as separate chunks to your main templates.</p>
 
                 </div>
             </div>
@@ -393,7 +461,11 @@ cd brs-0115
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <script src="/assets/scripts/westlaw/minified.js"></script>
+    <script src="/assets/scripts/westlaw/app.js"></script>
+
+    <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
+
+    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

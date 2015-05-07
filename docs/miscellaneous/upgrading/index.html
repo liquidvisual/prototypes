@@ -11,17 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Westlaw">
-    <title>
-        
-        
-            
-                 - Westlaw
-            
-        
-    </title>
+    <title>Upgrading - Westlaw</title>
 
-    <link rel="canonical" href="/docs/miscellaneous/upgrading/">
-    <link rel="shortcut icon" type='image/x-icon' href='/assets/img/westlaw/template/favicon.ico'>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/westlaw/template/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
 
     <!-- Google Fonts CDN -->
@@ -29,7 +21,9 @@
 
     <link rel="stylesheet" href="/assets/css/westlaw/foundation.css">
 
-    <link rel="stylesheet" href="/assets/css/westlaw/minified.css">
+    <link rel="stylesheet" href="/assets/css/westlaw/legacy-core.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/app.css">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css">
@@ -53,15 +47,29 @@
     html, body, .lv-main, .lv-stage {
         /*background: white;*/
     }
-    .lv-context-menu-fixed {
-        /*top: 60px;*/
-        /*bottom: 0;*/
+
+    /* move this into SCSS soon */
+    @media (min-width: 1024px) {
+        .lv-context-menu-fixed {
+            top: 60px;
+            bottom: 0;
+        }
     }
+
     .lv-context-menu ul ul li a {
         color: #eee;
         margin-left: 20px;
         display: none;
     }
+
+    /*.lv-context-menu h3 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color: black;
+        border-bottom: 1px solid #D4DCE3;
+    }*/
 
     .lv-context-menu h2 + ul {
         /*border-top: 1px solid #D4DCE3;*/
@@ -164,6 +172,38 @@
 
 	<h3>Page Layouts</h3>
 	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/page-layouts/dashboard/">Dashboard</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/search-templates/">Search Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/results/">Results</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/documents/">Documents</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/alerts/">Alerts</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/folders/">Folders</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/preferences/">Preferences</a>
+				</li>
+			
+		</ul>
+	
 
 	<h3>Miscellaneous</h3>
 	
@@ -185,11 +225,25 @@
 
 	<!-- Top Menu - visible via JavaScript -->
 	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
-		<ul>
-    <li class="">
-        <a href="/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
-    </li>
-    <li class="
+		
+
+<ul>
+    
+
+    	
+
+		
+		    <li class="">
+		        <a href="/pages/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+		    </li>
+		
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
@@ -200,10 +254,17 @@
     
 
     
-">
-        <a href="/westlaw/research/"><i class="fi-magnifying-glass"></i> Research</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/research/search-templates/basic/"><i class="fi-magnifying-glass"></i> Research</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
@@ -214,10 +275,17 @@
     
 
     
-">
-        <a href="/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
@@ -228,10 +296,17 @@
     
 
     
-">
-        <a href="/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
@@ -242,10 +317,17 @@
     
 
     
-">
-        <a href="/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
-    </li>
-    <li class="
+ ">
+	            <a href="/pages/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
 
 
 
@@ -256,9 +338,12 @@
     
 
     
-">
-        <a href="/westlaw/guide/"><i class="fi-info"></i> Guide</a>
-    </li>
+ ">
+	            <a href="/pages/westlaw/guide/"><i class="fi-book"></i> Guide</a>
+	        </li>
+        
+
+    
 </ul>
 	</nav> <!-- .lv-context-menu-panel -->
 
@@ -267,20 +352,125 @@
 		
 
 <ul>
-    <li><a href="#LOGOUT"><img width="30" src="/westlaw/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
-	<li><a href="/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a></li>
-	<li><a href="/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a></li>
-	<li><a href="/westlaw/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-address-book"></i>&nbsp; Contacts</a></li>
-    <li><a href="/westlaw/modal_output/checkpoint/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-    <li><a href="/westlaw/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/westlaw/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
-    <li><a href=""><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li><a href="#LOGOUT"><img width="30" src="/assets/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
+
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/coming-soon.html"><i class="fi-address-book"></i>&nbsp; Contacts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="#coming"><i class="fi-clock"></i>&nbsp; History</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/change-client-id.html"><i class="fi-torso"></i>&nbsp; Client ID</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/user/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ hide-for-large-up">
+			<a class="" href="http://training.thomsonreuters.com.au/products/westlaw-au/"><i class="fi-info"></i>&nbsp; Help</a>
+		</li>
+	
 </ul>
 	</nav> <!-- .lv-context-menu-panel -->
 
 </div> <!-- .lv-context-menu-fixed -->
-
-
     </nav>
 
     <!-- MAIN -->
@@ -311,7 +501,11 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <script src="/assets/scripts/westlaw/minified.js"></script>
+    <script src="/assets/scripts/westlaw/app.js"></script>
+
+    <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
+
+    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

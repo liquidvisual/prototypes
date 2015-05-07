@@ -11,15 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Westlaw">
-    <title>
-        
-        
-            Westlaw
-        
-    </title>
+    <title>Choose Prototype - Westlaw</title>
 
-    <link rel="canonical" href="/">
-    <link rel="shortcut icon" type='image/x-icon' href='/assets/img/westlaw/template/favicon.ico'>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/westlaw/template/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
 
     <!-- Google Fonts CDN -->
@@ -27,7 +21,9 @@
 
     <link rel="stylesheet" href="/assets/css/westlaw/foundation.css">
 
-    <link rel="stylesheet" href="/assets/css/westlaw/minified.css">
+    <link rel="stylesheet" href="/assets/css/westlaw/legacy-core.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/app.css">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css">
@@ -113,31 +109,44 @@
     }
 </style>
 
-<section class="table-wrapper animated fadeIn">
+<section class="lv-lobby table-wrapper animated fadeIn">
     <div class="cell-wrapper">
         <div class="row">
             <div class="columns">
                 <h1>Choose Prototype...</h1>
-                <br />
+                <br>
                 <ul class="small-block-grid-2">
-                    <li><a class="logo-cp" href="/checkpoint/guide/"><img width="100%" src="/assets/img/common/template/cp-logo@2x.png" alt="Checkpoint" /></a></li>
-                    <li><a class="logo-wl" href="/westlaw/guide/"><img width="100%" src="/assets/img/common/template/wl-logo@2x.png" alt="Westlaw" /></a></li>
+                    <li>
+                        <a class="logo-cp" href="/pages/checkpoint/guide/">
+                            <img width="100%" src="/assets/img/common/template/cp-logo@2x.png" alt="Checkpoint">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="logo-wl" href="/pages/westlaw/guide/">
+                            <img width="100%" src="/assets/img/common/template/wl-logo@2x.png" alt="Westlaw">
+                        </a>
+                    </li>
                 </ul>
-                <br />
-                <a class="button" href="/docs/"><i class="fi-book"></i>&nbsp; Docs</a>
-                <a class="button" href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; Repo</a>
+                <br>
+                <a class="button" href="/docs/"><i class="fi-book"></i>&nbsp; Documentation</a>
+                <a class="button" href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; Repository</a>
+
+                <p class="text-center">Last updated: <b>Friday 08 May 2015</b></p>
             </div>
         </div>
     </div>
 </section>
-
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <script src="/assets/scripts/westlaw/minified.js"></script>
+    <script src="/assets/scripts/westlaw/app.js"></script>
+
+    <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
+
+    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

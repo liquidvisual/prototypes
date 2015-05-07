@@ -3,29 +3,29 @@
 <section id="sidebar">
     <h1>Search Templates</h1>
     <ul id="mysearch" class="toplevel">
-        <li class="active">
+        <li class="{% include common/snippets/is_active.html current_path="basic" %}">
             <a href="#" id="std-anz-formhelp-basic" class="searchTemplateHelpIcon"><img src="/cpau/images/ico_info12b.png" alt=""></a>
-            <a id="lnkAUSearch_std-anz-default" href="/research/">Basic</a>
+            <a id="lnkAUSearch_std-anz-default" href="/pages/checkpoint/research/search-templates/basic/">Basic</a>
         </li>
-        <li>
+        <li class="{% include common/snippets/is_active.html current_path="cases" %}">
             <a href="#" id="std-anz-formhelp-cases" class="searchTemplateHelpIcon"><img src="/cpau/images/ico_info12b.png" alt=""></a>
-            <a id="lnkAUSearch_std-anz-cases" href="/research/cases/">Cases</a>
+            <a id="lnkAUSearch_std-anz-cases" href="/pages/checkpoint/research/search-templates/cases/">Cases</a>
         </li>
         <li>
             <a href="#" id="std-anz-formhelp-legis" class="searchTemplateHelpIcon"><img src="/cpau/images/ico_info12b.png" alt=""></a>
-            <a id="lnkAUSearch_std-anz-legis" href="/research/cases/">Legislation / Commentary</a>
+            <a id="lnkAUSearch_std-anz-legis" href="/pages/checkpoint/research/search-templates/cases/">Legislation / Commentary</a>
         </li>
         <li>
             <a href="#" id="std-anz-formhelp-journals" class="searchTemplateHelpIcon"><img src="/cpau/images/ico_info12b.png" alt=""></a>
-            <a id="lnkAUSearch_std-anz-journals" href="/research/cases/">Journals</a>
+            <a id="lnkAUSearch_std-anz-journals" href="/pages/checkpoint/research/search-templates/cases/">Journals</a>
         </li>
         <li>
             <a href="#" id="std-anz-formhelp-curraware" class="searchTemplateHelpIcon"><img src="/cpau/images/ico_info12b.png" alt=""></a>
-            <a id="lnkAUSearch_std-anz-curraware" href="/research/cases/">News</a>
+            <a id="lnkAUSearch_std-anz-curraware" href="/pages/checkpoint/research/search-templates/cases/">News</a>
         </li>
         <li>
             <a href="#" id="std-anz-formhelp-govregs" class="searchTemplateHelpIcon"><img src="/cpau/images/ico_info12b.png" alt=""></a>
-            <a id="lnkAUSearch_std-anz-govregs" href="/research/cases/">Government and Regulatory</a>
+            <a id="lnkAUSearch_std-anz-govregs" href="/pages/checkpoint/research/search-templates/cases/">Government and Regulatory</a>
         </li>
         <div id="templateInstructionPopup"></div>
     </ul>

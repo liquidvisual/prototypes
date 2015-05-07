@@ -6,7 +6,7 @@
 	{% for item in settings.user_menu %}
 		{% assign path = item.url | downcase %}
 		<li class="{% include common/snippets/is_active.html current_path=path %} {{ item.visibility }}">
-			<a href="{{ item.url }}"><i class="{{ item.icon }}"></i>&nbsp; {{ item.title }}</a>
+			<a class="{{ item.modal }}" href="{{ item.url }}"><i class="{{ item.icon }}"></i>&nbsp; {{ item.title }}</a>
 		</li>
 	{% endfor %}
 </ul>

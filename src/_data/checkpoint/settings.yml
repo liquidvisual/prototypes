@@ -16,6 +16,11 @@ facebook: ""
 
 # Top Menu
 top_menu:
+  - title: Dashboard
+    url: /pages/checkpoint/
+    icon: fi-home
+    visibility:
+
   - title: Research
     url: /pages/checkpoint/research/search-templates/basic/
     icon: fi-magnifying-glass
@@ -60,9 +65,10 @@ user_menu:
     visibility:
 
   - title: Client ID
-    url: "#modal-output"
+    url: "/modal_output/checkpoint/change-client-id.html"
     icon: fi-torso
     visibility:
+    modal: ajax-modal
     exclude_from_guide: true
 
   - title: Preferences

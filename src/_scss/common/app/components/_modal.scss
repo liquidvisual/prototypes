@@ -11,6 +11,10 @@
 // Modal
 //-----------------------------------------------------------------
 
+.mfp-wrap {
+	z-index: 9002; // exceed stack of context menu mask overlay
+}
+
 .mfp-content {
 	position: relative;
 	background: white;

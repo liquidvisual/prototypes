@@ -16,6 +16,11 @@ facebook: ""
 
 # Top Menu
 top_menu:
+  - title: Home
+    url: /pages/westlaw/
+    icon: fi-home
+    visibility:
+
   - title: Research
     url: /pages/westlaw/research/search-templates/basic/
     icon: fi-magnifying-glass
@@ -55,9 +60,11 @@ user_menu:
     visibility:
 
   - title: Contacts
-    url: "#modal-output"
+    url: "/modal_output/westlaw/coming-soon.html"
     icon: fi-address-book
     visibility:
+    modal: ajax-modal
+    exclude_from_guide: true
 
   - title: History
     url: "#coming"
@@ -65,9 +72,10 @@ user_menu:
     visibility:
 
   - title: Client ID
-    url: "#modal-output"
+    url: "/modal_output/westlaw/change-client-id.html"
     icon: fi-torso
     visibility:
+    modal: ajax-modal
     exclude_from_guide: true
 
   - title: Preferences

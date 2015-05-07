@@ -10,6 +10,11 @@ layout: common/internal
         font-size: 14px;
     }
 
+    .lv-guide ul li:before,
+    .lv-guide ol li:before {
+        color: #FE7F00;
+    }
+
     .lv-guide ul {
         list-style: none;
     }
@@ -40,14 +45,20 @@ layout: common/internal
 
 <section class="lv-content-block lv-guide">
 
-    <h1>{{ page.title }}</h1>
-    <hr>
-
     <!-- GLOBAL PAGES -->
     <h3 class="panel">Global Pages</h3>
     <p><strong><a href="/"><i class="fi-layout"></i>&nbsp; LOBBY</a></strong><br><strong>Tip:</strong> launch from any page by clicking the top left logo.</p>
-    <p><strong><a href="/docs/"><i class="fi-book"></i>&nbsp; DOCS</a></strong></p>
-    <p><strong><a href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; REPO</a></strong></p>
+    <p><strong><a href="/docs/"><i class="fi-book"></i>&nbsp; DOCUMENTATION</a></strong></p>
+    <p><strong><a href="https://github.com/liquidvisual/prototypes"><i class="fi-social-github"></i>&nbsp; REPOSITORY</a></strong></p>
+    <br>
+
+    <!-- IMPORTANT -->
+    <h3 class="panel">Important</h3>
+    <ul>
+        <li>
+            <a href="/pages/{{ page.site_type }}/shell/"><strong>Application Shell</strong></a> - <small>/pages/{{ page.site_type }}/shell/</small>
+        </li>
+    </ul>
     <br>
 
     <!-- MAIN PAGES -->

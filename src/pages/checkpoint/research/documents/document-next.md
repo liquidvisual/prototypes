@@ -3,6 +3,7 @@ layout: checkpoint/research/documents/document_01
 title: "Research: 'Document 2/2 - Recurring Employee Declarations'"
 type: document
 context_menu: "checkpoint/context_menu_output/document_options_02.html"
+sidebar_details: "checkpoint/sidebar_content/hints/navigating_documents.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

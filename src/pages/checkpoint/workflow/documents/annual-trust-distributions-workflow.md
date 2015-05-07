@@ -3,6 +3,7 @@ layout: checkpoint/workflow/documents/document_01
 title: "Workflow: 'Document 1/1 - Annual Trust Distributions Workflow'"
 type: document
 context_menu: "checkpoint/context_menu_output/document_options_04.html"
+sidebar_details: "checkpoint/sidebar_content/hints/workflow.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

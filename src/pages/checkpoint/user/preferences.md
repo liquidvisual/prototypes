@@ -1,6 +1,6 @@
 ---
 layout: checkpoint/user/preferences
-title: User Preferences
+title: "User Preferences"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

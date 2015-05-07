@@ -3,6 +3,7 @@ layout: checkpoint/research/documents/document_01
 title: "Research: 'Document 1/2 - Tax-exempt Body Entertainment Fringe Benefits'"
 type: document
 context_menu: "checkpoint/context_menu_output/document_options_01.html"
+sidebar_details: "checkpoint/sidebar_content/hints/navigating_documents.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

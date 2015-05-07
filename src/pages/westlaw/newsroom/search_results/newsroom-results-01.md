@@ -3,6 +3,7 @@ layout: westlaw/newsroom/search_results/results_01
 title: "Newsroom Results: 'Australian News'"
 type: search_result
 context_menu: "westlaw/context_menu_output/newsroom_results_01.html"
+sidebar_details: "checkpoint/sidebar_content/hints/sort_ordering.html"
 ---
 
 <!-- START WESTLAW OUTPUT -->

@@ -1,6 +1,6 @@
 ---
 layout: westlaw/user/preferences
-title: User Preferences
+title: "User Preferences"
 ---
 
 <!-- START WESTLAW OUTPUT -->

@@ -3,6 +3,7 @@ layout: checkpoint/research/search_results/result_01
 title: "Research Results: 'tax exempt! +10 deduct!' + 'corporate' (Doc Listing)"
 type: search_result
 context_menu: "checkpoint/context_menu_output/search_summary_02.html"
+sidebar_details: "checkpoint/sidebar_content/hints/sort_ordering.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

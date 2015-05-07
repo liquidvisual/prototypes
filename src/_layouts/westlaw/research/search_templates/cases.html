@@ -1,20 +1,9 @@
 ---
 layout: common/internal
-context_menu: "westlaw/context_menu_output/search_cases.html"
 ---
 
-<!-- HEADER -->
-<header class="header">
-    <div class="row">
-        <div class="columns">
-            <h3 class="left">Cases</h3>
-            <hr>
-        </div>
-    </div>
-</header>
-
 <!-- SEARCH FORM -->
-<form class="lv-search-form lv-partial-view collapsed" action="/research/results" method="post" novalidate>
+<form class="lv-search-form lv-partial-view collapsed" action="#" method="post" novalidate>
     <div class="row">
         <div class="medium-11 large-10 columns">
 
@@ -23,14 +12,14 @@ context_menu: "westlaw/context_menu_output/search_cases.html"
 
             <!-- Draw Fields -->
             {% for item in text_fields %}
-                {% include westlaw/components/form_text_input.html %}
+                {% include common/components/form_text_input.html %}
             {% endfor %}
 
             <!-- Draw Select Field -->
-            {% include westlaw/components/form_select_input.html title="Jurisdiction" %}
+            {% include common/components/form_select_input.html title="Jurisdiction" %}
 
             <!-- Draw Date Fields -->
-            {% include westlaw/components/form_date_input.html title="Judgement Date" %}
+            {% include common/components/form_date_input.html title="Judgement Date" %}
 
             <div class="lv-advanced-options hide">
 
@@ -39,23 +28,23 @@ context_menu: "westlaw/context_menu_output/search_cases.html"
 
                 <!-- Draw Fields -->
                 {% for item in text_fields %}
-                    {% include westlaw/components/form_text_input.html %}
+                    {% include common/components/form_text_input.html %}
                 {% endfor %}
 
                 <!-- Draw Checkbox -->
-                {% include westlaw/components/form_checkbox_input.html title="FirstPoint Verified Data Only" %}
+                {% include common/components/form_checkbox_input.html title="FirstPoint Verified Data Only" %}
 
                 <!-- Create Field Names -->
                 {% assign text_fields = "Words & Phrases|Legal Representative(s)" | split: "|" %}
 
                 <!-- Draw Fields -->
                 {% for item in text_fields %}
-                    {% include westlaw/components/form_text_input.html %}
+                    {% include common/components/form_text_input.html %}
                 {% endfor %}
 
                 <!-- Draw Select Fields -->
-                {% include westlaw/components/form_select_input.html title="Reported Unreported" %}
-                {% include westlaw/components/form_select_input.html title="Cases Updated" %}
+                {% include common/components/form_select_input.html title="Reported Unreported" %}
+                {% include common/components/form_select_input.html title="Cases Updated" %}
 
             </div> <!-- .lv-advanced-options -->
 
@@ -67,7 +56,7 @@ context_menu: "westlaw/context_menu_output/search_cases.html"
             </div>
 
             <!-- Draw Submit Fields -->
-            {% include westlaw/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
+            {% include common/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
 
         </div>
     </div>
@@ -93,6 +82,6 @@ context_menu: "westlaw/context_menu_output/search_cases.html"
 <!-- TOC -->
 <div class="row">
     <div class="columns">
-        {% include westlaw/toc_output/toc_newsroom.html %}
+        {% include westlaw/toc_output/toc_cases.html %}
     </div>
 </div>

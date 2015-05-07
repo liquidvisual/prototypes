@@ -3,9 +3,9 @@ layout: common/master
 ---
 
 <!-- HEADER -->
-<div class="lv-header">
+<header class="lv-header">
     {% include {{page.site_type}}/modules/header.html %} <!-- Unique -->
-</div>
+</header>
 
 <!-- NAVIGATION -->
 <nav class="lv-navigation show-for-large-up">
@@ -29,7 +29,19 @@ layout: common/master
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
+
+                    <!-- HEADER -->
+                    <header class="header">
+                        <div class="row">
+                            <div class="columns">
+                                <h1 class="h3">{{ page.title }}</h1>
+                                <hr>
+                            </div>
+                        </div>
+                    </header>
+
                     {{ content }}
+
                 </div>
             </div>
         </div>

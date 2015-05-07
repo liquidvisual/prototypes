@@ -1,27 +1,6 @@
 ---
 layout: common/internal
-context_menu: "westlaw/context_menu_output/search_newsroom.html"
 ---
-
-<!-- ADHOC JS FOR SIMULATION ONLY -->
-<script>
-    $(document).ready(function(){
-        // Point all links to the same template (demo purposes only)
-        var newLink = "/westlaw/newsroom/newsroom-results-01/";
-        $(".toc-root a").attr("href", newLink);
-    });
-</script>
-<!-- END ADHOC JS FOR SIMULATION ONLY -->
-
-<!-- HEADER -->
-<header class="header">
-    <div class="row">
-        <div class="columns">
-            <h3 class="left">Newsroom</h3>
-            <hr>
-        </div>
-    </div>
-</header>
 
 <!-- SEARCH FORM -->
 <form class="lv-search-form lv-partial-view collapsed" action="/research/results" method="post" novalidate>
@@ -33,25 +12,25 @@ context_menu: "westlaw/context_menu_output/search_newsroom.html"
 
             <!-- Draw Fields -->
             {% for item in text_fields %}
-                {% include westlaw/components/form_text_input.html %}
+                {% include common/components/form_text_input.html %}
             {% endfor %}
 
             <!-- Draw Select Field (Source Type) -->
-            {% include westlaw/components/form_select_input.html title="Source Type" %}
+            {% include common/components/form_select_input.html title="Source Type" %}
 
             <!-- Create Field Names -->
             {% assign text_fields = "Source Country|All Indexing|News Subject|Company|Industry|Region" | split: "|" %}
 
             <!-- Draw Fields -->
             {% for item in text_fields %}
-                {% include westlaw/components/form_text_input.html %}
+                {% include common/components/form_text_input.html %}
             {% endfor %}
 
             <!-- Draw Date Fields -->
-            {% include westlaw/components/form_date_input.html title="Publication Date (from)" %}
+            {% include common/components/form_date_input.html title="Publication Date (from)" %}
 
             <!-- Draw Submit Fields -->
-            {% include westlaw/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
+            {% include common/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
 
         </div>
     </div>

@@ -1,6 +1,7 @@
 ---
 layout: checkpoint/user/history
-title: User History
+title: "User History"
+context_menu: "checkpoint/context_menu_output/sessions.html"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

@@ -1,5 +1,5 @@
 ---
-layout: checkpoint/app/homepage
+layout: common/internal
 ---
 
 <div class="row">
@@ -8,9 +8,8 @@ layout: checkpoint/app/homepage
             <li>
                 <!-- CALENDAR -->
                 {% capture body_text %}
-                    <p><a href="#"></a></p>
-                    <form data-abide novalidate id="contact" action="/" method="post">
-                        <select name="budget" class="radius">
+                    <form data-abide novalidate action="/" method="post">
+                        <select name="events" class="radius">
                             <option selected disabled>All Events</option>
                             <option value="Tax">Tax</option>
                             <option value="PAYG">PAYG</option>
@@ -25,7 +24,7 @@ layout: checkpoint/app/homepage
                     </form>
                     <div id="datepicker"></div> <!-- JQuery UI Calendar -->
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
+                {% include common/components/dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
 
                 <!-- BASIC SEARCH -->
                 {% capture body_text %}
@@ -43,7 +42,7 @@ layout: checkpoint/app/homepage
                         </div>
                     </form>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="Basic Search" body=body_text %}
+                {% include common/components/dash_block.html header="Basic Search" body=body_text %}
 
                 <!-- ADVANCED SEARCH -->
                 {% capture body_text %}
@@ -55,7 +54,7 @@ layout: checkpoint/app/homepage
                         <li><a href="/research/cases/">Government and Regulatory</a></li>
                     </ul>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="Advanced Search" body=body_text %}
+                {% include common/components/dash_block.html header="Advanced Search" body=body_text %}
 
             </li>
             <li>
@@ -66,13 +65,13 @@ layout: checkpoint/app/homepage
                         <li><a href="http://www.checkpointau.com.au/maf/app/fulldocument?endChunk=1&parentguid=AUNZ_CURRAWARE_TOC%7C%7CIca0737b0713a11e49e2888ff8c71c53d&startChunk=1&bcguid=AUNZ_TOC%7C%7CI8f455ebc4c7331ffa567550e53ec5247&docguid=Icbcc6790713a11e49e2888ff8c71c53d">WTB - Issue 49 Table of Contents</a></li>
                     </ul>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="My Quicklinks" body=body_text %}
+                {% include common/components/dash_block.html header="My Quicklinks" body=body_text %}
 
                 <!-- MY CLEARDOCS -->
                 {% capture body_text %}
                     <h5 class="subheader"><i>There have been no assembled documents saved.</i></h5>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="My Cleardocs" body=body_text %}
+                {% include common/components/dash_block.html header="My Cleardocs" body=body_text %}
 
                 <!-- MY PRODUCTS -->
                 {% capture body_text %}
@@ -102,7 +101,7 @@ layout: checkpoint/app/homepage
                     <br>
                     <a href="/alerts/">More Products</a>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="My Products" body=body_text %}
+                {% include common/components/dash_block.html header="My Products" body=body_text %}
 
             </li>
             <li>
@@ -115,7 +114,7 @@ layout: checkpoint/app/homepage
                         <li><a href="#">Thomson Reuters Website (NZ)</a></li>
                     </ul>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="Customer Service" body=body_text %}
+                {% include common/components/dash_block.html header="Customer Service" body=body_text %}
 
                 <!-- NEWS HEADLINES -->
                 {% capture body_text %}
@@ -132,7 +131,7 @@ layout: checkpoint/app/homepage
                         <li><a href="">ASIC seeks court order to stop property promoter from providing unlicensed financial product advice on SMSFs</a></li>
                     </ul>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="News Headlines" body=body_text %}
+                {% include common/components/dash_block.html header="News Headlines" body=body_text %}
 
                 <!-- MY TOOLS -->
                 {% capture body_text %}
@@ -151,7 +150,7 @@ layout: checkpoint/app/homepage
                     <br>
                     <a class="button radius knockout tiny" href="/tools/">More Tools</a>
                 {% endcapture %}
-                {% include checkpoint/app/components/dash_block.html header="My Tools" body=body_text %}
+                {% include common/components/dash_block.html header="My Tools" body=body_text %}
 
             </li>
         </ul>

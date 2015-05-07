@@ -2,6 +2,8 @@
 layout: westlaw/workflow/documents/document_01
 title: "Workflow: 'Ending a Relationship (WA) Flowchart'"
 type: document
+context_menu: "westlaw/context_menu_output/workflow_document_01.html"
+sidebar_details: "westlaw/sidebar_content/hints/workflow.html"
 ---
 
 <!-- START WESTLAW OUTPUT -->

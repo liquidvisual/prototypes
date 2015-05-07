@@ -3,6 +3,7 @@ layout: westlaw/research/search_results/basic_results_01
 title: "Research Results: 'confidentiality agreement'"
 type: search_result
 context_menu: "westlaw/context_menu_output/search_summary_01.html"
+sidebar_details: "westlaw/sidebar_content/hints/sort_ordering.html"
 ---
 
 <!-- START WESTLAW OUTPUT -->

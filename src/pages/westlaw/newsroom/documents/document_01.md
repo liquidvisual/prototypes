@@ -2,6 +2,7 @@
 layout: westlaw/newsroom/documents/document_01
 title: "Newsroom: Document 1/1 - 'Market Grows in Confidence'"
 type: document
+context_menu: "westlaw/context_menu_output/newsroom_document_01.html"
 ---
 
 <!-- START WESTLAW OUTPUT -->

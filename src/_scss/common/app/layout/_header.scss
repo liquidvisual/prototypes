@@ -76,6 +76,14 @@
     width: rem-calc(100);
     display: inline-block;
 
+    @media #{$small-only} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
     // Centering bigger logo
     @media #{$medium-up} {
         width: rem-calc(240);
@@ -107,7 +115,7 @@
     }
 
     &:active {
-        color: #28A4E3;
+        color: darken($primary-color, 20%);
     }
 
     /* refactor */

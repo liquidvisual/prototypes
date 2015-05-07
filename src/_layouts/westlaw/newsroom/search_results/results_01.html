@@ -1,0 +1,46 @@
+---
+layout: common/internal
+---
+
+<!-- REFINE SEARCH -->
+<div class="row">
+    <div class="medium-10 medium-centered columns">
+        <form data-abide novalidate action="/" method="post">
+            <div class="row collapse postfix-radius">
+                <div class="small-10 medium-9 columns">
+                    <input name="q" type="text" placeholder="Type Keywords to Refine Search">
+                </div>
+                <div class="small-2 medium-3 columns">
+                    <button type="submit" class="button search-button flat radius postfix"><i class="show-for-small-only fi-magnifying-glass"></i> <span class="text hide-for-small">Refine Search</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- SEARCH RESULTS -->
+<div class="row">
+    <div class="columns">
+        <h2>Search Results</h2>
+        <hr>
+    </div>
+</div>
+
+<!-- TOP PAGINATION -->
+<div class="row">
+    <div class="columns text-right">
+        {% include common/snippets/pagination.html %}
+    </div>
+</div>
+
+{% include westlaw/export_options/results.html %}
+
+<!-- SELECT ALL -->
+<input type="checkbox" id="select-all" name="Select All"><label for="select-all">Select All</label>
+
+{{ content }}
+
+<!-- PAGINATION -->
+<div class="text-center medium-text-right">
+    {% include common/snippets/pagination.html %}
+</div>

@@ -1,5 +1,5 @@
 /*
-    MAIN SCRIPTS - Last updated: 19-11-14
+    CONTENT-EXPANDER.JS - Last updated: 12-05-15
 */
 //-----------------------------------------------------------------
 // Variables

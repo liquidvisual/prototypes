@@ -52,7 +52,9 @@
     }
 }
 
+//-----------------------------------------------------------------
 // Buttons are unclickable when disabled
+//-----------------------------------------------------------------
 
 .lv-export-options.disabled {
     cursor: not-allowed;
@@ -71,6 +73,39 @@
     a {
         color: #DDDDDD;
         cursor: default;
+    }
+}
+
+//-----------------------------------------------------------------
+// Export Options inside Context Menu
+//-----------------------------------------------------------------
+
+.lv-context-menu .lv-export-options {
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+
+    ul {
+        margin: 0;
+        line-height: 0;
+        padding: rem-calc(10 0);
+    }
+
+    li {
+        display: inline-block;
+        text-align: center;
+    }
+
+    a {
+        padding: 0;
+        color: $primary-color;
+        line-height: 0;
+    }
+
+    i {
+        display: block;
+        width: 100%;
+        font-size: rem-calc(20);
     }
 }
 

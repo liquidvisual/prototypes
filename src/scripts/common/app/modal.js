@@ -1,5 +1,5 @@
 /*
-    MAIN SCRIPTS - Last updated: 19-11-14
+    MODAL.JS - Last updated: 19-11-14
 */
 //-----------------------------------------------------------------
 // Variables

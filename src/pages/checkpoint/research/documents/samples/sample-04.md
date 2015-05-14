@@ -2,6 +2,7 @@
 layout: checkpoint/research/documents/document_01
 title: "Sample 04: 'Checklist of Employer Deductions'"
 type: sample_document
+next_url: "/pages/checkpoint/research/documents/samples/sample-05/"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

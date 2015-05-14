@@ -11,6 +11,10 @@
 // Special
 //-----------------------------------------------------------------
 
+.lv-context-menu .lv-resize-btn {
+	display: none; // don't need on checkpoint
+}
+
 .lv-super .pagination {
     display: inline-block; // so we can text-align it
 }

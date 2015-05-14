@@ -38,26 +38,11 @@ layout: common/internal
 
 <!-- ************************ END FORM ************************ -->
 
+{% comment %}
 <!-- Form obscured on mobile (restricted height) - button will show all -->
 <div class="row">
     <div class="medium-11 columns text-right">
         <a class="lv-partial-view-btn lv-non-legacy button pill tiny" href="#">Expand</a>
-    </div>
-</div>
-
-<!-- DOCUMENT OPTIONS -->
-<div class="row">
-    <div class="columns">
-        <!-- { % include common/snippets/breadcrumbs.html %} -->
-        {% include westlaw/export_options/search_advanced.html %}
-    </div>
-</div>
-
-{% comment %}
-<!-- TOC -->
-<div class="row">
-    <div class="columns">
-        {% include westlaw/toc_output/toc_newsroom.html %}
     </div>
 </div>
 {% endcomment %}

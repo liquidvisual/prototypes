@@ -2,24 +2,44 @@
 title: Documents
 ---
 
-# Documents (A.K.A Document View)
+# Documents
 
-The Document template is quite a difficult piece to get right. Due to its complexity and legacy we'll need to include the existing stylesheets from the app so we don't risk breaking aything.
+## Document View
 
-There is a special document stylesheet which overrides the current one with some sensible defaults - like better typography and white space. This looks fine on desktop and tablets but mobile presents some problems, particularly with tables.
+The Document template is a tricky piece to get right. By default, documents have extensive styling which differs from document to document. The main issue is these styles are necessary but introduce changes to the box-model; applying margins, fixed widths, padding and borders to the content. The problem lies in the mobile view, where existing styles break content out from the Application Frame.
 
-There's a few ways we can go about presenting a view that is readable and functional although we'd probably need to have these user tested as their effectiveness may vary with individual.
+## Addressing Mobile View
 
-### Potential Solution #1
+Perhaps the best way around this, is with CSS Media Queries. We essentially strip off all box-model related properties and floats once the screen enters 640px or below. This results in content stacking naturally with the flow.
 
-On mobile we restrict the width of the document container to the width of the phone's viewport and evoke horizontal scrollbars. This keeps the interface responsive but the content would require more effort to consume. Elements are stripped of their floats, padding and margins with media queries and forced to follow the "flow" on mobile. Offending elements such as tables and images that can't adapt will extend past the container where the user can then thumb across to read more.
+In some cases this may not be ideal and obscure content where it otherwise would have displayed fine on desktop - however this is the best we can do without re-writing documents from the ground up.
 
-### Potential Solution #1
+## Legacy Stylesheets
 
-It's possible the sheer amount of content could be best consumed in a non-responsive way, where users are able to pinch and zoom their way across a very long document. To do this we could remove an important meta tag from the Master layout on document templates.
+During testing, all existing stylesheets were taken from the app and placed into the Sass environment. An audit was performed to determine the inclusion of **only key files** related to legacy content. We don't include all previous legacy stylesheets because we don't want to override the Application Frame or typographical defaults set by Foundation. So we only opt to include those which are useful. I'll demonstrate what this looks like in both apps:
+
+[CONT'D]
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+Path: src/_scss/checkpoint/app/legacy/original/all.scss
 ```
 
-Removing this tag from the head will instantly remove responsive appearance on mobile.
+```sass
+// @import "base";
+// @import "basic-novus-params";
+// @import "checkpoint"; // updated - problematic
+// @import "contacts";
+// @import "delivery";
+// @import "doc_note";
+// @import "doc_view";
+// @import "documentstyling";
+// @import "highlights";
+// @import "jquery-ui-1";
+// @import "jstree";
+// @import "layout";
+// @import "newsfeed";
+// @import "print";
+// @import "rspace_002";
+// @import "rspace";
+// @import "rspacebar";
+```

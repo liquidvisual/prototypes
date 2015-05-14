@@ -1,5 +1,5 @@
 /*
-    TABLES.JS - Last updated: 15.04.15
+    TABLES.JS - Last updated: 12.05.15
 */
 //-----------------------------------------------------------------
 // Variables
@@ -13,7 +13,7 @@ $('.js-footable').footable({
         phone: 480,
         tablet: 963-30 //-30
     }
-}).removeClass('lv-loading'); //.find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
+}).removeClass('lv-loading').find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
 
 // $('.footable').footable().redraw();
 

@@ -10,6 +10,7 @@
 
 $context-menu-bg: white;
 $context-menu-border-color: #D4DCE3;
+$context-menu-width-expanded: 70%;
 
 //*****************************************************************
 // Context Menu - Layout
@@ -58,6 +59,29 @@ $context-menu-border-color: #D4DCE3;
         bottom: $footer-height;
     }
 }
+
+//-----------------------------------------------------------------
+// Expanded Feature
+//-----------------------------------------------------------------
+
+.lv-context-menu.is-expanded {
+    @media #{$large-up} {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 30;
+    }
+}
+
+.lv-context-menu.is-expanded,
+.lv-context-menu.is-expanded .lv-context-menu-fixed {
+    @media #{$large-up} {
+        width: $context-menu-width-expanded;
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+ }
+
 
 //=========================================
 // Context Menu Scroller - Layout
@@ -244,7 +268,7 @@ $context-menu-border-color: #D4DCE3;
         }
 
         @media #{$large-up} {
-            background: #5E6E7F;
+            background: $tertiary-color; //#5E6E7F;
             color: white;
 
             i {

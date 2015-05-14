@@ -2,6 +2,7 @@
 layout: checkpoint/research/documents/document_01
 title: "Sample 02: 'Engagement Acceptance and Continuance'"
 type: sample_document
+next_url: "/pages/checkpoint/research/documents/samples/sample-03/"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

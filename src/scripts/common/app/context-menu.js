@@ -141,6 +141,14 @@ $('#home-btn').on('click', function(event){
 
 // }
 
+//-----------------------------------------------------------------
+// Resizer Button (Westlaw only)
+//-----------------------------------------------------------------
+
+$('.lv-context-menu .lv-resize-btn').click(function(){
+    $('.lv-context-menu').toggleClass('is-expanded');
+    $('i', $(this)).toggleClass('fi-arrows-expand');
+});
 
 
 

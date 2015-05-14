@@ -4,6 +4,7 @@ title: "Research: 'Document 1/1 - Blank v Federal Commisioner of Taxation (No 2)
 type: document
 context_menu: "checkpoint/context_menu_output/document_options_03.html"
 sidebar_details: "checkpoint/sidebar_content/hints/navigating_documents.html"
+next_url: "/pages/checkpoint/research/documents/samples/sample-01/"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

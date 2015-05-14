@@ -122,21 +122,23 @@ $include-text-selection-styles: true !default;
 		padding: rem-calc(15);
 		margin-bottom: rem-calc(20);
 		overflow-x: auto;
-		white-space: pre-wrap;       /* css-3 */
-		word-wrap: break-word;
+		// white-space: pre-wrap;       /* css-3 */
+		// word-wrap: break-word;
 		max-width: 100%;
 		width: 100%;
-		word-break: break-all;
+		// word-break: break-all;
 	}
 
 	code {
 		border: 0;
-		color: #DAE0E7;
+		border-radius: 3px;
 		font-size: rem-calc(14);
+		background: lighten(#B3CBEE, 10%);
 	}
 
 	pre code {
 		background: none;
+		color: #DAE0E7;
 	}
 
 	.lv-stage {

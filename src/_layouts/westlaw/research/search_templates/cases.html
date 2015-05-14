@@ -3,7 +3,7 @@ layout: common/internal
 ---
 
 <!-- SEARCH FORM -->
-<form class="lv-search-form lv-partial-view collapsed" action="#" method="post" novalidate>
+<form class="lv-search-form" action="#" method="post" novalidate>
     <div class="row">
         <div class="medium-11 large-10 columns">
 
@@ -48,13 +48,6 @@ layout: common/internal
 
             </div> <!-- .lv-advanced-options -->
 
-            <!-- Toggle More Option Button -->
-            <div class="row">
-                <div class="medium-offset-3 medium-9 columns">
-                    <a class="lv-advanced-options-btn button tiny pill radius" href="#">Show More</a>
-                </div>
-            </div>
-
             <!-- Draw Submit Fields -->
             {% include common/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}
 
@@ -64,24 +57,11 @@ layout: common/internal
 
 <!-- ************************ END FORM ************************ -->
 
+{% comment %}
 <!-- Form obscured on mobile (restricted height) - button will show all -->
 <div class="row">
     <div class="medium-11 columns text-right">
         <a class="lv-partial-view-btn lv-non-legacy button pill tiny" href="#">Expand</a>
     </div>
 </div>
-
-<!-- DOCUMENT OPTIONS -->
-<div class="row">
-    <div class="columns">
-        {% include common/snippets/breadcrumbs.html %}
-        {% include westlaw/export_options/search_advanced.html %}
-    </div>
-</div>
-
-<!-- TOC -->
-<div class="row">
-    <div class="columns">
-        {% include westlaw/toc_output/toc_cases.html %}
-    </div>
-</div>
+{% endcomment %}

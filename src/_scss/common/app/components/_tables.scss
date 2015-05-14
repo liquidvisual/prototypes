@@ -142,7 +142,7 @@ td select {
 //-----------------------------------------------------------------
 
 .footable {
-    background: white url(../../img/westlaw/template/table-thead-bg.png) repeat-x; // hack
+    background: white url(../../img/westlaw/template/table-thead-bg-orig.png) repeat-x; // hack
 
     .footable-toggle {
         display: none !important; // remove that plus minus thing
@@ -156,13 +156,13 @@ td select {
         color: $success-color;
     }
 
-    .footable .zebra,
-    .footableX tr:nth-of-type(odd) {
-        // background: darken(#EEEFF3, 2%);
-        // background: lighten(#EEEFF3, 2%);
-        // background: #F4F6F9;
-        // background: #EFF4F7;
-    }
+    // .zebra {
+    // //tr:nth-of-type(odd) {
+    //     // background: darken(#EEEFF3, 2%);
+    //     // background: lighten(#EEEFF3, 2%);
+    //     // background: #F4F6F9;
+    //     background: #EFF4F7;
+    // }
 
     .footable-detail-show {
         background: rgba(#5887B7, 0.05); // hit area highlight

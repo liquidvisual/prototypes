@@ -22,8 +22,6 @@ $('[data-dropdown]').each(function(event){
 
     $(trigger, dropdown).wrapAll('<span class="lv-dropdown-wrapper"/>');
 
-
-
     trigger.click(function(event){
         event.preventDefault();
         dropdown.toggle();

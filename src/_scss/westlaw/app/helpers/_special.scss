@@ -11,6 +11,48 @@
 // Special
 //-----------------------------------------------------------------
 
+.lv-context-menu-fixed {
+	overflow-x: auto !important;
+}
+
+//-----------------------------------------------------------------
+// Context Menu Expander Feature
+//-----------------------------------------------------------------
+
+.lv-context-menu-fixed .lv-resize-btn {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -2px;
+	z-index: 100;
+	cursor: pointer;
+
+	i {
+		display: block;
+		width: rem-calc(25);
+		padding-left: rem-calc(1);
+		height: rem-calc(25);
+		line-height: rem-calc(25);
+		font-size: rem-calc(14);
+		text-align: center;
+		border-radius: 3px;
+	}
+
+	.fi-arrows-compress {
+		background: lighten(#3FC450, 20%);
+		color: white;
+	}
+
+	.fi-arrows-expand {
+		background: #D4DCE3;
+		color: #222;
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
 .lv-super .pagination {
     display: inline-block; // so we can text-align it
 }

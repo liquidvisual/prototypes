@@ -2,6 +2,7 @@
 layout: checkpoint/research/documents/document_01
 title: "Sample 01: 'Table of Amending Legislation'"
 type: sample_document
+next_url: "/pages/checkpoint/research/documents/samples/sample-02/"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

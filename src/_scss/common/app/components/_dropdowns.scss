@@ -19,20 +19,6 @@
 //-----------------------------------------------------------------
 // Dropdowns
 //-----------------------------------------------------------------
-
-// .lv-has-dropdown:hover .lv-dropdown {
-//     height: auto;
-//     opacity: 1;
-// }
-
-// .lv-has-dropdown:hover i.fa-caret-down {
-//     color: #222;
-// }
-
-// .lv-has-dropdown a:hover i {
-//     color: $primary-color;
-// }
-
 //=========================================
 // Dropdown
 //=========================================
@@ -54,8 +40,8 @@
     border-right: 1px solid #D4DCE3;
     border-radius: $global-radius $global-radius;
     box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
-    opacity: 0;
-    height: 0;
+    // opacity: 0;
+    // height: 0;
     overflow: hidden;
     display: none;
 
@@ -85,10 +71,10 @@
     a,
     .anchor {
         display: block;
-        padding: rem-calc(14);
+        padding: rem-calc(10 12);
         border-bottom: 1px solid #D4DCE3; // better blue? #E1E4E6
         color: #505659;//#676767;
-        // font-size: rem-calc(14) !important;
+        font-size: rem-calc(12);
         line-height: 1.2;
         text-align: left;
         font-weight: 600;

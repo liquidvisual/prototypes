@@ -5,16 +5,23 @@ permalink: /docs/
 
 # Welcome
 
-Last updated: **24.04.15**
+Last updated: **14.05.15**
 
 The public facing site is currently located at:
 [http://prototypes.uat.liquidvisual.net](http://prototypes.uat.liquidvisual.net)
 
 ---
 
-The purpose of this project is to test and assess the impact of a responsive retro-fitting of both Checkpoint and Westlaw. The original goal was to design and create a responsive user interface (referred to as the 'Application Frame' throughout this document) that could accomodate large portions of existing code without too much modification.
+## Purpose
 
-This has been successful **to a point**, so far. The complexity of search templates across both applications require a re-write of those form elements to be responsive - these cannot be retro-fitted. I have however devised a simple way to generate templates with little effort using a series of includes and variables which I will explain later on.
+The purpose of this project is to test and assess the impact of a responsive retro-fitting of both Checkpoint and Westlaw. The original goal was to design and create a responsive user interface (referred to as the 'Application Frame' throughout this document) that could accommodate large portions of existing code without too much modification.
 
-Mostly everything else is using markup directly output from the DOM. The premise of this working hinges on the fact that all CSS is essentially left behind - save for what is included with the prototype. JavaScript will carry over from the apps, but this is expected to conflict at certain points.
+## Result
 
+This has been successful **to a point**. Most content has worked fine being dropped in directly, for example the *Search Results* templates and *Document* templates have posed few issues except in special cases, where as others will need significant re-working to function correctly. *Search Templates* fall into the latter category as do smaller components such as the delivery options, search boxes and document navigation buttons.
+
+The premise of this working hinges on the fact that all CSS is essentially left behind - except for what is included with the prototype, and some of those files (namely document styles) have been refactored back into a modular Sass environment.
+
+## Just a Prototype
+
+The strategies laid out in these prototypes are in no way bullet-proof and there will be great challenges in the final implementation. All examples here are to be used as suggestions for best application with final judgement being reserved to the back-end developers' discretion.

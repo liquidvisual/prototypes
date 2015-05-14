@@ -49,6 +49,8 @@
 - title: Miscellaneous
   include_children: true
   children:
+    - title: Change Log
+      url: /docs/miscellaneous/change-log/
     - title: Upgrading
       url: /docs/miscellaneous/upgrading/
     - title: Troubleshooting

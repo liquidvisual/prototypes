@@ -2,6 +2,7 @@
 layout: checkpoint/research/documents/document_01
 title: "Sample 05: 'YA 1 Definitions'"
 type: sample_document
+next_url: "/pages/checkpoint/research/documents/samples/sample-01/"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

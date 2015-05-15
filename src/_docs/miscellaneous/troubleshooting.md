@@ -30,5 +30,21 @@ All paths in the prototype site are **root relative**, pointing to an **/assets*
 
 If images or font icons fail to load in your own environment, it's most likely an issue with the paths. Make sure the **assets/** folder is in the root. For more information see [Assets](/docs/basics/assets/).
 
+## 'npm install' Fails
+
+In many cases a failure with `npm install` is to do with user permissions. On Mac I use sudo which takes care of it:
+
+```
+sudo npm install
+```
+
+Failing that, you might want to clear npm's cache - as some files can get corrupted if downloaded incorrectly.
+
+Delete the `node-modules/` and then run:
+
+```
+sudo npm cache clean
+sudo npm install
+```
 
 ## IE8 compatibility and hitting the hard limit

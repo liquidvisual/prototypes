@@ -4,8 +4,9 @@ site_type: "westlaw"
 ---
 
 <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
     }
 
     .lv-super .lv-resize-btn {
@@ -15,7 +16,27 @@ site_type: "westlaw"
     .lv-super .lv-context-menu .lv-context-menu-fixed {
         background: white;
         border-right: 1px solid #D4DCE3;
+    }
 
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
     }
 
     .lv-stage {
@@ -52,7 +73,8 @@ site_type: "westlaw"
         text-transform: uppercase;
         font-size: 11px;
         /*text-align: left;*/
-        color: #1C78A7;
+        /*color: #1C78A7;*/
+        color: #675392;
         font-weight: bold;
         /*border-bottom: 1px solid #D4DCE3;*/
     }

@@ -4,6 +4,7 @@ title: "Workflow: 'Document 1/1 - Annual Trust Distributions Workflow'"
 type: document
 context_menu: "checkpoint/context_menu_output/document_options_04.html"
 sidebar_details: "checkpoint/sidebar_content/hints/workflow.html"
+next_url: "/pages/checkpoint/research/documents/samples/sample-01/"
 ---
 
 <!-- START CHECKPOINT OUTPUT -->

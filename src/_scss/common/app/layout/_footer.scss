@@ -38,7 +38,7 @@
     .anchor {
         color: $body-font-color;
         @media #{$large-up} {
-            color: white;
+            color: lighten($dark-grey, 75%);
         }
     }
 }

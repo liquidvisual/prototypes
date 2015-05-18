@@ -20,22 +20,33 @@
 //-----------------------------------------------------------------
 
 .lv-context-menu-fixed .lv-resize-btn {
-	display: block;
+	display: none;
 	position: absolute;
-	top: 0;
-	left: -2px;
+	top: -2px;
+	right: 0px;
+	// right: 3px;
 	z-index: 100;
 	cursor: pointer;
 
+	@media #{$large-up} {
+	    display: block;
+	}
+
+	&:hover i {
+		color: #222;
+		background: darken(#D4DCE3, 5%);
+	}
+
 	i {
+		// @include transition('background, color');
 		display: block;
-		width: rem-calc(25);
-		padding-left: rem-calc(1);
-		height: rem-calc(25);
-		line-height: rem-calc(25);
-		font-size: rem-calc(14);
+		margin: 0; // strange
+		width: rem-calc(20);
+		height: rem-calc(20);
+		line-height: rem-calc(20);
+		font-size: rem-calc(12);
 		text-align: center;
-		border-radius: 3px;
+		border-radius: 0 0 0 3px;
 	}
 
 	.fi-arrows-compress {
@@ -45,7 +56,7 @@
 
 	.fi-arrows-expand {
 		background: #D4DCE3;
-		color: #222;
+		color: darken(#C4CED9, 30%);
 	}
 }
 

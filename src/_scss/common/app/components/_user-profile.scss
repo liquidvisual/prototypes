@@ -85,12 +85,18 @@
     }
 }
 
+//-----------------------------------------------------------------
+// USER TEXT AND LOGOUT
+//-----------------------------------------------------------------
+
 .lv-user-text {
-    position: absolute;
-    bottom: rem-calc(-30);
+    position: fixed; // this should be absolute, but IE, grr
+    top: 68px;
+    // bottom: rem-calc(-30);
     right: rem-calc(20);
     color: lighten($dark-grey, 70%);
     font-size: rem-calc(15);
+    z-index: 1;
 }
 
 // Remove if going with initial design

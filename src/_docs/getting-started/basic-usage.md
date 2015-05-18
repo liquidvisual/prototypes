@@ -4,90 +4,26 @@ title: Basic Usage
 
 # Basic Usage
 
-## How to Implement
+Checkpoint & Westlaw share the same 'Application Frame' and reside in the same codebase. As a result each prototype will follow the same rules and behavior. Anything you do in Checkpoint can be done in Westlaw and vice versa (mostly). This includes navigation, mobile viewing and the interaction of components.
 
-Both prototypes (Checkpoint and Westlaw) share the same Application Frame.
+## Using the Guide
 
-```
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-```
+Each prototype has a dynamically generated Guide which lists all of the pages you can access within that prototype. Alongside you will also find, in tiny print, the path of the **layout** the page uses.
 
-## Responsive Analysis
+The Guide is built into both prototype's main navigation bar, allowing you to return to it quickly.
 
-1. Search Templates
-2. Search Results
-3. Documents
-4. Module Pages
+<div class="panel">
+    <strong>TIP: Return to the Lobby</strong>
+    <p>If you feel lost or need to locate these docs later, you can return to the lobby screen by clicking the site logo in the top bar throughout any page of the app.</p>
+</div>
 
-etc
+## Simulated Workflows
 
-## Media Queries
+To simulate the effect of using the app, each page comes with a built-in "destination" variable which tells it where to go next. Due to the static nature of the prototypes this is rather restrictive, forcing you along a linear path like a powerpoint slideshow. It should be enough to get the job done though. These simulated workflows have been built around the documents that were originally submitted at the start of the project. You can find them here:
 
-<div class="table-responsive">
-        <table>
-    <thead>
-        <tr>
-            <th class="highlight">Key</th>
-            <th class="highlight">CSS Media Query</th>
-            <th>Applies</th>
-            <th>Classname</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="highlight"><i>None</i></td>
-            <td class="highlight"><i>None</i></td>
-            <td><i>Always</i></td>
-            <td><code>.pure-u-*</code></td>
-        </tr>
+[Westlaw Workflows Doc](https://cloudup.com/c1OlESVlUdJ)
+[Checkpoint Workflows Doc](https://cloudup.com/cARHOODXUQ0)
 
+### How Simulation Works
 
-        <tr>
-            <td class="highlight"><b><code>sm</code></b></td>
-            <td class="mq-table-mq highlight"><code>@media screen and (min-width: 35.5em)</code></td>
-            <td>≥ <b>568px</b></td>
-            <td><code>.pure-u-<b>sm</b>-*</code></td>
-        </tr>
-
-        <tr>
-            <td class="highlight"><b><code>md</code></b></td>
-            <td class="mq-table-mq highlight"><code>@media screen and (min-width: 48em)</code></td>
-            <td>≥ <b>768px</b></td>
-            <td><code>.pure-u-<b>md</b>-*</code></td>
-        </tr>
-
-        <tr>
-            <td class="highlight"><b><code>lg</code></b></td>
-            <td class="mq-table-mq highlight"><code>@media screen and (min-width: 64em)</code></td>
-            <td>≥ <b>1024px</b></td>
-            <td><code>.pure-u-<b>lg</b>-*</code></td>
-        </tr>
-
-        <tr>
-            <td class="highlight"><b><code>xl</code></b></td>
-            <td class="mq-table-mq highlight"><code>@media screen and (min-width: 80em)</code></td>
-            <td>≥ <b>1280px</b></td>
-            <td><code>.pure-u-<b>xl</b>-*</code></td>
-        </tr>
-
-    </tbody>
-</table>
-
-    </div>
-
-## Libraries
-
-Animate.css
-FastClick
-Font Awesome Icons
-Footable: Responsive Tables JQuery Plugin
-Foundation 5 CSS Framework
-Foundation Font Icons
-JQuery 1.11.1
-JQuery UI 1.11.2
-JQuery scrollTo
-JQuery Transit
-Magnific Popup Responsive Lightbox
-Modernizr
-MMenu (phased out in new codebase)
-NProgress Load Bar
+Prototypes use a lot of raw code dropped in from their real counterparts. Because of this, many links throughout the app will be dead. To overcome this, all link hrefs are replaced with paths passed from the current page's destination variable. This **may** lead to some undesirable or otherwise glitchy behavior in places. If something goes wrong, refresh the page or return to the Guide to find your place.

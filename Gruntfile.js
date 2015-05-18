@@ -65,9 +65,9 @@ module.exports = function (grunt) {
           notify: false,
           // Here you can disable/enable each feature individually
           ghostMode: {
-              clicks: true,
-              forms: true,
-              scroll: true
+              clicks: false,
+              forms: false,
+              scroll: false
           },
           // Don't send any file-change events to browsers
           codeSync: true,
@@ -142,8 +142,7 @@ module.exports = function (grunt) {
       options: {
         //sourceMap: true,
         //imagePath: '',
-        includePaths: ['<%= yeoman.app %>/_bower_components/foundation/scss',
-                       '<%= yeoman.app %>/_bower_components/jQuery.mmenu/src/scss']
+        includePaths: ['<%= yeoman.app %>/_bower_components/foundation/scss']
       },
       dist: {
         files: [{

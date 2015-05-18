@@ -23,7 +23,7 @@
 // horizontal scrolling FTW
 .lv-context-menu .toc-root {
     padding: 10px;
-    overflow-x: scroll;
+    // overflow-x: scroll;
 
     * {
         white-space: nowrap;
@@ -215,6 +215,14 @@
 //-----------------------------------------------------------------
 // FILTER SEARCH (Context Menu - mini toc)
 //-----------------------------------------------------------------
+
+.lv-context-menu #tocNodes {
+    ul ul {
+        @media #{$medium-up} {
+            margin-left: 10px !important;
+        }
+    }
+}
 
 #searchsummary #metadocs > ul {
     margin-bottom: 15px;

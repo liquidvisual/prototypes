@@ -2,6 +2,32 @@
 title: Documents
 ---
 
+# Warning: This page is still in progress
+
+
+
+
+## Addressing Diagrams in Workflow
+
+Workflow documents are problematic since they utilise interactive image maps for their diagrams. Image maps cannot be made responsive so there's two ways we could go about handling this:
+
+1. Add a `width="100%"` on the diagram `img` element. The image map will fail once it changes size but the user will still be able to see it and save it to their device.
+
+2. Allow the user to 'pinch and zoom'.
+
+With the latter we can trigger a page-based 'pinch and zoom' behavior by altering a meta tag in the master layout. You can find this tag in **src/layouts/common/master.html** on line 10.
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+```
+
+The key attribute above is `user-scalable=no`. By default all pages are locked and **not** user-scalable unless specifically requested by a page. In Westlaw, the Workflow document passes a front-matter variable `user-scalable: true` which gets picked up by the template logic in the master, changing it to: `user-scalable="yes"`
+
+The result is a page that can essentially be **"unresponsive" by design**. With the current [workflow document](http://localhost:9292/pages/westlaw/workflow/documents/document-01/) I've implemented options **both 1 and 2**. The image is 100% but the page can be 'pinch and zoomed'. The assumption is if you were to leave a diagram in place, the width would remain fixed and a user *may* be able to interact with the image map on a smaller device if they scale the document with their thumbs.
+
+
+
+
 # Documents
 
 ## Document View

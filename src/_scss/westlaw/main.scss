@@ -1,7 +1,7 @@
 /*
     WESTLAW CSS
 
-    - Last updated: 05.05.15
+    - Last updated: 15.05.15
     - hello@liquidvisual.com
 */
 
@@ -52,14 +52,14 @@
 // Pages
 @import "app/pages/dashboard";
 
-// Legacy Overrides
-@import "app/legacy/overrides/delivery-options";
-@import "app/legacy/overrides/document-context";
-@import "app/legacy/overrides/document";
+// Common Legacy Overrides
+@import "../common/app/legacy/overrides/document";
+@import "../common/app/legacy/overrides/document-context";
+@import "../common/app/legacy/overrides/general";
+@import "../common/app/legacy/overrides/search-results";
+@import "../common/app/legacy/overrides/search-result-options";
+@import "../common/app/legacy/overrides/toc";
+@import "../common/app/legacy/overrides/user-preferences";
+
+// App Legacy Overrides
 @import "app/legacy/overrides/general";
-@import "app/legacy/overrides/search-result-options"; // context menu mostly
-// @import "app/legacy/overrides/search-results-checkpoint"; // overrides
-@import "app/legacy/overrides/search-results-westlaw"; // overrides
-@import "app/legacy/overrides/search-templates";
-@import "app/legacy/overrides/toc";
-@import "app/legacy/overrides/user-preferences";

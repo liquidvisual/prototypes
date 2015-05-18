@@ -2,6 +2,8 @@
 title: Results
 ---
 
+# Warning: This page is still in progress
+
 # Results
 
 The "Search Results" template is probably one of the most problematic due to the large amount of varying content and styles. This prototype's template consists of existing app DOM output and has not been re-written in anyway. The idea is to try and re-style the existing markup so these templates don't have to be written.

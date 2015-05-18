@@ -1,7 +1,7 @@
 /*
     CHECKPOINT SCSS
 
-    - Last updated: 05.05.15
+    - Last updated: 15.05.15
     - hello@liquidvisual.com
 */
 
@@ -12,7 +12,7 @@
 // Variables
 @import "app/base/variables";
 
-// legacy
+// legacy - REMOVE ONCE DONE
 @import "app/legacy/original/all";
 
 // Base
@@ -55,22 +55,19 @@
 // Pages
 @import "app/pages/dashboard";
 
-// Legacy Overrides
-@import "../westlaw/app/legacy/overrides/delivery-options";
-@import "../westlaw/app/legacy/overrides/document-context";
-@import "../westlaw/app/legacy/overrides/document";
-@import "../westlaw/app/legacy/overrides/general";
-@import "../westlaw/app/legacy/overrides/search-result-options"; // context menu mostly
-// @import "../westlaw/app/legacy/overrides/search-results-checkpoint"; // overrides
-@import "../westlaw/app/legacy/overrides/search-results-westlaw"; // overrides
-@import "../westlaw/app/legacy/overrides/search-templates";
-@import "../westlaw/app/legacy/overrides/toc";
-@import "../westlaw/app/legacy/overrides/user-preferences";
+// Common Legacy Overrides
+@import "../common/app/legacy/overrides/document";
+@import "../common/app/legacy/overrides/document-context";
+@import "../common/app/legacy/overrides/general";
+@import "../common/app/legacy/overrides/search-results";
+@import "../common/app/legacy/overrides/search-result-options";
+@import "../common/app/legacy/overrides/toc";
+@import "../common/app/legacy/overrides/user-preferences";
 
-// Legacy
-@import "app/legacy/overrides/legacy";
-@import "app/legacy/overrides/legacy-document";
-// @import "app/legacy/overrides/legacy-preferences";
-// @import "app/legacy/overrides/legacy-search-templates";
-// @import "app/legacy/overrides/legacy-toc";
-// @import "app/legacy/overrides/legacy-doc-context";
+// App Legacy Overrides
+@import "app/legacy/overrides/general";
+
+// phased out - choosing to use original styles instead
+// @import "app/legacy/overrides/document";
+// @import "app/legacy/overrides/search-results";
+// @import "app/legacy/overrides/toc";

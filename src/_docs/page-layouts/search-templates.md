@@ -2,6 +2,8 @@
 title: Search Templates
 ---
 
+# Warning: This page is still in progress
+
 # Search Templates
 
 As we know, Search Templates cannot be responsively retro-fitted. These templates would need to be re-built using the [Foundation grid](http://foundation.zurb.com/docs/components/grid.html).
@@ -31,7 +33,7 @@ src/
   |         |--form_submit_clear_input.html
   |         |--form_submit_input.html
   |         |--form_text_input.html
-  
+
 ```
 
 ### Search Form Example
@@ -42,9 +44,9 @@ In the case of Checkpoint the code for *Cases* is as follows:
 <form class="lv-search-form lv-partial-view collapsed" action="#" method="post" novalidate>
     <div class="row">
         <div class="medium-11 large-10 columns">
-            
+
             <!--*** Inputs happen inside here ***-->
-            
+
         </div>
     </div>
 </form>

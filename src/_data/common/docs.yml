@@ -23,6 +23,8 @@
       url: /docs/basics/data-files/
     - title: Assets
       url: /docs/basics/assets/
+    - title: Libraries
+      url: /docs/basics/libraries/
     - title: CSS Components
       url: /docs/basics/css-components/
     - title: JavaScript

@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -480,8 +578,108 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="directory-structure">Directory Structure</h1>
+                    <div class="lv-content-block">
+                        <h1 id="directory-structure">Directory Structure</h1>
 
+<h2 id="root">Root</h2>
+
+<pre><code>prototypes/
+  |--node_modules/
+  |
+  |--src/
+  |  |--[Everything]
+  |
+  |--dist/
+  |  |--[Compiled Directory]
+  |
+  |--Gruntfile.js
+  |--bower.json
+  |--package.json
+  |--README.md
+  |--_config.build.yml
+  |--_config.yml
+  |--Gemfile
+</code></pre>
+
+<p><strong>NOTE</strong>: The <strong>dist/</strong> folder is not be included by default. One needs to run <code>grunt build</code> to generate it.</p>
+
+<h3 id="configyml">config.yml</h3>
+
+<p>This file instructs Jekyll what to do on compile. Currently the config sets up some global variables for pages inside the Westlaw and Checkpoint directories (see below). Most variables are passed through front-matter YAML from page to page in the markdown files where as this establishes those variables in one place.</p>
+
+<pre><code>defaults:
+  -
+    scope:
+      path: "pages/westlaw"
+    values:
+      site_type: "westlaw"
+  -
+    scope:
+      path: "pages/checkpoint"
+    values:
+      site_type: "checkpoint"
+</code></pre>
+
+<p>The result is we’re able to determine paths based on the page we’re on by using the template variable <code>westlaw</code>. For instance, the index from <strong>pages/checkpoint/index.html</strong> will store a page_type variable of “checkpoint” and be accessible throughout all subsequent pages. This variable then goes to define paths and is ultimately how we share the codebases between the two.</p>
+
+<h2 id="src">SRC</h2>
+
+<p>As you’ll see below, most directories have subfolders which point towards Checkpoint or Westlaw specific data. In cases where files are shared eg. top layouts, these will reside in a <strong>common/</strong> folder.</p>
+
+<pre><code>src/
+  |--_bower_components/
+  |
+  |--data/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |  |--common/
+  |
+  |--_docs/
+  |  |--[Documention files]
+  |
+  |--_includes/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |  |--common/
+  |
+  |--_layouts/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |  |--common/
+  |
+  |--_scss/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |  |--common/
+  |
+  |--fonts/
+  |
+  |--img/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |  |--common/
+  |
+  |--modal_output/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |
+  |--pages/
+  |--scripts/
+  |--README.md
+  |--robots.txt
+  |--CNAME
+</code></pre>
+
+<h2 id="it-all-starts-with-the-pages-directory">It All Starts with the Pages Directory</h2>
+
+<p>The way Jekyll processes everything begins with markdown files stored inside the <strong>pages/</strong> directory. These files contain front-matter YAML which tell the page what layout to use and the page title. They also pass data, such as strings - which tell the layout to include certain HTML partials.</p>
+
+<h2 id="in-a-nutshell">In a Nutshell</h2>
+
+<p>The two prototypes are controlled by data variables stored inside of <strong>src/data/[name]</strong>. These variables govern colours, navigation and other information that differ between sites.</p>
+
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -498,8 +696,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -480,8 +578,271 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="search-templates">Search Templates</h1>
+                    <div class="lv-content-block">
+                        <h1 id="warning-this-page-is-still-in-progress">Warning: This page is still in progress</h1>
 
+<h1 id="search-templates">Search Templates</h1>
+
+<p>As we know, Search Templates cannot be responsively retro-fitted. These templates would need to be re-built using the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>.</p>
+
+<p>I’ve provided two examples of Search Templates in the prototype in the form of:</p>
+
+<ol>
+  <li>Basic Search Template</li>
+  <li>Cases Search Template</li>
+</ol>
+
+<p>Basic isn’t too involved, as it’s just a single search field, TOC and some delivery options. The complexity arises when building Search Templates that include lots of inputs types.</p>
+
+<h2 id="building-templates-with-micro-partials">Building Templates with Micro-Partials</h2>
+<hr />
+
+<p>Fortunately I’ve devised a simple way to build out these templates through the use of micro-partials and basic template logic. The result is code which can be compiled, copied and built upon. The idea of these templates is to remain generic and simple as possible. You can check out the meat of these simple partials (or includes) in the <strong>src</strong> directory.</p>
+
+<pre><code>src/
+  |--includes/
+  |  |--common/
+  |     |--components/
+  |        |--dash_block.html
+  |         |--form_checkbox_input.html
+  |         |--form_date_input.html
+  |         |--form_select_input.html
+  |         |--form_submit_clear_input.html
+  |         |--form_submit_input.html
+  |         |--form_text_input.html
+
+</code></pre>
+
+<h3 id="search-form-example">Search Form Example</h3>
+
+<p>In the case of Checkpoint the code for <em>Cases</em> is as follows:</p>
+
+<pre><code>&lt;form class="lv-search-form lv-partial-view collapsed" action="#" method="post" novalidate&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="medium-11 large-10 columns"&gt;
+
+            &lt;!--*** Inputs happen inside here ***--&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h3 id="render-text-fields">Render Text Fields</h3>
+
+<p>To render a number of standard input fields in succession, we can create a (somewhat hacky) array.</p>
+
+<pre><code>&lt;!-- Create Field Names --&gt;
+
+</code></pre>
+
+<p>We then loop through these word strings calling the micro-partial to write each time.</p>
+
+<pre><code>&lt;!-- Draw Fields --&gt;
+
+    &lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-keywords" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Keywords&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="text" name="Keywords" id="sf-keywords"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-case-title-party-name" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Case Title / Party Name&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="text" name="Case Title / Party Name" id="sf-case-title-party-name"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-citation" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Citation&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="text" name="Citation" id="sf-citation"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-catchwords" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Catchwords&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="text" name="Catchwords" id="sf-catchwords"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-judge-s" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Judge(s)&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="text" name="Judge(s)" id="sf-judge-s"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-court" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Court&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="text" name="Court" id="sf-court"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+<h3 id="render-select-input">Render Select Input</h3>
+
+<p>In this example we’re passing a string directly to the partial. The title “Jurisdiction” is then captured inside the partial - and uses the value to display the name of the field in the left column - next to the select field.</p>
+
+<pre><code>&lt;!-- Draw Select Field --&gt;
+
+
+
+&lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-jurisdiction" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Jurisdiction&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;select name="Jurisdiction" id="sf-jurisdiction"&gt;
+
+            &lt;option value="All" selected&gt;All&lt;/option&gt;
+
+			&lt;!-- Draw multiple options for dropdown example --&gt;
+            
+            	&lt;option value="option-1"&gt;Option 1&lt;/option&gt;
+            
+            	&lt;option value="option-2"&gt;Option 2&lt;/option&gt;
+            
+            	&lt;option value="option-3"&gt;Option 3&lt;/option&gt;
+            
+            	&lt;option value="option-4"&gt;Option 4&lt;/option&gt;
+            
+            	&lt;option value="option-5"&gt;Option 5&lt;/option&gt;
+            
+            	&lt;option value="option-6"&gt;Option 6&lt;/option&gt;
+            
+            	&lt;option value="option-7"&gt;Option 7&lt;/option&gt;
+            
+            	&lt;option value="option-8"&gt;Option 8&lt;/option&gt;
+            
+            	&lt;option value="option-9"&gt;Option 9&lt;/option&gt;
+            
+            	&lt;option value="option-10"&gt;Option 10&lt;/option&gt;
+            
+
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="render-tofrom-dates">Render TO/FROM Dates</h3>
+
+<p>Same as above. This will generate what you need with included JQuery UI Calendar functionality.</p>
+
+<pre><code>&lt;!-- Draw Date Fields --&gt;
+
+
+
+&lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="start-date-judgement-date" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;Judgement Date&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="medium-4 columns"&gt;
+                &lt;input class="ui-datepicker" type="text" name="Judgement Date Start Date" placeholder="Start Date" id="start-date-judgement-date"&gt;
+            &lt;/div&gt;
+            &lt;div class="medium-4 columns"&gt;
+                &lt;input class="ui-datepicker" type="text" name="Judgement Date End date" placeholder="End Date" id="end-date-judgement-date"&gt;
+
+                &lt;!-- Hidden for accessibility --&gt;
+                &lt;label for="end-date-judgement-date" class="hide"&gt;Judgement End Date&lt;/label&gt;
+
+            &lt;/div&gt;
+            &lt;div class="medium-4 columns"&gt;
+                &lt;input type="checkbox" name="Judgement Exact Date" id="exact-judgement-date"&gt;
+                &lt;label for="exact-judgement-date"&gt;Exact Date&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt; &lt;!-- .medium-9 --&gt;
+&lt;/div&gt; &lt;!-- .row --&gt;
+</code></pre>
+
+<h3 id="render-checkbox">Render Checkbox</h3>
+
+<pre><code>&lt;!-- Draw Checkbox --&gt;
+
+
+
+&lt;div class="row"&gt;
+    &lt;div class="medium-3 columns"&gt;
+        &lt;label for="sf-firstpoint-verified-data-only" class="text-left medium-text-right"&gt;
+            &lt;span class="text lv-tooltip" title="This is a tooltip. In production, this will display information about the selected field."&gt;FirstPoint Verified Data Only&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="medium-9 columns"&gt;
+        &lt;input type="checkbox" name="FirstPoint Verified Data Only" id="sf-firstpoint-verified-data-only"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="render-submit-button">Render Submit Button</h3>
+
+<pre><code>&lt;!-- Draw Submit Fields --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="medium-offset-3 medium-9 columns"&gt;
+		&lt;br&gt;
+        &lt;button value="submit" class="button radius medium"&gt;Search&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="render-submit-button-and-clear-button">Render Submit Button and Clear Button</h3>
+
+<pre><code>&lt;!-- Draw Submit Fields --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="medium-offset-3 medium-9 columns"&gt;
+		&lt;br&gt;
+        &lt;button value="submit" class="button radius medium"&gt;Search&lt;/button&gt;&amp;nbsp;&amp;nbsp;
+        &lt;button type="reset" class="button radius medium knockout" value="clear"&gt;Clear&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="westlaw-and-research">Westlaw and ‘Research’</h2>
+<hr />
+
+<p><strong>Research</strong> isn’t part of the existing Westlaw it’s only in Checkpoint. In merging the codebases I’ve needed to keep paths sane and directory structures similar to ensure everything works consistently. In production this ‘research’ tab would simply be replaced with ‘home’ but for technical reasons related to these prototypes - it’s necessary Search Templates are accessed through <strong>/research/</strong>.</p>
+
+<h2 id="workflow-templates">Workflow Templates</h2>
+<hr />
+
+<p>Workflow is a slightly problematic [CONT’D]</p>
+
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -498,8 +859,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

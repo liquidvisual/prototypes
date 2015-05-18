@@ -43,7 +43,19 @@
     <div class="lv-super">
         <div class="lv-page">
 
-            
+            <!-- REMOVE ON PROD: FOR SIMULATION ONLY -->
+<script>
+    $(function(){
+        $('.lv-stage a:not(".toplevel a, .lv-back-btn")').click(function(e){
+            $(this).attr('href', '/pages/westlaw/alerts/');
+        });
+
+        $('.lv-stage button:not([type="reset"]), input[type=submit]').click(function(e){
+            location.href = '/pages/westlaw/alerts/';
+            e.preventDefault();
+        });
+    });
+</script>
 
 <!-- HEADER -->
 <header class="lv-header">
@@ -403,6 +415,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -2009,8 +2023,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

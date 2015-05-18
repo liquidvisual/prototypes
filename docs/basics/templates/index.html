@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -480,25 +578,26 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="templates">Templates</h1>
+                    <div class="lv-content-block">
+                        <h1 id="templates">Templates</h1>
 
 <h2 id="how-templating-works">How Templating Works</h2>
 
-<p><strong>NOTE:</strong> All of these folders live inside <strong>/src</strong> directory</p>
+<p><strong>NOTE:</strong> All the following folders live inside the <strong>/src</strong> directory</p>
 
 <h3 id="layouts">/_layouts</h3>
 
-<p>Layouts are stored in the <strong>/_layouts</strong> folder and have 3 levels of heirarchy. This is to help maintenance. They inherit from the bottom up (starting from #3).</p>
+<p>Layouts are stored in the <strong>/_layouts</strong> folder and have three levels of hierarchy. This is to help with maintenance. Each template will inherit from the <strong>bottom up</strong> (starting from #3).</p>
 
 <ol>
   <li>master.html</li>
   <li>internal.html</li>
-  <li>leaf template (eg. dashboard.html or login.html)</li>
+  <li>Page Layout (eg. workflow.html)</li>
 </ol>
 
 <h3 id="includes">/_includes</h3>
 
-<p>Some templates will draw on partials, which are just small HTML chunks inside the <strong>/_includes</strong> folder. These includes will sometimes use global template variables from their parent template.</p>
+<p>Some templates will draw on partials, which are just small HTML chunks inside the <strong>/_includes</strong> folder. These includes will sometimes use global template variables from their parent template to change their function or appearance.</p>
 
 <h3 id="data">/_data</h3>
 
@@ -506,26 +605,32 @@
 
 <h3 id="pages">/pages</h3>
 
-<p>Each Jekyll page is initiated with a single MARKDOWN file (leaf) acting as the point of entry. These files contain meta data, permalinks and page specific variables which get passed into the layouts. They also contain body text which is stored as:</p>
+<p>Each Jekyll page is initiated with a single Markdown file acting as the point of entry. These files contain meta data, permalinks and page specific variables which get passed into the layouts. They also contain body text which is stored as:</p>
 
-<p>In the YAML front matter - these leaf pages will specify a template to use, eg. /public/login.html which will start at the leaf template and inherit up the chain.</p>
+<pre><code>{{ content }}
+</code></pre>
 
-<p><strong>IMPORTANT TO NOTE:</strong></p>
+<p>In the YAML front matter - these Markdown files will specify a template to use. For example:</p>
 
-<p>During the early stages of this prototype, leaf templates stored in /pages will contain a minified HTML dump of content <strong>sourced directly from the DOM output</strong> of the BigRedSky application. This is to ensure (and test) that most existing content can simply be dropped into the new responsive application frame without breaking. Although it probably will.</p>
+<pre><code>layout: "westlaw/workflow/workflow.html"
+</code></pre>
 
-<p>As these leaf templates are recreated from the ground up to be responsive, they will start to omit their data dump from being inherited into its self. The <strong>/page</strong> data will become redundant.</p>
+<p>This will start at the page layout and inherit up the chain until it stops at the Master.</p>
 
-<p>Eg. leaf templates (in <strong>/layout</strong>) will stop including:</p>
+<pre><code>workflow.html =&gt; internal.html =&gt; master.html
+</code></pre>
 
-<p>but the data will still exist in <strong>/pages</strong>, though it will no longer be used.</p>
+<p><strong>DOM Output Dump:</strong></p>
+
+<p>Pages also sometimes contain raw DOM output copied directly from the existing application. You’ll know if it’s DOM output when you see a large chunk of minified code. This code is inserted into page templates through the template variable <code>{{ content }}</code>.</p>
 
 <h3 id="front-matter">Front Matter</h3>
 
-<p>Every layout and markdown file (except the master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for hinting and quick access.</p>
+<p>Each layout and Markdown file (except the Master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for hinting and quick access.</p>
 
 <p>As a general rule of thumb; if variables are in the front-matter, they’re page variables and user editable. If they’re inside the actual layout - it’s for layout logic.</p>
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -542,8 +647,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

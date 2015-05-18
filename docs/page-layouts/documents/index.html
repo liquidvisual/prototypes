@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -480,27 +578,72 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="documents-aka-document-view">Documents (A.K.A Document View)</h1>
+                    <div class="lv-content-block">
+                        <h1 id="warning-this-page-is-still-in-progress">Warning: This page is still in progress</h1>
 
-<p>The Document template is quite a difficult piece to get right. Due to its complexity and legacy we’ll need to include the existing stylesheets from the app so we don’t risk breaking aything.</p>
+<h2 id="addressing-diagrams-in-workflow">Addressing Diagrams in Workflow</h2>
 
-<p>There is a special document stylesheet which overrides the current one with some sensible defaults - like better typography and white space. This looks fine on desktop and tablets but mobile presents some problems, particularly with tables.</p>
+<p>Workflow documents are problematic since they utilise interactive image maps for their diagrams. Image maps cannot be made responsive so there’s two ways we could go about handling this:</p>
 
-<p>There’s a few ways we can go about presenting a view that is readable and functional although we’d probably need to have these user tested as their effectiveness may vary with individual.</p>
+<ol>
+  <li>
+    <p>Add a <code>width="100%"</code> on the diagram <code>img</code> element. The image map will fail once it changes size but the user will still be able to see it and save it to their device.</p>
+  </li>
+  <li>
+    <p>Allow the user to ‘pinch and zoom’.</p>
+  </li>
+</ol>
 
-<h3 id="potential-solution-1">Potential Solution #1</h3>
+<p>With the latter we can trigger a page-based ‘pinch and zoom’ behavior by altering a meta tag in the master layout. You can find this tag in <strong>src/layouts/common/master.html</strong> on line 10.</p>
 
-<p>On mobile we restrict the width of the document container to the width of the phone’s viewport and evoke horizontal scrollbars. This keeps the interface responsive but the content would require more effort to consume. Elements are stripped of their floats, padding and margins with media queries and forced to follow the “flow” on mobile. Offending elements such as tables and images that can’t adapt will extend past the container where the user can then thumb across to read more.</p>
-
-<h3 id="potential-solution-1-1">Potential Solution #1</h3>
-
-<p>It’s possible the sheer amount of content could be best consumed in a non-responsive way, where users are able to pinch and zoom their way across a very long document. To do this we could remove an important meta tag from the Master layout on document templates.</p>
-
-<pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;
 </code></pre>
 
-<p>Removing this tag from the head will instantly remove responsive appearance on mobile.</p>
+<p>The key attribute above is <code>user-scalable=no</code>. By default all pages are locked and <strong>not</strong> user-scalable unless specifically requested by a page. In Westlaw, the Workflow document passes a front-matter variable <code>user-scalable: true</code> which gets picked up by the template logic in the master, changing it to: <code>user-scalable="yes"</code></p>
 
+<p>The result is a page that can essentially be <strong>“unresponsive” by design</strong>. With the current <a href="http://localhost:9292/pages/westlaw/workflow/documents/document-01/">workflow document</a> I’ve implemented options <strong>both 1 and 2</strong>. The image is 100% but the page can be ‘pinch and zoomed’. The assumption is if you were to leave a diagram in place, the width would remain fixed and a user <em>may</em> be able to interact with the image map on a smaller device if they scale the document with their thumbs.</p>
+
+<h1 id="documents">Documents</h1>
+
+<h2 id="document-view">Document View</h2>
+
+<p>The Document template is a tricky piece to get right. By default, documents have extensive styling which differs from document to document. The main issue is these styles are necessary but introduce changes to the box-model; applying margins, fixed widths, padding and borders to the content. The problem lies in the mobile view, where existing styles break content out from the Application Frame.</p>
+
+<h2 id="addressing-mobile-view">Addressing Mobile View</h2>
+
+<p>Perhaps the best way around this, is with CSS Media Queries. We essentially strip off all box-model related properties and floats once the screen enters 640px or below. This results in content stacking naturally with the flow.</p>
+
+<p>In some cases this may not be ideal and obscure content where it otherwise would have displayed fine on desktop - however this is the best we can do without re-writing documents from the ground up.</p>
+
+<h2 id="legacy-stylesheets">Legacy Stylesheets</h2>
+
+<p>During testing, all existing stylesheets were taken from the app and placed into the Sass environment. An audit was performed to determine the inclusion of <strong>only key files</strong> related to legacy content. We don’t include all previous legacy stylesheets because we don’t want to override the Application Frame or typographical defaults set by Foundation. So we only opt to include those which are useful. I’ll demonstrate what this looks like in both apps:</p>
+
+<p>[CONT’D]</p>
+
+<pre><code class="language-html">Path: src/_scss/checkpoint/app/legacy/original/all.scss
+</code></pre>
+
+<pre><code class="language-sass">// @import "base";
+// @import "basic-novus-params";
+// @import "checkpoint"; // updated - problematic
+// @import "contacts";
+// @import "delivery";
+// @import "doc_note";
+// @import "doc_view";
+// @import "documentstyling";
+// @import "highlights";
+// @import "jquery-ui-1";
+// @import "jstree";
+// @import "layout";
+// @import "newsfeed";
+// @import "print";
+// @import "rspace_002";
+// @import "rspace";
+// @import "rspacebar";
+</code></pre>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -517,8 +660,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

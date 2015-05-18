@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Westlaw">
+    <title>Assets - Westlaw</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/westlaw/template/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/westlaw/template/apple-touch-icon.png">
+
+    <!-- Google Fonts CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/foundation.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/legacy-core.css">
+
+    <link rel="stylesheet" href="/assets/css/westlaw/app.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css">
+    <![endif]-->
+
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="lv-super">
+        <div class="lv-page">
+
+            <style>
+    html, body, .lv-main, .lv-stage, p, li, a {
+        /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
+    }
+
+    /* move this into SCSS soon */
+    @media (min-width: 1024px) {
+        .lv-context-menu-fixed {
+            top: 60px;
+            bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
+        }
+    }
+
+    .lv-context-menu ul ul li a {
+        color: #eee;
+        margin-left: 20px;
+        display: none;
+    }
+
+    /*.lv-context-menu h3 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color: black;
+        border-bottom: 1px solid #D4DCE3;
+    }*/
+
+    .lv-context-menu h2 + ul {
+        /*border-top: 1px solid #D4DCE3;*/
+    }
+</style>
+
+<!-- HEADER -->
+<div class="lv-header">
+    <section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
+	<div class="left">
+		<a id="dynamic-menu-btn" class="lv-hamburger left" href="#"><i class="fi-results"></i></a>
+	</div>
+
+	<div class="lv-logo-wrapper">
+
+		<!-- Logo -->
+		<a class="lv-logo" href="/"><img width="143" src="/assets/img/common/template/docs-logo-type@2x.png"></a>
+
+		<!-- Site Select -->
+		<div class="lv-site-select show-for-medium-up">
+			<i class="fa fa-caret-down"></i>
+			<ul>
+				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+			</ul>
+		</div> <!-- .lv-site-select -->
+
+	</div> <!-- .logo-wrapper -->
+
+</section>
+</div>
+
+<!-- STAGE -->
+<section class="lv-stage">
+
+    <!-- CONTEXT MENU -->
+    <nav class="lv-context-menu">
+        <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
+
+	<!-- Dynamic Content - each page will point to a partial to pass through -->
+	<nav class="lv-context-menu-panel" aria-hidden="true">
+		
+		    
+	<h3>Getting Started</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/">Welcome</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/installation-and-setup/">Installation & Setup</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/basic-usage/">Basic Usage</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/directory-structure/">Directory Structure</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/getting-started/compatibility/">Compatibility</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Basics</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/basics/templates/">Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/data-files/">Data Files</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="active">
+					<a href="/docs/basics/libraries/">Libraries</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/css-components/">CSS Components</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/javascript/">JavaScript</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Page Layouts</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/page-layouts/dashboard/">Dashboard</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/search-templates/">Search Templates</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/results/">Results</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/documents/">Documents</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/alerts/">Alerts</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/folders/">Folders</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/page-layouts/preferences/">Preferences</a>
+				</li>
+			
+		</ul>
+	
+
+	<h3>Miscellaneous</h3>
+	
+		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a>
+				</li>
+			
+		</ul>
+	
+
+		
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- Top Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-top-menu js-top-menu" aria-hidden="true">
+		
+
+<ul>
+    
+
+    	
+
+		
+		    <li class="">
+		        <a href="/pages/westlaw/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+		    </li>
+		
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/research/search-templates/basic/"><i class="fi-magnifying-glass"></i> Research</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/tools/"><i class="fi-wrench"></i> Tools</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/newsroom/"><i class="fi-info"></i> Newsroom</a>
+	        </li>
+        
+
+    
+
+    	
+
+		
+	        <li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+	            <a href="/pages/westlaw/guide/"><i class="fi-book"></i> Guide</a>
+	        </li>
+        
+
+    
+</ul>
+	</nav> <!-- .lv-context-menu-panel -->
+
+	<!-- User Menu - visible via JavaScript -->
+	<nav class="lv-context-menu-panel lv-user-menu js-user-menu" aria-hidden="true">
+		
+
+<ul>
+    <li><a href="#LOGOUT"><img width="30" src="/assets/img/common/ui/no-face.png" alt="Profile Icon">&nbsp; John Smith<br><small>john.smith@thomsonreuters.com | LOGOUT</small></a></li>
+
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/alerts/"><i class="fi-megaphone"></i>&nbsp; Alerts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/folders/"><i class="fi-folder"></i>&nbsp; Folders</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/coming-soon.html"><i class="fi-address-book"></i>&nbsp; Contacts</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="#coming"><i class="fi-clock"></i>&nbsp; History</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="ajax-modal" href="/modal_output/westlaw/change-client-id.html"><i class="fi-torso"></i>&nbsp; Client ID</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ ">
+			<a class="" href="/pages/westlaw/user/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a>
+		</li>
+	
+		
+		<li class="
+
+
+
+    
+
+    
+
+    
+
+    
+ hide-for-large-up">
+			<a class="" href="http://training.thomsonreuters.com.au/products/westlaw-au/"><i class="fi-info"></i>&nbsp; Help</a>
+		</li>
+	
+</ul>
+	</nav> <!-- .lv-context-menu-panel -->
+
+</div> <!-- .lv-context-menu-fixed -->
+    </nav>
+
+    <!-- MAIN -->
+    <main class="lv-main">
+
+        <!-- CONTENT -->
+        <div class="lv-content">
+            <div class="row">
+                <div class="columns">
+                    <div class="lv-content-block">
+                        <h1 id="libraries">Libraries</h1>
+
+<p>The Prototypes share many external libraries and dependancies. These are all open source.<br />
+These can be updated through <a href="http://bower.io">Bower</a>, a Node based package manager, by running:</p>
+
+<pre><code>bower install
+</code></pre>
+
+<div class="panel">
+    <strong>NOTE:</strong>
+    <p>Not everything listed in the <b>bower.json</b> is included in the final app. All extraneous library references are just for  potential future purposes.</p>
+</div>
+
+<hr />
+
+<h2 id="bower-components">Bower Components</h2>
+<p><br /></p>
+
+<h3 id="animatecsshttpdanedengithubioanimatecss"><a href="http://daneden.github.io/animate.css/">Animate.css</a></h3>
+
+<p>A small library for CSS animations.</p>
+
+<h3 id="fastclickhttpsgithubcomftlabsfastclick"><a href="https://github.com/ftlabs/fastclick">FastClick</a></h3>
+
+<p>A tiny library for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers.</p>
+
+<h3 id="font-awesome-iconshttpfontawesomeiocheatsheet"><a href="http://fontawesome.io/cheatsheet/">Font Awesome Icons</a></h3>
+
+<p>Not used often, included more for future use. <a href="http://fontawesome.io/cheatsheet/">Cheatsheet here</a></p>
+
+<h3 id="footablehttpfoopluginscompluginsfootable-jquery"><a href="http://fooplugins.com/plugins/footable-jquery/">FooTable</a></h3>
+
+<p>Responsive Tables. Used for Alerts and Folders. Possibly History also.</p>
+
+<h3 id="foundation-5httpfoundationzurbcom"><a href="http://foundation.zurb.com/">Foundation 5</a></h3>
+
+<p>Perhaps the most important. This is the front-end framework that runs most aspects of the prototypes from the responsive grid to typography. No JS components are used though, due to non-existing IE8 compatibility.</p>
+
+<h3 id="foundation-font-iconshttpzurbcomplaygroundfoundation-icon-fonts-3"><a href="http://zurb.com/playground/foundation-icon-fonts-3">Foundation Font Icons</a></h3>
+
+<p>This is the dominating icon set that the protoypes use. You can find the <a href="http://zurb.com/playground/foundation-icon-fonts-3">cheatsheet here</a>.</p>
+
+<h3 id="jquery-1111httpdimsemenovcompluginsmagnific-popup"><a href="http://dimsemenov.com/plugins/magnific-popup/">JQuery 1.11.1</a></h3>
+
+<p>Last version of JQuery before 2.0 (which isn’t IE8 compatible)</p>
+
+<h3 id="jquery-ui-1112httpsjqueryuicom"><a href="https://jqueryui.com/">JQuery UI 1.11.2</a></h3>
+
+<p>Used for the DatePicker widget and Tabs. This was already present in the real apps.</p>
+
+<h3 id="jquery-scrolltohttpsgithubcomfleslerjqueryscrollto"><a href="https://github.com/flesler/jquery.scrollTo">JQuery scrollTo</a></h3>
+
+<p>Used on the collapsed Sidebar to whip the page back up to the top when an icon tab is clicked.</p>
+
+<h3 id="magnific-popuphttpdimsemenovcompluginsmagnific-popup"><a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a></h3>
+
+<p>The responsive modal that displays extended hints and info. Can also be used to display message prompts. Eg. ‘Do you want to log out?’</p>
+
+<h3 id="modernizrhttpmodernizrcom"><a href="http://modernizr.com/">Modernizr</a></h3>
+
+<p>CSS3 Feature detection. Used for determining touch devices, and providing HTML5 awareness to IE8.</p>
+
+<h3 id="nprogresshttpmmenufrebsitenl"><a href="http://mmenu.frebsite.nl/">NProgress</a></h3>
+
+<p>A CSS3 driven cosmetic load bar to indicate progress.</p>
+
+<h3 id="transithttpricostacruzcomjquerytransit"><a href="http://ricostacruz.com/jquery.transit/">Transit</a></h3>
+
+<p>A CSS3 animation library used for the collapsing of panels in the Application Frame. Built-in JQuery fallbacks.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main> <!-- .lv-main -->
+
+</section> <!-- .lv-stage -->
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/westlaw/app.js"></script>
+
+    <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
+
+    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

@@ -43,7 +43,19 @@
     <div class="lv-super">
         <div class="lv-page">
 
-            
+            <!-- REMOVE ON PROD: FOR SIMULATION ONLY -->
+<script>
+    $(function(){
+        $('.lv-stage a:not(".toplevel a, .lv-back-btn")').click(function(e){
+            $(this).attr('href', '/pages/westlaw/newsroom/search_results/newsroom-results-01/');
+        });
+
+        $('.lv-stage button:not([type="reset"]), input[type=submit]').click(function(e){
+            location.href = '/pages/westlaw/newsroom/search_results/newsroom-results-01/';
+            e.preventDefault();
+        });
+    });
+</script>
 
 <!-- HEADER -->
 <header class="lv-header">
@@ -379,6 +391,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -868,34 +882,6 @@
 
 <!-- ************************ END FORM ************************ -->
 
-<!-- Form obscured on mobile (restricted height) - button will show all -->
-<div class="row">
-    <div class="medium-11 columns text-right">
-        <a class="lv-partial-view-btn lv-non-legacy button pill tiny" href="#">Expand</a>
-    </div>
-</div>
-
-<!-- DOCUMENT OPTIONS -->
-<div class="row">
-    <div class="columns">
-        <!-- { % include common/snippets/breadcrumbs.html %} -->
-        <div class="lv-export-options disabled">
-    <div class="row">
-        <div class="medium-6 columns">
-            <ul class="lv-inline-list small-gaps text-center medium-text-left">
-                <li><a title="Save to My Folders" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-save"></i></a></li>
-                <li><a title="Download" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-download"></i></a></li>
-                <li><a title="Print" class="ajax-modal" href="/modal_output/checkpoint/print-document.html"><i class="fi-print"></i></a></li>
-                <li><a title="Email" class="ajax-modal" href="/modal_output/checkpoint/email-document.html"><i class="fi-mail"></i></a></li>
-                <li><a title="Create Alert" class="ajax-modal" href="/modal_output/checkpoint/add-to-my-quicklinks.html"><i class="fi-megaphone"></i></a></li>
-                <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/checkpoint/coming-soon.html"><i class="fi-rss"></i></a></li>
-            </ul>
-        </div>
-    </div> <!-- .row -->
-</div> <!-- .lv-export-options -->
-    </div>
-</div>
-
 
 
                 </div>
@@ -1129,8 +1115,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

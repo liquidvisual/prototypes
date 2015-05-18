@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -432,28 +530,31 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="welcome">Welcome</h1>
+                    <div class="lv-content-block">
+                        <h1 id="welcome---warning-docs-still-in-progress">Welcome - Warning: Docs still in progress</h1>
 
-<p>Last updated: <strong>10.05.15</strong></p>
+<p>Last updated: <strong>14.05.15</strong></p>
 
 <p>The public facing site is currently located at:<br />
 <a href="http://prototypes.uat.liquidvisual.net">http://prototypes.uat.liquidvisual.net</a></p>
 
-<h2 id="note-documentation-is-still-currently-in-progress-i-will-send-out-a-memo-once-completed">NOTE: Documentation is still currently in progress. I will send out a memo once completed.</h2>
 <hr />
 
-<p>The purpose of this project is to test and assess the impact of a responsive retro-fitting of both Checkpoint and Westlaw. The original goal was to design and create a responsive user interface (referred to as the ‘Application Frame’ throughout this document) that could accomodate large portions of existing code without too much modification.</p>
+<h2 id="purpose">Purpose</h2>
 
-<p>This has been successful <strong>to a point</strong>, so far…</p>
+<p>The purpose of this project is to test and assess the impact of a responsive retro-fitting of both Checkpoint and Westlaw. The original goal was to design and create a responsive user interface (referred to as the ‘Application Frame’ throughout this document) that could accommodate large portions of existing code without too much modification.</p>
 
-<p>[…]</p>
+<h2 id="result">Result</h2>
 
-<p>The complexity of search templates across both applications require a re-write of those form elements to be responsive - these cannot be retro-fitted. I have however devised a simple way to generate templates with little effort using a series of includes and variables which I will explain later on. […]</p>
+<p>This has been successful <strong>to a point</strong>. Most content has worked fine being dropped in directly, for example the <em>Search Results</em> templates and <em>Document</em> templates have posed few issues except in special cases, where as others will need significant re-working to function correctly. <em>Search Templates</em> fall into the latter category as do smaller components such as the delivery options, search boxes and document navigation buttons.</p>
 
-<p>Mostly everything else is using markup directly output from the DOM. The premise of this working hinges on the fact that all CSS is essentially left behind - save for what is included with the prototype. JavaScript will carry over from the apps, but this is expected to conflict at certain points.</p>
+<p>The premise of this working hinges on the fact that all CSS is essentially left behind - except for what is included with the prototype, and some of those files (namely document styles) have been refactored back into a modular Sass environment.</p>
 
-<p>[cont’d soon]</p>
+<h2 id="just-a-prototype">Just a Prototype</h2>
 
+<p>The strategies laid out in these prototypes are in no way bullet-proof and there will be great challenges in the final implementation. All examples here are to be used as suggestions for best application with final judgement being reserved to the back-end developers’ discretion.</p>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -470,8 +571,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

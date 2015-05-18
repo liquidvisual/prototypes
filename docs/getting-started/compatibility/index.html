@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -480,8 +578,119 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="compatibility">Compatibility</h1>
+                    <div class="lv-content-block">
+                        <h1 id="compatibility">Compatibility</h1>
 
+<h2 id="ie8">IE8</h2>
+
+<p>One major hurdle with compatibility is catering for IE8, one of the last browsers to neglect support for Media Queries - which everything is built around. <strong>Everything</strong>.</p>
+
+<p>For IE8 support we’ll need to depend on:</p>
+
+<ol>
+  <li>IE Conditionals</li>
+  <li>Polyfills</li>
+  <li>A Grunt generated IE8 stylesheet</li>
+</ol>
+
+<h3 id="ie-conditionals">IE Conditionals</h3>
+
+<p>IE Conditionals are found throughout the Master but they’re most important at the very top.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 8]&gt;       &lt;html class="no-js lt-ie9 lt-ie8"&gt; &lt;![endif]--&gt;
+&lt;!--[if lt IE 9]&gt;       &lt;html class="no-js lt-ie9"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt;          &lt;html class="no-js lt-ie10"&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 9]&gt;&lt;!--&gt;  &lt;html class="no-js"&gt; &lt;!--&lt;![endif]--&gt;
+</code></pre>
+<p>This allows us to target “versions” of IE in CSS and JS by using a <strong>.lt-ie[x]</strong> class selector.</p>
+
+<h3 id="polyfills">Polyfills</h3>
+
+<p>All polyfills are found in the master.html in the <strong>/layouts</strong> folder. The order of these items in the master layout is extremely important. Let’s run through them.</p>
+
+<pre><code class="language-html">&lt;!-- Priority Scripts --&gt;
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><a href="http://modernizr.com">Modernizr</a> is loaded in the head via CDN (right below JQuery). Modernizr is a JavaScript library that detects HTML5 and CSS3 features. IE8 will NOT recognise HTML5 elements such as <code>&lt;article&gt;</code> or <code>&lt;header&gt;</code> by default. Fortunately Modernizr patches this for us.</p>
+
+<p>The next set of Polyfills are used to restore absent CSS3 functionality such as media queries, CSS3 selectors and more.</p>
+
+<pre><code class="language-html">&lt;!--[if lt IE 9]&gt;
+    &lt;script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"&gt;&lt;/script&gt;
+    &lt;script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"&gt;&lt;/script&gt;
+    &lt;script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</code></pre>
+
+<h3 id="a-grunt-generated-ie8-stylesheet">A Grunt Generated IE8 Stylesheet</h3>
+
+<p>The final piece of the puzzle is a generating an overriding IE8 stylesheet. The sole purpose of this file is to include pixel fallbacks to REM units - which is used throughout the application. Unfortunately there isn’t a more succinct way to achieve this in Sass through Foundation - so we need to rely on post processing.</p>
+
+<p>On around line 400 of the Gruntfile.js you’ll find the following to make this happen:</p>
+
+<pre><code>pixrem: {
+  options: {
+    rootvalue: '16px'
+  },
+  dist: {
+    src: '&lt;%= yeoman.assets %&gt;/css/*.css',
+    dest: '&lt;%= yeoman.assets %&gt;/css/minified-ie8.css'
+  }
+},
+</code></pre>
+
+<p>Unfortunately, this process is only able to cover <strong>ONE</strong> stylesheet (Westlaw). You would need to generate these manually (and one at a time) by changing the paths and building again. It’s really confusing, and yes it sucks - but this is the only way that I’ve found.</p>
+
+<p>This conditional is what gives IE8 users what they need:</p>
+
+<pre><code>&lt;!--[if lt IE 9]&gt;
+&lt;link rel="stylesheet" href="/assets/css/westlaw/minified-ie8.css"&gt;
+&lt;![endif]--&gt;
+</code></pre>
+
+<p>You’d be right in that they download the CSS twice. It’s not ideal, but it’s <em>easier</em>. I suppose you could opt to use the IE8 generated sheet over the default one - but then you run the risk of forgetting to manually output the right one.</p>
+
+<h2 id="cdns">CDNs</h2>
+
+<p>Leveraging content delivery networks is much easier for these polyfills. We don’t have to worry about minifying or maintaining local files. Business networks <strong>may</strong> have an issue if they have some crazy firewall in place - but in that case they wouldn’t be able to load fonts from Google either. Best to keep in mind.</p>
+
+<h2 id="how-to-test-in-ie8">How to Test in IE8</h2>
+
+<p>It’s a very laborious task to actually test with IE8. In order to do it youself, follow these steps.</p>
+
+<ol>
+  <li><code>grunt build</code></li>
+  <li>Once <strong>dist/</strong> has been created; CD into the folder via the terminal <code>cd dist</code></li>
+  <li>Run it as a virtual server. This is what I use: <code>python -m SimpleHTTPServer 8000</code></li>
+  <li>Fire up IE8 compatibility mode and navigate to: <code>http://localhost:8000</code></li>
+</ol>
+
+<p>Right now, as mentioned above this will only work one prototype at a time. It’s currently configured to output an IE8 file for Westlaw. To generate a Checkpoint one, you need to edit the Gruntfile and reproduce like so:</p>
+
+<pre><code>pixrem: {
+  options: {
+    rootvalue: '16px'
+  },
+  dist: {
+    src: '&lt;%= yeoman.assets %&gt;/css/checkpoint/*.css',
+    dest: '&lt;%= yeoman.assets %&gt;/css/checkpoint/minified-ie8.css'
+  }
+},
+</code></pre>
+<p>For production, you would want to go through these steps so you have copies of IE8 stylesheets for both Westlaw and Checkpoint. This isn’t really maintainable though, since with every change - you need to jump through all these hoops again to produce the code for one browser. And then you risk running into the dreaded selector limit - <a href="/docs/miscellaneous/troubleshooting/">see troubleshooting</a>.</p>
+
+<p>There’s a chance a better process could be created to handle this post processing separately - but at the moment I’m not sure how to go about doing it. The current Grunt task works by collecting all files and generating one big one. It doesn’t work with exporting multiple sources. Oh, and it recently became unsupported making this all insanely difficult.</p>
+
+<h2 id="performance">Performance</h2>
+
+<p>In honesty, IE8 performance is pretty lackluster. It does work but we’re <strong>really</strong> stretching the limits of what we can do with all of these responsive frameworks by catering for IE8. Pages will sometimes freeze and feel really sluggish - but I’m unsure if that’s just a rendering issue with how much JavaScript is trying to process in accordance with the sizeable raw DOM dumps. I guess we’ll find out.</p>
+
+<p>Please remember that Microsoft will be dropping support for IE8 AND IE9 in early 2016 - so we should really be concentrating our efforts on better educating and warning our customer base instead of spending additional time on waning legacy support.</p>
+
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -498,8 +707,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

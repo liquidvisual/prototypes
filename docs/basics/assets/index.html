@@ -44,8 +44,83 @@
         <div class="lv-page">
 
             <style>
-    html, body, .lv-main, .lv-stage {
+    html, body, .lv-main, .lv-stage, p, li, a {
         /*background: white;*/
+        font-family: "Open Sans";
+    }
+
+    .lv-super .lv-resize-btn {
+        display: none;
+    }
+
+    .lv-super .lv-context-menu .lv-context-menu-fixed {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-super .lv-header {
+        background: #675392;
+    }
+
+    .lv-super a {
+        color: #675392;
+    }
+
+    .lv-super .lv-site-select {
+        background: #675392;
+        color: white;
+    }
+
+    .lv-super .lv-site-select a {
+        color: white;
+    }
+
+    .lv-super .lv-context-menu .active a {
+        background: #745596;
+    }
+
+    .lv-stage {
+        /*display: table;*/
+        display: block;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+
+    .lv-content-block h1,
+    .lv-content-block h2,
+    .lv-content-block h3,
+    .lv-content-block h4,
+    .lv-content-block h5,
+    .lv-content-block h6 {
+        font-weight: bold;
+    }
+
+    .lv-content-block h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 40px 0;
+    }
+
+    .lv-context-menu h3 {
+        text-transform: uppercase;
+        font-size: 11px;
+        /*text-align: left;*/
+        /*color: #1C78A7;*/
+        color: #675392;
+        font-weight: bold;
+        /*border-bottom: 1px solid #D4DCE3;*/
+    }
+
+    .lv-context-menu a {
+        padding: 5px 15px;
     }
 
     /* move this into SCSS soon */
@@ -53,6 +128,19 @@
         .lv-context-menu-fixed {
             top: 60px;
             bottom: 0;
+        }
+    }
+
+    .lv-content-block {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 641px) {
+
+        .lv-content-block {
+            padding: 30px;
         }
     }
 
@@ -95,8 +183,8 @@
 			<i class="fa fa-caret-down"></i>
 			<ul>
 				<li class="first"><a href="#"><i class="fi-web"></i>&nbsp; Sites</a></li>
-				<li><a href="/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
-				<li class="last"><a href="/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
+				<li><a href="/pages/checkpoint/guide/"><i class="fi-web"></i>&nbsp; Checkpoint</a></li>
+				<li class="last"><a href="/pages/westlaw/guide/"><i class="fi-web"></i>&nbsp; Westlaw</a></li>
 			</ul>
 		</div> <!-- .lv-site-select -->
 
@@ -111,6 +199,8 @@
     <!-- CONTEXT MENU -->
     <nav class="lv-context-menu">
         <div class="lv-context-menu-fixed">
+
+	<span class="lv-resize-btn"><i class="fi-arrows-compress fi-arrows-expand"></i></span> <!-- Only active in WL -->
 
 	<!-- Dynamic Content - each page will point to a partial to pass through -->
 	<nav class="lv-context-menu-panel" aria-hidden="true">
@@ -157,6 +247,10 @@
 			
 				<li class="active">
 					<a href="/docs/basics/assets/">Assets</a>
+				</li>
+			
+				<li class="">
+					<a href="/docs/basics/libraries/">Libraries</a>
 				</li>
 			
 				<li class="">
@@ -208,6 +302,10 @@
 	<h3>Miscellaneous</h3>
 	
 		<ul>
+			
+				<li class="">
+					<a href="/docs/miscellaneous/change-log/">Change Log</a>
+				</li>
 			
 				<li class="">
 					<a href="/docs/miscellaneous/upgrading/">Upgrading</a>
@@ -480,12 +578,195 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <h1 id="assets">Assets</h1>
+                    <div class="lv-content-block">
+                        <h1 id="assets">Assets</h1>
 
-<p>Foundation is built as a standalone file. Designed to be dropped in, changed through settings and app.</p>
+<p>The Gruntfile is configured to export all asset files such as CSS, JS, Images and Fonts into a dedicated <strong>assets/</strong> directory. All paths in the prototype site are root relative, pointing to the <strong>/assets</strong> directory and assuming it’s in the root.</p>
 
-<p>The order is important.</p>
+<p>If you experience images or font icons failing to load in your own environment, it’s most likely an issue with the paths. Simply move the <strong>/assets</strong> directory so it’s local to the root.</p>
 
+<h2 id="stylesheets">Stylesheets</h2>
+<hr />
+
+<p>The Master layout defines three standalone CSS files that are compromised of multiple files. On build, these get crunched down and minified into a single file. </p>
+
+<p>You’ll notice below that all stylesheets are wrapped inside of commented build flags which get picked up by a Grunt task called <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a> on build. </p>
+
+<p>The <code>westlaw</code> template variable (you’ll see further down) translates into <em>“checkpoint”</em> or <em>“westlaw”</em> depending on the page. This mirrors the directory in which to output on build.</p>
+
+<p>For example, you’ll find the following inside <strong>/assets</strong>:</p>
+
+<pre><code>dist/
+  |--assets/
+  |   |--css/
+  |      |--checkpoint/
+  |         |--app.css
+  |         |--foundation.css
+  |         |--legacy-core.css
+  |      |--westlaw/
+  |         |--app.css
+  |         |--foundation.css
+  |         |--legacy-core.css
+  |   |--fonts/
+  |   |--img/
+  |   |--scripts/
+</code></pre>
+
+<h3 id="foundation-styles">Foundation Styles</h3>
+
+<p>This defines the standalone stylesheet for <a href="http://foundation.zurb.com">Foundation</a>. Foundation comes with clean defaults for typography, spacing, forms and other base components.</p>
+
+<pre><code class="language-html">&lt;!-- build:css({src,.tmp}) /assets/css/westlaw/foundation.css --&gt;
+    &lt;link rel="stylesheet" href="/css/westlaw/foundation/app.css"&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+
+<h3 id="legacy-core">Legacy Core</h3>
+
+<p>This stylesheet is made up of a number of specifically selected CSS files from the original Checkpoint and/or Westlaw application. These CSS files were absorbed into the prototype’s codebase and converted to Sass (.scss) files. </p>
+
+<p>These files were very carefully selected and audited - they mostly target <em>Search Results</em> and <em>Documents</em> which are too involved to re-style from the ground up. These files were also tidied up of small compatibility hacks left over from IE6-7 - which would cause the Sass compiler to throw an error.</p>
+
+<p>It is recommended that any further Document or Result styles in future are carried out in the current Sass environment, so everything is kept together.</p>
+
+<pre><code class="language-html">&lt;!-- build:css({src,.tmp}) /assets/css/westlaw/legacy-core.css --&gt;
+    &lt;link rel="stylesheet" href="/css/westlaw/app/legacy/original/all.css"&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+
+<h3 id="app-styles">App Styles</h3>
+
+<p>Finally this stylesheet is one that contains all of the unique styling for app specific pages, layouts and components.</p>
+
+<pre><code class="language-html">&lt;!-- build:css({src,.tmp}) /assets/css/westlaw/app.css --&gt;
+    &lt;link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css"&gt;
+    &lt;link rel="stylesheet" href="/_bower_components/footable/css/footable.core.css"&gt;
+    &lt;link rel="stylesheet" href="/css/westlaw/liquidvisual/liquidvisual.css"&gt;
+    &lt;link rel="stylesheet" href="/css/westlaw/main.css"&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+
+<h3 id="why-are-these-separated">Why Are These Separated?</h3>
+
+<p>It turns out that IE6-9 have a very significant shortcoming. These browsers have a soft limit of 4095 selectors. Once this limit is reached, subsequent styles simply fail silently. Keeping stylesheets separated reduces the chance of running into this limit. You can read more about this in <a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a>.</p>
+
+<h2 id="javascript">JavaScript</h2>
+<hr />
+
+<p>JavaScript is set out in the same way. You’ll find a similar process right before the closing body. The build flags are much the same:</p>
+
+<pre><code class="language-html"> &lt;!-- build:js(src) /assets/scripts/westlaw/app.js --&gt;
+     /path/to/scripts.js
+ &lt;!-- endbuild --&gt;
+ ```
+ 
+### Adhoc JavaScript
+
+Aside from the main **app.js** there is a second JavaScript file that gets exported on build. It's called **adhoc-only.js**. This file contains code that's merely for simulation purposes in the prototype. Keeping it separate allows you to easily exclude it from your own environment.
+
+```html
+ &lt;!-- build:js(src) /assets/scripts/westlaw/adhoc-only.js --&gt;
+    &lt;script src="/scripts/common/adhoc/adhoc-datepicker.js"&gt;&lt;/script&gt;
+    &lt;script src="/scripts/common/adhoc/adhoc-export-options.js"&gt;&lt;/script&gt;
+    &lt;script src="/scripts/common/adhoc/adhoc-filter-toc.js"&gt;&lt;/script&gt;
+    &lt;script src="/scripts/common/adhoc/adhoc-list-delete.js"&gt;&lt;/script&gt;
+    &lt;script src="/scripts/common/adhoc/adhoc-toc.js"&gt;&lt;/script&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+
+<h2 id="images">Images</h2>
+<hr />
+
+<p>Images are fairly straight forward. There is a Grunt task called <a href="https://github.com/callumlocke/grunt-cdnify">grunt-cdnify</a> that runs through the templates and appends <strong>/assets/</strong> to file paths on build.</p>
+
+<p>For example when <strong>serving</strong> the image of a logo locally, the path might be:</p>
+
+<pre><code>/img/westlaw/template/logo-type@2x.png
+</code></pre>
+
+<p>On build, CDN-ify will append <strong>/assets/</strong> making it:</p>
+
+<pre><code>/assets/img/westlaw/template/logo-type@2x.png
+</code></pre>
+
+<h3 id="css-background-images">CSS Background Images</h3>
+
+<p>Though seldom used, the paths of these images don’t change from local to remote. Take the following:</p>
+
+<pre><code>background: url(../../img/common/ui/search-icon.svg);
+</code></pre>
+
+<p>Since image paths are relative to the stylesheet, this holds true in both environments where the css is in the same folder as the img directory. The key to this working is: <code>../../</code></p>
+
+<p><strong>dist</strong> example:</p>
+
+<pre><code>dist/
+  |--assets/
+  |   |--css/
+  |      |--checkpoint/
+  |      |--westlaw/
+  |   |--fonts/
+  |   |--img/
+  |   |--scripts/
+</code></pre>
+
+<p><strong>src</strong> example</p>
+
+<pre><code>src/
+  |--css/
+  |  |--checkpoint/
+  |  |--westlaw/
+  |--fonts/
+  |--img/
+  |--scripts/
+</code></pre>
+
+<h2 id="fonts">Fonts</h2>
+<hr />
+
+<p>All fonts are common to both prototypes. There are three types which get called upon:</p>
+
+<ol>
+  <li>Open Sans</li>
+  <li>Font Awesome Icon Fonts</li>
+  <li>Foundation Icon Fonts</li>
+</ol>
+
+<h3 id="open-sans">Open Sans</h3>
+
+<p>Open Sans is loaded from a Google’s Font Foundry CDN. You’ll find this in the Master.</p>
+
+<pre><code>&lt;!-- Google Fonts CDN --&gt;
+&lt;link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700"&gt;
+</code></pre>
+
+<h3 id="font-awesome-icon-fonts">Font Awesome Icon Fonts</h3>
+
+<p>This is a comprehensive library of every icon you could think of. <a href="http://fontawesome.io/cheatsheet/">Cheatsheet here</a></p>
+
+<p>Basic use is as follows:</p>
+
+<pre><code>&lt;i class="fa fa-[icon-name]"&gt;&lt;/i&gt;
+</code></pre>
+
+<h3 id="foundation-icon-fonts">Foundation Icon Fonts</h3>
+
+<p>This is the main library used by prototypes as the icons are well sized and consistent. Only use Font Awesome if Foundation doesn’t have what you’re looking for. Usage is pretty similar.</p>
+
+<pre><code>&lt;i class="fi-[icon-name]"&gt;&lt;/i&gt;
+</code></pre>
+
+<p>Let’s say I wanted to create an icon of a star, I would consult the <a href="http://zurb.com/playground/foundation-icon-fonts-3">Foundation Icons Cheatsheet</a>, grab the name of the icon and write:</p>
+
+<pre><code>&lt;i class="fi-star"&gt;&lt;/i&gt;
+</code></pre>
+
+<h3 id="font-icons-are-better-than-image-icons">Font Icons Are Better Than Image Icons</h3>
+
+<p>Fonts are much easier to scale. They also display better on retina screens with double pixel density. The need for sprite-sheets is also unnecessary now because you can control hover states by styling the icon directly.</p>
+
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -502,8 +783,6 @@
     <script src="/assets/scripts/westlaw/app.js"></script>
 
     <script src="/assets/scripts/westlaw/adhoc-only.js"></script>
-
-    <!-- // <script src="/scripts/westlaw/content-expander.js"></script> doesn't work in Westlaw -->
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 

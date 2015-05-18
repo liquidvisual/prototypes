@@ -69,6 +69,10 @@ site_type: "westlaw"
         margin: 40px 0;
     }
 
+    ul {
+        list-style: none;
+    }
+
     .lv-context-menu h3 {
         text-transform: uppercase;
         font-size: 11px;
@@ -94,7 +98,12 @@ site_type: "westlaw"
     .lv-content-block {
         padding: 15px;
         max-width: 800px;
-        margin: 0 auto;
+    }
+
+    @media (min-width: 1024px) {
+        .lv-content-block {
+            margin: 0 auto 0 250px;
+        }
     }
 
     @media (min-width: 641px) {

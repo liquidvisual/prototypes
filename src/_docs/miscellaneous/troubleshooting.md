@@ -47,4 +47,4 @@ sudo npm cache clean
 sudo npm install
 ```
 
-## IE8 compatibility and hitting the hard limit
+<!-- # # IE8 compatibility and hitting the hard limit -->

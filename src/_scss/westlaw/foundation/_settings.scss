@@ -42,7 +42,7 @@ $row-width: rem-calc(1140);
 
 // We use these to control various global styles
 $body-bg: #F5F6F6; //#DEDEDE; //#F5F6F6; // f6f6f6
-$body-font-color: #444; //#777;
+$body-font-color: #222; //#777;
 $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -542,7 +542,7 @@ $button-font-weight: 600; //$font-weight-normal;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-$form-spacing: rem-calc(11);
+$form-spacing: rem-calc(14);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
@@ -554,7 +554,7 @@ $form-spacing: rem-calc(11);
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+$input-font-size: rem-calc(12);
 $input-bg-color: #fff; //#E3E3E3;
 $input-focus-bg-color: white; //scale-color(#fff, $lightness: -10%);//#B5B5B5; //
 $input-border-color: scale-color(#fff, $lightness: -20%);

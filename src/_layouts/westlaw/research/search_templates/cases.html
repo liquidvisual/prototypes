@@ -21,7 +21,7 @@ layout: common/internal
             <!-- Draw Date Fields -->
             {% include common/components/form_date_input.html title="Judgement Date" %}
 
-            <div class="lv-advanced-options hide">
+            <!-- <div class="lv-advanced-options"> -->
 
                 <!-- Create Field Names -->
                 {% assign text_fields = "Cases Cited (Title)|Cases Cited (Citation)|Legislation Cited (Provision)" | split: "|" %}
@@ -46,7 +46,7 @@ layout: common/internal
                 {% include common/components/form_select_input.html title="Reported Unreported" %}
                 {% include common/components/form_select_input.html title="Cases Updated" %}
 
-            </div> <!-- .lv-advanced-options -->
+            <!--</div> .lv-advanced-options -->
 
             <!-- Draw Submit Fields -->
             {% include common/components/form_submit_clear_input.html path="#SEND-PATH-TO-DEMO-LOCATION" %}

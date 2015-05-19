@@ -25,12 +25,14 @@ prototypes/
   |--Gemfile
 ```
 
-**NOTE**: The **dist/** folder is not be included by default. One needs to run `grunt build` to generate it.
-
+<div class="panel">
+  <strong>NOTE:</strong>
+  <p>The <b>dist/</b> folder is not included by default when running locally. You need to run <b>grunt build</b> to generate it.</p>
+</div>
 
 ### config.yml
 
-This file instructs Jekyll what to do on compile. Currently the config sets up some global variables for pages inside the Westlaw and Checkpoint directories (see below). Most variables are passed through front-matter YAML from page to page in the markdown files where as this establishes those variables in one place.
+This file instructs Jekyll what to do on compile. Currently the config sets up some global variables for pages inside the Westlaw and Checkpoint directories (see below). Most variables are passed through front-matter YAML from page to page in the markdown files. **config.yml** however establishes those variables in one place.
 
 ```
 defaults:
@@ -46,7 +48,11 @@ defaults:
       site_type: "checkpoint"
 ```
 
-The result is we're able to determine paths based on the page we're on by using the template variable `{{ page.site_type }}`. For instance, the index from **pages/checkpoint/index.html** will store a page_type variable of "checkpoint" and be accessible throughout all subsequent pages. This variable then goes to define paths and is ultimately how we share the codebases between the two.
+The result is we're able to determine paths based on the page we're on by using the template variable:
+
+`{% raw %}{{ page.site_type }}{% endraw %}`
+
+ For instance, the index from **pages/checkpoint/index.html** will store a **page_type** variable of *"checkpoint"* and be accessible throughout all subsequent pages. This variable then goes to define paths and is ultimately how we share the codebases between the two.
 
 ## SRC
 
@@ -97,41 +103,16 @@ src/
   |--CNAME
 ```
 
-
-
 ## It All Starts with the Pages Directory
 
-The way Jekyll processes everything begins with markdown files stored inside the **pages/** directory. These files contain front-matter YAML which tell the page what layout to use and the page title. They also pass data, such as strings - which tell the layout to include certain HTML partials.
+The way Jekyll processes everything begins with Markdown files (.md) stored inside the **pages/** directory. These files contain front-matter YAML which tell the page what layout to use and the page title. They also pass other data, such as strings - which tell the layout to include certain HTML partials.
 
 ## In a Nutshell
 
 The two prototypes are controlled by data variables stored inside of **src/data/[name]**. These variables govern colours, navigation and other information that differ between sites.
 
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p class="text-center medium-text-right">
+  <a href="/docs/getting-started/compatibility/"><b>Next Up:</b> Compatibility →</a>
+</p>

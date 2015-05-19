@@ -2,9 +2,7 @@
 title: Results
 ---
 
-# Warning: This page is still in progress
-
-# Results
+<h1>Results <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 The "Search Results" template is probably one of the most problematic due to the large amount of varying content and styles. This prototype's template consists of existing app DOM output and has not been re-written in anyway. The idea is to try and re-style the existing markup so these templates don't have to be written.
 
@@ -21,3 +19,9 @@ Curiously the headings of the results in Westlaw are **NOT** anchor links. I sus
 ### Partial View and Westlaw Limitations
 
 As mentioned above, this template utilises a JavaScript snippet which inserts a show/hide button on device views. On Checkpoint this works fine, although given the problematic markup of Westlaw with results not being wrapped predictably, this feature has been omitted. At present the mobile view of results is mostly unreadable on mobile because of the wrapping issue which causes excessive scrolling - a fix would require appropriate wrapping of the result elements. Right now, each result is split into multiple result divs, which makes it impossible to target correctly.
+
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/documents/"><b>Next Up:</b> Documents →</a>
+</p>

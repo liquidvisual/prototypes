@@ -2,6 +2,12 @@
 title: Alerts
 ---
 
-# Warning: This page is still in progress
+<h1>Alerts <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
-# Alerts
+*Coming Soon*
+
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/folders/"><b>Next Up:</b> Folders →</a>
+</p>

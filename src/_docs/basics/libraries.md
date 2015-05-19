@@ -4,8 +4,7 @@ title: Assets
 
 # Libraries
 
-The Prototypes share many external libraries and dependancies. These are all open source.
-These can be updated through [Bower](http://bower.io), a Node based package manager, by running:
+The Prototypes share many external libraries and dependancies. These are all open source and can be updated through [Bower](http://bower.io), a Node based package manager, by running:
 
 ```
 bower install
@@ -72,3 +71,9 @@ A CSS3 driven cosmetic load bar to indicate progress.
 ### [Transit](http://ricostacruz.com/jquery.transit/)
 
 A CSS3 animation library used for the collapsing of panels in the Application Frame. Built-in JQuery fallbacks.
+
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/css-components/"><b>Next Up:</b> CSS Components →</a>
+</p>

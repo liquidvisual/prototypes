@@ -6,7 +6,10 @@ title: Templates
 
 ## How Templating Works
 
-**NOTE:** All the following folders live inside the **/src** directory
+<div class="panel">
+	<strong>NOTE:</strong>
+	<p>All the following folders live inside the <b>/src</b> directory</p>
+</div>
 
 ### /_layouts
 
@@ -52,6 +55,10 @@ Pages also sometimes contain raw DOM output copied directly from the existing ap
 
 ### Front Matter
 
-Each layout and Markdown file (except the Master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for hinting and quick access.
+Each layout and Markdown file (except the Master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables.
 
-As a general rule of thumb; if variables are in the front-matter, they're page variables and user editable. If they're inside the actual layout - it's for layout logic.
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/data-files/"><b>Next Up:</b> Data Files →</a>
+</p>

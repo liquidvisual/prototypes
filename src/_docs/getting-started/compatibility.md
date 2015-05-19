@@ -4,9 +4,14 @@ title: Compatibility
 
 # Compatibility
 
+<div class="panel">
+  <strong>NOTE:</strong>
+  <p>Cross browser testing has been performed with IE8, IE9 and IE10 in addition to all modern browsers.</p>
+</div>
+
 ## IE8
 
-One major hurdle with compatibility is catering for IE8, one of the last browsers to neglect support for Media Queries - which everything is built around. **Everything**.
+One major hurdle with compatibility is catering for IE8, one of the last browsers to lack support for Media Queries - which everything is built around. **Everything**.
 
 For IE8 support we'll need to depend on:
 
@@ -16,8 +21,7 @@ For IE8 support we'll need to depend on:
 
 ### IE Conditionals
 
-IE Conditionals are found throughout the Master but they're most important at the very top.
-
+IE Conditionals are found throughout the Master layout but the most important are at the very top.
 
 ```
 <!DOCTYPE html>
@@ -30,7 +34,7 @@ This allows us to target "versions" of IE in CSS and JS by using a **.lt-ie[x]**
 
 ### Polyfills
 
-All polyfills are found in the master.html in the **/layouts** folder. The order of these items in the master layout is extremely important. Let's run through them.
+All polyfills are found in the **master.html** in the **/layouts** folder. The order of these items in that Master layout is extremely important. Let's run through them.
 
 ```html
 <!-- Priority Scripts -->
@@ -51,9 +55,14 @@ The next set of Polyfills are used to restore absent CSS3 functionality such as 
 
 ### A Grunt Generated IE8 Stylesheet
 
-The final piece of the puzzle is a generating an overriding IE8 stylesheet. The sole purpose of this file is to include pixel fallbacks to REM units - which is used throughout the application. Unfortunately there isn't a more succinct way to achieve this in Sass through Foundation - so we need to rely on post processing.
+<div class="panel">
+  <strong>WARNING:</strong>
+  <p>Extreme pain up ahead.</p>
+</div>
 
-On around line 400 of the Gruntfile.js you'll find the following to make this happen:
+The final piece of the puzzle is generating an overriding IE8 stylesheet. The sole purpose of this file is to include pixel fallbacks to REM units - which is used throughout the application. Unfortunately there isn't a more succinct way to achieve this in Sass through Foundation - so we need to rely on post processing.
+
+On around line 400 of the **Gruntfile.js** you'll find the following to make this happen:
 
 ```
 pixrem: {
@@ -77,7 +86,7 @@ This conditional is what gives IE8 users what they need:
 <![endif]-->
 ```
 
-You'd be right in that they download the CSS twice. It's not ideal, but it's *easier*. I suppose you could opt to use the IE8 generated sheet over the default one - but then you run the risk of forgetting to manually output the right one.
+You'd be right in that they download the CSS twice. It's not ideal, but it's *easier*. I suppose you could opt to use the IE8 generated sheet over the default one - but then you run the risk of mistakenly outputting the wrong one.
 
 ## CDNs
 
@@ -85,7 +94,7 @@ Leveraging content delivery networks is much easier for these polyfills. We don'
 
 ## How to Test in IE8
 
-It's a very laborious task to actually test with IE8. In order to do it youself, follow these steps.
+It's a very laborious task to actually test with IE8. In order to do it locally, follow these steps.
 
 1. `grunt build`
 2. Once **dist/** has been created; CD into the folder via the terminal `cd dist`
@@ -116,6 +125,8 @@ In honesty, IE8 performance is pretty lackluster. It does work but we're **reall
 
 Please remember that Microsoft will be dropping support for IE8 AND IE9 in early 2016 - so we should really be concentrating our efforts on better educating and warning our customer base instead of spending additional time on waning legacy support.
 
+<br>
 
-
-
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/templates/"><b>Next Up:</b> Templates →</a>
+</p>

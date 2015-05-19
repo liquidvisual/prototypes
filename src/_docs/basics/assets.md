@@ -6,17 +6,20 @@ title: Assets
 
 The Gruntfile is configured to export all asset files such as CSS, JS, Images and Fonts into a dedicated **assets/** directory. All paths in the prototype site are root relative, pointing to the **/assets** directory and assuming it's in the root.
 
-If you experience images or font icons failing to load in your own environment, it's most likely an issue with the paths. Simply move the **/assets** directory so it's local to the root.
+<div class="panel">
+  <strong>TIP:</strong>
+  <p>If you experience images or font icons failing to load in your local environment, it's most likely an issue with the paths. Simply move the <b>/assets</b> directory so it's local to the root.</p>
+</div>
 
-
-## Stylesheets
 ---
 
-The Master layout defines three standalone CSS files that are compromised of multiple files. On build, these get crunched down and minified into a single file. 
+## Stylesheets
 
-You'll notice below that all stylesheets are wrapped inside of commented build flags which get picked up by a Grunt task called [grunt-usemin](https://github.com/yeoman/grunt-usemin) on build. 
+The Master layout defines three standalone CSS files that are compromised of multiple files. On build, these get crunched down and minified into a single file.
 
-The `{{ page.site_type }}` template variable (you'll see further down) translates into *"checkpoint"* or *"westlaw"* depending on the page. This mirrors the directory in which to output on build.
+You'll notice below that all stylesheets are wrapped inside of commented build flags which get picked up by a Grunt task called [grunt-usemin](https://github.com/yeoman/grunt-usemin) on build.
+
+The `{% raw %}{{ page.site_type }}{% endraw %}` template variable (you'll see further down) translates into *"checkpoint"* or *"westlaw"* depending on the page. This mirrors the directory in which to output on build.
 
 For example, you'll find the following inside **/assets**:
 
@@ -24,14 +27,14 @@ For example, you'll find the following inside **/assets**:
 dist/
   |--assets/
   |   |--css/
-  |      |--checkpoint/
-  |         |--app.css
-  |         |--foundation.css
-  |         |--legacy-core.css
-  |      |--westlaw/
-  |         |--app.css
-  |         |--foundation.css
-  |         |--legacy-core.css
+  |   |   |--checkpoint/
+  |   |   |   |--app.css
+  |   |   |   |--foundation.css
+  |   |   |   |--legacy-core.css
+  |   |   |--westlaw/
+  |   |   |   |--app.css
+  |   |   |   |--foundation.css
+  |   |   |   |--legacy-core.css
   |   |--fonts/
   |   |--img/
   |   |--scripts/
@@ -50,7 +53,7 @@ This defines the standalone stylesheet for [Foundation](http://foundation.zurb.c
 
 ### Legacy Core
 
-This stylesheet is made up of a number of specifically selected CSS files from the original Checkpoint and/or Westlaw application. These CSS files were absorbed into the prototype's codebase and converted to Sass (.scss) files. 
+This stylesheet is made up of a number of specifically selected CSS files from the original Checkpoint and/or Westlaw application. These CSS files were absorbed into the prototype's codebase and converted to Sass (.scss) files.
 
 These files were very carefully selected and audited - they mostly target *Search Results* and *Documents* which are too involved to re-style from the ground up. These files were also tidied up of small compatibility hacks left over from IE6-7 - which would cause the Sass compiler to throw an error.
 
@@ -79,9 +82,9 @@ Finally this stylesheet is one that contains all of the unique styling for app s
 
 It turns out that IE6-9 have a very significant shortcoming. These browsers have a soft limit of 4095 selectors. Once this limit is reached, subsequent styles simply fail silently. Keeping stylesheets separated reduces the chance of running into this limit. You can read more about this in [Troubleshooting](/docs/miscellaneous/troubleshooting/).
 
+---
 
 ## JavaScript
----
 
 JavaScript is set out in the same way. You'll find a similar process right before the closing body. The build flags are much the same:
 
@@ -89,8 +92,8 @@ JavaScript is set out in the same way. You'll find a similar process right befor
  <!-- build:js(src) /assets/scripts/{{ page.site_type }}/app.js -->
      /path/to/scripts.js
  <!-- endbuild -->
- ```
- 
+```
+
 ### Adhoc JavaScript
 
 Aside from the main **app.js** there is a second JavaScript file that gets exported on build. It's called **adhoc-only.js**. This file contains code that's merely for simulation purposes in the prototype. Keeping it separate allows you to easily exclude it from your own environment.
@@ -105,8 +108,9 @@ Aside from the main **app.js** there is a second JavaScript file that gets expor
 <!-- endbuild -->
 ```
 
-## Images
 ---
+
+## Images
 
 Images are fairly straight forward. There is a Grunt task called [grunt-cdnify](https://github.com/callumlocke/grunt-cdnify) that runs through the templates and appends **/assets/** to file paths on build.
 
@@ -157,8 +161,9 @@ src/
   |--scripts/
 ```
 
-## Fonts
 ---
+
+## Fonts
 
 All fonts are common to both prototypes. There are three types which get called upon:
 
@@ -193,7 +198,7 @@ This is the main library used by prototypes as the icons are well sized and cons
 <i class="fi-[icon-name]"></i>
 ```
 
-Let's say I wanted to create an icon of a star, I would consult the [Foundation Icons Cheatsheet](http://zurb.com/playground/foundation-icon-fonts-3), grab the name of the icon and write:
+Let's say I wanted to create an icon of a star <i class="fi-star"></i>, I would consult the [Foundation Icons Cheatsheet](http://zurb.com/playground/foundation-icon-fonts-3), grab the name of the icon and write:
 
 ```
 <i class="fi-star"></i>
@@ -203,32 +208,8 @@ Let's say I wanted to create an icon of a star, I would consult the [Foundation 
 
 Fonts are much easier to scale. They also display better on retina screens with double pixel density. The need for sprite-sheets is also unnecessary now because you can control hover states by styling the icon directly.
 
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/libraries/"><b>Next Up:</b> Libraries →</a>
+</p>

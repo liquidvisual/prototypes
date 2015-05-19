@@ -2,17 +2,13 @@
 title: Documents
 ---
 
-# Warning: This page is still in progress
-
-
-
+<h1>Documents <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 ## Addressing Diagrams in Workflow
 
 Workflow documents are problematic since they utilise interactive image maps for their diagrams. Image maps cannot be made responsive so there's two ways we could go about handling this:
 
 1. Add a `width="100%"` on the diagram `img` element. The image map will fail once it changes size but the user will still be able to see it and save it to their device.
-
 2. Allow the user to 'pinch and zoom'.
 
 With the latter we can trigger a page-based 'pinch and zoom' behavior by altering a meta tag in the master layout. You can find this tag in **src/layouts/common/master.html** on line 10.
@@ -25,10 +21,7 @@ The key attribute above is `user-scalable=no`. By default all pages are locked a
 
 The result is a page that can essentially be **"unresponsive" by design**. With the current [workflow document](http://localhost:9292/pages/westlaw/workflow/documents/document-01/) I've implemented options **both 1 and 2**. The image is 100% but the page can be 'pinch and zoomed'. The assumption is if you were to leave a diagram in place, the width would remain fixed and a user *may* be able to interact with the image map on a smaller device if they scale the document with their thumbs.
 
-
-
-
-# Documents
+---
 
 ## Document View
 
@@ -69,3 +62,9 @@ Path: src/_scss/checkpoint/app/legacy/original/all.scss
 // @import "rspace";
 // @import "rspacebar";
 ```
+
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/alerts/"><b>Next Up:</b> Alerts →</a>
+</p>

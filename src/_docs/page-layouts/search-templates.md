@@ -2,9 +2,7 @@
 title: Search Templates
 ---
 
-# Warning: This page is still in progress
-
-# Search Templates
+<h1>Search Templates<span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 As we know, Search Templates cannot be responsively retro-fitted. These templates would need to be re-built using the [Foundation grid](http://foundation.zurb.com/docs/components/grid.html).
 
@@ -119,19 +117,8 @@ Same as above. This will generate what you need with included JQuery UI Calendar
 
 Workflow is a slightly problematic [CONT'D]
 
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/results/"><b>Next Up:</b> Results →</a>
+</p>

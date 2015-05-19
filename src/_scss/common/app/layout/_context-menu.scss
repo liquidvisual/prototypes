@@ -64,6 +64,7 @@ $context-menu-width-expanded: 50%;
 // Expanded Feature **NEW**
 //-----------------------------------------------------------------
 
+.lv-context-menu.is-expanded
 .lv-context-menu-fixed.is-expanded {
     @media #{$large-up} {
         position: absolute;
@@ -72,6 +73,7 @@ $context-menu-width-expanded: 50%;
     }
 }
 
+.lv-context-menu.is-expanded,
 .lv-context-menu.is-expanded .lv-context-menu-fixed {
     @media #{$large-up} {
         width: $context-menu-width-expanded;

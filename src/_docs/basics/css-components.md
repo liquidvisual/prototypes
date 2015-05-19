@@ -2,15 +2,19 @@
 title: CSS Components
 ---
 
-# Warning: This page is still in progress
-
-# CSS Components
+<h1>CSS Components <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 ## Sass
 
-This project leverages Sass - a CSS preprocessor that helps with the maintainability of large amounts of files. Sass preprocessing is done through [grunt-sass](https://github.com/sindresorhus/grunt-sass) a grunt task that utilises the C++ implementation (aka libsass) of the Ruby based compiler.
+This project leverages Sass - a CSS pre-processor that helps with maintaining large amounts of files. Sass pre-processing is done through [grunt-sass](https://github.com/sindresorhus/grunt-sass) a grunt task that utilises the C++ implementation of the Ruby based compiler.
+
+<div class="panel">
+    <strong>NOTE:</strong>
+    <p>The C++ implementation of Sass is actually named <b>libsass</b></p></p>
+</div>
 
 ## How Legacy Content is Styled
+*Coming soon*
 
 ## Breakpoints
 
@@ -51,11 +55,12 @@ This project leverages Sass - a CSS preprocessor that helps with the maintainabi
 
 ### How These Work
 
-The small-range targets mobiles and phablets. At this narrow screen size
-
-
+*Coming soon*
+<!-- The small-range targets mobiles and phablets. At this narrow screen size -->
 
 ## TOC
+
+*Coming soon*
 
 In both prototypes TOC information is carried through partials. These files live inside a **toc_output/** directory. Since this is an **output** marked folder all partials contain minified snapshots of the existing apps' current DOM output only with no modification to the contents.
 
@@ -64,13 +69,17 @@ You can find these files in the following locations:
 `src/_includes/checkpoint/toc_output/`
 `src/_includes/westlaw/toc_output/`
 
-
-
-
-
 ## Breadcrumbs
 
+*Coming soon*
 
 
 ## Export Options
 
+*Coming soon*
+
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/javascript/"><b>Next Up:</b> JavaScript →</a>
+</p>

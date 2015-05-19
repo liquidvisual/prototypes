@@ -4,7 +4,7 @@ title: "Research Results: 'Mabo v Queensland'"
 type: search_result
 context_menu: "westlaw/context_menu_output/search_summary_01.html"
 sidebar_details: "westlaw/sidebar_content/hints/sort_ordering.html"
-next_url: "/pages/westlaw/research/documents/cases_document_01/"
+next_url: "/pages/westlaw/research/documents/cases-document-01/"
 ---
 
 <!-- START WESTLAW OUTPUT -->

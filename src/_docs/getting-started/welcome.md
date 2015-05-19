@@ -3,12 +3,17 @@ title: Welcome
 permalink: /docs/
 ---
 
-# Welcome - Warning: Docs still in progress
+<h1>Welcome <span class="subheader"> (Warning: Docs still in progress)</span></h1>
 
-Last updated: **14.05.15**
+Last updated: **19.05.15**
 
 The public facing site is currently located at:
 [http://prototypes.uat.liquidvisual.net](http://prototypes.uat.liquidvisual.net)
+
+<div class="panel">
+    <strong>NOTE:</strong>
+    <p>The <b>old</b> public facing website for Checkpoint can still be <a href="http://cpbeta.uat.liquidvisual.net">accessed here</a>. But I urge you to discontinue using it in favor of this new combined codebase.</p>
+</div>
 
 ---
 
@@ -25,3 +30,7 @@ The premise of this working hinges on the fact that all CSS is essentially left 
 ## Just a Prototype
 
 The strategies laid out in these prototypes are in no way bullet-proof and there will be great challenges in the final implementation. All examples here are to be used as suggestions for best application with final judgement being reserved to the back-end developers' discretion.
+
+<br>
+
+<p class="text-center medium-text-right"><a href="/docs/getting-started/installation-and-setup/"><b>Next Up:</b> Installation &amp; Setup →</a></p>

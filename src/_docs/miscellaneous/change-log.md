@@ -65,7 +65,7 @@ All point-of-entry Markdown files in **src/pages/** have been refactored to stor
 
 #### Simulated Workflows Improved
 
-This has been re-written to eliminate the need of including multiple snippets of JavaScript across all the page layouts. Now there is only a single piece of JavaScript in the internal template that controls where pages go. This will also eliminate those dead links. See [Simulated Workflows](/docs/getting-started/basic-usage/#simulated-workflows) for more. 
+This has been re-written to eliminate the need of including multiple snippets of JavaScript across all the page layouts. Now there is only a single piece of JavaScript in the internal template that controls where pages go. This will also eliminate those dead links. See [Simulated Workflows](/docs/getting-started/basic-usage/#simulated-workflows) for more.
 
 #### Improved Stability
 
@@ -107,3 +107,9 @@ Alerts have been added in the same way as Folders above.
 #### Dist Folder More Useful
 
 The dist folder that powers the public facing website now has a dedicated *pages/** directory that stores all compiled static HTML files relating to Checkpoint and Westlaw. These were originally strewn across the root. This will make referencing the compiled directories easier (eg. Assets), as they're better organised.
+
+<br>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/miscellaneous/upgrading/"><b>Next Up:</b> Upgrading →</a>
+</p>

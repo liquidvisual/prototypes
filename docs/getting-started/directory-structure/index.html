@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -610,11 +614,14 @@
   |--Gemfile
 </code></pre>
 
-<p><strong>NOTE</strong>: The <strong>dist/</strong> folder is not be included by default. One needs to run <code>grunt build</code> to generate it.</p>
+<div class="panel">
+  <strong>NOTE:</strong>
+  <p>The <b>dist/</b> folder is not included by default when running locally. You need to run <b>grunt build</b> to generate it.</p>
+</div>
 
 <h3 id="configyml">config.yml</h3>
 
-<p>This file instructs Jekyll what to do on compile. Currently the config sets up some global variables for pages inside the Westlaw and Checkpoint directories (see below). Most variables are passed through front-matter YAML from page to page in the markdown files where as this establishes those variables in one place.</p>
+<p>This file instructs Jekyll what to do on compile. Currently the config sets up some global variables for pages inside the Westlaw and Checkpoint directories (see below). Most variables are passed through front-matter YAML from page to page in the markdown files. <strong>config.yml</strong> however establishes those variables in one place.</p>
 
 <pre><code>defaults:
   -
@@ -629,7 +636,11 @@
       site_type: "checkpoint"
 </code></pre>
 
-<p>The result is we’re able to determine paths based on the page we’re on by using the template variable <code>westlaw</code>. For instance, the index from <strong>pages/checkpoint/index.html</strong> will store a page_type variable of “checkpoint” and be accessible throughout all subsequent pages. This variable then goes to define paths and is ultimately how we share the codebases between the two.</p>
+<p>The result is we’re able to determine paths based on the page we’re on by using the template variable:</p>
+
+<p><code>{{ page.site_type }}</code></p>
+
+<p>For instance, the index from <strong>pages/checkpoint/index.html</strong> will store a <strong>page_type</strong> variable of <em>“checkpoint”</em> and be accessible throughout all subsequent pages. This variable then goes to define paths and is ultimately how we share the codebases between the two.</p>
 
 <h2 id="src">SRC</h2>
 
@@ -681,12 +692,17 @@
 
 <h2 id="it-all-starts-with-the-pages-directory">It All Starts with the Pages Directory</h2>
 
-<p>The way Jekyll processes everything begins with markdown files stored inside the <strong>pages/</strong> directory. These files contain front-matter YAML which tell the page what layout to use and the page title. They also pass data, such as strings - which tell the layout to include certain HTML partials.</p>
+<p>The way Jekyll processes everything begins with Markdown files (.md) stored inside the <strong>pages/</strong> directory. These files contain front-matter YAML which tell the page what layout to use and the page title. They also pass other data, such as strings - which tell the layout to include certain HTML partials.</p>
 
 <h2 id="in-a-nutshell">In a Nutshell</h2>
 
 <p>The two prototypes are controlled by data variables stored inside of <strong>src/data/[name]</strong>. These variables govern colours, navigation and other information that differ between sites.</p>
 
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/getting-started/compatibility/"><b>Next Up:</b> Compatibility →</a>
+</p>
 
                     </div>
                 </div>

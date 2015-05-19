@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -597,12 +601,12 @@
   <li>data/checkpoint/settings.yml</li>
 </ol>
 
-<p>The settings file is how we’re able to share the majority of code. For example the Application Frame draws its top menu navigation from a partial:</p>
+<p>The settings file makes it possible to share the majority of code. For example the ‘Application Frame’ draws its top menu navigation from a partial:</p>
 
 <pre><code>src/includes/common/menus/top_menu.html
 </code></pre>
 
-<p>That partial is then able to access Checkpoint or Westlaw data and render the menu based on the values. The data looks like this:</p>
+<p>That partial is then able to access Checkpoint <strong>or</strong> Westlaw data and render the menu based on the values. The data looks like this:</p>
 
 <pre><code class="language-yaml">top_menu:
   - title: Dashboard
@@ -626,18 +630,11 @@ etc...
 <p>The template logic is then able to loop through these values like so:</p>
 
 <pre><code>
+{% assign settings = site.data.checkpoint.settings %}
 
-    &lt;a href="/pages/checkpoint/"&gt;Dashboard&lt;/a&gt;
-
-    &lt;a href="/pages/checkpoint/research/search-templates/basic/"&gt;Research&lt;/a&gt;
-
-    &lt;a href="/pages/checkpoint/workflow/"&gt;Workflow&lt;/a&gt;
-
-    &lt;a href="/pages/checkpoint/tools/"&gt;Tools&lt;/a&gt;
-
-    &lt;a href="/pages/checkpoint/learning/"&gt;Learning&lt;/a&gt;
-
-    &lt;a href="/pages/checkpoint/guide/"&gt;Guide&lt;/a&gt;
+{% for item in settings.top_menu %}
+    &lt;a href="{{ item.url }}"&gt;{{ item.title }}&lt;/a&gt;
+{% endfor %}
 
 </code></pre>
 
@@ -648,7 +645,13 @@ etc...
 &lt;a href="/pages/checkpoint/workflow/"&gt;Workflow&lt;/a&gt;
 </code></pre>
 
-<p>Most of the partials that make up the Application Frame work this way with the exception of the <strong>header.html</strong>.</p>
+<p>Most of the partials that make up the ‘Application Frame’ work this way with the exception of the <strong>header.html</strong> which is too specific to be shared.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/assets/"><b>Next Up:</b> Assets →</a>
+</p>
 
                     </div>
                 </div>

@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -590,11 +594,19 @@
                     <div class="lv-content-block">
                         <h1 id="upgrading">Upgrading</h1>
 
-<h3 id="the-quick-way">The Quick Way</h3>
+<h3 id="updating-pages-the-quick-way">Updating Pages the Quick Way</h3>
 
-<p>Simply create a new stylesheet or Javascript and link to it in the master.html. These files can store quick fixes and time sensitive updates. At a later time, they can be absorbed into the Sass files and recompiled with a <strong>grunt build</strong>.</p>
+<p>Simply create a new stylesheet or Javascript and link to it in the <strong>master.html</strong>. These files can store quick fixes and time sensitive updates. At a later time, they can be absorbed into the Sass files and re-compiled with a <strong>grunt build</strong>.</p>
+
+<h3 id="updating-assets">Updating Assets</h3>
 
 <p>In future, when updates are made relating to CSS, JS, fonts or images - one only needs to copy over the <strong>dist/assets</strong> folder from the remote repo to receive the updates.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/miscellaneous/troubleshooting/"><b>Next Up:</b> Troubleshooting →</a>
+</p>
 
                     </div>
                 </div>

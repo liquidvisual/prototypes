@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -588,19 +592,15 @@
             <div class="row">
                 <div class="columns">
                     <div class="lv-content-block">
-                        <h1 id="warning-this-page-is-still-in-progress">Warning: This page is still in progress</h1>
+                        <h1>Documents <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 <h2 id="addressing-diagrams-in-workflow">Addressing Diagrams in Workflow</h2>
 
 <p>Workflow documents are problematic since they utilise interactive image maps for their diagrams. Image maps cannot be made responsive so there’s two ways we could go about handling this:</p>
 
 <ol>
-  <li>
-    <p>Add a <code>width="100%"</code> on the diagram <code>img</code> element. The image map will fail once it changes size but the user will still be able to see it and save it to their device.</p>
-  </li>
-  <li>
-    <p>Allow the user to ‘pinch and zoom’.</p>
-  </li>
+  <li>Add a <code>width="100%"</code> on the diagram <code>img</code> element. The image map will fail once it changes size but the user will still be able to see it and save it to their device.</li>
+  <li>Allow the user to ‘pinch and zoom’.</li>
 </ol>
 
 <p>With the latter we can trigger a page-based ‘pinch and zoom’ behavior by altering a meta tag in the master layout. You can find this tag in <strong>src/layouts/common/master.html</strong> on line 10.</p>
@@ -612,7 +612,7 @@
 
 <p>The result is a page that can essentially be <strong>“unresponsive” by design</strong>. With the current <a href="http://localhost:9292/pages/westlaw/workflow/documents/document-01/">workflow document</a> I’ve implemented options <strong>both 1 and 2</strong>. The image is 100% but the page can be ‘pinch and zoomed’. The assumption is if you were to leave a diagram in place, the width would remain fixed and a user <em>may</em> be able to interact with the image map on a smaller device if they scale the document with their thumbs.</p>
 
-<h1 id="documents">Documents</h1>
+<hr />
 
 <h2 id="document-view">Document View</h2>
 
@@ -651,6 +651,12 @@
 // @import "rspace";
 // @import "rspacebar";
 </code></pre>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/alerts/"><b>Next Up:</b> Alerts →</a>
+</p>
 
                     </div>
                 </div>

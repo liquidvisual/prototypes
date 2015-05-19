@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -588,9 +592,7 @@
             <div class="row">
                 <div class="columns">
                     <div class="lv-content-block">
-                        <h1 id="warning-this-page-is-still-in-progress">Warning: This page is still in progress</h1>
-
-<h1 id="preferences">Preferences</h1>
+                        <h1 id="preferences">Preferences</h1>
 
 <p>The output of preferences appears to work fine when dropped directly into the content stage of the Application Frame.</p>
 
@@ -599,6 +601,12 @@
 <h2 id="whitespace-issue">Whitespace Issue</h2>
 
 <p>An concern brought up with Westlaw is there was too much whitespace. This can be reduced by tweaking the output to include less <code>&lt;br&gt;</code> tags which is a better way to go than manually overriding every style with CSS.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/miscellaneous/change-log/"><b>Next Up:</b> Change Log →</a>
+</p>
 
                     </div>
                 </div>

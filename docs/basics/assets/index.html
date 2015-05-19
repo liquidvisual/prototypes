@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -592,30 +596,34 @@
 
 <p>The Gruntfile is configured to export all asset files such as CSS, JS, Images and Fonts into a dedicated <strong>assets/</strong> directory. All paths in the prototype site are root relative, pointing to the <strong>/assets</strong> directory and assuming it’s in the root.</p>
 
-<p>If you experience images or font icons failing to load in your own environment, it’s most likely an issue with the paths. Simply move the <strong>/assets</strong> directory so it’s local to the root.</p>
+<div class="panel">
+  <strong>TIP:</strong>
+  <p>If you experience images or font icons failing to load in your local environment, it's most likely an issue with the paths. Simply move the <b>/assets</b> directory so it's local to the root.</p>
+</div>
 
-<h2 id="stylesheets">Stylesheets</h2>
 <hr />
 
-<p>The Master layout defines three standalone CSS files that are compromised of multiple files. On build, these get crunched down and minified into a single file. </p>
+<h2 id="stylesheets">Stylesheets</h2>
 
-<p>You’ll notice below that all stylesheets are wrapped inside of commented build flags which get picked up by a Grunt task called <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a> on build. </p>
+<p>The Master layout defines three standalone CSS files that are compromised of multiple files. On build, these get crunched down and minified into a single file.</p>
 
-<p>The <code>westlaw</code> template variable (you’ll see further down) translates into <em>“checkpoint”</em> or <em>“westlaw”</em> depending on the page. This mirrors the directory in which to output on build.</p>
+<p>You’ll notice below that all stylesheets are wrapped inside of commented build flags which get picked up by a Grunt task called <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a> on build.</p>
+
+<p>The <code>{{ page.site_type }}</code> template variable (you’ll see further down) translates into <em>“checkpoint”</em> or <em>“westlaw”</em> depending on the page. This mirrors the directory in which to output on build.</p>
 
 <p>For example, you’ll find the following inside <strong>/assets</strong>:</p>
 
 <pre><code>dist/
   |--assets/
   |   |--css/
-  |      |--checkpoint/
-  |         |--app.css
-  |         |--foundation.css
-  |         |--legacy-core.css
-  |      |--westlaw/
-  |         |--app.css
-  |         |--foundation.css
-  |         |--legacy-core.css
+  |   |   |--checkpoint/
+  |   |   |   |--app.css
+  |   |   |   |--foundation.css
+  |   |   |   |--legacy-core.css
+  |   |   |--westlaw/
+  |   |   |   |--app.css
+  |   |   |   |--foundation.css
+  |   |   |   |--legacy-core.css
   |   |--fonts/
   |   |--img/
   |   |--scripts/
@@ -632,7 +640,7 @@
 
 <h3 id="legacy-core">Legacy Core</h3>
 
-<p>This stylesheet is made up of a number of specifically selected CSS files from the original Checkpoint and/or Westlaw application. These CSS files were absorbed into the prototype’s codebase and converted to Sass (.scss) files. </p>
+<p>This stylesheet is made up of a number of specifically selected CSS files from the original Checkpoint and/or Westlaw application. These CSS files were absorbed into the prototype’s codebase and converted to Sass (.scss) files.</p>
 
 <p>These files were very carefully selected and audited - they mostly target <em>Search Results</em> and <em>Documents</em> which are too involved to re-style from the ground up. These files were also tidied up of small compatibility hacks left over from IE6-7 - which would cause the Sass compiler to throw an error.</p>
 
@@ -659,22 +667,22 @@
 
 <p>It turns out that IE6-9 have a very significant shortcoming. These browsers have a soft limit of 4095 selectors. Once this limit is reached, subsequent styles simply fail silently. Keeping stylesheets separated reduces the chance of running into this limit. You can read more about this in <a href="/docs/miscellaneous/troubleshooting/">Troubleshooting</a>.</p>
 
-<h2 id="javascript">JavaScript</h2>
 <hr />
+
+<h2 id="javascript">JavaScript</h2>
 
 <p>JavaScript is set out in the same way. You’ll find a similar process right before the closing body. The build flags are much the same:</p>
 
 <pre><code class="language-html"> &lt;!-- build:js(src) /assets/scripts/westlaw/app.js --&gt;
      /path/to/scripts.js
  &lt;!-- endbuild --&gt;
- ```
- 
-### Adhoc JavaScript
+</code></pre>
 
-Aside from the main **app.js** there is a second JavaScript file that gets exported on build. It's called **adhoc-only.js**. This file contains code that's merely for simulation purposes in the prototype. Keeping it separate allows you to easily exclude it from your own environment.
+<h3 id="adhoc-javascript">Adhoc JavaScript</h3>
 
-```html
- &lt;!-- build:js(src) /assets/scripts/westlaw/adhoc-only.js --&gt;
+<p>Aside from the main <strong>app.js</strong> there is a second JavaScript file that gets exported on build. It’s called <strong>adhoc-only.js</strong>. This file contains code that’s merely for simulation purposes in the prototype. Keeping it separate allows you to easily exclude it from your own environment.</p>
+
+<pre><code class="language-html"> &lt;!-- build:js(src) /assets/scripts/westlaw/adhoc-only.js --&gt;
     &lt;script src="/scripts/common/adhoc/adhoc-datepicker.js"&gt;&lt;/script&gt;
     &lt;script src="/scripts/common/adhoc/adhoc-export-options.js"&gt;&lt;/script&gt;
     &lt;script src="/scripts/common/adhoc/adhoc-filter-toc.js"&gt;&lt;/script&gt;
@@ -683,8 +691,9 @@ Aside from the main **app.js** there is a second JavaScript file that gets expor
 &lt;!-- endbuild --&gt;
 </code></pre>
 
-<h2 id="images">Images</h2>
 <hr />
+
+<h2 id="images">Images</h2>
 
 <p>Images are fairly straight forward. There is a Grunt task called <a href="https://github.com/callumlocke/grunt-cdnify">grunt-cdnify</a> that runs through the templates and appends <strong>/assets/</strong> to file paths on build.</p>
 
@@ -730,8 +739,9 @@ Aside from the main **app.js** there is a second JavaScript file that gets expor
   |--scripts/
 </code></pre>
 
-<h2 id="fonts">Fonts</h2>
 <hr />
+
+<h2 id="fonts">Fonts</h2>
 
 <p>All fonts are common to both prototypes. There are three types which get called upon:</p>
 
@@ -765,7 +775,7 @@ Aside from the main **app.js** there is a second JavaScript file that gets expor
 <pre><code>&lt;i class="fi-[icon-name]"&gt;&lt;/i&gt;
 </code></pre>
 
-<p>Let’s say I wanted to create an icon of a star, I would consult the <a href="http://zurb.com/playground/foundation-icon-fonts-3">Foundation Icons Cheatsheet</a>, grab the name of the icon and write:</p>
+<p>Let’s say I wanted to create an icon of a star <i class="fi-star"></i>, I would consult the <a href="http://zurb.com/playground/foundation-icon-fonts-3">Foundation Icons Cheatsheet</a>, grab the name of the icon and write:</p>
 
 <pre><code>&lt;i class="fi-star"&gt;&lt;/i&gt;
 </code></pre>
@@ -774,6 +784,11 @@ Aside from the main **app.js** there is a second JavaScript file that gets expor
 
 <p>Fonts are much easier to scale. They also display better on retina screens with double pixel density. The need for sprite-sheets is also unnecessary now because you can control hover states by styling the icon directly.</p>
 
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/libraries/"><b>Next Up:</b> Libraries →</a>
+</p>
 
                     </div>
                 </div>

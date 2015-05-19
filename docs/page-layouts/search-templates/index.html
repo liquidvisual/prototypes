@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -588,9 +592,7 @@
             <div class="row">
                 <div class="columns">
                     <div class="lv-content-block">
-                        <h1 id="warning-this-page-is-still-in-progress">Warning: This page is still in progress</h1>
-
-<h1 id="search-templates">Search Templates</h1>
+                        <h1>Search Templates<span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 <p>As we know, Search Templates cannot be responsively retro-fitted. These templates would need to be re-built using the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>.</p>
 
@@ -850,6 +852,11 @@
 
 <p>Workflow is a slightly problematic [CONT’D]</p>
 
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/results/"><b>Next Up:</b> Results →</a>
+</p>
 
                     </div>
                 </div>

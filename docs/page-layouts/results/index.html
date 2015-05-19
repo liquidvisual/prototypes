@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -588,9 +592,7 @@
             <div class="row">
                 <div class="columns">
                     <div class="lv-content-block">
-                        <h1 id="warning-this-page-is-still-in-progress">Warning: This page is still in progress</h1>
-
-<h1 id="results">Results</h1>
+                        <h1>Results <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
 <p>The “Search Results” template is probably one of the most problematic due to the large amount of varying content and styles. This prototype’s template consists of existing app DOM output and has not been re-written in anyway. The idea is to try and re-style the existing markup so these templates don’t have to be written.</p>
 
@@ -607,6 +609,12 @@
 <h3 id="partial-view-and-westlaw-limitations">Partial View and Westlaw Limitations</h3>
 
 <p>As mentioned above, this template utilises a JavaScript snippet which inserts a show/hide button on device views. On Checkpoint this works fine, although given the problematic markup of Westlaw with results not being wrapped predictably, this feature has been omitted. At present the mobile view of results is mostly unreadable on mobile because of the wrapping issue which causes excessive scrolling - a fix would require appropriate wrapping of the result elements. Right now, each result is split into multiple result divs, which makes it impossible to target correctly.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/page-layouts/documents/"><b>Next Up:</b> Documents →</a>
+</p>
 
                     </div>
                 </div>

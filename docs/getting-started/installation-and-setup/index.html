@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -592,7 +596,7 @@
 
 <p>This project is built with <a href="http://jekyllrb.com">Jekyll 2.5.3</a> - a static site generator. It also uses <a href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner and <a href="http://bower.io">Bower</a> for package management. This workflow was scaffolded with a <a href="http://yeoman.io">Yeoman</a> generator called <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> which simply automates the process of setting it all up.</p>
 
-<p>The repo for all the source files are found here:</p>
+<p>The <strong>repo</strong> for all the source files are found here:</p>
 
 <p><a href="https://github.com/liquidvisual/prototypes">https://github.com/liquidvisual/prototypes</a></p>
 
@@ -660,7 +664,7 @@ grunt serve
 
 <h3 id="access-layoutsmasterhtml">02. Access /_layouts/master.html</h3>
 
-<p>Start with this master layout and substitute the template logic for your own as you build out the page in your own environment. When it comes to the assets, they compile into <strong>/assets</strong> on build so you’ll only need to do a bit of substitution.</p>
+<p>Start with this master layout and substitute any template logic for your own as you build out the page in your own environment. When it comes to the assets, they compile into <strong>/assets</strong> on build so you’ll only need to do a bit of substitution.</p>
 
 <p>You can replace all of this:</p>
 
@@ -690,6 +694,10 @@ grunt serve
 <h3 id="copy-over-partials-in-includes">03. Copy Over Partials in /_includes</h3>
 
 <p>Templates reference partials from this folder to keep things modular and easy to maintain. If possible, I’d recommend retaining these files as separate chunks to your main templates.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right"><a href="/docs/getting-started/basic-usage/"><b>Next Up:</b> Basic Usage →</a></p>
 
                     </div>
                 </div>

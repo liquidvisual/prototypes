@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -590,9 +594,14 @@
                     <div class="lv-content-block">
                         <h1 id="compatibility">Compatibility</h1>
 
+<div class="panel">
+  <strong>NOTE:</strong>
+  <p>Cross browser testing has been performed with IE8, IE9 and IE10 in addition to all modern browsers.</p>
+</div>
+
 <h2 id="ie8">IE8</h2>
 
-<p>One major hurdle with compatibility is catering for IE8, one of the last browsers to neglect support for Media Queries - which everything is built around. <strong>Everything</strong>.</p>
+<p>One major hurdle with compatibility is catering for IE8, one of the last browsers to lack support for Media Queries - which everything is built around. <strong>Everything</strong>.</p>
 
 <p>For IE8 support we’ll need to depend on:</p>
 
@@ -604,7 +613,7 @@
 
 <h3 id="ie-conditionals">IE Conditionals</h3>
 
-<p>IE Conditionals are found throughout the Master but they’re most important at the very top.</p>
+<p>IE Conditionals are found throughout the Master layout but the most important are at the very top.</p>
 
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;!--[if lt IE 8]&gt;       &lt;html class="no-js lt-ie9 lt-ie8"&gt; &lt;![endif]--&gt;
@@ -616,7 +625,7 @@
 
 <h3 id="polyfills">Polyfills</h3>
 
-<p>All polyfills are found in the master.html in the <strong>/layouts</strong> folder. The order of these items in the master layout is extremely important. Let’s run through them.</p>
+<p>All polyfills are found in the <strong>master.html</strong> in the <strong>/layouts</strong> folder. The order of these items in that Master layout is extremely important. Let’s run through them.</p>
 
 <pre><code class="language-html">&lt;!-- Priority Scripts --&gt;
 &lt;script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"&gt;&lt;/script&gt;
@@ -635,9 +644,14 @@
 
 <h3 id="a-grunt-generated-ie8-stylesheet">A Grunt Generated IE8 Stylesheet</h3>
 
-<p>The final piece of the puzzle is a generating an overriding IE8 stylesheet. The sole purpose of this file is to include pixel fallbacks to REM units - which is used throughout the application. Unfortunately there isn’t a more succinct way to achieve this in Sass through Foundation - so we need to rely on post processing.</p>
+<div class="panel">
+  <strong>WARNING:</strong>
+  <p>Extreme pain up ahead.</p>
+</div>
 
-<p>On around line 400 of the Gruntfile.js you’ll find the following to make this happen:</p>
+<p>The final piece of the puzzle is generating an overriding IE8 stylesheet. The sole purpose of this file is to include pixel fallbacks to REM units - which is used throughout the application. Unfortunately there isn’t a more succinct way to achieve this in Sass through Foundation - so we need to rely on post processing.</p>
+
+<p>On around line 400 of the <strong>Gruntfile.js</strong> you’ll find the following to make this happen:</p>
 
 <pre><code>pixrem: {
   options: {
@@ -659,7 +673,7 @@
 &lt;![endif]--&gt;
 </code></pre>
 
-<p>You’d be right in that they download the CSS twice. It’s not ideal, but it’s <em>easier</em>. I suppose you could opt to use the IE8 generated sheet over the default one - but then you run the risk of forgetting to manually output the right one.</p>
+<p>You’d be right in that they download the CSS twice. It’s not ideal, but it’s <em>easier</em>. I suppose you could opt to use the IE8 generated sheet over the default one - but then you run the risk of mistakenly outputting the wrong one.</p>
 
 <h2 id="cdns">CDNs</h2>
 
@@ -667,7 +681,7 @@
 
 <h2 id="how-to-test-in-ie8">How to Test in IE8</h2>
 
-<p>It’s a very laborious task to actually test with IE8. In order to do it youself, follow these steps.</p>
+<p>It’s a very laborious task to actually test with IE8. In order to do it locally, follow these steps.</p>
 
 <ol>
   <li><code>grunt build</code></li>
@@ -698,6 +712,11 @@
 
 <p>Please remember that Microsoft will be dropping support for IE8 AND IE9 in early 2016 - so we should really be concentrating our efforts on better educating and warning our customer base instead of spending additional time on waning legacy support.</p>
 
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/templates/"><b>Next Up:</b> Templates →</a>
+</p>
 
                     </div>
                 </div>

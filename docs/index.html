@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -540,12 +544,17 @@
             <div class="row">
                 <div class="columns">
                     <div class="lv-content-block">
-                        <h1 id="welcome---warning-docs-still-in-progress">Welcome - Warning: Docs still in progress</h1>
+                        <h1>Welcome <span class="subheader"> (Warning: Docs still in progress)</span></h1>
 
-<p>Last updated: <strong>14.05.15</strong></p>
+<p>Last updated: <strong>19.05.15</strong></p>
 
 <p>The public facing site is currently located at:<br />
 <a href="http://prototypes.uat.liquidvisual.net">http://prototypes.uat.liquidvisual.net</a></p>
+
+<div class="panel">
+    <strong>NOTE:</strong>
+    <p>The <b>old</b> public facing website for Checkpoint can still be <a href="http://cpbeta.uat.liquidvisual.net">accessed here</a>. But I urge you to discontinue using it in favor of this new combined codebase.</p>
+</div>
 
 <hr />
 
@@ -562,6 +571,10 @@
 <h2 id="just-a-prototype">Just a Prototype</h2>
 
 <p>The strategies laid out in these prototypes are in no way bullet-proof and there will be great challenges in the final implementation. All examples here are to be used as suggestions for best application with final judgement being reserved to the back-end developers’ discretion.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right"><a href="/docs/getting-started/installation-and-setup/"><b>Next Up:</b> Installation &amp; Setup →</a></p>
 
                     </div>
                 </div>

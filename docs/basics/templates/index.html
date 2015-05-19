@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -592,7 +596,10 @@
 
 <h2 id="how-templating-works">How Templating Works</h2>
 
-<p><strong>NOTE:</strong> All the following folders live inside the <strong>/src</strong> directory</p>
+<div class="panel">
+	<strong>NOTE:</strong>
+	<p>All the following folders live inside the <b>/src</b> directory</p>
+</div>
 
 <h3 id="layouts">/_layouts</h3>
 
@@ -635,9 +642,13 @@
 
 <h3 id="front-matter">Front Matter</h3>
 
-<p>Each layout and Markdown file (except the Master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for hinting and quick access.</p>
+<p>Each layout and Markdown file (except the Master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables.</p>
 
-<p>As a general rule of thumb; if variables are in the front-matter, they’re page variables and user editable. If they’re inside the actual layout - it’s for layout logic.</p>
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/basics/data-files/"><b>Next Up:</b> Data Files →</a>
+</p>
 
                     </div>
                 </div>

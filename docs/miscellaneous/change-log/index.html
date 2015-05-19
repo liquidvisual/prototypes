@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -653,7 +657,7 @@
 
 <h4 id="simulated-workflows-improved">Simulated Workflows Improved</h4>
 
-<p>This has been re-written to eliminate the need of including multiple snippets of JavaScript across all the page layouts. Now there is only a single piece of JavaScript in the internal template that controls where pages go. This will also eliminate those dead links. See <a href="/docs/getting-started/basic-usage/#simulated-workflows">Simulated Workflows</a> for more. </p>
+<p>This has been re-written to eliminate the need of including multiple snippets of JavaScript across all the page layouts. Now there is only a single piece of JavaScript in the internal template that controls where pages go. This will also eliminate those dead links. See <a href="/docs/getting-started/basic-usage/#simulated-workflows">Simulated Workflows</a> for more.</p>
 
 <h4 id="improved-stability">Improved Stability</h4>
 
@@ -695,6 +699,12 @@
 <h4 id="dist-folder-more-useful">Dist Folder More Useful</h4>
 
 <p>The dist folder that powers the public facing website now has a dedicated *pages/** directory that stores all compiled static HTML files relating to Checkpoint and Westlaw. These were originally strewn across the root. This will make referencing the compiled directories easier (eg. Assets), as they’re better organised.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+  <a href="/docs/miscellaneous/upgrading/"><b>Next Up:</b> Upgrading →</a>
+</p>
 
                     </div>
                 </div>

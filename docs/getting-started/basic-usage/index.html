@@ -127,6 +127,10 @@
         padding: 5px 15px;
     }
 
+    .lv-context-menu {
+        z-index: 999;
+    }
+
     /* move this into SCSS soon */
     @media (min-width: 1024px) {
         .lv-context-menu-fixed {
@@ -607,12 +611,22 @@
 
 <p>To simulate the effect of using the app, each page comes with a built-in “destination” variable which tells it where to go next. Due to the static nature of the prototypes this is rather restrictive, forcing you along a linear path like a powerpoint slideshow. It should be enough to get the job done though. These simulated workflows have been built around the documents that were originally submitted at the start of the project. You can find them here:</p>
 
-<p><a href="https://cloudup.com/c1OlESVlUdJ">Westlaw Workflows Doc</a><br />
-<a href="https://cloudup.com/cARHOODXUQ0">Checkpoint Workflows Doc</a></p>
+<ul>
+  <li><a href="https://cloudup.com/c1OlESVlUdJ">Westlaw Workflows Doc</a></li>
+  <li><a href="https://cloudup.com/cARHOODXUQ0">Checkpoint Workflows Doc</a></li>
+</ul>
 
 <h3 id="how-simulation-works">How Simulation Works</h3>
 
 <p>Prototypes use a lot of raw code dropped in from their real counterparts. Because of this, many links throughout the app will be dead. To overcome this, all link hrefs are replaced with paths passed from the current page’s destination variable. This <strong>may</strong> lead to some undesirable or otherwise glitchy behavior in places. If something goes wrong, refresh the page or return to the Guide to find your place.</p>
+
+<p>Please also report any dead links through email.</p>
+
+<p><br /></p>
+
+<p class="text-center medium-text-right">
+	<a href="/docs/getting-started/directory-structure/"><b>Next Up:</b> Directory Structure →</a>
+</p>
 
                     </div>
                 </div>

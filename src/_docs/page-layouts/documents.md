@@ -4,6 +4,16 @@ title: Documents
 
 <h1>Documents <span class="subheader"> (Warning: this page is still in progress)</span></h1>
 
+## Ensure Documents Have a background
+
+Most documents have a wrapping container with an id of "documentContainer". This provides the hook to which we can create a container with appropriate padding and a white background. If a document doesn't display correctly, ensure the wrapping div is in place.
+
+```html
+<div id="documentContainer">
+	// Contents here
+</div>
+```
+
 ## Addressing Diagrams in Workflow
 
 Workflow documents are problematic since they utilise interactive image maps for their diagrams. Image maps cannot be made responsive so there's two ways we could go about handling this:

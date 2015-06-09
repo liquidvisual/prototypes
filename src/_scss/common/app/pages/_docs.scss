@@ -1,0 +1,158 @@
+/*
+    DOCS.CSS
+
+    - Last updated: 01.06.15
+    - hello@liquidvisual.com
+
+    - Notes -
+
+    The responsive frame is broken because of the pre code elements.
+    For some reason they can't operate inside css tables, which is the stage.
+    Possible solution is to JS wrap pre code and make overflow hidden.
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$purple-color: #675392;
+
+//-----------------------------------------------------------------
+// Docs Skin
+//-----------------------------------------------------------------
+
+.lv-docs .lv-header {
+    background: $purple-color;
+    z-index: 1000;
+}
+
+.lv-docs a {
+    color: $purple-color;
+}
+
+.lv-docs .lv-site-select {
+    background: $purple-color;
+    color: white;
+    // z-index: 999;
+}
+
+.lv-docs .lv-site-select a {
+    color: white;
+}
+
+.lv-docs .lv-context-menu .active a {
+    background: lighten($purple-color, 10%);
+}
+
+.lv-docs {
+    .lv-main, .lv-stage, p, li, a {
+        font-family: "Open Sans";
+        color: #444;
+    }
+}
+
+//-----------------------------------------------------------------
+// Headings
+//-----------------------------------------------------------------
+
+.lv-docs .lv-content h1 {
+    margin-bottom: 40px;
+}
+
+.lv-docs .lv-content {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+    h2 {
+        padding-top: 20px;
+    }
+}
+
+//-----------------------------------------------------------------
+// Typography
+//-----------------------------------------------------------------
+
+.lv-docs {
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        margin: 20px 0 40px 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    pre code {
+        overflow: auto;
+    }
+}
+
+//-----------------------------------------------------------------
+// Stage
+//-----------------------------------------------------------------
+
+.lv-docs .lv-stage {
+    /*display: table;*/
+    display: block;
+}
+
+//-----------------------------------------------------------------
+// Context Menu
+//-----------------------------------------------------------------
+
+.lv-docs .lv-context-menu .lv-resize-btn {
+    display: none;
+}
+
+.lv-docs .lv-context-menu .lv-context-menu-fixed {
+    background: white;
+    border-right: 1px solid #D4DCE3;
+
+    @media #{$medium-up} {
+        top: 60px;
+        bottom: 0;
+    }
+}
+
+.lv-docs .lv-context-menu h3 {
+    text-transform: uppercase;
+    font-size: 11px;
+    /*text-align: left;*/
+    /*color: #1C78A7;*/
+    color: #675392;
+    font-weight: bold;
+    /*border-bottom: 1px solid #D4DCE3;*/
+}
+
+.lv-docs .lv-context-menu a {
+    padding: 5px 15px;
+}
+
+.lv-docs .lv-context-menu {
+    z-index: 999;
+}
+
+.lv-docs .lv-context-menu ul ul li a {
+    color: #eee;
+    margin-left: 20px;
+    display: none;
+}
+
+//-----------------------------------------------------------------
+// Content Block
+//-----------------------------------------------------------------
+
+.lv-docs .lv-content-block {
+    padding: 15px;
+    max-width: 800px;
+
+    @media (min-width: 1024px) {
+        margin: 0 auto 0 250px;
+        padding: 30px;
+    }
+}
+
+

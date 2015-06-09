@@ -4,6 +4,33 @@ title: Change Log
 
 # CHANGELOG
 
+## 03.06.15 - Checkpoint
+---
+
+* Fixed mistyped class causing radios to stack on 'Basic' search templates.
+
+## 03.06.15 - Westlaw
+---
+
+* Documents for 'Newsroom' and 'Research' given white containers [see documents](http://localhost:9292/docs/page-layouts/documents/)
+* Newsroom - removed *partial-view* class from form (displays correctly now)
+* Tools - removed *partial-view* class from form (displays correctly now)
+* Logic updated in JS snippet that controls interaction flow. Previously User Menu and Nav Menu were accidently overriden on Tablets and mobile.
+
+## 01.06.15 - Westlaw
+---
+
+* Context Menu fonts made darker (#111 in theme.scss)
+* Tidied up some Docs styling
+
+## 19.05.15 - Westlaw
+---
+
+* Context Menu fonts made darker (#222)
+* Radio buttons centered on mobile in 'Basic Search Templates'
+* Context Menu expander reverted to previous behavior (pushes content right)
+* Reduced size of form input fonts to 12px
+
 ## 19.05.15 - Checkpoint + Westlaw
 ---
 
@@ -12,7 +39,6 @@ title: Change Log
 * Context Menu resize functionality improved. Button moved to right.
 * Context Menu when resized is 50% of viewport down from 70%
 * Main navigation (topbar) fonts darkened
-
 
 ## 18.05.15 - Westlaw
 ---
@@ -25,7 +51,6 @@ title: Change Log
 * Main font switched to Arial
 * Flows introduced back into prototype
 * Context Menu resize functionality introduced
-
 
 ## 14.05.15 - Checkpoint
 ---

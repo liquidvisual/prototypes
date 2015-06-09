@@ -54,6 +54,7 @@
 
 // Pages
 @import "app/pages/dashboard";
+@import "../common/app/pages/docs"; // ** DOCS **
 
 // Common Legacy Overrides
 @import "../common/app/legacy/overrides/document";

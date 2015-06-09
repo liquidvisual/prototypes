@@ -5,7 +5,7 @@ permalink: /docs/
 
 <h1>Welcome <span class="subheader"> (Warning: Docs still in progress)</span></h1>
 
-Last updated: **19.05.15**
+Last updated: **01.06.15**
 
 The public facing site is currently located at:
 [http://prototypes.uat.liquidvisual.net](http://prototypes.uat.liquidvisual.net)

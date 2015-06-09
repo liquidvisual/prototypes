@@ -25,7 +25,10 @@ $tertiary-color: $primary-color;
 	background: -ms-linear-gradient(top,  #0c5c83 0%,#147aad 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #0c5c83 0%,#147aad 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c5c83', endColorstr='#147aad',GradientType=0 ); /* IE6-8 */
+}
 
+.lv-super .lv-context-menu a {
+	color: #111; // darker requested by Tom
 }
 
 .lv-super .footable .zebra {

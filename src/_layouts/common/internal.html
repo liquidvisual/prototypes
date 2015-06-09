@@ -5,7 +5,7 @@ layout: common/master
 <!-- REMOVE ON PROD: FOR SIMULATION ONLY -->
 <script>
     $(function(){
-        $('.lv-stage a:not(".toplevel a, .lv-back-btn")').click(function(e){
+        $('.lv-stage a:not(".toplevel a, .lv-back-btn, .lv-top-menu a, .lv-user-menu a")').click(function(e){
             $(this).attr('href', '{{ page.next_url }}');
         });
 

@@ -46,7 +46,9 @@
             <!-- REMOVE ON PROD: FOR SIMULATION ONLY -->
 <script>
     $(function(){
-        $('.lv-stage a:not(".toplevel a, .lv-back-btn, .lv-top-menu a, .lv-user-menu a")').click(function(e){
+        var excludedLinks = ".toplevel a,  .lv-back-btn, .lv-top-menu a, .lv-user-menu a, #metadocs a";
+
+        $('.lv-stage a:not('+excludedLinks+')').click(function(e){
             $(this).attr('href', '/pages/checkpoint/research/documents/blank-v-federal-01/');
         });
 

@@ -4,6 +4,13 @@ title: Change Log
 
 # CHANGELOG
 
+## 18.06.15 - Checkpoint + Westlaw
+---
+
+* Both: Home button on the touch menu will now open the Context Menu (RHS) if on the homepage.
+* Checkpoint: Header menus now white again - previously was inheriting orange.
+* Westlaw: "#metadocs" links in Context Menu (LHS) added to exclusion list regarding anchor overriding. These should now open, instead of being hi-jacked by the simulated workflows.
+
 ## 03.06.15 - Checkpoint
 ---
 

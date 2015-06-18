@@ -124,7 +124,7 @@ $('#home-btn').on('click', function(event){
     $this = $(this);
 
     // If user is HOME - launch context menu, otherwise load "/"
-    if (window.location.pathname == "/westlaw/") {
+    if (window.location.pathname == "/pages/westlaw/" || window.location.pathname == "/pages/checkpoint/") {
         launchContextMenu('topMenu');
         event.preventDefault();
     }
